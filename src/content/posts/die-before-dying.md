@@ -20,7 +20,7 @@ Where to begin? What a strange universe we live in. My life has changed dramatic
 
 I have always loved music. I’ve always been a creator. I’ve always wanted to make music and share art with people. It’s something that I’ve identified with—it’s who I am, or at least, who I was. On June 1st, 2024, I was working with a band in my home studio. Their drummer brought in his own drum set, which just so happened to be the largest set I’d ever worked with in my home studio. Two massive floor toms, not to mention songs that ran into the seven-and-a-half-minute mark, and they were doing two of them. Even with ear protection, four hours of pounding on drums caught up with me, and somehow, it decided to rewrite my entire existence.
 
-To make matters worse, a girl I fancied at the time asked me to join her to see some live music that night. Against my better judgment, I went out, exposing myself to even more loud acoustics. I drank and had a pretty decent time, though I was exhausted from the recording session.
+To make matters worse, a friend asked me to join her to see some live music that night. Against my better judgment, I went out, exposing myself to even more loud acoustics. I drank and had a pretty decent time, though I was exhausted from the recording session.
 
 The next day, I woke up with some sensitivity in my ears and a feeling of fullness. I assumed it was from the long session the previous day and the music that night and that it would go away. But it didn’t.
 
