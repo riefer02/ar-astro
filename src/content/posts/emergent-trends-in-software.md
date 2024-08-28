@@ -34,7 +34,7 @@ It's slightly upsetting that the first thing everyone does with AI is challenge 
 
 We need to get these custom AI agents to handle the jobs nobody wants to do, so we can move towards universal basic income and have more time to create art for our communities. The big takeaway here is that developing AI agents to solve specific problems is the kind of work I want to pursue. I'm thankful for my strong foundation in web application development, hosting, deployment, and testing. Now, it's time to grab my surfboard and ride the wave, while ignoring the noise that seems to emanate everywhere in the AI space.
 
-Hope you all have a wonderful rest of your June.
+As of summer 2024, I've started exploring LangChain and LangGraph to build agentic systems, and I'm loving every bit of it. These tools are transforming how I think about creating custom AI agents, making it easier to build complex, interactive workflows that can truly assist in tackling the everyday tasks we often dread. I'm excited to see where this journey takes me and how these technologies can be leveraged to create meaningful, impactful solutions.
 
 All the best,
 
