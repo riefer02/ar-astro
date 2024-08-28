@@ -44,7 +44,7 @@ This new awareness reframed my perspective on life. Living in the now and just b
 
 I began to appreciate everything around me. My backyard became a sanctuary. I listened to the sounds of summer, though at times the insects were painful during my heightened sensitivity. Still, I was healing and finding a new baseline—a new normal. This baseline would continue to shift, and I knew I’d get better, though there’s no telling if I’ll ever be able to handle the pounding of drums at point blank again. On the worst days, my own voice would hurt my ears. On the best, I could go out with friends and, with some ear protection, enjoy myself without being overwhelmed by the acoustics.
 
-I feel like I’m losing steam here, telling you all this, but I just wanted to say that I know I’m going to be okay. I know my life won’t look like I originally envisioned, but I’ve found beauty and strength in my friendships and connections. I understand that life won’t be like it used to be, and my heart goes out to everyone who has had to deal with such limitations. 
+I feel like I’m losing steam here, telling you all this, but I just wanted to say that I know I’m going to be okay. I know my life won’t look like I originally envisioned, but I’ve found beauty and strength in my friendships and connections. My heart goes out to everyone who has had to deal with such limitations. 
 
 The literature helped me find acceptance. I stay home a lot now, dedicated to getting better and increasing my threshold. I still have setbacks when I do something careless or go out without ear protection, and I understand it will probably be like that for a long time—maybe forever.
 
