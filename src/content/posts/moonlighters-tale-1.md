@@ -26,9 +26,9 @@ So, what have I been up to? Well, I’ve had a few successful moonlighting proje
 
 ### TolbertsRestaurant.com
 
-First up is the new website for [**TolbertsRestaurant.com**](https://tolbertsrestaurant.com), which I built alongside Riley Sklar. When the opportunity arose to create their new site, we presented them with a competitive offer. Not only did they save money, but they also got a superior product.
+First up is the new website for [**TolbertsRestaurant.com**](https://tolbertsrestaurant.com), which I built alongside [Riley Sklar](https://github.com/rileysklar). When the opportunity arose to create their new site, we presented them with a competitive offer. Not only did they save money, but they also got a superior product.
 
-A few years ago, I built a standalone Next.js application as a music calendar for their events at **tolbertsmusic.com**. At the time, I was using the Next.js **Page Router**, which was an excellent real-world opportunity to grow my skills. While **Page Router** can be a bit tricky (just kidding, it’s not that bad), the real issue was deciding on a backend. They had a legacy WordPress site, so I set up a new WordPress instance as a dedicated content management system (CMS), with Next.js handling the front end. 
+A few years ago, I built a standalone Next.js application as a music calendar for their events at **tolbertsmusic.com**. At the time, I was using the Next.js **Page Router**, which was an excellent real-world opportunity to grow my skills. While Page Router can be a bit tricky (just kidding, it’s not that bad), the real issue was deciding on a backend. They had a legacy WordPress site, so I set up a new WordPress instance as a dedicated content management system (CMS), with Next.js handling the front end. 
 
 Lately, I’ve been using the **App Router** at work, which has been a significant improvement in terms of organization and flexibility.
 
