@@ -1,0 +1,49 @@
+{
+    "skills": [
+      {
+        "name": "Web Development",
+        "description": "Mastery in modern web technologies including React, Gatsby.js, Next.js, WordPress, Astro, Vue, Nuxt.js and Vite, delivering responsive and dynamic user experiences."
+      },
+      {
+        "name": "Full Stack Development",
+        "description": "Skilled in developing robust web applications with Python (Django, Flask), PHP, Express.js, Deno, and Node.js. Expertise in integrating diverse front-end and back-end technologies for efficient, scalable solutions."
+      },
+      {
+        "name": "AI Solutions & Emergent Technologies",
+        "description": "Emergent leader in AI solutions, creating and utilizing Retrieval-Augmented Generation (RAG) applications, performing vector similarity searches, and developing custom agents with specialized toolsets for comprehensive and innovative solutions."
+      },
+      {
+        "name": "CMS Integration",
+        "description": "Skilled in deploying and customizing content management systems like Strapi CMS and Headless WordPress for dynamic content delivery."
+      },
+      {
+        "name": "E-commerce Integration",
+        "description": "Proficient in implementing e-commerce solutions with Stripe, enhancing online transaction capabilities for businesses."
+      },
+      {
+        "name": "API Development",
+        "description": "Adept at building and managing APIs, enabling efficient data exchange and integration with various services and frameworks."
+      },
+      {
+        "name": "Database Management",
+        "description": "Competent in handling complex data structures with PostgreSQL, MongoDB, and Supabase, ensuring data integrity and performance."
+      },
+      {
+        "name": "Emerging Technologies",
+        "description": "Forward-thinking in adapting new technologies like Deno and blockchain, staying ahead in the tech curve."
+      },
+      {
+        "name": "Web Applications",
+        "description": "Advanced proficiency in building scalable, responsive web applications. Expertise in modern JavaScript frameworks, backend integration, and performance optimization."
+      },
+      {
+        "name": "Leadership & Mentorship",
+        "description": "Skilled at mentoring junior developers, fostering a collaborative team environment, and driving continuous learning and innovation."
+      },
+      {
+        "name": "Other Technologies",
+        "description": "Versatile in utilizing a range of languages and tools including TypeScript, Rust, PHP, CSS, HTML, and Python, showcasing a comprehensive tech skillset."
+      }
+    ]
+  }
+  

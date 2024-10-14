@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import profileImage from "../assets/Andrew-Riefenstahl.jpg";
 import Analytics from "../components/Analytics.astro";
+import professionalSkills from "../lib/professional-skills.json";
+import keyProjects from "../lib/key-projects.json";
 
 const metaTags = {
   title: "Andrew Riefenstahl: Full Stack Web Developer",
@@ -35,222 +37,44 @@ const metaTags = {
       to new heights of success.
     </p>
 
+    <!-- Professional Skills Section -->
     <section class="mb-8">
       <h2 class="mb-3 text-lg font-semibold sm:text-xl">Professional Skills</h2>
       <ul class="flex list-disc flex-col gap-2 pl-5">
-        <li>
-          <strong>Web Development:</strong> Mastery in modern web technologies including
-          React, Gatsby.js, Next.js, WordPress, Astro, Vue, Nuxt.js and Vite, delivering
-          responsive and dynamic user experiences.
-        </li>
-        <li>
-          <strong>Full Stack Development:</strong> Skilled in developing robust web
-          applications with Python (Django, Flask), PHP, Express.js, Deno, and Node.js.
-          Expertise in integrating diverse front-end and back-end technologies for
-          efficient, scalable solutions.
-        </li>
-        <li>
-          <strong>AI Solutions & Emergent Technologies:</strong> Emergent leader
-          in AI solutions, creating and utilizing Retrieval-Augmented Generation
-          (RAG) applications, performing vector similarity searches, and developing
-          custom agents with specialized toolsets for comprehensive and innovative
-          solutions.
-        </li>
-        <li>
-          <strong>CMS Integration:</strong> Skilled in deploying and customizing
-          content management systems like Strapi CMS and Headless WordPress for dynamic
-          content delivery.
-        </li>
-        <li>
-          <strong>E-commerce Integration:</strong> Proficient in implementing e-commerce
-          solutions with Stripe, enhancing online transaction capabilities for businesses.
-        </li>
-        <li>
-          <strong>API Development:</strong> Adept at building and managing APIs,
-          enabling efficient data exchange and integration with various services
-          and frameworks.
-        </li>
-        <li>
-          <strong>Database Management:</strong> Competent in handling complex data
-          structures with PostgreSQL, MongoDB, and Supabase, ensuring data integrity
-          and performance.
-        </li>
-        <li>
-          <strong>Emerging Technologies:</strong> Forward-thinking in adapting new
-          technologies like Deno and blockchain, staying ahead in the tech curve.
-        </li>
-        <li>
-          <strong>Web Applications:</strong> Advanced proficiency in building scalable,
-          responsive web applications. Expertise in modern JavaScript frameworks,
-          backend integration, and performance optimization.
-        </li>
-        <li>
-          <strong>Leadership & Mentorship:</strong> Skilled at mentoring junior developers,
-          fostering a collaborative team environment, and driving continuous learning
-          and innovation.
-        </li>
-        <li>
-          <strong>Other Technologies:</strong> Versatile in utilizing a range of
-          languages and tools including TypeScript, Rust, PHP, CSS, HTML, and Python,
-          showcasing a comprehensive tech skillset.
-        </li>
+        {
+          professionalSkills.skills.map((skill) => (
+            <li key={skill.name}>
+              <strong>{skill.name}:</strong> {skill.description}
+            </li>
+          ))
+        }
       </ul>
     </section>
+
+    <!-- Key Projects Section -->
     <section class="mb-8">
       <h2 class="mb-3 text-lg font-semibold sm:text-xl">Key Projects</h2>
       <ul class="list-disc pl-5">
-        <li>
-          <a
-            href="https://propane.com"
-            target="_blank"
-            class="no-underline hover:underline"
-          >
-            <div class="mb-4">
-              <h3 class="text-md font-bold">Enterprise Site - Propane.com</h3>
-              <p class="text-md lg:text-base">
-                Spearheaded the development of Propane.com, an enterprise-level
-                WordPress site featuring advanced customizations and
-                integrations. Implemented a robust CI pipeline, 2FA
-                authentication via OAuth Okta, and developed stateful web
-                applications. Enhanced user engagement by integrating Algolia
-                for advanced search capabilities and HubSpot for CRM.
-                Additionally, optimized React-based components for improved site
-                performance and user experience.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://community.flockx.io"
-            target="_blank"
-            class="no-underline hover:underline"
-          >
-            <div class="mb-4">
-              <h3 class="text-md font-bold">
-                Start-Up Sites - Flockx.io & Community.Flockx.io
-              </h3>
-              <p class="text-md lg:text-base">
-                Led the front-end development of Flockx.io and its companion app
-                using Gatsby and Next.js, establishing a seamless integration
-                with a Django backend. Incorporated cutting-edge features like
-                interactive Mapbox maps and ElasticSearch for dynamic content
-                delivery. Pioneered the use of Intercom and Slack integrations
-                to enhance user engagement and communication, significantly
-                boosting the platform's SEO and overall digital presence.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://abowlofred.com"
-            target="_blank"
-            class="no-underline hover:underline"
-          >
-            <div class="mb-4">
-              <h3 class="text-md font-bold">
-                Non-Profit Charity - ABowlofRed.com
-              </h3>
-              <p class="text-md lg:text-base">
-                Orchestrated the development of ABowlofRed.com, a Gatsby-based
-                front-end platform, with a focus on high-performance and
-                accessible design. Utilized Strapi CMS on AWS EC2 with Node.js
-                for content management, ensuring optimal image rendering and
-                SEO-friendly metadata. Successfully integrated Stripe for secure
-                ticket transactions, contributing to a significant fundraising
-                success of around $19k.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://junkerri.com"
-            target="_blank"
-            class="no-underline hover:underline"
-          >
-            <div class="mb-4">
-              <h3 class="text-md font-bold">E-commerce Site - Junkerri.com</h3>
-              <p class="text-md lg:text-base">
-                Engineered Junkerri.com, a sleek and efficient e-commerce
-                platform using Next.js. Implemented Stripe for a streamlined
-                payment process, and integrated SparkPost for effective customer
-                communication. This project highlights my ability to create
-                user-centric shopping experiences with robust back-end
-                functionalities.
-              </p>
-            </div>
-          </a>
-        </li>
-        <!-- https://www.theosapp.com/ -->
-        <li>
-          <a
-            href="https://theosapp.com"
-            target="_blank"
-            class="no-underline hover:underline"
-          >
-            <div class="mb-4">
-              <h3 class="text-md font-bold">AI Bible Quote Generator</h3>
-              <p class="text-md lg:text-base">
-                Developed an innovative Bible quote generator application
-                utilizing Supabase, Edge Functions, Deno, and OpenAI's
-                frameworks and REST APIs. This app offers users personalized
-                Bible quotes related to their life experiences, employing vector
-                similarity search to ensure unique results. The application
-                integrates advanced AI capabilities to provide context and
-                explanations for each quote, enhancing the user experience with
-                meaningful insights and support.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/riefer02/electron-chat-app"
-            target="_blank"
-            class="no-underline hover:underline"
-          >
-            <div class="mb-4">
-              <h3 class="text-md font-bold">Electron Chat App</h3>
-              <p class="text-md lg:text-base">
-                Conceptualized and developed a cutting-edge chat application
-                using React and Electron, demonstrating expertise in
-                cross-platform software development. This app features real-time
-                messaging capabilities, a user-friendly interface, and
-                high-performance chat functionalities. It showcases my
-                proficiency in seamlessly blending front-end technologies with
-                Electron for a cohesive desktop application experience.
-              </p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://steelcalculator.xyz"
-            target="_blank"
-            class="no-underline hover:underline"
-          >
-            <div class="mb-4">
-              <h3 class="text-md font-bold">
-                Steel Calculator App - Steelcalculator.xyz
-              </h3>
-              <p class="text-md lg:text-base">
-                Developed a highly specialized steel calculator application,
-                tailored for efficiency improvements in steel-related
-                calculations. This microservice web application, primarily built
-                using Vite, JavaScript, CSS, and HTML, was customized for a
-                client to streamline their work processes. The application has
-                been a valuable tool, actively used to this day for its
-                simplicity and effectiveness in steel calculations,
-                demonstrating my ability to deliver focused and client-specific
-                solutions in web development.
-              </p>
-            </div>
-          </a>
-        </li>
+        {
+          keyProjects.projects.map((project) => (
+            <li key={project.name}>
+              <a
+                href={project.url}
+                target="_blank"
+                class="no-underline hover:underline"
+              >
+                <div class="mb-4">
+                  <h3 class="text-md font-bold">{project.name}</h3>
+                  <p class="text-md lg:text-base">{project.description}</p>
+                </div>
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </section>
+
+    <!-- Connect with Me Section -->
     <section class="mb-8">
       <h2 class="mb-3 text-lg font-semibold sm:text-xl">Connect with Me</h2>
       <ul class="list-none pl-0">
