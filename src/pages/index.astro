@@ -5,7 +5,8 @@ import profileImage from "../assets/Andrew-Riefenstahl.jpg";
 import Analytics from "../components/Analytics.astro";
 import professionalSkills from "../lib/professional-skills.json";
 import keyProjects from "../lib/key-projects.json";
-
+import KeyProjects from "@/components/KeyProjects.astro";
+import { Card, CardContent } from "@/components/ui/card";
 const metaTags = {
   title: "Andrew Riefenstahl: Full Stack Web Developer",
   description:
@@ -52,28 +53,7 @@ const metaTags = {
     </section>
 
     <!-- Key Projects Section -->
-    <section class="mb-8">
-      <h2 class="mb-3 text-lg font-semibold sm:text-xl">Key Projects</h2>
-      <ul class="list-disc pl-5">
-        {
-          keyProjects.projects.map((project) => (
-            <li key={project.name}>
-              <a
-                href={project.url}
-                target="_blank"
-                class="no-underline hover:underline"
-              >
-                <div class="mb-4">
-                  <h3 class="text-md font-bold">{project.name}</h3>
-                  <p class="text-md lg:text-base">{project.description}</p>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-
+    <KeyProjects keyProjects={keyProjects} />
     <!-- Connect with Me Section -->
     <section class="mb-8">
       <h2 class="mb-3 text-lg font-semibold sm:text-xl">Connect with Me</h2>

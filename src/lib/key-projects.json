@@ -1,40 +1,53 @@
 {
-    "projects": [
-      {
-        "name": "Enterprise Site - Propane.com",
-        "url": "https://propane.com",
-        "description": "Spearheaded the development of Propane.com, an enterprise-level WordPress site featuring advanced customizations and integrations. Implemented a robust CI pipeline, 2FA authentication via OAuth Okta, and developed stateful web applications. Enhanced user engagement by integrating Algolia for advanced search capabilities and HubSpot for CRM. Additionally, optimized React-based components for improved site performance and user experience."
-      },
-      {
-        "name": "Start-Up Sites - Flockx.io & Community.Flockx.io",
-        "url": "https://community.flockx.io",
-        "description": "Led the front-end development of Flockx.io and its companion app using Gatsby and Next.js, establishing a seamless integration with a Django backend. Incorporated cutting-edge features like interactive Mapbox maps and ElasticSearch for dynamic content delivery. Pioneered the use of Intercom and Slack integrations to enhance user engagement and communication, significantly boosting the platform's SEO and overall digital presence."
-      },
-      {
-        "name": "Non-Profit Charity - ABowlofRed.com",
-        "url": "https://abowlofred.com",
-        "description": "Orchestrated the development of ABowlofRed.com, a Gatsby-based front-end platform, with a focus on high-performance and accessible design. Utilized Strapi CMS on AWS EC2 with Node.js for content management, ensuring optimal image rendering and SEO-friendly metadata. Successfully integrated Stripe for secure ticket transactions, contributing to a significant fundraising success of around $19k."
-      },
-      {
-        "name": "E-commerce Site - Junkerri.com",
-        "url": "https://junkerri.com",
-        "description": "Engineered Junkerri.com, a sleek and efficient e-commerce platform using Next.js. Implemented Stripe for a streamlined payment process, and integrated SparkPost for effective customer communication. This project highlights my ability to create user-centric shopping experiences with robust back-end functionalities."
-      },
-      {
-        "name": "AI Bible Quote Generator",
-        "url": "https://theosapp.com",
-        "description": "Developed an innovative Bible quote generator application utilizing Supabase, Edge Functions, Deno, and OpenAI's frameworks and REST APIs. This app offers users personalized Bible quotes related to their life experiences, employing vector similarity search to ensure unique results. The application integrates advanced AI capabilities to provide context and explanations for each quote, enhancing the user experience with meaningful insights and support."
-      },
-      {
-        "name": "Electron Chat App",
-        "url": "https://github.com/riefer02/electron-chat-app",
-        "description": "Conceptualized and developed a cutting-edge chat application using React and Electron, demonstrating expertise in cross-platform software development. This app features real-time messaging capabilities, a user-friendly interface, and high-performance chat functionalities. It showcases my proficiency in seamlessly blending front-end technologies with Electron for a cohesive desktop application experience."
-      },
-      {
-        "name": "Steel Calculator App - Steelcalculator.xyz",
-        "url": "https://steelcalculator.xyz",
-        "description": "Developed a highly specialized steel calculator application, tailored for efficiency improvements in steel-related calculations. This microservice web application, primarily built using Vite, JavaScript, CSS, and HTML, was customized for a client to streamline their work processes. The application has been a valuable tool, actively used to this day for its simplicity and effectiveness in steel calculations, demonstrating my ability to deliver focused and client-specific solutions in web development."
-      }
-    ]
-  }
-  
+  "projects": [
+    {
+      "name": "Propane.com",
+      "subheader": "Enterprise Website",
+      "url": "https://propane.com",
+      "description": "Spearheaded the development of Propane.com, an enterprise-level WordPress site featuring advanced customizations and integrations. Implemented a robust CI pipeline, 2FA authentication via OAuth Okta, and developed stateful web applications. Enhanced user engagement by integrating Algolia for advanced search capabilities and HubSpot for CRM. Additionally, optimized React-based components for improved site performance and user experience.",
+      "technologies": ["WordPress", "React", "OAuth", "CI/CD", "Algolia", "HubSpot"]
+    },
+    {
+      "name": "Flockx.io",
+      "subheader": "Start-Up Platform",
+      "url": "https://community.flockx.io",
+      "description": "Led the front-end development of Flockx.io and its companion app using Gatsby and Next.js, establishing a seamless integration with a Django backend. Incorporated cutting-edge features like interactive Mapbox maps and ElasticSearch for dynamic content delivery. Pioneered the use of Intercom and Slack integrations to enhance user engagement and communication, significantly boosting the platform's SEO and overall digital presence.",
+      "technologies": ["Gatsby", "Next.js", "Django", "Mapbox", "ElasticSearch", "Intercom", "Slack"]
+    },
+    {
+      "name": "ABowlofRed.com",
+      "subheader": "Non-Profit Charity",
+      "url": "https://abowlofred.com",
+      "description": "Orchestrated the development of ABowlofRed.com, a Gatsby-based front-end platform, with a focus on high-performance and accessible design. Utilized Strapi CMS on AWS EC2 with Node.js for content management, ensuring optimal image rendering and SEO-friendly metadata. Successfully integrated Stripe for secure ticket transactions, contributing to a significant fundraising success of around $19k.",
+      "technologies": ["Gatsby", "Strapi CMS", "AWS EC2", "Node.js", "Stripe", "SEO"]
+    },
+    {
+      "name": "Junkerri.com",
+      "subheader": "E-commerce Platform",
+      "url": "https://junkerri.com",
+      "description": "Engineered Junkerri.com, a sleek and efficient e-commerce platform using Next.js. Implemented Stripe for a streamlined payment process, and integrated SparkPost for effective customer communication. This project highlights my ability to create user-centric shopping experiences with robust back-end functionalities.",
+      "technologies": ["Next.js", "Stripe", "SparkPost", "E-commerce"]
+    },
+    {
+      "name": "AI Bible Quote Generator",
+      "subheader": "AI-Powered Application",
+      "url": "https://theosapp.com",
+      "description": "Developed an innovative Bible quote generator application utilizing Supabase, Edge Functions, Deno, and OpenAI's frameworks and REST APIs. This app offers users personalized Bible quotes related to their life experiences, employing vector similarity search to ensure unique results.",
+      "technologies": ["Supabase", "Edge Functions", "Deno", "OpenAI", "REST API", "AI"]
+    },
+    {
+      "name": "Electron Chat App",
+      "subheader": "Cross-Platform Chat Application",
+      "url": "https://github.com/riefer02/electron-chat-app",
+      "description": "Conceptualized and developed a cutting-edge chat application using React and Electron, demonstrating expertise in cross-platform software development. This app features real-time messaging capabilities, a user-friendly interface, and high-performance chat functionalities.",
+      "technologies": ["React", "Electron", "Real-time Messaging"]
+    },
+    {
+      "name": "Steel Calculator",
+      "subheader": "Microservice Web Application",
+      "url": "https://steelcalculator.xyz",
+      "description": "Developed a highly specialized steel calculator application, tailored for efficiency improvements in steel-related calculations. Built using Vite, JavaScript, CSS, and HTML, this tool has proven highly effective for clients in the steel industry.",
+      "technologies": ["Vite", "JavaScript", "CSS", "HTML", "Microservices"]
+    }
+  ]
+}
