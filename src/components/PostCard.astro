@@ -1,23 +1,46 @@
 ---
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Image } from "astro:assets";
-interface Props {
-  post: any;
-}
 const { post } = Astro.props;
 const { title, description, pubDate, image, author } = post.data;
 ---
 
-<li
-  class="list-none overflow-hidden rounded-lg border bg-stone-100 p-4 shadow-sm"
->
-  <a href={"/posts/" + post.slug} class="text-decoration-none">
-    <div>
-      <Image src={image.url} alt={image.alt} class="h-auto w-full rounded-sm" />
-      <h2 class="mt-2 line-clamp-2 text-lg font-bold">{title}</h2>
-      <p class="mt-1 text-xs text-gray-600">
-        {new Date(pubDate).toLocaleDateString()}
-      </p>
-      <p class="mt-2 line-clamp-3 text-sm text-gray-800">{description}</p>
+<li class="list-none">
+  <Card className="mx-auto flex h-full max-w-md flex-col justify-between">
+    <div class="flex h-full flex-col">
+      <CardHeader className="p-0">
+        <Image
+          src={image.url}
+          alt={image.alt}
+          class="h-48 w-full rounded-t-lg object-cover"
+        />
+      </CardHeader>
+      <CardContent className="flex flex-1 flex-col justify-between p-4">
+        <div>
+          <CardTitle className="mb-2 line-clamp-2 text-lg font-bold">
+            {title}
+          </CardTitle>
+          <CardDescription className="mb-4 line-clamp-3 text-sm text-gray-600">
+            {description}
+          </CardDescription>
+        </div>
+        <p class="mt-2 text-xs text-gray-500">
+          {new Date(pubDate).toLocaleDateString()}
+        </p>
+      </CardContent>
+      <CardFooter className="mt-auto flex items-center justify-between p-4">
+        <a href={"/posts/" + post.slug} class="text-decoration-none">
+          <Button variant="outline">Read More</Button>
+        </a>
+      </CardFooter>
     </div>
-  </a>
+  </Card>
 </li>
