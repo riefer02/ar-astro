@@ -6,7 +6,7 @@ import Analytics from "../components/Analytics.astro";
 import professionalSkills from "../lib/professional-skills.json";
 import keyProjects from "../lib/key-projects.json";
 import KeyProjects from "@/components/KeyProjects.astro";
-import { Card, CardContent } from "@/components/ui/card";
+
 const metaTags = {
   title: "Andrew Riefenstahl: Full Stack Web Developer",
   description:
@@ -44,7 +44,7 @@ const metaTags = {
       <ul class="flex list-disc flex-col gap-2 pl-5">
         {
           professionalSkills.skills.map((skill) => (
-            <li key={skill.name}>
+            <li>
               <strong>{skill.name}:</strong> {skill.description}
             </li>
           ))
