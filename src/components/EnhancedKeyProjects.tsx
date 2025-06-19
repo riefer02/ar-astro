@@ -54,7 +54,7 @@ const getProjectGradient = (index: number) => {
 
 const EnhancedKeyProjects = ({ keyProjects }: Props) => {
   return (
-    <section id="projects" className="px-6 py-16">
+    <section id="projects" className="py-16">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 text-center">
