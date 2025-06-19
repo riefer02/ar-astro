@@ -1,16 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import profileImage from "../assets/Andrew-Riefenstahl.jpg";
 import Analytics from "../components/Analytics.astro";
-import professionalSkills from "../lib/professional-skills.json";
+import HeroSection from "../components/HeroSection";
+import ExpertiseSection from "../components/ExpertiseSection";
+import EnhancedKeyProjects from "../components/EnhancedKeyProjects";
+import ConnectSection from "../components/ConnectSection";
 import keyProjects from "../lib/key-projects.json";
-import KeyProjects from "@/components/KeyProjects.astro";
 
 const metaTags = {
-  title: "Andrew Riefenstahl: Full Stack Web Developer",
+  title:
+    "Andrew Riefenstahl: AI-Powered Web Development & Enterprise Solutions",
   description:
-    "Discover Andrew Riefenstahl's journey in full stack web development, showcasing skills in modern technologies and innovative solutions.",
+    "Leading AI developer specializing in intelligent web applications, long-term memory AI models, HIPAA-compliant security, and MCP server development. Thought leadership in enterprise technology solutions.",
   url: "https://andrewriefenstahl.com",
   twitterHandle: "@riefer02",
 };
@@ -18,78 +19,21 @@ const metaTags = {
 
 <Layout metaTags={metaTags}>
   <Analytics />
-  <main class="prose mx-auto max-w-3xl">
-    <div class="text-center">
-      <Image
-        src={profileImage}
-        alt="Andrew Riefenstahl smiling with his arms crossed against a multicolored background with hues of purple and maroon to pink."
-        width="800"
-        height="800"
-        class="mx-auto mb-4 w-[280px] rounded-full md:mb-8"
-      />
-      <h1 class="mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl">
-        Andrew Riefenstahl
-      </h1>
-    </div>
-    <p class="mb-6 indent-8 text-base">
-      With a proven track record of innovation and problem-solving, Andrew
-      Riefenstahl stands at the forefront of digital transformation. His
-      expertise in web and software development drives businesses and projects
-      to new heights of success.
-    </p>
 
-    <!-- Professional Skills Section -->
-    <section class="mb-8">
-      <h2 class="mb-3 text-lg font-semibold sm:text-xl">Professional Skills</h2>
-      <ul class="flex list-disc flex-col gap-2 pl-5">
-        {
-          professionalSkills.skills.map((skill) => (
-            <li>
-              <strong>{skill.name}:</strong> {skill.description}
-            </li>
-          ))
-        }
-      </ul>
-    </section>
+  <!-- Modern spacing and structure -->
+  <div class="space-y-0">
+    <!-- Hero Section -->
+    <HeroSection client:load />
 
-    <!-- Key Projects Section -->
-    <KeyProjects keyProjects={keyProjects} />
-    <!-- Connect with Me Section -->
-    <section class="mb-8">
-      <h2 class="mb-3 text-lg font-semibold sm:text-xl">Connect with Me</h2>
-      <ul class="list-none pl-0">
-        <li class="mb-2">
-          <a
-            href="https://www.linkedin.com/in/andrewriefenstahl/"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800"
-            >LinkedIn: Andrew Riefenstahl</a
-          >
-        </li>
-        <li class="mb-2">
-          <a
-            href="https://github.com/riefer02"
-            target="_blank"
-            class="hover: text-gray-900">GitHub: @riefer02</a
-          >
-        </li>
-        <li class="mb-2">
-          <a
-            href="https://twitter.com/riefer02"
-            target="_blank"
-            class="text-blue-400 hover:text-blue-600">Twitter: @riefer02</a
-          >
-        </li>
-        <li class="mb-2">
-          Email: <a
-            href="mailto:andrew.riefenstahl@gmail.com"
-            class="text-green-600 hover:text-green-800"
-            >&#97;&#110;&#100;&#114;&#101;&#119;&#46;&#114;&#105;&#101;&#102;&#101;&#110;&#115;&#116;&#97;&#104;&#108;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a
-          >
-        </li>
-      </ul>
-    </section>
-  </main>
+    <!-- Expertise Section -->
+    <ExpertiseSection client:load />
+
+    <!-- Enhanced Projects Section -->
+    <EnhancedKeyProjects keyProjects={keyProjects} client:load />
+
+    <!-- Connect Section -->
+    <ConnectSection client:load />
+  </div>
 </Layout>
 
 <style>
