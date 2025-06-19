@@ -97,7 +97,7 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="px-6 py-16">
+    <section id="expertise" className="px-6 py-16">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-16 text-center">

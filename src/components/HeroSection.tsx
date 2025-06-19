@@ -2,6 +2,17 @@ import { ChevronDown, Code2, Brain, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section className="relative overflow-hidden rounded-2xl border border-stone-200/50 bg-gradient-to-br from-stone-50 to-stone-100 px-6 py-20 shadow-lg">
       {/* Background Pattern */}
@@ -60,9 +71,9 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="#projects">
+          <a href="#projects" onClick={handleScrollToProjects}>
             <Button
-              className="bg-stone-800 px-8 py-3 text-lg text-white hover:bg-stone-900"
+              className="bg-stone-800 px-8 py-3 text-lg text-white transition-all duration-200 hover:bg-stone-900"
               size="lg"
             >
               See My Work
@@ -71,7 +82,7 @@ const HeroSection = () => {
           <a href="/posts">
             <Button
               variant="outline"
-              className="border-stone-300 px-8 py-3 text-lg text-stone-700 hover:bg-stone-50"
+              className="border-stone-300 px-8 py-3 text-lg text-stone-700 transition-all duration-200 hover:bg-stone-50"
               size="lg"
             >
               Read My Writing
