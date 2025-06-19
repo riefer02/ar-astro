@@ -5,11 +5,15 @@ import { Button } from "../components/ui/button";
 import { Image } from "astro:assets";
 const { frontmatter } = Astro.props;
 
+// Get the current URL from Astro
+const currentUrl = Astro.url.pathname;
+const fullUrl = `https://andrewriefenstahl.com${currentUrl}`;
+
 const metaTags = {
   title: frontmatter.title,
   description: frontmatter.description,
   image: frontmatter.image?.url?.src || frontmatter.image,
-  url: `https://andrewriefenstahl.com/posts/${frontmatter.slug}`,
+  url: fullUrl,
 };
 
 // Format date nicely
