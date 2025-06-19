@@ -2,6 +2,7 @@
 import Layout from "./Layout.astro";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
+import { Image } from "astro:assets";
 const { frontmatter } = Astro.props;
 
 const metaTags = {
@@ -144,11 +145,15 @@ const getReadingTime = (content) => {
     {
       frontmatter.image && (
         <div class="mb-8 overflow-hidden rounded-xl">
-          <img
+          <Image
             class="h-auto w-full object-cover"
-            src={frontmatter.image.url?.src || frontmatter.image}
+            src={frontmatter.image.url || frontmatter.image}
             alt={frontmatter.image.alt || frontmatter.title}
             loading="eager"
+            width={800}
+            height={400}
+            format="webp"
+            quality={85}
           />
         </div>
       )
