@@ -20,85 +20,87 @@ const metaTags = {
 ---
 
 <Layout metaTags={metaTags}>
-  <main class="mx-auto max-w-7xl px-6 py-16">
-    <!-- Header Section - Clean and Natural -->
-    <header class="mb-16 text-center">
-      <h1 class="mb-6 text-4xl font-bold text-stone-900 md:text-5xl">
-        Writing & Musings
-      </h1>
-      <p
-        class="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-stone-600 md:text-xl"
-      >
-        Personal reflections on technology, life, music, philosophy, and the
-        human experience. A mix of technical insights, creative pursuits, and
-        honest thoughts on navigating this world.
-      </p>
+  <main class="py-16">
+    <div class="mx-auto max-w-7xl">
+      <!-- Header Section - Clean and Natural -->
+      <header class="mb-16 text-center">
+        <h1 class="mb-6 text-4xl font-bold text-stone-900 md:text-5xl">
+          Writing & Musings
+        </h1>
+        <p
+          class="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-stone-600 md:text-xl"
+        >
+          Personal reflections on technology, life, music, philosophy, and the
+          human experience. A mix of technical insights, creative pursuits, and
+          honest thoughts on navigating this world.
+        </p>
 
-      <!-- Stats - Cleaner Design -->
-      <div
-        class="flex flex-col items-center justify-center gap-6 text-center sm:flex-row"
-      >
-        <div class="flex items-center space-x-2">
-          <svg
-            class="h-5 w-5 text-stone-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-            ></path>
-          </svg>
-          <span class="font-medium text-stone-700"
-            >{sortedPosts.length} Articles</span
-          >
+        <!-- Stats - Cleaner Design -->
+        <div
+          class="flex flex-col items-center justify-center gap-6 text-center sm:flex-row"
+        >
+          <div class="flex items-center space-x-2">
+            <svg
+              class="h-5 w-5 text-stone-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+            <span class="font-medium text-stone-700"
+              >{sortedPosts.length} Articles</span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              class="h-5 w-5 text-stone-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <span class="font-medium text-stone-700">
+              Latest: {
+                new Date(sortedPosts[0]?.data.pubDate).toLocaleDateString(
+                  "en-US",
+                  { month: "long", year: "numeric" }
+                )
+              }
+            </span>
+          </div>
         </div>
-        <div class="flex items-center space-x-2">
-          <svg
-            class="h-5 w-5 text-stone-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            ></path>
-          </svg>
-          <span class="font-medium text-stone-700">
-            Latest: {
-              new Date(sortedPosts[0]?.data.pubDate).toLocaleDateString(
-                "en-US",
-                { month: "long", year: "numeric" }
-              )
-            }
-          </span>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- Posts Grid - Consistent Mobile Responsiveness -->
-    <section class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-      {sortedPosts.map((post) => <PostCard post={post} />)}
-    </section>
+      <!-- Posts Grid - Consistent Mobile Responsiveness -->
+      <section class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {sortedPosts.map((post) => <PostCard post={post} />)}
+      </section>
 
-    <!-- Empty State -->
-    {
-      sortedPosts.length === 0 && (
-        <div class="py-16 text-center">
-          <p class="mb-4 text-lg text-stone-600">
-            More articles coming soon...
-          </p>
-          <p class="text-stone-500">
-            In the meantime, check out my projects and connect with me.
-          </p>
-        </div>
-      )
-    }
+      <!-- Empty State -->
+      {
+        sortedPosts.length === 0 && (
+          <div class="py-16 text-center">
+            <p class="mb-4 text-lg text-stone-600">
+              More articles coming soon...
+            </p>
+            <p class="text-stone-500">
+              In the meantime, check out my projects and connect with me.
+            </p>
+          </div>
+        )
+      }
+    </div>
   </main>
 </Layout>

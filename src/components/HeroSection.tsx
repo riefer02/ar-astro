@@ -14,7 +14,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-stone-200/50 bg-gradient-to-br from-stone-50 to-stone-100 px-6 py-20 shadow-lg">
+    <section className="relative overflow-hidden rounded-2xl border border-stone-200/50 bg-gradient-to-br from-stone-50 to-stone-100 py-20 shadow-lg">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute left-10 top-10 h-20 w-20 rounded-full bg-stone-600 blur-xl"></div>
@@ -22,7 +22,7 @@ const HeroSection = () => {
         <div className="absolute left-1/2 top-1/2 h-24 w-24 rounded-full bg-stone-500 blur-xl"></div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         {/* Main Heading */}
         <h1 className="mb-6 text-4xl font-bold leading-tight text-stone-900 md:text-6xl">
           Hi, I'm Andrew Riefenstahl
