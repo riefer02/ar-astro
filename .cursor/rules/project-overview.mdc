@@ -1,0 +1,54 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Andrew Riefenstahl Personal Website - Project Rules
+
+## Overview
+Static personal website/blog for Andrew Riefenstahl - developer, thought leader. Goals: SEO optimization, business outreach, entertainment, thought leadership.
+
+## Tech Stack
+- **Framework**: Astro 5 (99% static generation)
+- **Package Manager**: pnpm (always use `pnpm` not npm/yarn)
+- **Styling**: Tailwind CSS + Shadcn/ui components
+- **Content**: Astro Content Collections for type-safe blog posts
+- **Deployment**: Netlify (see [netlify.toml](mdc:netlify.toml))
+
+## Architecture
+
+### Core Structure
+- [src/pages/](mdc:src/pages) - Route definitions
+- [src/content/posts/](mdc:src/content/posts) - Blog markdown files
+- [src/assets/images/](mdc:src/assets/images) - Blog post images (referenced in frontmatter)
+- [src/components/](mdc:src/components) - Astro + React components
+- [src/layouts/](mdc:src/layouts) - Page templates
+
+### Styling System
+- **Base**: [src/styles/globals.css](mdc:src/styles/globals.css) - CSS variables for theme
+- **Components**: [src/components/ui/](mdc:src/components/ui) - Shadcn components
+- **Config**: [tailwind.config.mjs](mdc:tailwind.config.mjs) - New York style, stone base color
+- **Setup**: [components.json](mdc:components.json) - Shadcn configuration
+
+### Content Management
+- **Schema**: [src/content/config.ts](mdc:src/content/config.ts) - Type-safe post structure
+- **Posts**: Required frontmatter: title, pubDate, description, author, image {url, alt}, tags
+- **Images**: Store in [src/assets/images/](mdc:src/assets/images), reference via image() helper
+
+### Key Files
+- [astro.config.mjs](mdc:astro.config.mjs) - Astro config with sitemap, React integration
+- [package.json](mdc:package.json) - Dependencies (Radix UI, Lucide icons, Sharp for images)
+- [src/lib/utils.ts](mdc:src/lib/utils.ts) - Utility functions (cn for class merging)
+
+## Development Guidelines
+- **Commands**: `pnpm dev`, `pnpm build`, `pnpm preview`
+- **Components**: Use TypeScript, prefer Astro over React unless interactivity needed
+- **Styling**: Use Tailwind utilities, Shadcn components for consistency
+- **Images**: Optimize with Sharp, use proper alt text for SEO
+- **Content**: Follow schema in content config, focus on SEO-friendly structure
+
+## SEO Focus
+- Sitemap auto-generated via @astrojs/sitemap
+- Typography plugin for readable content
+- Proper semantic HTML structure
+- Image optimization with Sharp
