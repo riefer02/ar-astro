@@ -81,14 +81,14 @@
 
   /* Scroll offset for fixed header - accounts for 80px header height */
   #projects {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 60px;
   }
 
   #expertise {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 60px;
   }
 
   #connect {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 60px;
   }
 }
