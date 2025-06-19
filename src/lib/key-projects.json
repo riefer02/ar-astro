@@ -1,6 +1,41 @@
 {
   "projects": [
     {
+      "name": "Flockx.io",
+      "subheader": "AI Agent Workflow Platform",
+      "url": "https://agents.flockx.io",
+      "description": "Senior backend engineer and full-stack developer for Flockx.io's AI agent workflow platform built with Next.js. Architected API routes, authentication systems, and data transformation pipelines while managing cloud infrastructure including AWS S3, Cloudinary, and Redis. Implemented performance optimizations, database migrations, and site reliability engineering. Enhanced platform capabilities with LangGraph workflows, ElasticSearch integration, and third-party services like Intercom and Slack for comprehensive user engagement.",
+      "technologies": [
+        "LangGraph",
+        "LangChain",
+        "Next.js",
+        "API Development",
+        "Authentication",
+        "AWS S3",
+        "Cloudinary",
+        "Redis",
+        "ElasticSearch",
+        "Data Migration",
+        "Performance Optimization",
+        "SRE"
+      ]
+    },
+    {
+      "name": "ABowlofRed.com",
+      "subheader": "Non-Profit Charity",
+      "url": "https://abowlofred.com",
+      "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end platform that underwent a successful migration to Astro for improved performance and developer experience. Maintained focus on high-performance and accessible design throughout the transition. Utilized Strapi CMS on AWS EC2 with Node.js for content management, ensuring optimal image rendering and SEO-friendly metadata. Successfully integrated Stripe for secure ticket transactions, contributing to a significant fundraising success of around $19k.",
+      "technologies": [
+        "Astro",
+        "Strapi CMS",
+        "AWS EC2",
+        "Node.js",
+        "Stripe",
+        "SEO"
+      ]
+    },
+
+    {
       "name": "Propane.com",
       "subheader": "Enterprise Website",
       "url": "https://propane.com",
@@ -14,36 +49,21 @@
         "HubSpot"
       ]
     },
+
     {
-      "name": "Flockx.io",
-      "subheader": "AI Agent Platform",
-      "url": "https://agents.flockx.io",
-      "description": "Led the front-end development of Flockx.io and its companion app using Gatsby and Next.js, establishing a seamless integration with a Django backend. Incorporated cutting-edge features like interactive Mapbox maps and ElasticSearch for dynamic content delivery. Pioneered the use of Intercom and Slack integrations to enhance user engagement and communication, significantly boosting the platform's SEO and overall digital presence.",
-      "technologies": [
-        "LangGraph",
-        "LangChain",
-        "Zep",
-        "Redis",
-        "Next.js",
-        "Django",
-        "Mapbox",
-        "ElasticSearch",
-        "Intercom",
-        "Slack"
-      ]
-    },
-    {
-      "name": "ABowlofRed.com",
-      "subheader": "Non-Profit Charity",
-      "url": "https://abowlofred.com",
-      "description": "Orchestrated the development of ABowlofRed.com, a Gatsby-based front-end platform, with a focus on high-performance and accessible design. Utilized Strapi CMS on AWS EC2 with Node.js for content management, ensuring optimal image rendering and SEO-friendly metadata. Successfully integrated Stripe for secure ticket transactions, contributing to a significant fundraising success of around $19k.",
+      "name": "Tolbert's Restaurant",
+      "subheader": "Modern Restaurant Website",
+      "url": "https://tolbertsrestaurant.com",
+      "description": "Architected a high-performance restaurant website using Astro with a headless WordPress CMS backend. Integrated third-party menu systems and food ordering platforms through custom API routes, leveraging cloud infrastructure for optimal performance and budget efficiency. Features include dynamic calendar integration, contact forms, and seamless third-party service connections - all while maintaining exceptional accessibility and performance standards.",
       "technologies": [
         "Astro",
-        "Strapi CMS",
-        "AWS EC2",
-        "Node.js",
-        "Stripe",
-        "SEO"
+        "Headless WordPress",
+        "Custom API Routes",
+        "Third-party Integrations",
+        "Cloud Infrastructure",
+        "Food Ordering Systems",
+        "Dynamic Calendar",
+        "Performance Optimization"
       ]
     },
     {
@@ -55,16 +75,16 @@
     },
     {
       "name": "AI Bible Quote Generator",
-      "subheader": "AI-Powered Application",
+      "subheader": "Early AI Exploration",
       "url": "https://theosapp.com",
-      "description": "Developed an innovative Bible quote generator application utilizing Supabase, Edge Functions, Deno, and OpenAI's frameworks and REST APIs. This app offers users personalized Bible quotes related to their life experiences, employing vector similarity search to ensure unique results.",
+      "description": "An early exploration into AI-powered applications that, while archaic by today's rapidly evolving AI standards, was an enjoyable project during the emergence of accessible AI technology. Built with Supabase, Edge Functions, Deno, and OpenAI's early frameworks to generate personalized Bible quotes using vector similarity search. A nostalgic reminder of the exciting early days of consumer AI applications.",
       "technologies": [
         "Supabase",
         "Edge Functions",
         "Deno",
         "OpenAI",
-        "REST API",
-        "AI"
+        "Vector Search",
+        "Early AI"
       ]
     },
     {

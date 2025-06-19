@@ -23,11 +23,17 @@ const { metaTags } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{metaTags.title}</title>
     <meta name="description" content={metaTags.description} />
+    <meta name="author" content="Andrew Riefenstahl" />
+    <meta
+      name="keywords"
+      content="Andrew Riefenstahl, web developer, AI specialist, MCP server, HIPAA compliance, full stack development, React, Astro, thought leadership"
+    />
     <meta property="og:title" content={metaTags.title} />
     <meta property="og:description" content={metaTags.description} />
     <meta property="og:image" content={metaTags.image || ogImage.src} />
     <meta property="og:url" content={metaTags.url} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Andrew Riefenstahl" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:creator"
@@ -39,6 +45,30 @@ const { metaTags } = Astro.props;
     <link rel="canonical" href={metaTags.url} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <ViewTransitions />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrew Riefenstahl",
+        "jobTitle": "Full Stack Developer & AI Specialist",
+        "url": "https://andrewriefenstahl.com",
+        "sameAs": [
+          "https://twitter.com/riefer02",
+          "https://github.com/riefer02"
+        ],
+        "knowsAbout": [
+          "Web Development",
+          "Artificial Intelligence",
+          "MCP Server Development",
+          "HIPAA Compliance",
+          "Security Engineering",
+          "Full Stack Development"
+        ],
+        "description": "Full-stack developer specializing in AI applications, secure web development, and MCP server architecture."
+      }
+    </script>
   </head>
   <body class="bg-stone-200 text-gray-600">
     <Header title={metaTags.title} />
