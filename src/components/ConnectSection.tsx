@@ -113,7 +113,7 @@ const ConnectSection = () => {
             <a href="/posts">
               <Button
                 variant="outline"
-                className="border-stone-300 px-8 py-3 text-white hover:bg-stone-600"
+                className="border-white px-8 py-3 text-white hover:bg-white hover:text-stone-800"
                 size="lg"
               >
                 Read My Writing
