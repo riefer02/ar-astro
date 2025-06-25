@@ -76,7 +76,7 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
             return (
               <Card
                 key={project.name}
-                className={`h-full bg-gradient-to-br ${gradientClass} group border-2 transition-all duration-300 hover:shadow-xl`}
+                className={`flex h-full flex-col bg-gradient-to-br ${gradientClass} group border-2 transition-all duration-300 hover:shadow-xl`}
               >
                 <CardHeader className="pb-4">
                   <div className="mb-3 flex items-start justify-between">
@@ -109,35 +109,33 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
                   </p>
 
                   {/* Technologies */}
-                  <div className="space-y-3">
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="secondary"
-                          className="bg-white/70 text-xs text-stone-700 transition-colors hover:bg-white/90"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    {/* Action Button */}
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
-                    >
-                      <Button
-                        variant="outline"
-                        className="mt-3 w-full border-stone-300 text-stone-700 transition-all hover:bg-white/60 group-hover:border-stone-400"
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="bg-white/70 text-xs text-stone-700 transition-colors hover:bg-white/90"
                       >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Visit Project
-                      </Button>
-                    </a>
+                        {tech}
+                      </Badge>
+                    ))}
                   </div>
+
+                  {/* Action Button - pushed to bottom */}
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto block"
+                  >
+                    <Button
+                      variant="outline"
+                      className="w-full border-stone-300 text-stone-700 transition-all hover:bg-white/60 group-hover:border-stone-400"
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Visit Project
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             );
@@ -149,12 +147,14 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
           <p className="mb-4 text-stone-600">
             Interested in seeing more work or discussing a project?
           </p>
-          <Button
-            className="bg-stone-800 px-8 py-3 text-white hover:bg-stone-900"
-            size="lg"
-          >
-            Let's Connect
-          </Button>
+          <a href="#connect">
+            <Button
+              className="bg-stone-800 px-8 py-3 text-white hover:bg-stone-900"
+              size="lg"
+            >
+              Let's Connect
+            </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -2,17 +2,6 @@ import { ChevronDown, Code2, Brain, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
-  const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
   return (
     <section className="relative overflow-hidden rounded-2xl border border-stone-200/50 bg-gradient-to-br from-stone-50 to-stone-100 py-20 shadow-lg">
       {/* Background Pattern */}
@@ -40,7 +29,7 @@ const HeroSection = () => {
 
         {/* Key Stats/Highlights */}
         <div className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="flex flex-col items-center rounded-xl border border-stone-200/50 bg-white/60 p-4 backdrop-blur-sm">
+          <div className="flex flex-col items-center rounded-xl border border-stone-200/50 bg-white/60 p-4 shadow-md backdrop-blur-sm transition-shadow duration-200 hover:shadow-lg">
             <Brain className="mb-2 h-8 w-8 text-stone-700" />
             <span className="text-sm font-medium text-stone-600">
               AI & Machine Learning
@@ -49,7 +38,7 @@ const HeroSection = () => {
               LangGraph • Memory Systems
             </span>
           </div>
-          <div className="flex flex-col items-center rounded-xl border border-stone-200/50 bg-white/60 p-4 backdrop-blur-sm">
+          <div className="flex flex-col items-center rounded-xl border border-stone-200/50 bg-white/60 p-4 shadow-md backdrop-blur-sm transition-shadow duration-200 hover:shadow-lg">
             <Shield className="mb-2 h-8 w-8 text-stone-700" />
             <span className="text-sm font-medium text-stone-600">
               Security & SRE
@@ -58,7 +47,7 @@ const HeroSection = () => {
               HIPAA • Session Management
             </span>
           </div>
-          <div className="flex flex-col items-center rounded-xl border border-stone-200/50 bg-white/60 p-4 backdrop-blur-sm">
+          <div className="flex flex-col items-center rounded-xl border border-stone-200/50 bg-white/60 p-4 shadow-md backdrop-blur-sm transition-shadow duration-200 hover:shadow-lg">
             <Code2 className="mb-2 h-8 w-8 text-stone-700" />
             <span className="text-sm font-medium text-stone-600">
               Full-Stack Development
@@ -71,7 +60,7 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="#projects" onClick={handleScrollToProjects}>
+          <a href="#projects">
             <Button
               className="bg-stone-800 px-8 py-3 text-lg text-white transition-all duration-200 hover:bg-stone-900"
               size="lg"
