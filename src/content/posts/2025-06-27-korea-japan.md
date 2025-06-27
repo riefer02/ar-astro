@@ -4,7 +4,7 @@ pubDate: 2025-06-27
 description: "Travel reflections on Korea and Japan, cultural insights, infrastructure envy, and thoughts on society, education, and the future."
 author: "Andrew Riefenstahl"
 image:
-  url: "../../assets/images/korea-japan.jpg" # Placeholder, update if a suitable image is added
+  url: "../../assets/images/a-journey-through-korea-" # Placeholder, update if a suitable image is added
   alt: "Photo from travels in Korea and Japan."
 tags:
   [
