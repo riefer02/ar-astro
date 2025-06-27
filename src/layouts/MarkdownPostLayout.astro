@@ -2,7 +2,11 @@
 import Layout from "./Layout.astro";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
+import { Toaster } from "../components/ui/toaster";
+import { toast } from "../hooks/use-toast";
+import ShareButton from "../components/ShareButton";
 import { Image } from "astro:assets";
+import React from "react";
 const { frontmatter } = Astro.props;
 
 // Get the current URL from Astro
@@ -201,16 +205,9 @@ const getReadingTime = (content) => {
               ← More Articles
             </Button>
           </a>
-          <a
-            href="mailto:andrew.riefenstahl@gmail.com?subject=Re: {frontmatter.title}"
-          >
-            <Button
-              className="bg-stone-800 text-white transition-colors hover:bg-stone-900"
-            >
-              Discuss This Article
-            </Button>
-          </a>
+          <ShareButton url={fullUrl} client:load />
         </div>
+        <Toaster client:load />
       </footer>
     </div>
   </article>
