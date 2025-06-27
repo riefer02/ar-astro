@@ -129,4 +129,4 @@ Thanks so much. Talk again soon, baby.
 
 ---
 
-Let me know if you'd like any adjustments or additional formatting!
+_Disclaimer: Yes, AI was used to edit this. If you notice any suspiciously well-structured sentences, blame the robots._
