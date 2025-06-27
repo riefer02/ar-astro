@@ -55,7 +55,7 @@ One thing that stood out: stores open late, often 10 am or later. Even on weekni
 
 The cultural heritage sites were stunning. When we first landed in Insadong, Seoul, it felt magical—even while we were jet-lagged. The train systems, buses, and subways were fantastic.
 
-Honestly, I wish we had that in the U.S. It's such a shame how dependent we are on the oil and gas car economy. Don't get me wrong—I love my car. But if I could take a train to see my parents over the weekend or a bus downtown whenever I wanted, I would. This trip was a reminder of how backwards our infrastructure can feel.
+Honestly, I wish we had that in the U.S. It's such a shame how dependent we are on the oil and gas car economy. Don't get me wrong—I love my car. But if I could take a train to see my parents over the weekend or hop on a bus downtown—on a variety of routes, with consistent and frequent service—it would change everything. This trip was a reminder of how backwards our infrastructure can feel.
 
 Of course, you wouldn't know any different unless you traveled, so I'm grateful for the new perspective.
 
