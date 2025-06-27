@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
+const metaTags = {
+  title: "404 Not Found | Andrew Riefenstahl",
+  description:
+    "This page does not exist. Maybe you took a wrong turn at Albuquerque?",
+  url: "https://andrewriefenstahl.com/404",
+};
+---
+
+<Layout metaTags={metaTags}>
+  <div
+    class="flex min-h-[60vh] flex-col items-center justify-center text-center"
+  >
+    <Badge
+      variant="secondary"
+      className="mb-4 bg-stone-100 px-4 py-2 text-lg text-stone-700"
+      >404 Not Found</Badge
+    >
+    <h1 class="mb-4 text-4xl font-bold text-stone-900">Lost in the Code?</h1>
+    <p class="mb-8 max-w-xl text-lg text-stone-600">
+      Sorry, the page you're looking for doesn't exist.<br />
+      Maybe it was refactored out of existence, or you just hit a broken link.<br
+      />
+      Either way, you're still awesome. 🚀
+    </p>
+    <a href="/">
+      <Button variant="default" className="px-6 py-3 text-lg"
+        >Take Me Home</Button
+      >
+    </a>
+  </div>
+</Layout>
+
