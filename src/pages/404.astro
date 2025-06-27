@@ -3,34 +3,46 @@ import Layout from "../layouts/Layout.astro";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 const metaTags = {
-  title: "404 Not Found | Andrew Riefenstahl",
+  title: "Page Lost | Andrew Riefenstahl",
   description:
     "This page does not exist. Maybe you took a wrong turn at Albuquerque?",
-  url: "https://andrewriefenstahl.com/404",
+  url: Astro.url.toString(),
 };
 ---
 
 <Layout metaTags={metaTags}>
-  <div
-    class="flex min-h-[60vh] flex-col items-center justify-center text-center"
-  >
-    <Badge
-      variant="secondary"
-      className="mb-4 bg-stone-100 px-4 py-2 text-lg text-stone-700"
-      >404 Not Found</Badge
+  <section class="flex min-h-[70vh] items-center justify-center py-20">
+    <div
+      class="mx-auto w-full max-w-2xl rounded-2xl border border-stone-200/50 bg-gradient-to-br from-stone-50 to-stone-100 p-8 text-center shadow-lg md:p-12"
     >
-    <h1 class="mb-4 text-4xl font-bold text-stone-900">Lost in the Code?</h1>
-    <p class="mb-8 max-w-xl text-lg text-stone-600">
-      Sorry, the page you're looking for doesn't exist.<br />
-      Maybe it was refactored out of existence, or you just hit a broken link.<br
-      />
-      Either way, you're still awesome. 🚀
-    </p>
-    <a href="/">
-      <Button variant="default" className="px-6 py-3 text-lg"
-        >Take Me Home</Button
+      <Badge
+        variant="secondary"
+        className="mb-6 bg-stone-100 px-4 py-2 text-base text-stone-700"
       >
-    </a>
-  </div>
+        Lost Signal
+      </Badge>
+      <h1
+        class="mb-6 text-4xl font-bold leading-tight text-stone-900 md:text-5xl"
+      >
+        You've wandered off the map
+      </h1>
+      <p
+        class="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-stone-700 md:text-xl"
+      >
+        This page doesn't exist—or maybe it's just hiding.<br />
+        Try heading back home or exploring something new.<br />
+        <span class="text-base text-stone-400"
+          >(And if you think this is a bug, let me know!)</span
+        >
+      </p>
+      <a href="/">
+        <Button
+          className="bg-stone-800 px-8 py-3 text-lg text-white transition-all duration-200 hover:bg-stone-900"
+          size="lg"
+        >
+          Take Me Home
+        </Button>
+      </a>
+    </div>
+  </section>
 </Layout>
-
