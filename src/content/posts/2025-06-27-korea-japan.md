@@ -97,7 +97,7 @@ One last thought—I still believe the only way we fix any of this is by rebuild
 
 And just to circle back to the trip—yes, it was expensive, but totally worth it. I'm excited to do something similar again, maybe in Europe next time to see the castles.
 
-I'm not even well-off, but I wish more humans could experience travel like that. So many of us are struggling to find work. AI is on the rise, with little regulation. People harvest our data and use it against us. And a lot of people don't have the critical thinking skills to see how social media keeps them trapped on a dopamine drip.
+I recognize that travel like this is a privilege, and I genuinely wish more people could have these kinds of experiences. So many are struggling to find work or stability, especially as AI rises with little regulation and our data is constantly being harvested and used against us. It's tough when so many don't have the critical thinking skills to see how social media keeps them trapped on a dopamine drip.
 
 It's wild how talking about my trip can make me analyze the whole world's condition.
 
