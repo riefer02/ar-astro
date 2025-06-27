@@ -65,7 +65,9 @@ Of course, you wouldn't know any different unless you traveled, so I'm grateful 
 
 Japan—especially Tokyo—was so cool to see. The way they organize streets and prioritize pedestrians was refreshing. Cars are at the bottom of the transportation food chain.
 
-We walked everywhere. At some point, my legs got tired, and my knee complained, but we made do. The biggest takeaway from the trip was this reminder: there's a whole world out there, and sometimes we're just stuck in our own little box.
+We walked everywhere. At some point, my legs got tired, and my knee complained, but we made do. The biggest takeaway from the trip was this reminder:
+
+> There's a whole world out there, and sometimes we're just stuck in our own little box.
 
 I feel like the whole world is struggling. Instead of coming together, our leaders keep falling back on basic tribalism, screwing each other over. We see it in our current American leadership. Honestly, it's insane that a con artist, a demagogue, and a liar of the highest degree is in the primary driver's seat. (Let's just call him "the orange man.")
 
@@ -81,15 +83,15 @@ We met an American expat in Tokyo—she'd been a Mormon originally—and she tol
 
 In America, meanwhile, we pick teams and fight over everything. That was interesting to hear.
 
-And yeah—maybe it's obvious now why the Hiroshima Memorial was so powerful for me. I'm yearning for a future where, globally, we can talk about our problems and move resources to grow and heal communities instead of undercutting each other so a select few can buy their \$9 million yachts.
-
-I really hope for that future.
+And yeah—maybe it's obvious now why the Hiroshima Memorial was so powerful for me. I'm yearning for a future where, globally, we can talk about our problems and move resources to grow and heal communities instead of undercutting each other so a select few can buy their $9 million yachts.
 
 ---
 
 ## 🎓 Education Is Everything
 
 One last thought—I still believe the only way we fix any of this is by rebuilding our education system. It's been gutted over the past 30+ years. That's why we end up promoting leaders like the orange man—people lack critical thinking. Money talks, and nonsense walks.
+
+> Education is everything. If we want a better future, it starts there.
 
 ---
 
@@ -99,7 +101,7 @@ And just to circle back to the trip—yes, it was expensive, but totally worth i
 
 I recognize that travel like this is a privilege, and I genuinely wish more people could have these kinds of experiences. So many are struggling to find work or stability, especially as AI rises with little regulation and our data is constantly being harvested and used against us. It's tough when so many don't have the critical thinking skills to see how social media keeps them trapped on a dopamine drip.
 
-It's wild how talking about my trip can make me analyze the whole world's condition.
+> Everyone deserves the chance to see the world and gain new perspectives.
 
 And yes—Korea and Japan have problems too. In Korea, while we were there, a bus union strike started and ended successfully in one day. I wish Americans hadn't been brainwashed to think unions are evil. They're one of the most powerful tools we have to improve our quality of life. Sure, there's always some corruption and factionalism, but everything now is so imbalanced—Big Tech is controlling the narrative.
 
