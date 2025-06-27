@@ -7,11 +7,10 @@ import { toast } from "../hooks/use-toast";
 import ShareButton from "../components/ShareButton";
 import { Image } from "astro:assets";
 import React from "react";
-import { getSiteUrl } from "../lib/get-site-url";
 const { frontmatter } = Astro.props;
 
-// Get the full current URL dynamically for all environments
-const fullUrl = getSiteUrl(Astro) + Astro.url.pathname;
+// Get the full current URL using Astro's built-in approach
+const fullUrl = Astro.url.toString();
 
 const metaTags = {
   title: frontmatter.title,
