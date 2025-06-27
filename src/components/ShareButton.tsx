@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import { toast } from "../hooks/use-toast";
-import React from "react";
 
 export default function ShareButton({ url }: { url: string }) {
   return (
