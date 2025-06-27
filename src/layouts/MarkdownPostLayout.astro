@@ -9,9 +9,8 @@ import { Image } from "astro:assets";
 import React from "react";
 const { frontmatter } = Astro.props;
 
-// Get the current URL from Astro
-const currentUrl = Astro.url.pathname;
-const fullUrl = `https://andrewriefenstahl.com${currentUrl}`;
+// Get the full current URL dynamically for all environments
+const fullUrl = Astro.url.toString();
 
 const metaTags = {
   title: frontmatter.title,
