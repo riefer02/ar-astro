@@ -4,12 +4,19 @@ import path from "path";
 import process from "process";
 import { fileURLToPath } from "url";
 import OpenAI from "openai";
+import sharp from "sharp";
 import "dotenv/config";
 
 // --- CONFIG ---
-const IMAGE_WIDTH = 1792;
-const IMAGE_HEIGHT = 1024;
-const IMAGE_SIZE = `${IMAGE_WIDTH}x${IMAGE_HEIGHT}`;
+// Generation size from the model (more detail; we'll downscale after)
+const GENERATION_WIDTH = 1792;
+const GENERATION_HEIGHT = 1024;
+const IMAGE_SIZE = `${GENERATION_WIDTH}x${GENERATION_HEIGHT}`;
+
+// Target OG dimensions and compression
+const OG_WIDTH = 1200;
+const OG_HEIGHT = 630;
+const JPEG_QUALITY = 70; // aim for a few hundred KB
 const IMAGE_DIR = path.join(process.cwd(), "src/assets/images");
 
 // --- UTILS ---
@@ -75,9 +82,29 @@ function extractFrontmatter(md) {
     console.error("Failed to download generated image:", res.statusText);
     process.exit(1);
   }
-  const buf = Buffer.from(await res.arrayBuffer());
-  await fs.writeFile(outPath, buf);
-  console.log("OG image saved to:", outPath);
+  const originalBuffer = Buffer.from(await res.arrayBuffer());
+
+  // Optimize: resize to OG size and compress JPEG
+  let optimizedBuffer;
+  try {
+    optimizedBuffer = await sharp(originalBuffer)
+      .resize(OG_WIDTH, OG_HEIGHT, { fit: "cover", position: "attention" })
+      .jpeg({
+        quality: JPEG_QUALITY,
+        progressive: true,
+        mozjpeg: true,
+        chromaSubsampling: "4:2:0",
+      })
+      .toBuffer();
+  } catch (e) {
+    console.error("Image optimization failed, writing original buffer:", e);
+    optimizedBuffer = originalBuffer;
+  }
+
+  await fs.writeFile(outPath, optimizedBuffer);
+
+  const kb = (optimizedBuffer.length / 1024).toFixed(0);
+  console.log(`OG image saved to: ${outPath} (${kb} KB)`);
 
   // TODO: Add background image generation logic here
 })();
