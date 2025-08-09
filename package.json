@@ -22,7 +22,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.58",
     "@types/react-dom": "^18.2.19",
-    "astro": "^5.12.8",
+    "astro": "^5.12.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "dotenv": "^17.0.0",
