@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Favicon from "../components/Favicon.astro";
 import { ViewTransitions } from "astro:transitions";
 import ogImage from "../assets/ar-ogimage-optimized.jpg";
 import "../styles/globals.css";
@@ -45,6 +46,7 @@ const { metaTags } = Astro.props;
     <link rel="canonical" href={metaTags.url} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <ViewTransitions />
+    <Favicon />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
