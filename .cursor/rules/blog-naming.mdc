@@ -1,0 +1,18 @@
+---
+globs: src/content/posts/*.md
+description: Enforce blog post filenames starting with the publish date for organization and chronological sorting
+---
+
+# Blog post filename convention
+
+All blog markdown files in `src/content/posts/` must begin with the publish date in `YYYY-MM-DD-` format, followed by a short, hyphenated slug.
+
+Examples:
+
+- [2025-04-30-checking-in.md](mdc:src/content/posts/2025-04-30-checking-in.md)
+- [2025-06-27-korea-japan.md](mdc:src/content/posts/2025-06-27-korea-japan.md)
+
+Guidelines:
+
+- Use lowercase and hyphens; avoid spaces and special characters
+- Keep slugs concise and descriptive

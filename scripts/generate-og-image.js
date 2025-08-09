@@ -47,7 +47,7 @@ function extractFrontmatter(md) {
   const slug = slugify(title);
 
   // Compose prompt for OpenAI image generation
-  const prompt = `Create a visually striking, web-optimized Open Graph image for a blog post titled: "${title}".\n\nDescription: ${description}\n\nThe image should be 1200x630 pixels, suitable for social sharing, and visually represent the themes of travel in Korea and Japan, cultural exploration, and personal reflection. Avoid text in the image. Use vibrant, inviting colors and a modern, clean style. Optimize for clarity and impact at small sizes. Do not include any faces or copyrighted content.`;
+  const prompt = `Create a visually striking, web-optimized Open Graph image for a blog post titled: "${title}".\n\nDescription: ${description}\n\nThe image should be suitable for social sharing and visually represent the themes and concepts from the blog post. Include a cute Shih Tzu dog somewhere in the composition as a central visual element. Avoid text in the image. Use vibrant, inviting colors and a modern, clean style. Optimize for clarity and impact at small sizes. Do not include any human faces or copyrighted content.`;
 
   // OpenAI API setup
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
