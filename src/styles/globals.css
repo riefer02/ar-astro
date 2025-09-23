@@ -92,3 +92,23 @@
     scroll-margin-top: 60px;
   }
 }
+
+/* Typography and code block fixes */
+@layer base {
+  /* Ensure fenced code blocks (Shiki) use our dark background and readable text */
+  .prose pre.astro-code {
+    background-color: rgb(28 25 23) !important; /* stone-900 */
+    color: #f5f5f4 !important; /* stone-100 */
+  }
+  .dark .prose pre.astro-code {
+    background-color: rgb(28 25 23) !important;
+    color: #f5f5f4 !important;
+  }
+
+  /* Reset inline code styling inside fenced blocks so it doesn't get white pills */
+  .prose pre code {
+    background: transparent !important;
+    padding: 0 !important;
+    color: inherit !important;
+  }
+}

@@ -21,8 +21,6 @@ tags:
 
 _How I built a custom AI code review system that rivals CodeRabbit at a fraction of the cost, leverages organizational knowledge, and provides architectural insights that generic tools miss._
 
----
-
 When OpenAI announced their new Codex model, I was immediately intrigued. Here was a tool that could potentially rival Claude's code analysis capabilities, but at a significantly lower cost per token. The problem? There was no ready-made GitHub Action like Claude Code Review, no context-aware analysis like CodeRabbit, and definitely no way to leverage our organization's existing knowledge base.
 
 So I decided to build my own.
@@ -105,7 +103,7 @@ The system has already caught issues that would have made it to production:
 **Security Finding:**
 
 ```
-High · `ci/workflows/code-review.yml:~27` · Global `npm i -g @openai/codex`
+High · `ci/workflows/code-review.yml:~123` · Global `npm i -g @openai/codex`
 on every run fetches an unpinned package with repo secrets in env, so a supply‑chain
 compromise could leak secrets. Pin to a vetted version.
 ```
@@ -113,7 +111,7 @@ compromise could leak secrets. Pin to a vetted version.
 **Logic Bug:**
 
 ```
-services/chunking_service.py:~333 · When the post-check still shows
+services/chunking_service.py:~69 · When the post-check still shows
 final_chunk_size > MAX_CHUNK_SIZE, do not drop the chunk—retry emergency
 chunking with a smaller budget so that no segment of the original payload is lost.
 ```
@@ -121,7 +119,7 @@ chunking with a smaller budget so that no segment of the original payload is los
 **Memory Issue:**
 
 ```
-services/chunking_service.py:~309 · minimal_chunk.copy() is shallow;
+services/chunking_service.py:~420 · minimal_chunk.copy() is shallow;
 take a deepcopy before mutating chunk_number so previously appended emergency
 chunks keep their own metadata values.
 ```
@@ -219,8 +217,6 @@ If you're interested in building something similar, the key insights are:
 5. **Test locally first** - CI debugging is painful
 
 The future of code review isn't just about catching bugs—it's about encoding organizational wisdom and making it accessible to every developer, every time they write code.
-
----
 
 _This system represents about 20% of the engineering effort of existing solutions while delivering 80% of the value, plus organizational context that no external tool can provide. Sometimes the best tool is the one you build yourself._
 
