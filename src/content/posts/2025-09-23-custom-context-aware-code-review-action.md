@@ -149,6 +149,34 @@ Even when authentication worked, the Codex CLI wasn't honoring configuration fil
 codex exec --full-auto --model "gpt-5-codex" --sandbox "read-only" --output-last-message review.md
 ```
 
+### **The "Argument List Too Long" Crisis**
+
+Just when everything seemed to work, we hit Linux's argument length limit. Large PRs were generating prompts that exceeded bash's ~1MB argument size limit, causing the entire CI pipeline to fail with cryptic "Argument list too long" errors.
+
+The breakthrough came from understanding that Codex CLI supports stdin input—a feature buried in the help documentation. Instead of passing the prompt as a command argument, we could pipe it directly:
+
+```bash
+# Before (broken for large PRs):
+codex exec "$(cat prompt.md)"
+
+# After (handles any size):
+cat prompt.md | codex exec
+```
+
+### **Defensive Programming for CI Stability**
+
+To prevent monster PRs from breaking the pipeline, we added a simple size check that gracefully skips AI review for extremely large changes:
+
+```bash
+PROMPT_SIZE=$(wc -c < prompt.md)
+if [ "$PROMPT_SIZE" -gt 1048576 ]; then  # 1MB limit
+  echo "⚠️ Prompt too large. Skipping AI review."
+  exit 0  # Success exit - doesn't break CI
+fi
+```
+
+This ensures that even 30,000-line PRs won't crash the system—they just skip automated review and continue with manual processes.
+
 ### **Inline Comment Precision**
 
 Getting inline comments to appear on the correct lines required parsing the AI output for specific patterns and converting file line numbers to diff line numbers—a requirement of GitHub's API that's not well documented.
