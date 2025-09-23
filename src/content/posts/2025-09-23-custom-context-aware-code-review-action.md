@@ -17,10 +17,6 @@ tags:
   ]
 ---
 
-# Building a Context-Aware AI Code Review System: Beyond GitHub Actions
-
-_How I built a custom AI code review system that rivals CodeRabbit at a fraction of the cost, leverages organizational knowledge, and provides architectural insights that generic tools miss._
-
 When OpenAI announced their new Codex model, I was immediately intrigued. Here was a tool that could potentially rival Claude's code analysis capabilities, but at a significantly lower cost per token. The problem? There was no ready-made GitHub Action like Claude Code Review, no context-aware analysis like CodeRabbit, and definitely no way to leverage our organization's existing knowledge base.
 
 So I decided to build my own.
