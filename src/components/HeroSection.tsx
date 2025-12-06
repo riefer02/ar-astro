@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Code2, Globe, Terminal } from "lucide-react";
+import { ArrowRight, Brain, Code2, Terminal, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-2xl text-lg leading-relaxed text-stone-600 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both sm:text-xl">
-            I'm <strong>Andrew Riefenstahl</strong>. Full-stack engineer and AI
+            I'm <strong>Andrew Riefenstahl</strong>. Senior software engineer and AI
             specialist. I build resilient systems and explore the intersection
             of human cognition and artificial intelligence.
           </p>
@@ -68,47 +68,44 @@ const HeroSection = () => {
 
           {/* Tech Stack / "Flare" Visual - Floating Cards */}
           <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 fill-mode-both sm:grid-cols-3">
-            {/* Card 1: AI */}
-            <div className="group relative overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-stone-900 group-hover:text-white">
-                <Brain className="h-6 w-6" />
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-stone-900">
-                AI Architecture
-              </h3>
-              <p className="text-stone-600">
-                Building autonomous agents, memory systems, and RAG pipelines
-                that solve complex problems.
-              </p>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-stone-100 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
-            </div>
-
-            {/* Card 2: Full Stack */}
+            {/* Card 1: Senior Engineering */}
             <div className="group relative overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-stone-900 group-hover:text-white">
                 <Code2 className="h-6 w-6" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-stone-900">
-                Full-Stack Eng
+                Senior Engineering
               </h3>
               <p className="text-stone-600">
-                Creating scalable, type-safe applications with React, Next.js,
-                and modern backend architectures.
+                Scalable architectures, automation pipelines, and robust full-stack solutions.
               </p>
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-stone-100 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>
 
-            {/* Card 3: Philosophy/Human */}
+            {/* Card 2: AI & Future Tech */}
             <div className="group relative overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-stone-900 group-hover:text-white">
-                <Globe className="h-6 w-6" />
+                <Brain className="h-6 w-6" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-stone-900">
-                Digital Philosophy
+                AI Innovation
               </h3>
               <p className="text-stone-600">
-                Writing about the societal impact of technology, developer
-                health, and sustainable systems.
+                Building autonomous agents, memory systems, and RAG pipelines for complex problems.
+              </p>
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-stone-100 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
+            </div>
+
+            {/* Card 3: Leadership & Ethics */}
+            <div className="group relative overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-stone-900 group-hover:text-white">
+                <Heart className="h-6 w-6" />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-stone-900">
+                Leadership & Ethics
+              </h3>
+              <p className="text-stone-600">
+                Solution-oriented mentorship with a focus on sustainable, human-centric tech.
               </p>
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-stone-100 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>

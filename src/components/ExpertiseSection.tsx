@@ -1,17 +1,13 @@
 import {
   Bot,
-  Shield,
   Code2,
-  Database,
-  Cloud,
-  Settings,
   Users,
   Zap,
   Lock,
-  TrendingUp,
   Cpu,
-  Network,
-  Music,
+  Brain,
+  Heart,
+  Globe,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,51 +15,51 @@ import { Badge } from "@/components/ui/badge";
 const ExpertiseSection = () => {
   const expertiseAreas = [
     {
-      title: "AI & Machine Learning",
-      icon: Bot,
-      description:
-        "Building intelligent systems with long-term memory and contextual understanding",
-      skills: [
-        "AI Agent Workflows",
-        "Long-term Memory AI Models",
-        "User Preference Learning",
-        "Business Logic Integration",
-        "LangGraph & LangChain",
-        "Vector Similarity Search",
-        "Model Context Protocol (MCP) Servers",
-        "RAG Applications",
-      ],
-    },
-    {
-      title: "Security & Site Reliability",
-      icon: Shield,
-      description:
-        "Enterprise-grade security with HIPAA compliance and robust infrastructure",
-      skills: [
-        "HIPAA-Compliant Firewalls",
-        "Session Management",
-        "OAuth & 2FA Implementation",
-        "Infrastructure Automation",
-        "CI/CD Pipeline Construction",
-        "Monitoring & Alerting",
-        "Performance Optimization",
-        "Security Auditing",
-      ],
-    },
-    {
-      title: "Full-Stack Development",
+      title: "Modern Tech Ecosystem",
       icon: Code2,
       description:
-        "Modern web applications with cutting-edge frameworks and seamless integrations",
+        "Full-cycle development from high-performance frontends to robust, event-driven backends.",
       skills: [
-        "React & Next.js",
-        "Python (Django/Flask)",
-        "TypeScript & JavaScript",
-        "Astro & Gatsby",
-        "PostgreSQL & MongoDB",
-        "API Development",
-        "Real-time Applications",
-        "E-commerce Solutions",
+        "React & Astro",
+        "TanStack Router",
+        "TypeScript Ecosystem",
+        "Workers & Cron Jobs",
+        "Event Buses",
+        "Automation Pipelines",
+        "Scalable Packages",
+        "Deployment Strategy",
+      ],
+    },
+    {
+      title: "Architectural Philosophy",
+      icon: Brain,
+      description:
+        "Pragmatic, solution-oriented engineering. avoiding over-engineering while keeping a vision for the future.",
+      skills: [
+        "Solution-First Mindset",
+        "Right-Sized Scalability",
+        "Future-Proof Vision",
+        "Complexity Management",
+        "Sustainable Codebases",
+        "System Design",
+        "Performance Tuning",
+        "Tech Debt Management",
+      ],
+    },
+    {
+      title: "Leadership & Culture",
+      icon: Users,
+      description:
+        "Leading with empathy, clarity, and an ethical lens. Fostering a collaborative, 'no-drama' environment.",
+      skills: [
+        "Strategic Goal Setting",
+        "Team Inspiration",
+        "Ethical Leadership",
+        "Mentorship",
+        "Cross-Functional Comms",
+        "Conflict Resolution",
+        "Senior Staff Execution",
+        "Freelance Adaptability",
       ],
     },
   ];
@@ -71,26 +67,26 @@ const ExpertiseSection = () => {
   const specializations = [
     {
       icon: Cpu,
-      label: "MCP Server Development",
-      desc: "Model Context Protocol",
+      label: "System Architecture",
+      desc: "Scalable & Maintainable",
     },
     {
-      icon: Database,
-      label: "Memory Systems",
-      desc: "Persistent AI Knowledge",
+      icon: Zap,
+      label: "Automation",
+      desc: "CI/CD & Workflows",
     },
     {
-      icon: Network,
-      label: "Agent Orchestration",
-      desc: "Multi-Agent Workflows",
+      icon: Globe,
+      label: "Web Performance",
+      desc: "Core Vitals & SEO",
     },
-    { icon: Lock, label: "Enterprise Security", desc: "HIPAA & Compliance" },
+    { icon: Lock, label: "Security", desc: "Best Practices & Auth" },
     {
-      icon: Cloud,
-      label: "Cloud Architecture",
-      desc: "Scalable Infrastructure",
+      icon: Heart,
+      label: "Human Centric",
+      desc: "Mindful & Ethical",
     },
-    { icon: Zap, label: "Automation", desc: "CI/CD & DevOps" },
+    { icon: Bot, label: "AI Integration", desc: "RAG & Agents" },
   ];
 
   return (
@@ -106,12 +102,10 @@ const ExpertiseSection = () => {
             Core Competencies
           </Badge>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-stone-900 md:text-5xl">
-            Technical Expertise
+            Technical & Leadership DNA
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-stone-600">
-            I'm passionate about building meaningful software that helps people.
-            Here are the areas where I spend my time learning, creating, and
-            solving problems.
+            I bring a holistic approach to software engineering—combining deep technical expertise with a focus on sustainable architecture and human-centric leadership.
           </p>
         </div>
 
