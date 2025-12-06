@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-stone-50 py-24 md:py-32">
+    <section className="relative w-full overflow-hidden bg-stone-50 py-16 md:py-32">
       {/* Abstract Background Shapes for Depth */}
       <div className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-stone-200/40 blur-[120px]" />
       <div className="absolute -right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-stone-300/30 blur-[120px]" />

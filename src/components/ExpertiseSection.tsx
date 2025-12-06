@@ -94,7 +94,7 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section id="expertise" className="relative py-24 md:py-32">
+    <section id="expertise" className="relative py-16 md:py-32">
        {/* Background Elements - Subtle continuation of Hero theme */}
        <div className="absolute inset-0 -z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
        <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] bg-gradient-to-b from-stone-100/50 to-transparent blur-[120px]" />

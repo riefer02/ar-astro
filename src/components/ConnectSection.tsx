@@ -44,7 +44,7 @@ const ConnectSection = () => {
   ];
 
   return (
-    <section id="connect" className="relative py-24 md:py-32">
+    <section id="connect" className="relative py-16 md:py-32">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
       

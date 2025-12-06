@@ -42,7 +42,7 @@ const getProjectIcon = (projectName: string) => {
 
 const EnhancedKeyProjects = ({ keyProjects }: Props) => {
   return (
-    <section id="projects" className="relative py-24 md:py-32 bg-stone-50">
+    <section id="projects" className="relative py-16 md:py-32 bg-stone-50">
        {/* Background Pattern */}
        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
