@@ -21,6 +21,8 @@ const { title, description, pubDate, image, author } = post.data;
         <Image
           src={image.url}
           alt={image.alt}
+          widths={[400, 800]}
+          sizes="(max-width: 640px) 100vw, 400px"
           class="h-48 w-full rounded-t-lg object-cover"
         />
       </CardHeader>
