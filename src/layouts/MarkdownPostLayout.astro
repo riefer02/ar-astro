@@ -164,10 +164,10 @@ const getReadingTime = (content) => {
               src={frontmatter.image.url || frontmatter.image}
               alt={frontmatter.image.alt || frontmatter.title}
               loading="eager"
-              width={800}
-              height={400}
+              widths={[375, 720, 900, 1350, 1800]}
+              sizes="(max-width: 896px) 100vw, 896px"
               format="webp"
-              quality={85}
+              quality={90}
             />
           </div>
         )
