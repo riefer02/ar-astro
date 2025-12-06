@@ -1,12 +1,21 @@
 ---
-title: "Unchecked Capitalism and the Erosion of Social Systems"
+title: "Profit Over People: Unchecked Capitalism and the Erosion of Social Systems"
 pubDate: 2025-12-06
-description: "A discussion on how the lack of government oversight in capitalism can destroy social systems for the majority."
+description: "A critical look at how unchecked capitalism and corporate investments in warfare—highlighted by Spotify's recent defense spending—threaten social systems, urging a return to community, education, and stewardship."
 author: "Andrew Riefenstahl"
 image:
   url: "../../assets/images/educated-citizens.jpg"
-  alt: "Conceptual image representing social systems"
-tags: ["capitalism", "government", "social systems", "philosophy", "economics"]
+  alt: "Conceptual illustration of society's structure under capitalism"
+tags:
+  [
+    "capitalism",
+    "government",
+    "social systems",
+    "corporate ethics",
+    "imagined order",
+    "activism",
+    "stewardship",
+  ]
 ---
 
 In this post, I want to discuss a critical topic: how capitalism, when left without government oversight, can destroy the social systems that support the majority of people.
