@@ -4,8 +4,8 @@ pubDate: 2025-12-06
 description: "A critical look at how unchecked capitalism and corporate investments in warfare—highlighted by Spotify's recent defense spending—threaten social systems, urging a return to community, education, and stewardship."
 author: "Andrew Riefenstahl"
 image:
-  url: "../../assets/images/educated-citizens.jpg"
-  alt: "Conceptual illustration of society's structure under capitalism"
+  url: "../../assets/images/profit-over-people-unchecked-capitalism-and-the-erosion-of-social-systems-og.jpg"
+  alt: "Conceptual illustration of society's structure under capitalism with a cute Shih Tzu"
 tags:
   [
     "capitalism",
