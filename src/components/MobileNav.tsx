@@ -21,7 +21,7 @@ const MobileNav = () => {
         <Button
           variant="ghost"
           size="icon"
-          className="text-stone-100 hover:bg-stone-500/20 md:hidden"
+          className="text-white hover:bg-white/10 hover:text-white md:hidden"
         >
           <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle navigation menu</span>

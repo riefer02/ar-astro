@@ -41,7 +41,7 @@ const getReadingTime = (content) => {
 
 <Layout metaTags={metaTags}>
   <!-- Back Navigation -->
-  <div class="pt-8">
+  <div class="px-6 pt-8">
     <div class="mx-auto max-w-4xl">
       <a
         href="/posts"
@@ -65,7 +65,7 @@ const getReadingTime = (content) => {
   </div>
 
   <!-- Main Article -->
-  <article class="pb-16">
+  <article class="pb-16 px-6">
     <div class="mx-auto max-w-4xl">
       <!-- Article Header (natural, no cards) -->
       <header class="mb-8 text-center">
@@ -164,10 +164,10 @@ const getReadingTime = (content) => {
               src={frontmatter.image.url || frontmatter.image}
               alt={frontmatter.image.alt || frontmatter.title}
               loading="eager"
-              width={800}
-              height={400}
+              widths={[375, 720, 900, 1350, 1800]}
+              sizes="(max-width: 896px) 100vw, 896px"
               format="webp"
-              quality={85}
+              quality={90}
             />
           </div>
         )
@@ -178,9 +178,10 @@ const getReadingTime = (content) => {
         class="prose prose-stone mx-auto max-w-none lg:prose-lg xl:prose-xl
                 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-stone-900
                 prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
-                prose-h4:text-xl prose-p:text-lg prose-p:leading-relaxed prose-p:text-stone-700 prose-a:font-medium
-                prose-a:text-stone-800 prose-a:no-underline
-                hover:prose-a:text-stone-600 hover:prose-a:underline prose-blockquote:rounded-r-lg prose-blockquote:border-l-4 prose-blockquote:border-stone-300 prose-blockquote:bg-stone-50 prose-blockquote:py-4 prose-blockquote:pl-6 prose-blockquote:pr-4
+                prose-h4:text-xl prose-p:text-lg prose-p:leading-relaxed prose-p:text-stone-700
+                prose-a:font-medium prose-a:text-stone-800 prose-a:underline prose-a:decoration-stone-300 prose-a:underline-offset-4
+                hover:prose-a:text-stone-900 hover:prose-a:decoration-stone-600 prose-a:transition-all prose-a:duration-200
+                prose-blockquote:rounded-r-lg prose-blockquote:border-l-4 prose-blockquote:border-stone-300 prose-blockquote:bg-stone-50 prose-blockquote:py-4 prose-blockquote:pl-6 prose-blockquote:pr-4
                 prose-blockquote:not-italic prose-blockquote:text-stone-700 prose-strong:font-semibold prose-strong:text-stone-900 prose-code:rounded prose-code:font-mono
                 prose-code:text-base prose-code:text-stone-800 prose-code:before:content-[''] prose-code:after:content-[''] prose-pre:overflow-x-auto
                 prose-pre:rounded-lg prose-pre:bg-stone-900
