@@ -7,6 +7,7 @@ import {
   MessageSquare,
   Calculator,
   Globe,
+  ArrowUpRight,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -39,31 +40,24 @@ const getProjectIcon = (projectName: string) => {
   return Globe;
 };
 
-const getProjectGradient = (index: number) => {
-  const gradients = [
-    "from-blue-50 to-indigo-100 border-blue-200",
-    "from-green-50 to-emerald-100 border-green-200",
-    "from-purple-50 to-violet-100 border-purple-200",
-    "from-orange-50 to-amber-100 border-orange-200",
-    "from-pink-50 to-rose-100 border-pink-200",
-    "from-cyan-50 to-teal-100 border-cyan-200",
-    "from-gray-50 to-slate-100 border-gray-200",
-  ];
-  return gradients[index % gradients.length];
-};
-
 const EnhancedKeyProjects = ({ keyProjects }: Props) => {
   return (
-    <section id="projects" className="py-16">
-      <div className="mx-auto max-w-7xl">
+    <section id="projects" className="relative py-24 md:py-32 bg-stone-50">
+       {/* Background Pattern */}
+       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+
+      <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-stone-900 md:text-4xl">
-            Things I've Built
+        <div className="mb-16 text-center">
+          <Badge variant="outline" className="mb-4 border-stone-200 bg-white/50 px-3 py-1 text-stone-600 backdrop-blur-sm">
+             Portfolio
+          </Badge>
+          <h2 className="mb-6 text-3xl font-bold tracking-tight text-stone-900 md:text-5xl">
+            Selected Work
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-stone-600">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-stone-600">
             A collection of projects I'm proud of - from helping nonprofits
-            raise funds to building AI platforms that solve real problems
+            raise funds to building AI platforms that solve real problems.
           </p>
         </div>
 
@@ -71,26 +65,26 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {keyProjects.projects.map((project, index) => {
             const IconComponent = getProjectIcon(project.name);
-            const gradientClass = getProjectGradient(index);
 
             return (
               <Card
                 key={project.name}
-                className={`flex h-full flex-col bg-gradient-to-br ${gradientClass} group border-2 transition-all duration-300 hover:shadow-xl`}
+                className="group relative flex h-full flex-col overflow-hidden border-stone-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-stone-200/50"
               >
                 <CardHeader className="pb-4">
-                  <div className="mb-3 flex items-start justify-between">
-                    <div className="rounded-xl bg-white p-3 shadow-sm transition-shadow group-hover:shadow-md">
-                      <IconComponent className="h-6 w-6 text-stone-700" />
+                  <div className="mb-6 flex items-start justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-700 transition-colors duration-300 group-hover:bg-stone-900 group-hover:text-white">
+                      <IconComponent className="h-6 w-6" />
                     </div>
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 text-stone-600 transition-colors hover:text-stone-900"
+                      className="group/link flex items-center gap-1 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-xs font-medium text-stone-600 transition-all hover:border-stone-900 hover:text-stone-900"
                       aria-label={`Visit ${project.name}`}
                     >
-                      <ExternalLink className="h-5 w-5" />
+                      Visit
+                      <ArrowUpRight className="h-3 w-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                     </a>
                   </div>
 
@@ -98,44 +92,29 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
                     {project.name}
                   </CardTitle>
 
-                  <p className="mb-3 text-sm font-medium text-stone-600">
+                  <p className="text-sm font-medium text-stone-500">
                     {project.subheader}
                   </p>
                 </CardHeader>
 
                 <CardContent className="flex flex-grow flex-col">
-                  <p className="mb-6 flex-grow text-sm leading-relaxed text-stone-700">
+                  <p className="mb-8 flex-grow text-sm leading-relaxed text-stone-600">
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
-                  <div className="mb-4 flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="secondary"
-                        className="bg-white/70 text-xs text-stone-700 transition-colors hover:bg-white/90"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
+                  <div className="mt-auto">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="bg-stone-100 text-xs font-normal text-stone-600 transition-colors group-hover:bg-stone-200 group-hover:text-stone-900"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
-
-                  {/* Action Button - pushed to bottom */}
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto block"
-                  >
-                    <Button
-                      variant="outline"
-                      className="w-full border-stone-300 text-stone-700 transition-all hover:bg-white/60 group-hover:border-stone-400"
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Visit Project
-                    </Button>
-                  </a>
                 </CardContent>
               </Card>
             );
@@ -143,13 +122,13 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
         </div>
 
         {/* Additional CTA */}
-        <div className="mt-12 text-center">
-          <p className="mb-4 text-stone-600">
+        <div className="mt-20 text-center">
+          <p className="mb-6 text-lg font-medium text-stone-600">
             Interested in seeing more work or discussing a project?
           </p>
           <a href="#connect">
             <Button
-              className="bg-stone-800 px-8 py-3 text-white hover:bg-stone-900"
+              className="h-12 rounded-full px-8 text-base font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
               size="lg"
             >
               Let's Connect

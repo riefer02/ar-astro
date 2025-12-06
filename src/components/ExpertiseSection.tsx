@@ -33,7 +33,6 @@ const ExpertiseSection = () => {
         "Model Context Protocol (MCP) Servers",
         "RAG Applications",
       ],
-      gradient: "from-blue-50 to-indigo-50 border-blue-200",
     },
     {
       title: "Security & Site Reliability",
@@ -50,7 +49,6 @@ const ExpertiseSection = () => {
         "Performance Optimization",
         "Security Auditing",
       ],
-      gradient: "from-green-50 to-emerald-50 border-green-200",
     },
     {
       title: "Full-Stack Development",
@@ -67,7 +65,6 @@ const ExpertiseSection = () => {
         "Real-time Applications",
         "E-commerce Solutions",
       ],
-      gradient: "from-purple-50 to-violet-50 border-purple-200",
     },
   ];
 
@@ -97,14 +94,21 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section id="expertise" className="py-16">
-      <div className="mx-auto max-w-7xl">
+    <section id="expertise" className="relative py-24 md:py-32">
+       {/* Background Elements - Subtle continuation of Hero theme */}
+       <div className="absolute inset-0 -z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+       <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] bg-gradient-to-b from-stone-100/50 to-transparent blur-[120px]" />
+
+      <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-stone-900 md:text-4xl">
-            What I Do
+          <Badge variant="outline" className="mb-4 border-stone-200 bg-white/50 px-3 py-1 text-stone-600 backdrop-blur-sm">
+            Core Competencies
+          </Badge>
+          <h2 className="mb-6 text-3xl font-bold tracking-tight text-stone-900 md:text-5xl">
+            Technical Expertise
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-stone-600">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-stone-600">
             I'm passionate about building meaningful software that helps people.
             Here are the areas where I spend my time learning, creating, and
             solving problems.
@@ -112,32 +116,34 @@ const ExpertiseSection = () => {
         </div>
 
         {/* Main Expertise Areas */}
-        <div className="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="mb-20 grid grid-cols-1 gap-8 lg:grid-cols-3">
           {expertiseAreas.map((area, index) => {
             const IconComponent = area.icon;
             return (
               <Card
                 key={index}
-                className={`h-full bg-gradient-to-br ${area.gradient} border-2 transition-all duration-300 hover:shadow-lg`}
+                className="group relative h-full overflow-hidden border-stone-200 bg-white/80 p-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-stone-200/50"
               >
-                <CardHeader className="pb-4 text-center">
-                  <div className="mx-auto mb-4 w-fit rounded-xl bg-white p-3 shadow-sm">
-                    <IconComponent className="h-8 w-8 text-stone-700" />
+                <div className="absolute inset-0 bg-gradient-to-br from-stone-50/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                
+                <CardHeader className="relative pb-4">
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-100 text-stone-700 transition-colors duration-300 group-hover:bg-stone-900 group-hover:text-white">
+                    <IconComponent className="h-7 w-7" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-stone-900">
+                  <CardTitle className="text-2xl font-bold text-stone-900">
                     {area.title}
                   </CardTitle>
-                  <p className="text-sm leading-relaxed text-stone-600">
+                  <p className="text-base leading-relaxed text-stone-600">
                     {area.description}
                   </p>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
+                <CardContent className="relative">
+                  <div className="flex flex-wrap gap-2">
                     {area.skills.map((skill, skillIndex) => (
                       <Badge
                         key={skillIndex}
                         variant="secondary"
-                        className="mb-2 mr-2 bg-white/70 text-stone-700 transition-colors hover:bg-white/90"
+                        className="border border-stone-100 bg-stone-50 px-3 py-1 text-sm font-normal text-stone-600 transition-colors hover:border-stone-200 hover:bg-white hover:text-stone-900"
                       >
                         {skill}
                       </Badge>
@@ -149,23 +155,23 @@ const ExpertiseSection = () => {
           })}
         </div>
 
-        {/* Specializations Grid */}
-        <div className="rounded-2xl border border-stone-200 bg-stone-50 p-8">
-          <h3 className="mb-8 text-center text-2xl font-bold text-stone-900">
-            Other Things I Do
+        {/* Specializations Grid - Updated to match style */}
+        <div className="rounded-3xl border border-stone-200 bg-white/50 p-8 backdrop-blur-sm md:p-12">
+          <h3 className="mb-10 text-center text-xl font-semibold tracking-tight text-stone-900">
+            Specialized Capabilities
           </h3>
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
             {specializations.map((spec, index) => {
               const IconComponent = spec.icon;
               return (
-                <div key={index} className="group text-center">
-                  <div className="mx-auto mb-3 w-fit rounded-xl bg-white p-3 shadow-sm transition-shadow group-hover:shadow-md">
-                    <IconComponent className="h-6 w-6 text-stone-700" />
+                <div key={index} className="group flex flex-col items-center text-center">
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-stone-100 bg-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:border-stone-200 group-hover:shadow-md">
+                    <IconComponent className="h-7 w-7 text-stone-600 transition-colors group-hover:text-stone-900" />
                   </div>
-                  <h4 className="mb-1 text-sm font-semibold text-stone-900">
+                  <h4 className="mb-1.5 text-sm font-bold text-stone-900">
                     {spec.label}
                   </h4>
-                  <p className="text-xs text-stone-600">{spec.desc}</p>
+                  <p className="text-xs font-medium text-stone-500">{spec.desc}</p>
                 </div>
               );
             })}
