@@ -8,6 +8,8 @@ import {
   Calculator,
   Globe,
   ArrowUpRight,
+  Users,
+  BrainCircuit,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -31,6 +33,8 @@ interface Props {
 
 const getProjectIcon = (projectName: string) => {
   const name = projectName.toLowerCase();
+  if (name.includes("pulse")) return Users;
+  if (name.includes("chisos")) return BrainCircuit;
   if (name.includes("flockx") || name.includes("ai")) return Cpu;
   if (name.includes("propane")) return Globe;
   if (name.includes("junkerri")) return ShoppingCart;

@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "name": "Pulse COOP",
+      "subheader": "Worker-Owned Tech Cooperative",
+      "url": "https://pulse.coop",
+      "description": "Co-founded a worker-owned technology cooperative dedicated to empowering local businesses and grassroots movements. As a founding member, I helped establish democratic workplace practices based on the seven cooperative principles while delivering tech solutions that strengthen community economic foundations.",
+      "technologies": [
+        "Cooperative Management",
+        "Web Development",
+        "Community Tools",
+        "Democratic Workplace",
+        "Local Business Support"
+      ]
+    },
+    {
       "name": "Flockx.io",
       "subheader": "AI Agent Workflow Platform",
       "url": "https://agents.flockx.io",
@@ -24,7 +37,7 @@
       "name": "ABowlofRed.com",
       "subheader": "Non-Profit Charity",
       "url": "https://abowlofred.com",
-      "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end platform that underwent a successful migration to Astro for improved performance and developer experience. Maintained focus on high-performance and accessible design throughout the transition. Utilized Strapi CMS on AWS EC2 with Node.js for content management, ensuring optimal image rendering and SEO-friendly metadata. Successfully integrated Stripe for secure ticket transactions, contributing to a significant fundraising success of around $19k.",
+      "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end platform that underwent a successful migration to Astro for improved performance and developer experience. Maintained focus on high-performance and accessible design throughout the transition. Utilized Strapi CMS on AWS EC2 with Node.js for content management, ensuring optimal image rendering and SEO-friendly metadata. Successfully integrated Stripe for secure ticket transactions, facilitating annual fundraising events that recently surpassed $130,000 in donations.",
       "technologies": [
         "Astro",
         "Strapi CMS",
@@ -72,6 +85,20 @@
       "url": "https://junkerri.com",
       "description": "Engineered Junkerri.com, a sleek and efficient e-commerce platform using Next.js. Implemented Stripe for a streamlined payment process, and integrated SparkPost for effective customer communication. This project highlights my ability to create user-centric shopping experiences with robust back-end functionalities.",
       "technologies": ["Next.js", "Stripe", "SparkPost", "E-commerce"]
+    },
+    {
+      "name": "Chisos",
+      "subheader": "AI Note-Taking & Speech Platform",
+      "url": "https://chisos.xyz",
+      "description": "Developed, deployed, and provisioned a full-stack advanced note-taking application in a single weekend. The platform leverages AI to transcribe speech-to-text and organize notes for later analysis. Built with a focus on end-to-end delivery, I handled all infrastructure provisioning on Railway, implemented secure authentication with Clerk, and integrated AI services for core functionality. The frontend utilizes Vite and TanStack Router for a modern, type-safe routing experience. A testament to rapid, high-quality product delivery and comprehensive system architecture skills.",
+      "technologies": [
+        "Vite",
+        "TanStack Router",
+        "AI Integration",
+        "Clerk Auth",
+        "Railway",
+        "Infrastructure as Code"
+      ]
     },
     {
       "name": "AI Bible Quote Generator",
