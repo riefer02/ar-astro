@@ -10,6 +10,13 @@ const sortedPosts = allPosts.sort((a, b) => {
     new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
   );
 });
+const latestPost = sortedPosts[0];
+const latestDate = latestPost
+  ? new Date(latestPost.data.pubDate).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    })
+  : null;
 
 const metaTags = {
   title: "Writing & Musings - Andrew Riefenstahl",
@@ -20,7 +27,7 @@ const metaTags = {
 ---
 
 <Layout metaTags={metaTags}>
-  <main class="px-6 py-16">
+  <section class="px-6 py-16">
     <div class="mx-auto max-w-7xl">
       <!-- Header Section - Clean and Natural -->
       <header class="mb-16 text-center">
@@ -72,12 +79,7 @@ const metaTags = {
               ></path>
             </svg>
             <span class="font-medium text-stone-700">
-              Latest: {
-                new Date(sortedPosts[0]?.data.pubDate).toLocaleDateString(
-                  "en-US",
-                  { month: "long", year: "numeric" }
-                )
-              }
+              Latest: {latestDate ?? "—"}
             </span>
           </div>
         </div>
@@ -102,5 +104,5 @@ const metaTags = {
         )
       }
     </div>
-  </main>
+  </section>
 </Layout>

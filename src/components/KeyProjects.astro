@@ -39,11 +39,11 @@ const { keyProjects } = Astro.props;
           </CardContent>
 
           <CardFooter className="pt-4 mt-auto">
-            <a href={project.url} target="_blank" class="no-underline">
-              <Button variant="outline" className="w-full sm:w-auto">
+            <Button asChild variant="outline" className="w-full sm:w-auto">
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
                 Visit Project
-              </Button>
-            </a>
+              </a>
+            </Button>
           </CardFooter>
         </Card>
       ))

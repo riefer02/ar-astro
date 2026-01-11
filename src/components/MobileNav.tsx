@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, BookOpen } from "lucide-react";
+import { Menu, Home, BookOpen } from "lucide-react";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);

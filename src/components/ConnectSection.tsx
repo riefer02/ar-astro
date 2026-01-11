@@ -46,7 +46,7 @@ const ConnectSection = () => {
   return (
     <section id="connect" className="relative py-16 md:py-32">
       {/* Background Elements */}
-      <div className="absolute inset-0 -z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+      <div className="absolute inset-0 -z-10 bg-[url('/noise.svg')] opacity-10"></div>
       
       <div className="container mx-auto max-w-5xl px-4">
         {/* Section Header */}
@@ -123,24 +123,24 @@ const ConnectSection = () => {
             </p>
             
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a href="mailto:andrew.riefenstahl@gmail.com">
-                <Button
-                  className="h-12 rounded-full bg-white px-8 text-base font-bold text-stone-900 transition-all hover:scale-105 hover:bg-stone-100"
-                  size="lg"
-                >
+              <Button
+                asChild
+                className="h-12 rounded-full bg-white px-8 text-base font-bold text-stone-900 transition-all hover:scale-105 hover:bg-stone-100"
+                size="lg"
+              >
+                <a href="mailto:andrew.riefenstahl@gmail.com">
                   <Send className="mr-2 h-4 w-4" />
                   Say Hello
-                </Button>
-              </a>
-              <a href="/posts">
-                <Button
-                  variant="outline"
-                  className="h-12 rounded-full border-stone-700 bg-transparent px-8 text-base text-stone-300 hover:bg-stone-800 hover:text-white"
-                  size="lg"
-                >
-                  Read My Writing
-                </Button>
-              </a>
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="h-12 rounded-full border-stone-700 bg-transparent px-8 text-base text-stone-300 hover:bg-stone-800 hover:text-white"
+                size="lg"
+              >
+                <a href="/posts">Read My Writing</a>
+              </Button>
             </div>
           </div>
         </div>

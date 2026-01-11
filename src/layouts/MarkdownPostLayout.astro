@@ -197,14 +197,13 @@ const getReadingTime = (content) => {
         <div
           class="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <a href="/posts">
-            <Button
-              variant="outline"
-              className="border-stone-300 text-stone-700 transition-colors hover:bg-stone-50"
-            >
-              ← More Articles
-            </Button>
-          </a>
+          <Button
+            asChild
+            variant="outline"
+            className="border-stone-300 text-stone-700 transition-colors hover:bg-stone-50"
+          >
+            <a href="/posts">← More Articles</a>
+          </Button>
           <ShareButton url={fullUrl} client:load />
         </div>
         <Toaster client:load />

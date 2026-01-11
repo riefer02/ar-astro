@@ -1,6 +1,4 @@
 import {
-  ExternalLink,
-  Github,
   Cpu,
   Shield,
   ShoppingCart,
@@ -48,7 +46,7 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
   return (
     <section id="projects" className="relative py-16 md:py-32 bg-stone-50">
        {/* Background Pattern */}
-       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+       <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20"></div>
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
@@ -130,14 +128,13 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
           <p className="mb-6 text-lg font-medium text-stone-600">
             Interested in seeing more work or discussing a project?
           </p>
-          <a href="#connect">
-            <Button
-              className="h-12 rounded-full px-8 text-base font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-              size="lg"
-            >
-              Let's Connect
-            </Button>
-          </a>
+          <Button
+            asChild
+            className="h-12 rounded-full px-8 text-base font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+            size="lg"
+          >
+            <a href="#connect">Let's Connect</a>
+          </Button>
         </div>
       </div>
     </section>

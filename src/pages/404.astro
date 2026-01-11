@@ -35,14 +35,13 @@ const metaTags = {
           >(And if you think this is a bug, let me know!)</span
         >
       </p>
-      <a href="/">
-        <Button
-          className="bg-stone-800 px-8 py-3 text-lg text-white transition-all duration-200 hover:bg-stone-900"
-          size="lg"
-        >
-          Take Me Home
-        </Button>
-      </a>
+      <Button
+        asChild
+        className="bg-stone-800 px-8 py-3 text-lg text-white transition-all duration-200 hover:bg-stone-900"
+        size="lg"
+      >
+        <a href="/">Take Me Home</a>
+      </Button>
     </div>
   </section>
 </Layout>

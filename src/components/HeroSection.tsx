@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute -right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-stone-300/30 blur-[120px]" />
       
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20"></div>
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center gap-8 text-center">
@@ -45,25 +45,27 @@ const HeroSection = () => {
 
           {/* Actions */}
           <div className="flex flex-col items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both sm:flex-row">
-            <a href="#projects">
-              <Button
-                size="lg"
-                className="h-12 min-w-[160px] rounded-full text-base font-semibold shadow-xl transition-all hover:scale-105 hover:shadow-2xl hover:bg-stone-800"
-              >
+            <Button
+              asChild
+              size="lg"
+              className="h-12 min-w-[160px] rounded-full text-base font-semibold shadow-xl transition-all hover:scale-105 hover:shadow-2xl hover:bg-stone-800"
+            >
+              <a href="#projects">
                 Explore Work
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
-            <a href="/posts">
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-12 min-w-[160px] rounded-full border-stone-300 bg-white/60 text-base backdrop-blur-sm transition-all hover:bg-white hover:text-stone-900"
-              >
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="h-12 min-w-[160px] rounded-full border-stone-300 bg-white/60 text-base backdrop-blur-sm transition-all hover:bg-white hover:text-stone-900"
+            >
+              <a href="/posts">
                 Read Insights
                 <Terminal className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
 
           {/* Tech Stack / "Flare" Visual - Floating Cards */}

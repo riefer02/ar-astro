@@ -11,10 +11,10 @@ import { Button } from "@/components/ui/button.tsx";
 import { Image } from "astro:assets";
 
 const { post } = Astro.props;
-const { title, description, pubDate, image, author } = post.data;
+const { title, description, pubDate, image } = post.data;
 ---
 
-<li class="list-none">
+<article>
   <Card className="mx-auto flex h-full max-w-md flex-col justify-between">
     <div class="flex h-full flex-col">
       <CardHeader className="p-0">
@@ -40,10 +40,10 @@ const { title, description, pubDate, image, author } = post.data;
         </p>
       </CardContent>
       <CardFooter className="mt-auto flex items-center justify-between p-4">
-        <a href={"/posts/" + post.slug} class="text-decoration-none">
-          <Button variant="outline">Read More</Button>
-        </a>
+        <Button asChild variant="outline">
+          <a href={"/posts/" + post.slug}>Read More</a>
+        </Button>
       </CardFooter>
     </div>
   </Card>
-</li>
+</article>
