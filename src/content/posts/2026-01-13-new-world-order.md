@@ -6,6 +6,7 @@ author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/a-new-world-order-millennials-technology-and-the-fight-for-an-egalitarian-future-og.jpg"
   alt: "Abstract representation of a globalized, interconnected earth with digital networks"
+
 tags:
   [
     "technology",
@@ -19,9 +20,9 @@ tags:
   ]
 ---
 
-Today is January 13. I'm feeling burnt out by all the news—all this new technology disrupting people's lives, and how the people who control that technology are attempting to create, or have already successfully created, a new caste of humans. That's rather dramatic, I know. But it feels like right now there's no real way to advance as a society or as an individual.
+A new caste of humans is emerging—and the people building the technology are the ones creating it. We millennials have witnessed something unprecedented: the birth of a truly globalized earth. And I think it demands a new world order.
 
-In this moment, I was thinking about how we millennials have experienced something special: the emergence of a globalized earth thanks to digital technology. This is profound, and it's something we have to bring awareness to—because I think it calls for a new world order to develop, for human society to prevail and coexist with planet Earth.
+This is profound, and it's something we have to bring awareness to—because human society needs to prevail and coexist with planet Earth. Right now, it feels like there's no real way to advance as individuals or as a society. The people who control technology are consolidating power while the rest of us watch.
 
 Starting a revolution seems hard. But when you break it down to fundamentals, we have to spread a message. The best way to do that is still by publishing literature—writing blogs, sharing them online, and talking to each other in person. That's the only real way we're going to connect. Digital social spaces aren't good places for these conversations anymore because of bots, which account for so much spam and noise in today's society.
 
