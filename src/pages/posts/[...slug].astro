@@ -4,16 +4,36 @@ import MarkdownPostLayout from "../../layouts/MarkdownPostLayout.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+
+  // Sort posts by date (newest first)
+  const sortedPosts = blogEntries.sort((a, b) => {
+    return (
+      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+    );
+  });
+
+  return sortedPosts.map((entry, index) => {
+    // Previous = older (next in array), Next = newer (previous in array)
+    const prevPost = sortedPosts[index + 1] ?? null;
+    const nextPost = sortedPosts[index - 1] ?? null;
+
+    return {
+      params: { slug: entry.slug },
+      props: { entry, prevPost, nextPost, allPosts: sortedPosts },
+    };
+  });
 }
 
-const { entry } = Astro.props;
+const { entry, prevPost, nextPost, allPosts } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<MarkdownPostLayout frontmatter={entry.data}>
+<MarkdownPostLayout
+  frontmatter={entry.data}
+  prevPost={prevPost}
+  nextPost={nextPost}
+  currentSlug={entry.slug}
+  allPosts={allPosts}
+>
   <Content />
 </MarkdownPostLayout>

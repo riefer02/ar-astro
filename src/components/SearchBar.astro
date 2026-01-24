@@ -1,0 +1,124 @@
+---
+// Custom search component using Pagefind API directly
+---
+
+<div class="relative mx-auto w-full max-w-sm">
+  <div class="relative">
+    <svg
+      class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search articles..."
+      autocomplete="off"
+      class="h-9 w-full rounded-md border border-input bg-background pl-9 pr-3 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+    />
+  </div>
+  <div
+    id="search-results"
+    class="absolute left-0 right-0 top-full z-50 mt-2 hidden max-h-80 overflow-y-auto rounded-md border border-border bg-background shadow-lg"
+  ></div>
+</div>
+
+<script>
+  let pagefind: any = null;
+
+  async function loadPagefind() {
+    if (pagefind) return pagefind;
+    try {
+      // Use string concatenation to prevent Vite from resolving at build time
+      const pagefindPath = "/pagefind/pagefind.js";
+      pagefind = await import(/* @vite-ignore */ pagefindPath);
+      await pagefind.init();
+      return pagefind;
+    } catch (e) {
+      console.log("Pagefind not available (dev mode)");
+      return null;
+    }
+  }
+
+  function initSearch() {
+    const input = document.getElementById("search-input") as HTMLInputElement;
+    const resultsContainer = document.getElementById("search-results");
+    if (!input || !resultsContainer) return;
+
+    let debounceTimer: ReturnType<typeof setTimeout>;
+
+    input.addEventListener("input", async () => {
+      clearTimeout(debounceTimer);
+      const query = input.value.trim();
+
+      if (!query) {
+        resultsContainer.classList.add("hidden");
+        resultsContainer.innerHTML = "";
+        return;
+      }
+
+      debounceTimer = setTimeout(async () => {
+        const pf = await loadPagefind();
+        if (!pf) {
+          resultsContainer.innerHTML = `<div class="p-3 text-sm text-muted-foreground">Search available after build</div>`;
+          resultsContainer.classList.remove("hidden");
+          return;
+        }
+
+        const search = await pf.search(query);
+        const results = await Promise.all(
+          search.results.slice(0, 8).map((r: any) => r.data())
+        );
+
+        if (results.length === 0) {
+          resultsContainer.innerHTML = `<div class="px-3 py-4 text-center text-sm text-muted-foreground">No results found</div>`;
+        } else {
+          resultsContainer.innerHTML = results
+            .map((r: any) => {
+              const title = r.meta?.title || "Untitled";
+              const date = r.meta?.date || "";
+              
+              return `
+              <a href="${r.url}" class="block px-3 py-2 hover:bg-accent transition-colors">
+                <div class="flex items-baseline justify-between gap-3">
+                  <span class="truncate text-sm font-medium text-foreground">${title}</span>
+                  ${date ? `<span class="flex-shrink-0 text-xs text-muted-foreground">${date}</span>` : ""}
+                </div>
+              </a>
+            `;
+            })
+            .join("");
+        }
+        resultsContainer.classList.remove("hidden");
+      }, 150);
+    });
+
+    // Close on click outside
+    document.addEventListener("click", (e) => {
+      if (!input.contains(e.target as Node) && !resultsContainer.contains(e.target as Node)) {
+        resultsContainer.classList.add("hidden");
+      }
+    });
+
+    // Close on escape
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        resultsContainer.classList.add("hidden");
+        input.blur();
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSearch);
+  } else {
+    initSearch();
+  }
+
+  document.addEventListener("astro:page-load", initSearch);
+</script>

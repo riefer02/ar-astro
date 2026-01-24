@@ -1,0 +1,83 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
+import SearchBar from "../../components/SearchBar.astro";
+import Pagination from "../../components/Pagination.astro";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allPosts = await getCollection("posts");
+  const sortedPosts = allPosts.sort((a, b) => {
+    return (
+      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+    );
+  });
+
+  return paginate(sortedPosts, { pageSize: 6 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const allPosts = await getCollection("posts");
+const totalPosts = allPosts.length;
+
+const latestPost = page.data[0];
+const latestDate = latestPost
+  ? new Date(latestPost.data.pubDate).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    })
+  : null;
+
+const metaTags = {
+  title:
+    page.currentPage === 1
+      ? "Writing & Musings - Andrew Riefenstahl"
+      : `Writing & Musings - Page ${page.currentPage} - Andrew Riefenstahl`,
+  description:
+    "Personal reflections on technology, life, music, philosophy, and the human experience. A mix of technical insights, creative pursuits, and honest thoughts on navigating this world.",
+  url: `https://andrewriefenstahl.com/posts${page.currentPage === 1 ? "" : `/${page.currentPage}`}`,
+};
+---
+
+<Layout metaTags={metaTags}>
+  <section class="px-6 py-16">
+    <div class="mx-auto max-w-7xl">
+      <header class="mb-12 text-center">
+        <h1 class="mb-4 text-3xl font-bold text-stone-900 md:text-4xl">
+          Writing & Musings
+        </h1>
+        <p class="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-stone-500">
+          Personal reflections on technology, life, and the human experience.
+        </p>
+        <SearchBar />
+      </header>
+
+      <!-- Posts Grid - Consistent Mobile Responsiveness -->
+      <section class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {page.data.map((post) => <PostCard post={post} />)}
+      </section>
+
+      <!-- Empty State -->
+      {
+        page.data.length === 0 && (
+          <div class="py-16 text-center">
+            <p class="mb-4 text-lg text-stone-600">
+              More articles coming soon...
+            </p>
+            <p class="text-stone-500">
+              In the meantime, check out my projects and connect with me.
+            </p>
+          </div>
+        )
+      }
+
+      <!-- Pagination -->
+      <Pagination
+        currentPage={page.currentPage}
+        totalPages={page.lastPage}
+        baseUrl="/posts/"
+      />
+    </div>
+  </section>
+</Layout>

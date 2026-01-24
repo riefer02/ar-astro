@@ -1,0 +1,70 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props;
+
+const prevUrl = currentPage > 1 ? `${baseUrl}${currentPage === 2 ? "" : currentPage - 1}` : null;
+const nextUrl = currentPage < totalPages ? `${baseUrl}${currentPage + 1}` : null;
+---
+
+{
+  totalPages > 1 && (
+    <nav class="mt-16 flex items-center justify-center gap-8" aria-label="Pagination">
+      {prevUrl ? (
+        <a
+          href={prevUrl}
+          class="group flex items-center gap-2 text-sm text-stone-500 transition-colors hover:text-stone-900"
+        >
+          <svg
+            class="h-4 w-4 transition-transform group-hover:-translate-x-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          Newer
+        </a>
+      ) : (
+        <span class="flex items-center gap-2 text-sm text-stone-300">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+          </svg>
+          Newer
+        </span>
+      )}
+
+      <span class="text-sm text-stone-400">
+        {currentPage} / {totalPages}
+      </span>
+
+      {nextUrl ? (
+        <a
+          href={nextUrl}
+          class="group flex items-center gap-2 text-sm text-stone-500 transition-colors hover:text-stone-900"
+        >
+          Older
+          <svg
+            class="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      ) : (
+        <span class="flex items-center gap-2 text-sm text-stone-300">
+          Older
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      )}
+    </nav>
+  )
+}

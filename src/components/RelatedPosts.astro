@@ -1,0 +1,72 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+
+interface Props {
+  currentSlug: string;
+  currentTags: string[];
+  allPosts: CollectionEntry<"posts">[];
+  maxPosts?: number;
+}
+
+const { currentSlug, currentTags, allPosts, maxPosts = 3 } = Astro.props;
+
+const getRelatedPosts = () => {
+  const otherPosts = allPosts.filter((post) => post.slug !== currentSlug);
+
+  const scoredPosts = otherPosts.map((post) => {
+    const postTags = post.data.tags || [];
+    const matchingTags = currentTags.filter((tag) => postTags.includes(tag));
+    return { post, score: matchingTags.length };
+  });
+
+  scoredPosts.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return new Date(b.post.data.pubDate).getTime() - new Date(a.post.data.pubDate).getTime();
+  });
+
+  return scoredPosts.slice(0, maxPosts).map((p) => p.post);
+};
+
+const relatedPosts = getRelatedPosts();
+
+const formatDate = (date: Date) => {
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+  });
+};
+---
+
+{
+  relatedPosts.length > 0 && (
+    <section class="mt-16 border-t border-stone-100 pt-12">
+      <h2 class="mb-8 text-center text-sm font-medium uppercase tracking-wider text-stone-400">
+        Continue Reading
+      </h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+        {relatedPosts.map((post) => (
+          <a href={`/posts/${post.slug}`} class="group block">
+            {post.data.image && (
+              <div class="mb-3 aspect-[16/10] overflow-hidden rounded-lg bg-stone-100">
+                <Image
+                  src={post.data.image.url}
+                  alt={post.data.image.alt}
+                  widths={[280, 400]}
+                  sizes="(max-width: 640px) 100vw, 280px"
+                  class="h-full w-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:opacity-90"
+                />
+              </div>
+            )}
+            <h3 class="line-clamp-2 text-sm font-medium leading-snug text-stone-800 transition-colors group-hover:text-stone-600">
+              {post.data.title}
+            </h3>
+            <p class="mt-1.5 text-xs text-stone-400">
+              {formatDate(post.data.pubDate)}
+            </p>
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}

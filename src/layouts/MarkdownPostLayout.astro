@@ -5,9 +5,20 @@ import { Button } from "../components/ui/button";
 import { Toaster } from "../components/ui/toaster";
 import { toast } from "../hooks/use-toast";
 import ShareButton from "../components/ShareButton";
+import PostNavigation from "../components/PostNavigation.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
 import { Image } from "astro:assets";
-import React from "react";
-const { frontmatter } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  frontmatter: CollectionEntry<"posts">["data"];
+  prevPost: CollectionEntry<"posts"> | null;
+  nextPost: CollectionEntry<"posts"> | null;
+  currentSlug: string;
+  allPosts: CollectionEntry<"posts">[];
+}
+
+const { frontmatter, prevPost, nextPost, currentSlug, allPosts } = Astro.props;
 
 // Get the full current URL using Astro's built-in approach
 const fullUrl = Astro.url.toString();
@@ -65,7 +76,9 @@ const getReadingTime = (content) => {
   </div>
 
   <!-- Main Article -->
-  <article class="pb-16 px-6">
+  <article class="pb-16 px-6" data-pagefind-body>
+    <!-- Hidden date for Pagefind -->
+    <span data-pagefind-meta="date" class="hidden">{formatDate(frontmatter.pubDate)}</span>
     <div class="mx-auto max-w-4xl">
       <!-- Article Header (natural, no cards) -->
       <header class="mb-8 text-center">
@@ -129,6 +142,7 @@ const getReadingTime = (content) => {
         <!-- Title & Description -->
         <h1
           class="mb-6 text-3xl font-bold leading-tight text-stone-900 md:text-5xl"
+          data-pagefind-meta="title"
         >
           {frontmatter.title}
         </h1>
@@ -168,6 +182,7 @@ const getReadingTime = (content) => {
               sizes="(max-width: 896px) 100vw, 896px"
               format="webp"
               quality={90}
+              data-pagefind-meta="image[src]"
             />
           </div>
         )
@@ -192,19 +207,31 @@ const getReadingTime = (content) => {
         <slot />
       </div>
 
+      <!-- Share Button -->
+      <div class="mt-12 flex justify-center">
+        <ShareButton url={fullUrl} client:load />
+      </div>
+
+      <!-- Post Navigation (Prev/Next) -->
+      <PostNavigation prevPost={prevPost} nextPost={nextPost} />
+
+      <!-- Related Posts -->
+      <RelatedPosts
+        currentSlug={currentSlug}
+        currentTags={frontmatter.tags || []}
+        allPosts={allPosts}
+      />
+
       <!-- Footer Actions -->
-      <footer class="mt-16 border-t border-stone-200 pt-8">
-        <div
-          class="flex flex-col items-center justify-center gap-4 sm:flex-row"
-        >
+      <footer class="mt-12 border-t border-stone-200 pt-8">
+        <div class="flex justify-center">
           <Button
             asChild
             variant="outline"
             className="border-stone-300 text-stone-700 transition-colors hover:bg-stone-50"
           >
-            <a href="/posts">← More Articles</a>
+            <a href="/posts">← Back to All Articles</a>
           </Button>
-          <ShareButton url={fullUrl} client:load />
         </div>
         <Toaster client:load />
       </footer>

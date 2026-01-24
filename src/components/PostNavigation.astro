@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  prevPost: CollectionEntry<"posts"> | null;
+  nextPost: CollectionEntry<"posts"> | null;
+}
+
+const { prevPost, nextPost } = Astro.props;
+---
+
+{
+  (prevPost || nextPost) && (
+    <nav class="mt-16 flex items-stretch justify-between gap-4" aria-label="Post navigation">
+      {prevPost ? (
+        <a
+          href={`/posts/${prevPost.slug}`}
+          class="group flex max-w-[45%] flex-col"
+        >
+          <span class="mb-2 flex items-center gap-1.5 text-xs text-stone-400 transition-colors group-hover:text-stone-600">
+            <svg
+              class="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+            </svg>
+            Previous
+          </span>
+          <span class="line-clamp-2 text-sm font-medium text-stone-700 transition-colors group-hover:text-stone-900">
+            {prevPost.data.title}
+          </span>
+        </a>
+      ) : (
+        <div />
+      )}
+
+      {nextPost ? (
+        <a
+          href={`/posts/${nextPost.slug}`}
+          class="group ml-auto flex max-w-[45%] flex-col text-right"
+        >
+          <span class="mb-2 flex items-center justify-end gap-1.5 text-xs text-stone-400 transition-colors group-hover:text-stone-600">
+            Next
+            <svg
+              class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+          <span class="line-clamp-2 text-sm font-medium text-stone-700 transition-colors group-hover:text-stone-900">
+            {nextPost.data.title}
+          </span>
+        </a>
+      ) : (
+        <div />
+      )}
+    </nav>
+  )
+}
