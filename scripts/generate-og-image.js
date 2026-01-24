@@ -8,10 +8,8 @@ import sharp from "sharp";
 import "dotenv/config";
 
 // --- CONFIG ---
-// Generation size from the model (more detail; we'll downscale after)
-const GENERATION_WIDTH = 1792;
-const GENERATION_HEIGHT = 1024;
-const IMAGE_SIZE = `${GENERATION_WIDTH}x${GENERATION_HEIGHT}`;
+// Generation size from the model (GPT image models support 1536x1024 landscape)
+const IMAGE_SIZE = "1536x1024";
 
 // Target OG dimensions and compression
 const OG_WIDTH = 1200;
@@ -59,30 +57,28 @@ function extractFrontmatter(md) {
   // OpenAI API setup
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-  // Generate image
-  let imageUrl;
+  // Generate image using GPT Image model (returns base64)
+  let originalBuffer;
   try {
+    console.log("Generating image with gpt-image-1.5...");
     const response = await openai.images.generate({
       prompt,
-      model: "dall-e-3",
+      model: "gpt-image-1.5",
       n: 1,
       size: IMAGE_SIZE,
-      response_format: "url",
+      quality: "high",
+      output_format: "png",
     });
-    imageUrl = response.data[0].url;
+    // GPT image models return base64 directly
+    const base64Data = response.data[0].b64_json;
+    originalBuffer = Buffer.from(base64Data, "base64");
+    console.log("Image generated successfully");
   } catch (err) {
     console.error("OpenAI image generation failed:", err);
     process.exit(1);
   }
 
-  // Download image
   const outPath = path.join(IMAGE_DIR, `${slug}-og.jpg`);
-  const res = await fetch(imageUrl);
-  if (!res.ok) {
-    console.error("Failed to download generated image:", res.statusText);
-    process.exit(1);
-  }
-  const originalBuffer = Buffer.from(await res.arrayBuffer());
 
   // Optimize: resize to OG size and compress JPEG
   let optimizedBuffer;
