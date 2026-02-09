@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { DragonGame } from "../../components/games/DragonGame";
+
+const metaTags = {
+  title: "Dragon Quest | Andrew Riefenstahl",
+  description: "A simple dragon adventure game - walk around, attack, and interact with objects!",
+  url: "https://andrewriefenstahl.com/games/dragon-quest",
+};
+---
+
+<Layout metaTags={metaTags}>
+  <main class="min-h-screen py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-stone-900 mb-2">Dragon Quest</h1>
+        <p class="text-stone-600">A proof-of-concept adventure game</p>
+      </header>
+      
+      <DragonGame client:only="react" />
+      
+      <div class="mt-12 prose prose-stone max-w-none">
+        <h2>About This Game</h2>
+        <p>
+          This is a simple proof-of-concept built with React and TypeScript, demonstrating 
+          basic game mechanics like character movement, collision detection, animations, 
+          and object interactions—all without any external game engines!
+        </p>
+        
+        <h3>Features</h3>
+        <ul>
+          <li>Smooth 4-directional movement with WASD or arrow keys</li>
+          <li>Animated attack system with visual feedback</li>
+          <li>Interactive objects you can examine</li>
+          <li>Collision detection with walls and objects</li>
+          <li>Dialogue system for storytelling</li>
+        </ul>
+        
+        <h3>Technical Details</h3>
+        <p>
+          Built using React hooks (useState, useEffect, useCallback, useRef), 
+          requestAnimationFrame for the game loop, and CSS animations for visual effects. 
+          The entire game is self-contained in a single component with no external dependencies 
+          beyond React itself.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
