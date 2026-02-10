@@ -16,7 +16,7 @@ importers:
         version: 3.7.0
       '@astrojs/tailwind':
         specifier: ^6.0.2
-        version: 6.0.2(astro@5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)
+        version: 6.0.2(astro@5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)
       '@pagefind/default-ui':
         specifier: ^1.4.0
         version: 1.4.0
@@ -45,11 +45,11 @@ importers:
         specifier: ^18.2.19
         version: 18.3.7(@types/react@18.3.23)
       astro:
-        specifier: ^5.16.15
-        version: 5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)
+        specifier: ^5.17.1
+        version: 5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)
       astro-pagefind:
         specifier: ^1.8.5
-        version: 1.8.5(astro@5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0))
+        version: 1.8.5(astro@5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0))
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
@@ -1086,8 +1086,8 @@ packages:
     peerDependencies:
       astro: ^2.0.4 || ^3 || ^4 || ^5
 
-  astro@5.16.15:
-    resolution: {integrity: sha512-+X1Z0NTi2pa5a0Te6h77Dgc44fYj63j1yx6+39Nvg05lExajxSq7b1Uj/gtY45zoum8fD0+h0nak+DnHighs3A==}
+  astro@5.17.1:
+    resolution: {integrity: sha512-oD3tlxTaVWGq/Wfbqk6gxzVRz98xa/rYlpe+gU2jXJMSD01k6sEDL01ZlT8mVSYB/rMgnvIOfiQQ3BbLdN237A==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2360,9 +2360,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  ufo@1.6.1:
-    resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
-
   ufo@1.6.3:
     resolution: {integrity: sha512-yDJTmhydvl5lJzBmy/hyOAA0d+aqCBuwl818haVdYCRrWV84o7YyeVm4QlVHStqNrrJSTb6jKuFAVqAFsr+K3Q==}
 
@@ -2702,9 +2699,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/tailwind@6.0.2(astro@5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.2(astro@5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)
       autoprefixer: 10.4.21(postcss@8.5.6)
       postcss: 8.5.6
       postcss-load-config: 4.0.2(postcss@8.5.6)
@@ -3526,14 +3523,14 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro-pagefind@1.8.5(astro@5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)):
+  astro-pagefind@1.8.5(astro@5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)):
     dependencies:
       '@pagefind/default-ui': 1.4.0
-      astro: 5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0)
       pagefind: 1.4.0
       sirv: 3.0.2
 
-  astro@5.16.15(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0):
+  astro@5.17.1(@types/node@24.0.3)(jiti@1.21.7)(rollup@4.44.0)(typescript@5.8.3)(yaml@2.8.0):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -4557,7 +4554,7 @@ snapshots:
     dependencies:
       destr: 2.0.5
       node-fetch-native: 1.6.7
-      ufo: 1.6.1
+      ufo: 1.6.3
 
   ohash@2.0.11: {}
 
@@ -5117,8 +5114,6 @@ snapshots:
   type-fest@4.41.0: {}
 
   typescript@5.8.3: {}
-
-  ufo@1.6.1: {}
 
   ufo@1.6.3: {}
 
