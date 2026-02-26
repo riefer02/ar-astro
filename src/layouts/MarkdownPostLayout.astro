@@ -56,7 +56,7 @@ const getReadingTime = (content) => {
     <div class="mx-auto max-w-4xl">
       <a
         href="/posts"
-        class="mb-8 inline-flex items-center text-stone-600 transition-colors duration-200 hover:text-stone-900"
+        class="mb-8 inline-flex items-center text-muted-foreground transition-colors duration-200 hover:text-foreground"
       >
         <svg
           class="mr-2 h-4 w-4"
@@ -84,7 +84,7 @@ const getReadingTime = (content) => {
       <header class="mb-8 text-center">
         <!-- Meta Information -->
         <div
-          class="mb-6 flex flex-col items-center justify-center gap-2 text-sm text-stone-500 sm:flex-row sm:gap-6"
+          class="mb-6 flex flex-col items-center justify-center gap-2 text-sm text-muted-foreground sm:flex-row sm:gap-6"
         >
           <!-- Date & Reading Time (stay together on mobile) -->
           <div class="flex items-center gap-4">
@@ -141,13 +141,13 @@ const getReadingTime = (content) => {
 
         <!-- Title & Description -->
         <h1
-          class="mb-6 text-3xl font-bold leading-tight text-stone-900 md:text-5xl"
+          class="mb-6 text-3xl font-bold leading-tight text-foreground md:text-5xl"
           data-pagefind-meta="title"
         >
           {frontmatter.title}
         </h1>
         <p
-          class="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-stone-600 md:text-xl"
+          class="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
           {frontmatter.description}
         </p>
@@ -159,7 +159,7 @@ const getReadingTime = (content) => {
               {frontmatter.tags.map((tag) => (
                 <Badge
                   variant="secondary"
-                  className="bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors"
+                  className="bg-secondary text-foreground hover:bg-accent transition-colors"
                 >
                   {tag}
                 </Badge>
@@ -190,18 +190,18 @@ const getReadingTime = (content) => {
 
       <!-- Article Content (clean, no cards) -->
       <div
-        class="prose prose-stone mx-auto max-w-none lg:prose-lg xl:prose-xl
-                prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-stone-900
+        class="prose mx-auto max-w-none lg:prose-lg xl:prose-xl
+                prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground
                 prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
-                prose-h4:text-xl prose-p:text-lg prose-p:leading-relaxed prose-p:text-stone-700
-                prose-a:font-medium prose-a:text-stone-800 prose-a:underline prose-a:decoration-stone-300 prose-a:underline-offset-4
-                hover:prose-a:text-stone-900 hover:prose-a:decoration-stone-600 prose-a:transition-all prose-a:duration-200
-                prose-blockquote:rounded-r-lg prose-blockquote:border-l-4 prose-blockquote:border-stone-300 prose-blockquote:bg-stone-50 prose-blockquote:py-4 prose-blockquote:pl-6 prose-blockquote:pr-4
-                prose-blockquote:not-italic prose-blockquote:text-stone-700 prose-strong:font-semibold prose-strong:text-stone-900 prose-code:rounded prose-code:font-mono
-                prose-code:text-base prose-code:text-stone-800 prose-code:before:content-[''] prose-code:after:content-[''] prose-pre:overflow-x-auto
-                prose-pre:rounded-lg prose-pre:bg-stone-900
-                prose-pre:p-6 prose-pre:text-stone-100 prose-ol:text-stone-700
-                prose-ul:text-stone-700 prose-li:text-lg prose-li:leading-relaxed prose-li:text-stone-700
+                prose-h4:text-xl prose-p:text-lg prose-p:leading-relaxed prose-p:text-muted-foreground
+                prose-a:font-medium prose-a:text-primary prose-a:underline prose-a:decoration-border prose-a:underline-offset-4
+                hover:prose-a:text-foreground hover:prose-a:decoration-primary prose-a:transition-all prose-a:duration-200
+                prose-blockquote:rounded-r-lg prose-blockquote:border-l-4 prose-blockquote:border-border prose-blockquote:bg-secondary/60 prose-blockquote:py-4 prose-blockquote:pl-6 prose-blockquote:pr-4
+                prose-blockquote:not-italic prose-blockquote:text-muted-foreground prose-strong:font-semibold prose-strong:text-foreground prose-code:rounded prose-code:font-mono
+                prose-code:text-base prose-code:text-foreground prose-code:before:content-[''] prose-code:after:content-[''] prose-pre:overflow-x-auto
+                prose-pre:rounded-lg prose-pre:bg-foreground
+                prose-pre:p-6 prose-pre:text-primary-foreground prose-ol:text-muted-foreground
+                prose-ul:text-muted-foreground prose-li:text-lg prose-li:leading-relaxed prose-li:text-muted-foreground
                 prose-img:rounded-lg prose-img:shadow-md"
       >
         <slot />
@@ -223,12 +223,12 @@ const getReadingTime = (content) => {
       />
 
       <!-- Footer Actions -->
-      <footer class="mt-12 border-t border-stone-200 pt-8">
+      <footer class="mt-12 border-t border-border pt-8">
         <div class="flex justify-center">
           <Button
             asChild
             variant="outline"
-            className="border-stone-300 text-stone-700 transition-colors hover:bg-stone-50"
+            className="border-border text-foreground transition-colors hover:bg-background"
           >
             <a href="/posts">← Back to All Articles</a>
           </Button>

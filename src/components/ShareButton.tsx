@@ -4,7 +4,7 @@ import { toast } from "../hooks/use-toast";
 export default function ShareButton({ url }: { url: string }) {
   return (
     <Button
-      className="bg-stone-800 text-white transition-colors hover:bg-stone-900"
+      className="bg-primary text-primary-foreground transition-colors hover:bg-foreground hover:text-background"
       onClick={async () => {
         if (!navigator?.clipboard?.writeText) {
           toast({

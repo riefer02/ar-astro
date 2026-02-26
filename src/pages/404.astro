@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 const metaTags = {
   title: "Page Lost | Andrew Riefenstahl",
@@ -13,35 +12,34 @@ const metaTags = {
 <Layout metaTags={metaTags}>
   <section class="flex min-h-[70vh] items-center justify-center py-20">
     <div
-      class="mx-auto w-full max-w-2xl rounded-2xl border border-stone-200/50 bg-gradient-to-br from-stone-50 to-stone-100 p-8 text-center shadow-lg md:p-12"
+      class="mx-auto w-full max-w-2xl rounded-2xl border border-border/50 bg-gradient-to-br from-background to-secondary p-8 text-center shadow-lg md:p-12"
     >
       <Badge
         variant="secondary"
-        className="mb-6 bg-stone-100 px-4 py-2 text-base text-stone-700"
+        className="mb-6 bg-secondary px-4 py-2 text-base text-foreground"
       >
         Lost Signal
       </Badge>
       <h1
-        class="mb-6 text-4xl font-bold leading-tight text-stone-900 md:text-5xl"
+        class="mb-6 text-4xl font-bold leading-tight text-foreground md:text-5xl"
       >
         You've wandered off the map
       </h1>
       <p
-        class="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-stone-700 md:text-xl"
+        class="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl"
       >
         This page doesn't exist—or maybe it's just hiding.<br />
         Try heading back home or exploring something new.<br />
-        <span class="text-base text-stone-400"
+        <span class="text-base text-muted-foreground/80"
           >(And if you think this is a bug, let me know!)</span
         >
       </p>
-      <Button
-        asChild
-        className="bg-stone-800 px-8 py-3 text-lg text-white transition-all duration-200 hover:bg-stone-900"
-        size="lg"
+      <a
+        href="/"
+        class="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-lg font-medium text-primary-foreground shadow transition-all duration-200 hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
       >
-        <a href="/">Take Me Home</a>
-      </Button>
+        Take Me Home
+      </a>
     </div>
   </section>
 </Layout>

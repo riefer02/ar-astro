@@ -17,7 +17,7 @@ const { prevPost, nextPost } = Astro.props;
           href={`/posts/${prevPost.slug}`}
           class="group flex max-w-[45%] flex-col"
         >
-          <span class="mb-2 flex items-center gap-1.5 text-xs text-stone-400 transition-colors group-hover:text-stone-600">
+          <span class="mb-2 flex items-center gap-1.5 text-xs text-muted-foreground/80 transition-colors group-hover:text-muted-foreground">
             <svg
               class="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5"
               fill="none"
@@ -28,7 +28,7 @@ const { prevPost, nextPost } = Astro.props;
             </svg>
             Previous
           </span>
-          <span class="line-clamp-2 text-sm font-medium text-stone-700 transition-colors group-hover:text-stone-900">
+          <span class="line-clamp-2 text-sm font-medium text-foreground transition-colors group-hover:text-foreground">
             {prevPost.data.title}
           </span>
         </a>
@@ -41,7 +41,7 @@ const { prevPost, nextPost } = Astro.props;
           href={`/posts/${nextPost.slug}`}
           class="group ml-auto flex max-w-[45%] flex-col text-right"
         >
-          <span class="mb-2 flex items-center justify-end gap-1.5 text-xs text-stone-400 transition-colors group-hover:text-stone-600">
+          <span class="mb-2 flex items-center justify-end gap-1.5 text-xs text-muted-foreground/80 transition-colors group-hover:text-muted-foreground">
             Next
             <svg
               class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
@@ -52,7 +52,7 @@ const { prevPost, nextPost } = Astro.props;
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
             </svg>
           </span>
-          <span class="line-clamp-2 text-sm font-medium text-stone-700 transition-colors group-hover:text-stone-900">
+          <span class="line-clamp-2 text-sm font-medium text-foreground transition-colors group-hover:text-foreground">
             {nextPost.data.title}
           </span>
         </a>

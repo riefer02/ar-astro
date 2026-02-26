@@ -13,13 +13,22 @@ const metaTags = {
   <main class="min-h-screen py-12 px-4">
     <div class="max-w-4xl mx-auto">
       <header class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-stone-900 mb-2">Dragon Quest</h1>
-        <p class="text-stone-600">A proof-of-concept adventure game</p>
+        <h1 class="text-4xl font-bold text-foreground mb-2">Dragon Quest</h1>
+        <p class="text-muted-foreground">A proof-of-concept adventure game</p>
       </header>
       
       <DragonGame client:only="react" />
       
-      <div class="mt-12 prose prose-stone max-w-none">
+      <div
+        class="prose mt-12 max-w-none
+               prose-headings:text-foreground
+               prose-p:text-muted-foreground
+               prose-ul:text-muted-foreground
+               prose-li:text-muted-foreground
+               prose-strong:text-foreground
+               prose-a:text-primary
+               hover:prose-a:text-foreground"
+      >
         <h2>About This Game</h2>
         <p>
           This is a simple proof-of-concept built with React and TypeScript, demonstrating 

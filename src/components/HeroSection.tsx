@@ -4,10 +4,10 @@ import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-stone-50 py-16 md:py-32">
+    <section className="relative w-full overflow-hidden bg-background py-16 md:py-32">
       {/* Abstract Background Shapes for Depth */}
-      <div className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-stone-200/40 blur-[120px]" />
-      <div className="absolute -right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-stone-300/30 blur-[120px]" />
+      <div className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-accent/40 blur-[120px]" />
+      <div className="absolute -right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-secondary/50 blur-[120px]" />
       
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20"></div>
@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             <Badge
               variant="secondary"
-              className="border border-stone-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-stone-600 shadow-sm backdrop-blur-md"
+              className="border border-border bg-card/80 px-4 py-1.5 text-sm font-medium text-muted-foreground shadow-sm backdrop-blur-md"
             >
               <span className="mr-2 flex h-2 w-2">
                 <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-400 opacity-75"></span>
@@ -29,15 +29,15 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="max-w-5xl font-sans text-5xl font-extrabold tracking-tight text-stone-900 animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both sm:text-7xl">
+          <h1 className="max-w-5xl font-sans text-5xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both sm:text-7xl">
             Forging the Future of <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-stone-800 to-stone-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[hsl(var(--hero-gradient-from))] via-[hsl(var(--hero-gradient-via))] to-[hsl(var(--hero-gradient-to))] bg-clip-text text-transparent drop-shadow-[0_6px_20px_hsl(var(--hero-gradient-to)/0.35)]">
               Digital Intelligence
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="max-w-2xl text-lg leading-relaxed text-stone-600 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both sm:text-xl">
+          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both sm:text-xl">
             I'm <strong>Andrew Riefenstahl</strong>. Senior software engineer and AI
             specialist. I build resilient systems and explore the intersection
             of human cognition and artificial intelligence.
@@ -48,7 +48,7 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="h-12 min-w-[160px] rounded-full text-base font-semibold shadow-xl transition-all hover:scale-105 hover:shadow-2xl hover:bg-stone-800"
+              className="h-12 min-w-[160px] rounded-full text-base font-semibold shadow-xl transition-all hover:scale-105 hover:shadow-2xl hover:bg-primary"
             >
               <a href="#projects">
                 Explore Work
@@ -59,7 +59,7 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="h-12 min-w-[160px] rounded-full border-stone-300 bg-white/60 text-base backdrop-blur-sm transition-all hover:bg-white hover:text-stone-900"
+              className="h-12 min-w-[160px] rounded-full border-border bg-card/60 text-base backdrop-blur-sm transition-all hover:bg-card hover:text-foreground"
             >
               <a href="/posts">
                 Read Insights
@@ -71,45 +71,45 @@ const HeroSection = () => {
           {/* Tech Stack / "Flare" Visual - Floating Cards */}
           <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 fill-mode-both sm:grid-cols-3">
             {/* Card 1: Senior Engineering */}
-            <div className="group relative overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-stone-900 group-hover:text-white">
+            <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                 <Code2 className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-stone-900">
+              <h3 className="mb-2 text-xl font-bold text-foreground">
                 Senior Engineering
               </h3>
-              <p className="text-stone-600">
+              <p className="text-muted-foreground">
                 Scalable architectures, automation pipelines, and robust full-stack solutions.
               </p>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-stone-100 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-secondary opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>
 
             {/* Card 2: AI & Future Tech */}
-            <div className="group relative overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-stone-900 group-hover:text-white">
+            <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                 <Brain className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-stone-900">
+              <h3 className="mb-2 text-xl font-bold text-foreground">
                 AI Innovation
               </h3>
-              <p className="text-stone-600">
+              <p className="text-muted-foreground">
                 Building autonomous agents, memory systems, and RAG pipelines for complex problems.
               </p>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-stone-100 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-secondary opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>
 
             {/* Card 3: Leadership & Ethics */}
-            <div className="group relative overflow-hidden rounded-2xl border border-stone-200 bg-white p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-stone-900 group-hover:text-white">
+            <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                 <Heart className="h-6 w-6" />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-stone-900">
+              <h3 className="mb-2 text-xl font-bold text-foreground">
                 Leadership & Ethics
               </h3>
-              <p className="text-stone-600">
+              <p className="text-muted-foreground">
                 Solution-oriented mentorship with a focus on sustainable, human-centric tech.
               </p>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-stone-100 opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-secondary opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>
           </div>
         </div>

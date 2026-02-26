@@ -25,7 +25,7 @@ export function GameCanvas({
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg border-4 border-stone-600 bg-stone-800 shadow-2xl"
+      className="relative overflow-hidden rounded-lg border-4 border-border bg-primary shadow-2xl"
       style={{ width: GAME_WIDTH, height: GAME_HEIGHT }}
     >
       {/* Floor Pattern */}
@@ -33,10 +33,10 @@ export function GameCanvas({
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `
-            linear-gradient(45deg, #57534e 25%, transparent 25%),
-            linear-gradient(-45deg, #57534e 25%, transparent 25%),
-            linear-gradient(45deg, transparent 75%, #57534e 75%),
-            linear-gradient(-45deg, transparent 75%, #57534e 75%)
+            linear-gradient(45deg, hsl(var(--surface-3)) 25%, transparent 25%),
+            linear-gradient(-45deg, hsl(var(--surface-3)) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, hsl(var(--surface-3)) 75%),
+            linear-gradient(-45deg, transparent 75%, hsl(var(--surface-3)) 75%)
           `,
           backgroundSize: "20px 20px",
           backgroundPosition: "0 0, 0 10px, 10px -10px, -10px 0px",

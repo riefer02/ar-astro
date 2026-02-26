@@ -31,11 +31,11 @@ const { title, description, pubDate, image } = post.data;
           <CardTitle className="mb-2 line-clamp-2 text-lg font-bold">
             {title}
           </CardTitle>
-          <CardDescription className="mb-4 line-clamp-3 text-sm text-gray-600">
+          <CardDescription className="mb-4 line-clamp-3 text-sm text-muted-foreground">
             {description}
           </CardDescription>
         </div>
-        <p class="mt-2 text-xs text-gray-500">
+        <p class="mt-2 text-xs text-muted-foreground">
           {new Date(pubDate).toLocaleDateString()}
         </p>
       </CardContent>

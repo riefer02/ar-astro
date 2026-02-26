@@ -72,26 +72,13 @@ const { metaTags } = Astro.props;
       }
     </script>
   </head>
-  <body class="bg-stone-50 text-gray-600">
+  <body class="bg-background text-foreground">
     <Header title={metaTags.title} />
     <main>
       <slot />
     </main>
     <footer class="py-6 text-center">
-      <a href="/games/dragon-quest" class="text-[0.5rem] leading-none text-stone-300 no-underline transition-colors hover:text-stone-500" aria-label="A secret">🐉</a>
+      <a href="/games/dragon-quest" class="text-[0.5rem] leading-none text-muted-foreground/70 no-underline transition-colors hover:text-muted-foreground" aria-label="A secret">🐉</a>
     </footer>
-    <style is:global>
-      :root {
-        --accent: 136, 58, 7;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          rgb(var(--accent-light)) 30%,
-          white 60%
-        );
-      }
-    </style>
   </body>
 </html>

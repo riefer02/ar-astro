@@ -93,18 +93,18 @@ const ExpertiseSection = () => {
     <section id="expertise" className="relative py-16 md:py-32">
        {/* Background Elements - Subtle continuation of Hero theme */}
        <div className="absolute inset-0 -z-10 bg-[url('/noise.svg')] opacity-10"></div>
-       <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] bg-gradient-to-b from-stone-100/50 to-transparent blur-[120px]" />
+       <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] bg-gradient-to-b from-secondary/60 to-transparent blur-[120px]" />
 
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-stone-200 bg-white/50 px-3 py-1 text-stone-600 backdrop-blur-sm">
+          <Badge variant="outline" className="mb-4 border-border bg-card/50 px-3 py-1 text-muted-foreground backdrop-blur-sm">
             Core Competencies
           </Badge>
-          <h2 className="mb-6 text-3xl font-bold tracking-tight text-stone-900 md:text-5xl">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             Technical & Leadership DNA
           </h2>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-stone-600">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
             I bring a holistic approach to software engineering—combining deep technical expertise with a focus on sustainable architecture and human-centric leadership.
           </p>
         </div>
@@ -116,18 +116,18 @@ const ExpertiseSection = () => {
             return (
               <Card
                 key={index}
-                className="group relative h-full overflow-hidden border-stone-200 bg-white/80 p-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-stone-200/50"
+                className="group relative h-full overflow-hidden border-border bg-card/80 p-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/15"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-stone-50/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-background/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 
                 <CardHeader className="relative pb-4">
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-100 text-stone-700 transition-colors duration-300 group-hover:bg-stone-900 group-hover:text-white">
+                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
                     <IconComponent className="h-7 w-7" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-stone-900">
+                  <CardTitle className="text-2xl font-bold text-foreground">
                     {area.title}
                   </CardTitle>
-                  <p className="text-base leading-relaxed text-stone-600">
+                  <p className="text-base leading-relaxed text-muted-foreground">
                     {area.description}
                   </p>
                 </CardHeader>
@@ -137,7 +137,7 @@ const ExpertiseSection = () => {
                       <Badge
                         key={skillIndex}
                         variant="secondary"
-                        className="border border-stone-100 bg-stone-50 px-3 py-1 text-sm font-normal text-stone-600 transition-colors hover:border-stone-200 hover:bg-white hover:text-stone-900"
+                        className="border border-border/70 bg-background px-3 py-1 text-sm font-normal text-muted-foreground transition-colors hover:border-border hover:bg-card hover:text-foreground"
                       >
                         {skill}
                       </Badge>
@@ -150,8 +150,8 @@ const ExpertiseSection = () => {
         </div>
 
         {/* Specializations Grid - Updated to match style */}
-        <div className="rounded-3xl border border-stone-200 bg-white/50 p-8 backdrop-blur-sm md:p-12">
-          <h3 className="mb-10 text-center text-xl font-semibold tracking-tight text-stone-900">
+        <div className="rounded-3xl border border-border bg-card/50 p-8 backdrop-blur-sm md:p-12">
+          <h3 className="mb-10 text-center text-xl font-semibold tracking-tight text-foreground">
             Specialized Capabilities
           </h3>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
@@ -159,13 +159,13 @@ const ExpertiseSection = () => {
               const IconComponent = spec.icon;
               return (
                 <div key={index} className="group flex flex-col items-center text-center">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-stone-100 bg-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:border-stone-200 group-hover:shadow-md">
-                    <IconComponent className="h-7 w-7 text-stone-600 transition-colors group-hover:text-stone-900" />
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-border/70 bg-card shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:border-border group-hover:shadow-md">
+                    <IconComponent className="h-7 w-7 text-muted-foreground transition-colors group-hover:text-foreground" />
                   </div>
-                  <h4 className="mb-1.5 text-sm font-bold text-stone-900">
+                  <h4 className="mb-1.5 text-sm font-bold text-foreground">
                     {spec.label}
                   </h4>
-                  <p className="text-xs font-medium text-stone-500">{spec.desc}</p>
+                  <p className="text-xs font-medium text-muted-foreground">{spec.desc}</p>
                 </div>
               );
             })}

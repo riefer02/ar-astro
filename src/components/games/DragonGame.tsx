@@ -109,7 +109,7 @@ export function DragonGame() {
         />
       </GameCanvas>
 
-      <div className="max-w-[800px] text-center text-sm text-stone-600">
+      <div className="max-w-[800px] text-center text-sm text-muted-foreground">
         <p className="font-semibold">Dragon Quest - Proof of Concept</p>
         <p>
           Use WASD or Arrow Keys to move. Press SPACE to attack. Press E when

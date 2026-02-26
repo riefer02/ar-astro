@@ -14,7 +14,7 @@ const DesktopNav = () => {
           <a
             key={item.href}
             href={item.href}
-            className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-stone-100 transition-all duration-200 hover:bg-white/10 hover:text-white"
+            className="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-primary-foreground transition-all duration-200 hover:bg-primary-foreground/10 hover:text-primary-foreground"
           >
             <IconComponent className="h-4 w-4" />
             <span>{item.label}</span>

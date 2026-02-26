@@ -21,16 +21,16 @@ const MobileNav = () => {
         <Button
           variant="ghost"
           size="icon"
-          className="text-white hover:bg-white/10 hover:text-white md:hidden"
+          className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground md:hidden"
         >
           <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-80 border-stone-200 bg-stone-50">
+      <SheetContent side="right" className="w-80 border-border bg-background">
         <div className="flex h-full flex-col">
-          <div className="flex items-center justify-between border-b border-stone-200 py-4">
-            <h2 className="text-lg font-semibold text-stone-900">Navigation</h2>
+          <div className="flex items-center justify-between border-b border-border py-4">
+            <h2 className="text-lg font-semibold text-foreground">Navigation</h2>
           </div>
           <nav className="flex-1 py-6">
             <div className="space-y-2">
@@ -41,7 +41,7 @@ const MobileNav = () => {
                     key={item.href}
                     href={item.href}
                     onClick={handleItemClick}
-                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-stone-700 transition-colors duration-200 hover:bg-stone-100 hover:text-stone-900"
+                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-foreground transition-colors duration-200 hover:bg-secondary hover:text-foreground"
                   >
                     <IconComponent className="h-5 w-5" />
                     <span className="font-medium">{item.label}</span>
@@ -50,8 +50,8 @@ const MobileNav = () => {
               })}
             </div>
           </nav>
-          <div className="border-t border-stone-200 pt-4">
-            <p className="text-center text-sm text-stone-500">
+          <div className="border-t border-border pt-4">
+            <p className="text-center text-sm text-muted-foreground">
               © 2025 Andrew Riefenstahl
             </p>
           </div>

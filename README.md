@@ -51,6 +51,14 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
+## Theme
+
+The site uses a semantic forest-green token system designed for accessibility and long-term scalability.
+
+- Token source: `src/styles/globals.css`
+- Tailwind mapping: `tailwind.config.mjs`
+- Usage guide: `docs/theme-system.md`
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

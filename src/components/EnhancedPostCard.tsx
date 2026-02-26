@@ -42,7 +42,7 @@ const EnhancedPostCard = ({ post }: Props) => {
   };
 
   return (
-    <Card className="group h-full overflow-hidden border border-stone-200 bg-white transition-all duration-300 hover:border-stone-300 hover:shadow-lg">
+    <Card className="group h-full overflow-hidden border border-border bg-card transition-all duration-300 hover:border-border hover:shadow-lg">
       {/* Image Header */}
       <div className="relative overflow-hidden">
         <img
@@ -61,7 +61,7 @@ const EnhancedPostCard = ({ post }: Props) => {
               <Badge
                 key={tag}
                 variant="secondary"
-                className="bg-stone-100 text-xs text-stone-700 transition-colors hover:bg-stone-200"
+                className="bg-secondary text-xs text-foreground transition-colors hover:bg-accent"
               >
                 {tag}
               </Badge>
@@ -70,17 +70,17 @@ const EnhancedPostCard = ({ post }: Props) => {
         )}
 
         {/* Title */}
-        <CardTitle className="mb-3 line-clamp-2 text-xl font-bold leading-tight text-stone-900 transition-colors group-hover:text-stone-700">
+        <CardTitle className="mb-3 line-clamp-2 text-xl font-bold leading-tight text-foreground transition-colors group-hover:text-foreground">
           {title}
         </CardTitle>
 
         {/* Description */}
-        <p className="mb-4 line-clamp-3 flex-grow text-sm leading-relaxed text-stone-600">
+        <p className="mb-4 line-clamp-3 flex-grow text-sm leading-relaxed text-muted-foreground">
           {description}
         </p>
 
         {/* Meta Information */}
-        <div className="mb-4 flex items-center justify-between text-xs text-stone-500">
+        <div className="mb-4 flex items-center justify-between text-xs text-muted-foreground">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Calendar className="h-3 w-3" />
@@ -101,7 +101,7 @@ const EnhancedPostCard = ({ post }: Props) => {
         <a href={`/posts/${post.slug}`} className="block">
           <Button
             variant="outline"
-            className="w-full transition-all duration-200 group-hover:border-stone-400 group-hover:bg-stone-50"
+            className="w-full transition-all duration-200 group-hover:border-border group-hover:bg-background"
           >
             <span>Read Article</span>
             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
