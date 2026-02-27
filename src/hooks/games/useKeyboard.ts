@@ -28,7 +28,7 @@ export function useKeyboard({
       const key = e.key.toLowerCase();
       keysRef.current.add(key);
 
-      if (e.key === " " || key === "e") {
+      if (e.key === " " || key === "e" || key === "shift" || key === "f") {
         e.preventDefault();
       }
 

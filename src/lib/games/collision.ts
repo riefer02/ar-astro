@@ -7,7 +7,9 @@ export function isWithinBounds(
   height: number,
   bounds: Bounds,
 ): boolean {
-  return x >= 0 && x + width <= bounds.width && y >= 0 && y + height <= bounds.height;
+  return (
+    x >= 0 && x + width <= bounds.width && y >= 0 && y + height <= bounds.height
+  );
 }
 
 export function checkAABBCollision(
@@ -36,7 +38,18 @@ export function checkCollision(
   }
 
   for (const obj of objects) {
-    if (checkAABBCollision(x, y, width, height, obj.x, obj.y, obj.width, obj.height)) {
+    if (
+      checkAABBCollision(
+        x,
+        y,
+        width,
+        height,
+        obj.x,
+        obj.y,
+        obj.width,
+        obj.height,
+      )
+    ) {
       return true;
     }
   }
