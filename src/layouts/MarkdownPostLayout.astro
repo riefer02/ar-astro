@@ -12,13 +12,14 @@ import type { CollectionEntry } from "astro:content";
 
 interface Props {
   frontmatter: CollectionEntry<"posts">["data"];
+  body: string;
   prevPost: CollectionEntry<"posts"> | null;
   nextPost: CollectionEntry<"posts"> | null;
   currentSlug: string;
   allPosts: CollectionEntry<"posts">[];
 }
 
-const { frontmatter, prevPost, nextPost, currentSlug, allPosts } = Astro.props;
+const { frontmatter, body, prevPost, nextPost, currentSlug, allPosts } = Astro.props;
 
 // Get the full current URL using Astro's built-in approach
 const fullUrl = Astro.url.toString();
@@ -117,7 +118,7 @@ const getReadingTime = (content) => {
                   stroke-width="2"
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span>{getReadingTime(frontmatter.description)}</span>
+              <span>{getReadingTime(body)}</span>
             </div>
           </div>
           <!-- Author (separate line on mobile, same line on desktop) -->

@@ -17,6 +17,13 @@ const OG_HEIGHT = 630;
 const JPEG_QUALITY = 70; // aim for a few hundred KB
 const IMAGE_DIR = path.join(process.cwd(), "src/assets/images");
 
+// Site theme — single source of truth for generated image aesthetics.
+// Update this when the site palette changes.
+const THEME = {
+  palette: "deep forest greens, muted sage, warm ivory accents",
+  mood: "moody, organic, modern with natural undertones",
+};
+
 // --- UTILS ---
 function slugify(str) {
   return str
@@ -52,7 +59,15 @@ function extractFrontmatter(md) {
   const slug = slugify(title);
 
   // Compose prompt for OpenAI image generation
-  const prompt = `Create a visually striking, web-optimized Open Graph image for a blog post titled: "${title}".\n\nDescription: ${description}\n\nThe image should be suitable for social sharing and visually represent the themes and concepts from the blog post. Include a cute Shih Tzu dog somewhere in the composition as a central visual element. Avoid text in the image. Use vibrant, inviting colors and a modern, clean style. Optimize for clarity and impact at small sizes. Do not include any human faces or copyrighted content.`;
+  const prompt = [
+    `Create a visually striking, web-optimized Open Graph image for a blog post titled: "${title}".`,
+    `Description: ${description}`,
+    `Color palette: ${THEME.palette}. Overall mood: ${THEME.mood}.`,
+    `The image should be suitable for social sharing and visually represent the themes and concepts from the blog post.`,
+    `Include a cute Shih Tzu dog somewhere in the composition as a central visual element.`,
+    `Avoid text in the image. Optimize for clarity and impact at small sizes.`,
+    `Do not include any human faces or copyrighted content.`,
+  ].join("\n\n");
 
   // OpenAI API setup
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });

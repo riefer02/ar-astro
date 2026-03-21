@@ -30,6 +30,7 @@ const { Content } = await entry.render();
 
 <MarkdownPostLayout
   frontmatter={entry.data}
+  body={entry.body}
   prevPost={prevPost}
   nextPost={nextPost}
   currentSlug={entry.slug}
