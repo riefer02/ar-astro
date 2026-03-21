@@ -113,6 +113,16 @@
   }
 }
 
+/* Floating tree background */
+@keyframes drift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-50%, -50%); }
+}
+
+.trees-drift {
+  animation: drift 120s linear infinite;
+}
+
 /* Typography and code block fixes */
 @layer base {
   /* Ensure fenced code blocks (Shiki) use our dark background and readable text */
