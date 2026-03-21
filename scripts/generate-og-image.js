@@ -43,6 +43,11 @@ function extractFrontmatter(md) {
   return fm;
 }
 
+function extractBody(md) {
+  const match = md.match(/^---[\s\S]*?---\s*([\s\S]*)$/);
+  return match ? match[1].trim() : "";
+}
+
 // --- MAIN ---
 (async () => {
   const [, , postPath] = process.argv;
@@ -56,12 +61,14 @@ function extractFrontmatter(md) {
   const frontmatter = extractFrontmatter(md);
   const title = frontmatter.title || path.basename(postPath, ".md");
   const description = frontmatter.description || "";
+  const body = extractBody(md);
   const slug = slugify(title);
 
   // Compose prompt for OpenAI image generation
   const prompt = [
     `Create a visually striking, web-optimized Open Graph image for a blog post titled: "${title}".`,
     `Description: ${description}`,
+    `Blog content:\n${body}`,
     `Color palette: ${THEME.palette}. Overall mood: ${THEME.mood}.`,
     `The image should be suitable for social sharing and visually represent the themes and concepts from the blog post.`,
     `Include a cute Shih Tzu dog somewhere in the composition as a central visual element.`,

@@ -1,10 +1,10 @@
 ---
-title: "Time to Reinvent the Wheel"
+title: "Time to Reinvent the Wheel: The OG Neuromancer"
 pubDate: 2026-03-21
-description: "A thought experiment on collapsing the wheel, the long road to a manuscript, and what it means to be a writer who refuses categories."
+description: "On bike rides, wormholes, collapsing the wheel, writing a novel for ten years, and why I take my brain's thoughts and just make something with them."
 author: "Andrew Riefenstahl"
 image:
-  url: "@/assets/images/time-to-reinvent-the-wheel-og.jpg"
+  url: "@/assets/images/time-to-reinvent-the-wheel-the-og-neuromancer-og.jpg"
   alt: "Abstract illustration of a wheel dissolving into something new"
 tags:
   [
