@@ -4,7 +4,8 @@ import { DragonGame } from "../../components/games/DragonGame";
 
 const metaTags = {
   title: "Dragon Quest | Andrew Riefenstahl",
-  description: "A simple dragon adventure game - walk around, attack, and interact with objects!",
+  description:
+    "A hidden dragon-themed micro-quest tucked inside the site footer. Explore, fight, and uncover the ancient gate.",
   url: "https://andrewriefenstahl.com/games/dragon-quest",
 };
 ---
@@ -14,7 +15,9 @@ const metaTags = {
     <div class="max-w-4xl mx-auto">
       <header class="text-center mb-8">
         <h1 class="text-4xl font-bold text-foreground mb-2">Dragon Quest</h1>
-        <p class="text-muted-foreground">A proof-of-concept adventure game</p>
+        <p class="text-muted-foreground">
+          A hidden footer easter egg turned into a tiny quest
+        </p>
       </header>
       
       <DragonGame client:only="react" />
@@ -31,9 +34,10 @@ const metaTags = {
       >
         <h2>About This Game</h2>
         <p>
-          This is a simple proof-of-concept built with React and TypeScript, demonstrating 
-          basic game mechanics like character movement, collision detection, animations, 
-          and object interactions—all without any external game engines!
+          This started as a tiny proof-of-concept and evolved into a hidden
+          micro-adventure tucked into the site. It is intentionally small, but
+          now has an actual quest loop, a secret exit, and just enough friction
+          to feel like a real easter egg rather than a throwaway demo.
         </p>
         
         <h3>Features</h3>
@@ -41,6 +45,7 @@ const metaTags = {
           <li>Smooth 4-directional movement with WASD or arrow keys</li>
           <li>Animated attack system with visual feedback</li>
           <li>Interactive objects you can examine</li>
+          <li>A hidden quest tracker and unlockable ending</li>
           <li>Collision detection with walls and objects</li>
           <li>Dialogue system for storytelling</li>
         </ul>

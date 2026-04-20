@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import type { Direction, Position, ReactiveObject } from "@/lib/games/types";
 import {
   GAME_WIDTH,
@@ -14,6 +14,8 @@ import {
   ROAR_KEYS,
   CONTACT_DAMAGE,
   PLAYER_SIZE,
+  SECRET_GEM_TARGET,
+  TOTAL_ENEMIES,
 } from "@/lib/games/constants";
 import { checkAABBCollision } from "@/lib/games/collision";
 import { useGameLoop } from "@/hooks/games/useGameLoop";
@@ -47,10 +49,12 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
   const [dialogue, setDialogue] = useState<string | null>(null);
   const [dialogueTarget, setDialogueTarget] = useState<string | null>(null);
   const [showControls, setShowControls] = useState(true);
+  const [victoryOpen, setVictoryOpen] = useState(false);
 
   // Refs to break circular dependency between keyboard handler and player
   const playerPosRef = useRef<Position>(INITIAL_POSITION);
   const playerDirRef = useRef<Direction>("down");
+  const questUnlockedRef = useRef(false);
 
   // Responsive scaling
   const containerRef = useRef<HTMLDivElement>(null);
@@ -78,10 +82,53 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
     onEnemyDeath: (x, y) => collectibles.spawnLootBurst(x, y, 2),
   });
 
+  const chestOpened = objectStates.get("chest1") === "activated";
+  const rockShattered = objectStates.get("rock1") === "activated";
+  const enemiesRemaining = enemySystem.enemies.filter(
+    (enemy) => enemy.state !== "dead",
+  ).length;
+  const questSteps = useMemo(
+    () => [
+      {
+        id: "chest",
+        label: "Crack open the treasure chest",
+        complete: chestOpened,
+      },
+      {
+        id: "rock",
+        label: "Shatter the mysterious rock",
+        complete: rockShattered,
+      },
+      {
+        id: "enemies",
+        label: `Cull the cave creatures (${TOTAL_ENEMIES - enemiesRemaining}/${TOTAL_ENEMIES})`,
+        complete: enemiesRemaining === 0,
+      },
+      {
+        id: "gems",
+        label: `Gather dragon gems (${Math.min(collectibles.score, SECRET_GEM_TARGET)}/${SECRET_GEM_TARGET})`,
+        complete: collectibles.score >= SECRET_GEM_TARGET,
+      },
+    ],
+    [chestOpened, rockShattered, enemiesRemaining, collectibles.score],
+  );
+  const doorUnlocked = questSteps.every((step) => step.complete);
+
   const closeDialogue = useCallback(() => {
     setDialogue(null);
     setDialogueTarget(null);
   }, []);
+
+  useEffect(() => {
+    if (!doorUnlocked || questUnlockedRef.current) return;
+
+    questUnlockedRef.current = true;
+    activateObject("door1");
+    setDialogue(
+      "The ancient gate shudders awake.\nA portal blooms in the north wall.\nReturn to it and press E to escape.",
+    );
+    setDialogueTarget("Ancient Gate");
+  }, [doorUnlocked, activateObject]);
 
   // Touch input
   const touch = useTouch();
@@ -92,6 +139,26 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
   const handleInteract = useCallback(() => {
     const facing = getFacingObject(playerPosRef.current, playerDirRef.current);
     if (!facing) return;
+
+    if (facing.id === "door1") {
+      if (doorUnlocked) {
+        closeDialogue();
+        setVictoryOpen(true);
+        setDialogueTarget("Ancient Gate");
+        return;
+      }
+
+      const remainingSteps = questSteps
+        .filter((step) => !step.complete)
+        .map((step) => `• ${step.label}`)
+        .join("\n");
+
+      setDialogue(
+        `The gate rejects you.\n${remainingSteps || "• Something still feels unfinished."}`,
+      );
+      setDialogueTarget("Ancient Gate");
+      return;
+    }
 
     // Potion: heal + consume instead of dialogue
     if (
@@ -108,7 +175,15 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
 
     setDialogue(facing.dialogue);
     setDialogueTarget(facing.name);
-  }, [getFacingObject, objectStates, health, consumeObject]);
+  }, [
+    closeDialogue,
+    consumeObject,
+    doorUnlocked,
+    getFacingObject,
+    health,
+    objectStates,
+    questSteps,
+  ]);
 
   const handleAttack = useCallback(() => {
     if (dialogue) return;
@@ -121,25 +196,28 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
 
   const handleTouchAttack = useCallback(() => {
     dismissControls();
+    if (victoryOpen) return;
     if (dialogue) {
       closeDialogue();
       return;
     }
     handleAttack();
-  }, [dialogue, closeDialogue, handleAttack, dismissControls]);
+  }, [dialogue, closeDialogue, handleAttack, dismissControls, victoryOpen]);
 
   const handleTouchInteract = useCallback(() => {
     dismissControls();
+    if (victoryOpen) return;
     if (dialogue) {
       closeDialogue();
       return;
     }
     handleInteract();
-  }, [dialogue, closeDialogue, handleInteract, dismissControls]);
+  }, [dialogue, closeDialogue, handleInteract, dismissControls, victoryOpen]);
 
   const handleKeyDown = useCallback(
     (key: string) => {
       if (health.isDead) return;
+      if (victoryOpen) return;
 
       if (dialogue) {
         if (CLOSE_DIALOGUE_KEYS.has(key)) {
@@ -176,6 +254,7 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
       performAttack,
       handleInteract,
       health.isDead,
+      victoryOpen,
     ],
   );
 
@@ -218,30 +297,30 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
   // Touch handlers for powers
   const handleTouchFire = useCallback(() => {
     dismissControls();
-    if (dialogue || health.isDead) return;
+    if (dialogue || health.isDead || victoryOpen) return;
     powers.fireBreath();
-  }, [dialogue, powers, dismissControls, health.isDead]);
+  }, [dialogue, powers, dismissControls, health.isDead, victoryOpen]);
 
   const handleTouchDash = useCallback(() => {
     dismissControls();
-    if (dialogue || health.isDead) return;
+    if (dialogue || health.isDead || victoryOpen) return;
     powers.wingDash();
-  }, [dialogue, powers, dismissControls, health.isDead]);
+  }, [dialogue, powers, dismissControls, health.isDead, victoryOpen]);
 
   const handleTouchSpin = useCallback(() => {
     dismissControls();
-    if (dialogue || health.isDead) return;
+    if (dialogue || health.isDead || victoryOpen) return;
     powers.spinAttack();
-  }, [dialogue, powers, dismissControls, health.isDead]);
+  }, [dialogue, powers, dismissControls, health.isDead, victoryOpen]);
 
   const handleTouchRoar = useCallback(() => {
     dismissControls();
-    if (dialogue || health.isDead) return;
+    if (dialogue || health.isDead || victoryOpen) return;
     powers.dragonRoar();
-  }, [dialogue, powers, dismissControls, health.isDead]);
+  }, [dialogue, powers, dismissControls, health.isDead, victoryOpen]);
 
   useGameLoop({
-    paused: !!dialogue || health.isDead,
+    paused: !!dialogue || health.isDead || victoryOpen,
     onTick: (deltaTime) => {
       // 1. Player movement
       if (!powers.isDashing) {
@@ -308,7 +387,7 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
     },
   });
 
-  const facingObject: ReactiveObject | null = !dialogue
+  const facingObject: ReactiveObject | null = !dialogue && !victoryOpen
     ? getFacingObject(player.position, player.direction)
     : null;
 
@@ -348,6 +427,7 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
             maxHp={health.maxHp}
             score={collectibles.score}
             isDead={health.isDead}
+            isVictory={victoryOpen}
             onRestart={onRestart}
           >
             <GameUI
@@ -357,6 +437,8 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
               showControls={showControls}
               onCloseDialogue={closeDialogue}
               isTouchDevice={isTouchDevice}
+              questSteps={questSteps}
+              doorUnlocked={doorUnlocked}
             />
           </GameCanvas>
         </div>
@@ -383,11 +465,12 @@ function DragonGameInner({ onRestart }: { onRestart: () => void }) {
             Use the D-pad to move. Tap {"\u2694\uFE0F"} to attack,{" "}
             {"\uD83D\uDCAC"} to interact, {"\uD83D\uDD25"} fire breath,{" "}
             {"\uD83D\uDCA8"} dash, {"\uD83C\uDF00"} spin, {"\uD83D\uDCE2"} roar.
+            Wake the gate to finish the hidden quest.
           </p>
         ) : (
           <p>
             WASD to move, SPACE to attack, E to interact. Powers: Q fire, Shift
-            dash, R spin, F roar.
+            dash, R spin, F roar. Wake the gate to complete the hidden quest.
           </p>
         )}
       </div>
