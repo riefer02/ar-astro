@@ -32,6 +32,7 @@ interface Props {
 const getProjectIcon = (projectName: string) => {
   const name = projectName.toLowerCase();
   if (name.includes("pulse")) return Users;
+  if (name.includes("iscpo")) return Users;
   if (name.includes("chisos")) return BrainCircuit;
   if (name.includes("flockx") || name.includes("ai")) return Cpu;
   if (name.includes("propane")) return Globe;

@@ -64,18 +64,15 @@
     },
     {
       "name": "ISCPO.org",
-      "subheader": "Membership Platform & Publishing System",
+      "subheader": "Membership Platform & Editorial System",
       "url": "https://iscpo.org",
-      "description": "Architected and delivered ISCPO.org as a modern WordPress membership platform without going headless. Built the site with Sage 11, Acorn 5, Blade, Tailwind, Vite, Alpine.js, and a disciplined plugin/theme boundary so the editorial team could keep native WordPress workflows while the codebase gained Laravel-style structure, config-as-code, and a much stronger developer experience.",
+      "description": "Architected and delivered ISCPO.org as a WordPress membership platform that preserved native editorial workflows, reduced config drift, and made key site structure reproducible across environments. Built with Sage 11, Acorn 5, Blade, Memberful, and a disciplined plugin/theme boundary so the organization kept the WordPress ecosystem it relied on while the codebase gained Laravel-style structure and a much faster developer workflow.",
       "technologies": [
         "WordPress",
         "Sage 11",
         "Acorn 5",
         "Blade",
-        "Tailwind",
         "Vite",
-        "Alpine.js",
-        "ACF",
         "Memberful",
         "Config as Code"
       ]
