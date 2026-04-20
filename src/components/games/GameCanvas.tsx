@@ -45,6 +45,7 @@ interface GameCanvasProps {
   maxHp: number;
   score: number;
   isDead: boolean;
+  isVictory: boolean;
   onRestart: () => void;
   children?: React.ReactNode;
 }
@@ -68,6 +69,7 @@ export function GameCanvas({
   maxHp,
   score,
   isDead,
+  isVictory,
   onRestart,
   children,
 }: GameCanvasProps) {
@@ -346,8 +348,39 @@ export function GameCanvas({
       {/* Overlay UI (dialogue, prompts, controls) */}
       {children}
 
+      {/* Victory Screen */}
+      {isVictory && (
+        <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-black/75 px-6 text-center">
+          <div className="mb-4 text-6xl">{"\uD83C\uDFC6"}</div>
+          <h2 className="mb-3 text-4xl font-bold text-emerald-300">
+            Secret Complete
+          </h2>
+          <p className="mb-2 max-w-md text-lg text-foreground">
+            You woke the ancient gate, cleared the grotto, and escaped with a
+            dragon's hoard.
+          </p>
+          <p className="mb-6 text-xl text-yellow-400">
+            {"\uD83D\uDC8E"} Final Score: {score}
+          </p>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <button
+              className="rounded-lg bg-foreground px-6 py-3 text-lg font-bold text-background transition hover:opacity-90"
+              onClick={onRestart}
+            >
+              Play Again
+            </button>
+            <a
+              className="rounded-lg border border-border bg-background/80 px-6 py-3 text-lg font-bold text-foreground transition hover:bg-background"
+              href="/"
+            >
+              Return Home
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Death Screen */}
-      {isDead && (
+      {isDead && !isVictory && (
         <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-black/70">
           <h2 className="mb-4 text-4xl font-bold text-red-500">Game Over</h2>
           <p className="mb-6 text-xl text-yellow-400">

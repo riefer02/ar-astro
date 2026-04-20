@@ -131,6 +131,8 @@ export const ENEMY_SPAWNS: Array<{ type: EnemyType; x: number; y: number }> = [
   { type: "skeleton", x: 400, y: 150 },
 ];
 
+export const TOTAL_ENEMIES = ENEMY_SPAWNS.length;
+
 // --- Damage ---
 
 export const DAMAGE_VALUES: Record<AttackType, number> = {
@@ -150,6 +152,7 @@ export const CONTACT_DAMAGE = 1;
 export const GEM_PICKUP_RANGE = 35;
 export const GEM_LIFETIME = 10000;
 export const GEM_SIZE = 20;
+export const SECRET_GEM_TARGET = 8;
 
 // --- Hit Effects ---
 
@@ -194,13 +197,13 @@ export const REACTIVE_OBJECTS: ReactiveObject[] = [
     y: 20,
     emoji: "\u{1F6AA}",
     name: "Wooden Door",
-    dialogue: "The door is barred from the other side. You can't leave yet!",
+    dialogue: "The gate is sealed. Something in this grotto needs to be awakened first.",
     width: 80,
     height: 60,
     objectState: "default",
     reactsTo: [],
-    activatedEmoji: "\u{1F6AA}",
-    activatedDialogue: "",
+    activatedEmoji: "\uD83C\uDF00",
+    activatedDialogue: "The ancient gate hums to life. Press E to leave the grotto.",
     lootCount: 0,
   },
   {
@@ -226,7 +229,7 @@ export const REACTIVE_OBJECTS: ReactiveObject[] = [
     emoji: "\u{1F4DC}",
     name: "Ancient Scroll",
     dialogue:
-      "The scroll reads: 'Beware the dragon's wrath... wait, that's you!'",
+      "The scroll reads: 'Crack the chest. Burn the stone. Gather glitter. Silence the cave. Then the gate will wake.'",
     width: 35,
     height: 30,
     objectState: "default",
