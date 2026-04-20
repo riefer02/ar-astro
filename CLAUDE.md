@@ -8,7 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev          # Dev server at localhost:4321
 pnpm build        # Production build to ./dist/ (also builds Pagefind search index)
 pnpm preview      # Preview production build locally
-node scripts/generate-og-image.js <path-to-post.md>  # Generate OG image for a blog post (requires OPENAI_API_KEY)
+pnpm generate:og -- <path-to-post.md>  # Generate a forest-branded OG image for a blog post
+pnpm generate:og:site                  # Regenerate the default site-wide OG image
 ```
 
 No test runner or linter is configured. Prettier with `prettier-plugin-tailwindcss` handles formatting.
@@ -52,4 +53,4 @@ Pagefind integration via `astro-pagefind`. The search index is only built during
 - Navigation: `DesktopNav.tsx` and `MobileNav.tsx` are React components (MobileNav uses Radix Sheet)
 - Layouts: `Layout.astro` (base) and `MarkdownPostLayout.astro` (blog posts)
 - Blog post pages compute reading time, show prev/next navigation, related posts by tags, and a share button
-- OG image generation uses OpenAI's image API with Sharp for resizing
+- OG image generation uses a local Sharp-based renderer that outputs fixed-size forest-themed cards
