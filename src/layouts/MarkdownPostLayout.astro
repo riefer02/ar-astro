@@ -21,8 +21,9 @@ interface Props {
 
 const { frontmatter, body, prevPost, nextPost, currentSlug, allPosts } = Astro.props;
 
-// Get the full current URL using Astro's built-in approach
-const fullUrl = Astro.url.toString();
+const siteUrl = Astro.site ?? new URL("https://andrewriefenstahl.com");
+const articlePath = `/posts/${currentSlug}/`;
+const fullUrl = new URL(articlePath, siteUrl).toString();
 const publishedIso = new Date(frontmatter.pubDate).toISOString();
 
 const metaTags = {

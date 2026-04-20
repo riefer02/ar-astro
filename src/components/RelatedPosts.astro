@@ -46,7 +46,7 @@ const formatDate = (date: Date) => {
       </h2>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
         {relatedPosts.map((post) => (
-          <a href={`/posts/${post.slug}`} class="group block">
+          <a href={`/posts/${post.slug}/`} class="group block">
             {post.data.image && (
               <div class="mb-3 aspect-[16/10] overflow-hidden rounded-lg bg-secondary">
                 <Image

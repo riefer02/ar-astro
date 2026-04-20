@@ -41,7 +41,7 @@ const { title, description, pubDate, image } = post.data;
       </CardContent>
       <CardFooter className="mt-auto flex items-center justify-between p-4">
         <Button asChild variant="outline">
-          <a href={"/posts/" + post.slug}>Read More</a>
+          <a href={`/posts/${post.slug}/`}>Read More</a>
         </Button>
       </CardFooter>
     </div>

@@ -98,7 +98,7 @@ const EnhancedPostCard = ({ post }: Props) => {
         </div>
 
         {/* Read More Button */}
-        <a href={`/posts/${post.slug}`} className="block">
+        <a href={`/posts/${post.slug}/`} className="block">
           <Button
             variant="outline"
             className="w-full transition-all duration-200 group-hover:border-border group-hover:bg-background"
