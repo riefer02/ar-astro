@@ -14,7 +14,7 @@ const { prevPost, nextPost } = Astro.props;
     <nav class="mt-16 flex items-stretch justify-between gap-4" aria-label="Post navigation">
       {prevPost ? (
         <a
-          href={`/posts/${prevPost.slug}`}
+          href={`/posts/${prevPost.slug}/`}
           class="group flex max-w-[45%] flex-col"
         >
           <span class="mb-2 flex items-center gap-1.5 text-xs text-muted-foreground/80 transition-colors group-hover:text-muted-foreground">
@@ -38,7 +38,7 @@ const { prevPost, nextPost } = Astro.props;
 
       {nextPost ? (
         <a
-          href={`/posts/${nextPost.slug}`}
+          href={`/posts/${nextPost.slug}/`}
           class="group ml-auto flex max-w-[45%] flex-col text-right"
         >
           <span class="mb-2 flex items-center justify-end gap-1.5 text-xs text-muted-foreground/80 transition-colors group-hover:text-muted-foreground">

@@ -36,7 +36,7 @@ const metaTags = {
       : `Writing & Musings - Page ${page.currentPage} - Andrew Riefenstahl`,
   description:
     "Personal reflections on technology, life, music, philosophy, and the human experience. A mix of technical insights, creative pursuits, and honest thoughts on navigating this world.",
-  url: `https://andrewriefenstahl.com/posts${page.currentPage === 1 ? "" : `/${page.currentPage}`}`,
+  url: `https://andrewriefenstahl.com/posts/${page.currentPage === 1 ? "" : `${page.currentPage}/`}`,
 };
 ---
 

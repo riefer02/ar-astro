@@ -155,11 +155,12 @@
 
   .article-prose table {
     width: 100%;
-    display: block;
-    overflow-x: auto;
-    border-collapse: collapse;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
     border: 1px solid hsl(var(--border));
     border-radius: 1rem;
+    overflow: hidden;
     background: linear-gradient(
       180deg,
       hsl(var(--card) / 0.95) 0%,
@@ -180,9 +181,10 @@
   }
 
   .article-prose :is(th, td) {
-    min-width: 12rem;
+    min-width: 0;
     padding: 0.9rem 1rem;
     vertical-align: top;
+    overflow-wrap: anywhere;
   }
 
   .article-prose th {
@@ -208,5 +210,18 @@
   .article-prose code {
     background: hsl(var(--secondary) / 0.65);
     padding: 0.15rem 0.4rem;
+  }
+
+  @media (max-width: 767px) {
+    .article-prose table {
+      display: block;
+      overflow-x: auto;
+      table-layout: auto;
+    }
+
+    .article-prose :is(th, td) {
+      min-width: 12rem;
+      overflow-wrap: normal;
+    }
   }
 }
