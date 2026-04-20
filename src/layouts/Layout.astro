@@ -11,10 +11,53 @@ interface Props {
     image?: string;
     url: string;
     twitterHandle?: string;
+    type?: "website" | "article";
+    article?: {
+      publishedTime?: string;
+      modifiedTime?: string;
+      author?: string;
+      tags?: string[];
+    };
   };
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
-const { metaTags } = Astro.props;
+const { metaTags, structuredData } = Astro.props;
+
+const siteUrl = Astro.site ?? new URL("https://andrewriefenstahl.com");
+const canonicalUrl = new URL(metaTags.url, siteUrl).toString();
+const socialImageUrl = new URL(metaTags.image || ogImage.src, siteUrl).toString();
+
+const personStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Andrew Riefenstahl",
+  jobTitle: "Full Stack Developer & AI Specialist",
+  url: "https://andrewriefenstahl.com",
+  sameAs: [
+    "https://twitter.com/riefer02",
+    "https://github.com/riefer02",
+  ],
+  knowsAbout: [
+    "Web Development",
+    "Artificial Intelligence",
+    "MCP Server Development",
+    "HIPAA Compliance",
+    "Security Engineering",
+    "Full Stack Development",
+  ],
+  description:
+    "Full-stack developer specializing in AI applications, secure web development, and MCP server architecture.",
+};
+
+const structuredDataItems = [
+  personStructuredData,
+  ...(structuredData
+    ? Array.isArray(structuredData)
+      ? structuredData
+      : [structuredData]
+    : []),
+];
 ---
 
 <!doctype html>
@@ -31,9 +74,9 @@ const { metaTags } = Astro.props;
     />
     <meta property="og:title" content={metaTags.title} />
     <meta property="og:description" content={metaTags.description} />
-    <meta property="og:image" content={metaTags.image || ogImage.src} />
-    <meta property="og:url" content={metaTags.url} />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content={metaTags.type || "website"} />
     <meta property="og:site_name" content="Andrew Riefenstahl" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -42,34 +85,41 @@ const { metaTags } = Astro.props;
     />
     <meta name="twitter:title" content={metaTags.title} />
     <meta name="twitter:description" content={metaTags.description} />
-    <meta name="twitter:image" content={metaTags.image || ogImage.src} />
-    <link rel="canonical" href={metaTags.url} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {
+      metaTags.article?.publishedTime && (
+        <meta
+          property="article:published_time"
+          content={metaTags.article.publishedTime}
+        />
+      )
+    }
+    {
+      metaTags.article?.modifiedTime && (
+        <meta
+          property="article:modified_time"
+          content={metaTags.article.modifiedTime}
+        />
+      )
+    }
+    {
+      metaTags.article?.author && (
+        <meta property="article:author" content={metaTags.article.author} />
+      )
+    }
+    {
+      metaTags.article?.tags?.map((tag) => (
+        <meta property="article:tag" content={tag} />
+      ))
+    }
     <ViewTransitions />
     <Favicon />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Andrew Riefenstahl",
-        "jobTitle": "Full Stack Developer & AI Specialist",
-        "url": "https://andrewriefenstahl.com",
-        "sameAs": [
-          "https://twitter.com/riefer02",
-          "https://github.com/riefer02"
-        ],
-        "knowsAbout": [
-          "Web Development",
-          "Artificial Intelligence",
-          "MCP Server Development",
-          "HIPAA Compliance",
-          "Security Engineering",
-          "Full Stack Development"
-        ],
-        "description": "Full-stack developer specializing in AI applications, secure web development, and MCP server architecture."
-      }
+      {JSON.stringify(structuredDataItems)}
     </script>
   </head>
   <body class="bg-background text-foreground">

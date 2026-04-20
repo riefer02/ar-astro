@@ -23,12 +23,41 @@ const { frontmatter, body, prevPost, nextPost, currentSlug, allPosts } = Astro.p
 
 // Get the full current URL using Astro's built-in approach
 const fullUrl = Astro.url.toString();
+const publishedIso = new Date(frontmatter.pubDate).toISOString();
 
 const metaTags = {
   title: frontmatter.title,
   description: frontmatter.description,
   image: frontmatter.image?.url?.src || frontmatter.image,
   url: fullUrl,
+  type: "article" as const,
+  article: {
+    publishedTime: publishedIso,
+    modifiedTime: publishedIso,
+    author: frontmatter.author,
+    tags: frontmatter.tags || [],
+  },
+};
+
+const articleStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: frontmatter.title,
+  description: frontmatter.description,
+  image: [metaTags.image],
+  datePublished: publishedIso,
+  dateModified: publishedIso,
+  author: {
+    "@type": "Person",
+    name: frontmatter.author,
+  },
+  mainEntityOfPage: fullUrl,
+  keywords: (frontmatter.tags || []).join(", "),
+  publisher: {
+    "@type": "Person",
+    name: "Andrew Riefenstahl",
+    url: "https://andrewriefenstahl.com",
+  },
 };
 
 // Format date nicely
@@ -51,7 +80,7 @@ const getReadingTime = (content) => {
 };
 ---
 
-<Layout metaTags={metaTags}>
+<Layout metaTags={metaTags} structuredData={articleStructuredData}>
   <!-- Back Navigation -->
   <div class="px-6 pt-8">
     <div class="mx-auto max-w-4xl">
@@ -190,22 +219,26 @@ const getReadingTime = (content) => {
       }
 
       <!-- Article Content (clean, no cards) -->
-      <div
-        class="prose mx-auto max-w-none lg:prose-lg xl:prose-xl
+      <div class="relative overflow-hidden rounded-[2rem] border border-border/70 bg-card/45 px-5 py-6 shadow-[0_24px_80px_-48px_hsl(var(--foreground)/0.35)] backdrop-blur-sm sm:px-8 sm:py-8 md:px-10 md:py-10">
+        <div class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent"></div>
+        <div
+          class="article-prose prose mx-auto max-w-none lg:prose-lg xl:prose-xl
                 prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground
-                prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
-                prose-h4:text-xl prose-p:text-lg prose-p:leading-relaxed prose-p:text-muted-foreground
+                prose-headings:scroll-mt-28 prose-h1:text-4xl prose-h2:mt-14 prose-h2:mb-5 prose-h2:text-3xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-2xl
+                prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-xl prose-p:my-5 prose-p:text-lg prose-p:leading-relaxed prose-p:text-muted-foreground
                 prose-a:font-medium prose-a:text-primary prose-a:underline prose-a:decoration-border prose-a:underline-offset-4
                 hover:prose-a:text-foreground hover:prose-a:decoration-primary prose-a:transition-all prose-a:duration-200
                 prose-blockquote:rounded-r-lg prose-blockquote:border-l-4 prose-blockquote:border-border prose-blockquote:bg-secondary/60 prose-blockquote:py-4 prose-blockquote:pl-6 prose-blockquote:pr-4
                 prose-blockquote:not-italic prose-blockquote:text-muted-foreground prose-strong:font-semibold prose-strong:text-foreground prose-code:rounded prose-code:font-mono
                 prose-code:text-base prose-code:text-foreground prose-code:before:content-[''] prose-code:after:content-[''] prose-pre:overflow-x-auto
-                prose-pre:rounded-lg prose-pre:bg-foreground
-                prose-pre:p-6 prose-pre:text-primary-foreground prose-ol:text-muted-foreground
-                prose-ul:text-muted-foreground prose-li:text-lg prose-li:leading-relaxed prose-li:text-muted-foreground
+                prose-pre:rounded-2xl prose-pre:bg-foreground
+                prose-pre:p-6 prose-pre:text-primary-foreground prose-ol:pl-6 prose-ol:text-muted-foreground
+                prose-ul:pl-6 prose-ul:text-muted-foreground prose-li:my-1 prose-li:text-lg prose-li:leading-relaxed prose-li:text-muted-foreground
+                prose-hr:my-12 prose-hr:border-border/80 prose-table:my-10 prose-img:my-10
                 prose-img:rounded-lg prose-img:shadow-md"
-      >
-        <slot />
+        >
+          <slot />
+        </div>
       </div>
 
       <!-- Share Button -->

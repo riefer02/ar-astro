@@ -62,6 +62,21 @@
         "HubSpot"
       ]
     },
+    {
+      "name": "ISCPO.org",
+      "subheader": "Membership Platform & Editorial System",
+      "url": "https://iscpo.org",
+      "description": "Architected and delivered ISCPO.org as a WordPress membership platform that preserved native editorial workflows, reduced config drift, and made key site structure reproducible across environments. Built with Sage 11, Acorn 5, Blade, Memberful, and a disciplined plugin/theme boundary so the organization kept the WordPress ecosystem it relied on while the codebase gained Laravel-style structure and a much faster developer workflow.",
+      "technologies": [
+        "WordPress",
+        "Sage 11",
+        "Acorn 5",
+        "Blade",
+        "Vite",
+        "Memberful",
+        "Config as Code"
+      ]
+    },
 
     {
       "name": "Tolbert's Restaurant",

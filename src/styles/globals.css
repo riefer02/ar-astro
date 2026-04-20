@@ -142,3 +142,71 @@
     color: inherit !important;
   }
 }
+
+@layer components {
+  .article-prose :is(h2, h3, h4) {
+    scroll-margin-top: 7rem;
+  }
+
+  .article-prose blockquote p:first-of-type::before,
+  .article-prose blockquote p:last-of-type::after {
+    content: none;
+  }
+
+  .article-prose table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--card) / 0.95) 0%,
+      hsl(var(--background) / 0.9) 100%
+    );
+  }
+
+  .article-prose thead {
+    background: hsl(var(--secondary) / 0.8);
+  }
+
+  .article-prose tr {
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .article-prose tbody tr:nth-child(even) {
+    background: hsl(var(--background) / 0.5);
+  }
+
+  .article-prose :is(th, td) {
+    min-width: 12rem;
+    padding: 0.9rem 1rem;
+    vertical-align: top;
+  }
+
+  .article-prose th {
+    color: hsl(var(--foreground));
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-align: left;
+  }
+
+  .article-prose td {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .article-prose tr:last-child {
+    border-bottom: 0;
+  }
+
+  .article-prose hr {
+    border-color: hsl(var(--border));
+  }
+
+  .article-prose code {
+    background: hsl(var(--secondary) / 0.65);
+    padding: 0.15rem 0.4rem;
+  }
+}

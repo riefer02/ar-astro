@@ -69,6 +69,7 @@ const HeroSection = () => {
           </div>
 
           {/* Tech Stack / "Flare" Visual - Floating Cards */}
+          <h2 className="sr-only">Core focus areas</h2>
           <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 fill-mode-both sm:grid-cols-3">
             {/* Card 1: Senior Engineering */}
             <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
