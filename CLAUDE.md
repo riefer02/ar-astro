@@ -8,7 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev          # Dev server at localhost:4321
 pnpm build        # Production build to ./dist/ (also builds Pagefind search index)
 pnpm preview      # Preview production build locally
-pnpm generate:og -- <path-to-post.md>  # Generate a forest-branded OG image for a blog post
+pnpm generate:blog-image -- <path-to-post.md>  # Default blog image generator from post metadata and body context
+pnpm generate:og -- <path-to-post.md>  # Legacy local OG card generator
 pnpm generate:og:site                  # Regenerate the default site-wide OG image
 ```
 
@@ -36,6 +37,14 @@ Blog posts live in `src/content/posts/*.md` with frontmatter validated by Zod sc
 
 Static data for the homepage (projects, skills) is in `src/lib/key-projects.json` and `src/lib/professional-skills.json`.
 
+### Blog Drafting Rule
+
+When drafting blog posts from user-provided notes, dictation, transcripts, or "stream of thought" content, preserve the author's grammar, syntax, pronouns, cadence, and rough structure by default. Light cleanup for readability is fine, but do **not** rewrite into a more polished essay unless the user explicitly asks for that. Voice preservation is the default requirement.
+
+### Blog Image Rule
+
+Use `pnpm generate:blog-image` as the default workflow for blog art. The generator should use post metadata and article context, follow the site's forest palette, and subtly hide a Shih Tzu as a recurring motif when it fits the composition. `pnpm generate:og` is the legacy local OG card generator and should not be the default for new blog images.
+
 ### Styling
 
 Tailwind CSS with the **Stone** color palette as the primary design language. Uses shadcn/ui (New York variant) — components live in `src/components/ui/`. The `cn()` utility from `src/lib/utils.ts` merges Tailwind classes. Dark mode is configured (class-based) but not actively used. CSS custom properties define the design tokens in `src/styles/globals.css`.
@@ -53,4 +62,5 @@ Pagefind integration via `astro-pagefind`. The search index is only built during
 - Navigation: `DesktopNav.tsx` and `MobileNav.tsx` are React components (MobileNav uses Radix Sheet)
 - Layouts: `Layout.astro` (base) and `MarkdownPostLayout.astro` (blog posts)
 - Blog post pages compute reading time, show prev/next navigation, related posts by tags, and a share button
-- OG image generation uses a local Sharp-based renderer that outputs fixed-size forest-themed cards
+- `scripts/generate-blog-image.js` is the default blog-art generator
+- A local Sharp-based OG renderer exists for legacy/site OG use, but it is not the default workflow for new blog art

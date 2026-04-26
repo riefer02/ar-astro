@@ -50,6 +50,8 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm preview`         | Preview your build locally, before deploying     |
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm generate:blog-image -- <post.md>` | Generate blog art from post metadata and body context |
+| `pnpm generate:og -- <post.md>` | Generate a legacy local OG card |
 
 ## Theme
 
@@ -58,6 +60,12 @@ The site uses a semantic forest-green token system designed for accessibility an
 - Token source: `src/styles/globals.css`
 - Tailwind mapping: `tailwind.config.mjs`
 - Usage guide: `docs/theme-system.md`
+
+## Blog Authoring
+
+- Agent guidance: `AGENTS.md`
+- Claude guidance: `CLAUDE.md`
+- Blog authoring workflow: `docs/blog-authoring.md`
 
 ## 👀 Want to learn more?
 
