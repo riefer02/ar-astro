@@ -114,13 +114,31 @@
 }
 
 /* Floating tree background */
+:root {
+  --trees-tile-size: 240px;
+}
+
 @keyframes drift {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-50%, -50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(var(--trees-tile-size) * -1), calc(var(--trees-tile-size) * -1), 0); }
 }
 
 .trees-drift {
+  position: absolute;
+  inset: calc(var(--trees-tile-size) * -1);
+  background-image: url("/trees-bg.svg");
+  background-repeat: repeat;
+  background-size: var(--trees-tile-size) var(--trees-tile-size);
   animation: drift 120s linear infinite;
+  contain: paint;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trees-drift {
+    animation: none;
+  }
 }
 
 /* Typography and code block fixes */
