@@ -1,11 +1,11 @@
 ---
 title: "Human Archaeology: Moving As A Compression Algorithm"
 pubDate: 2026-05-07
-description: "A stream-of-thought post on LLM context overload, moving, memory, procedural game systems, and the strange emotional labor of deciding what stays and what goes."
+description: "A stream-of-thought post on LLM context overload, moving, memory, and the strange emotional labor of deciding what stays and what goes."
 author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/human-archaeology-moving-as-a-compression-algorithm.jpg"
-  alt: "Boxes, old artifacts, game maps, and AI fragments arranged like a strange personal archaeology."
+  alt: "Boxes, old artifacts, and AI fragments arranged like a strange personal archaeology."
 tags: ["AI", "life update", "game development", "moving", "stream of thought"]
 ---
 
@@ -50,8 +50,6 @@ That's the real pattern I'm noticing. The physical context window gets too full 
 And that's a trap.
 
 Meanwhile, I've been hanging out with Dayzee, packing, exercising, going to work, working on my mental health, playing a little bit of music, steadily building this indie game, and moving some things in motion for my book.
-
-The game is still alive in the middle of all of this. It turns overwhelm into playable structure.
 
 And outside of that, my brain keeps making these other connections. Stray fragments still bouncing around the mental context window.
 
