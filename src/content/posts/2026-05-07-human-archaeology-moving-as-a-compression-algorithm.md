@@ -1,10 +1,10 @@
 ---
-title: "Human Archaeology And The Short Circuit Generator"
+title: "Human Archaeology: Moving As A Compression Algorithm"
 pubDate: 2026-05-07
 description: "A stream-of-thought post on LLM context overload, moving, memory, procedural game systems, and the strange emotional labor of deciding what stays and what goes."
 author: "Andrew Riefenstahl"
 image:
-  url: "@/assets/images/human-archaeology-and-the-short-circuit-generator.jpg"
+  url: "@/assets/images/human-archaeology-moving-as-a-compression-algorithm.jpg"
   alt: "Boxes, old artifacts, game maps, and AI fragments arranged like a strange personal archaeology."
 tags: ["AI", "life update", "game development", "moving", "stream of thought"]
 ---
