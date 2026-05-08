@@ -1,24 +1,18 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { getCollection } from "astro:content";
+import { getSortedPosts } from "../../lib/content";
 import Layout from "../../layouts/Layout.astro";
 import PostCard from "../../components/PostCard.astro";
 import SearchBar from "../../components/SearchBar.astro";
 import Pagination from "../../components/Pagination.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const allPosts = await getCollection("posts");
-  const sortedPosts = allPosts.sort((a, b) => {
-    return (
-      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
-    );
-  });
-
+  const sortedPosts = await getSortedPosts();
   return paginate(sortedPosts, { pageSize: 6 });
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
-const allPosts = await getCollection("posts");
+const allPosts = await getSortedPosts();
 const totalPosts = allPosts.length;
 
 const latestPost = page.data[0];

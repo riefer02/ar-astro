@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
 import Favicon from "../components/Favicon.astro";
-import { ViewTransitions } from "astro:transitions";
 import ogImage from "../assets/ar-ogimage-optimized.jpg";
 import "../styles/globals.css";
 interface Props {
@@ -114,7 +113,6 @@ const structuredDataItems = [
         <meta property="article:tag" content={tag} />
       ))
     }
-    <ViewTransitions />
     <Favicon />
 
     <!-- JSON-LD Structured Data -->

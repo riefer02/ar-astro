@@ -51,27 +51,7 @@ And that's a trap.
 
 Meanwhile, I've been hanging out with Dayzee, packing, exercising, going to work, working on my mental health, playing a little bit of music, steadily building this indie game, and moving some things in motion for my book.
 
-The game is still alive in the middle of all of this.
-
-That's probably why this game system is appealing to me right now. It turns overwhelm into playable structure.
-
-I've been thinking about the new Godot component, the short circuit generator. Basically, the short circuit generator is a formula schema with random joints inside it, little hinge points where the system can branch, designed to generate dynamic story chapters for an adventure action RPG.
-
-There needs to be a main quest theme and narrative. Then sub-scenes and locations inside the short circuit, each with their own main quest, sub-quest, interwoven story, characters, character dialogue, and maybe even game-core references if an NPC needs to point the player toward a certain mechanic.
-
-Eventually it should be level-appropriate and consist of three or more unique locations, procedurally generated from GIS technology to create realistic terrain, plus a component library for building dynamic locations.
-
-But for the MVP, maybe we keep it simple.
-
-Generate a main quest. Generate three connected areas. Drop the players into the game. Let them interact with the systems.
-
-That's enough.
-
-Because that's also the lesson from moving. You can't carry the whole house at once. You need short circuits. Smaller loops. Generate the next area. Make the next call. Clear the next drawer. Build the next playable chunk.
-
-I've also been thinking about procedural dungeons with wave function collapse. I saw Acerola's Dirt Jam on itch, plus his linked Godot terrain source code, and I've been studying it. Wave function collapse is interesting because it's basically another way of making decisions inside constraints. You define the tiles, the rules, the adjacency, and then the world resolves itself one possibility at a time.
-
-Moving is like that too, except the tiles are paintings, lamps, old documents, boxes, and weird emotional traps. You collapse the possibility space one decision at a time.
+The game is still alive in the middle of all of this. It turns overwhelm into playable structure.
 
 And outside of that, my brain keeps making these other connections. Stray fragments still bouncing around the mental context window.
 
