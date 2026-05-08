@@ -8,7 +8,7 @@ const MobileNav = () => {
 
   const menuItems = [
     { href: "/", label: "Home", icon: Home },
-    { href: "/posts", label: "Blog Posts", icon: BookOpen },
+    { href: "/posts/", label: "Blog Posts", icon: BookOpen },
   ];
 
   const handleItemClick = () => {

@@ -61,7 +61,7 @@ const HeroSection = () => {
               size="lg"
               className="h-12 min-w-[160px] rounded-full border-border bg-card/60 text-base backdrop-blur-sm transition-all hover:bg-card hover:text-foreground"
             >
-              <a href="/posts">
+              <a href="/posts/">
                 Read Insights
                 <Terminal className="ml-2 h-4 w-4" />
               </a>

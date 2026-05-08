@@ -139,7 +139,7 @@ const ConnectSection = () => {
                 className="h-12 rounded-full border-border bg-transparent px-8 text-base text-foreground hover:bg-secondary hover:text-foreground"
                 size="lg"
               >
-                <a href="/posts">Read My Writing</a>
+                <a href="/posts/">Read My Writing</a>
               </Button>
             </div>
           </div>

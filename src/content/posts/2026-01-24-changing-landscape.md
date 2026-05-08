@@ -38,7 +38,7 @@ I'll agree that AI-generated code isn't always great when given massive, undefin
 
 Code reviews have become the primary bottleneck at work. There's a lot of generated code, and increasingly it's being reviewed by AI agents—which I think is great. AI reviewers tend to focus on technical issues rather than the ego-driven nitpicking that often plagues human code reviews.
 
-If a coding convention is something the team is aligning on, let's hope they've actually discussed and agreed on it first. Those conventions need to be written into the prompts for AI code reviews dynamically—similar to the [custom context-aware code review system](/posts/2025-09-23-custom-context-aware-code-review-action) I built a few months back, which is still plugging along for my team.
+If a coding convention is something the team is aligning on, let's hope they've actually discussed and agreed on it first. Those conventions need to be written into the prompts for AI code reviews dynamically—similar to the [custom context-aware code review system](/posts/2025-09-23-custom-context-aware-code-review-action/) I built a few months back, which is still plugging along for my team.
 
 I can't help but chuckle whenever I'm able to output tons of progress toward an objective, only to be forced to create piecemeal pull requests and slowly drip them to my team for code review. I spend most of my time waiting, unable to actually deliver outcomes.
 
@@ -54,7 +54,7 @@ I think it's amazing that the Claude Code team uses their own product to continu
 
 ## Personal Benefits: Accessibility and Productivity
 
-Although I'm not the first to say it, some people are definitely holding onto the past. The other day someone asked me if I use AI agents to code, and I proudly said yes. Not only has my output increased, but my ability to understand greater parts of the codebase has improved because I ask critical questions through the AI. It's also more accessibility-friendly—as you may remember, I've had [health issues with my wrists](/posts/2025-08-09-curious-path-through-pain).
+Although I'm not the first to say it, some people are definitely holding onto the past. The other day someone asked me if I use AI agents to code, and I proudly said yes. Not only has my output increased, but my ability to understand greater parts of the codebase has improved because I ask critical questions through the AI. It's also more accessibility-friendly—as you may remember, I've had [health issues with my wrists](/posts/2025-08-09-curious-path-through-pain/).
 
 I'm able to quickly jump between tasks and get up to speed extremely fast. It's also about meeting your customers where they're at and not over-engineering. One of the biggest flaws I see in software organizations is chasing shiny objects rather than driving user value.
 
@@ -84,7 +84,7 @@ The cost of the best models—the ones that let you output the most and move the
 
 > Is AI fundamentally changing our day-to-day lives for the better? Is it enriching our human experience? Or is it mostly being commodified to line the pockets of capitalists?
 
-As I've mentioned in [previous blogs](/posts/2026-01-13-new-world-order), this technology should be publicly owned and overseen by a government that actually cares for its citizens—one that provides universal basic income, free universal healthcare, and free higher education, all subsidized because a society that is more intelligent and healthy spends less and operates more efficiently. But that's not what capitalists want.
+As I've mentioned in [previous blogs](/posts/2026-01-13-new-world-order/), this technology should be publicly owned and overseen by a government that actually cares for its citizens—one that provides universal basic income, free universal healthcare, and free higher education, all subsidized because a society that is more intelligent and healthy spends less and operates more efficiently. But that's not what capitalists want.
 
 ## Staying Current
 

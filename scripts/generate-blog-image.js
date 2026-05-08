@@ -56,12 +56,14 @@ function printUsage() {
 Usage:
   node scripts/generate-blog-image.js <path-to-post.md>
   node scripts/generate-blog-image.js <path-to-post.md> --output <path>
+  node scripts/generate-blog-image.js <path-to-post.md> --scene <description>
   node scripts/generate-blog-image.js <path-to-post.md> --dry-run
   node scripts/generate-blog-image.js <path-to-post.md> --prompt-only
 
 Options:
   --output <path>   Write the generated image to a specific path
   --model <name>    Image model to use (default: ${DEFAULT_MODEL})
+  --scene <desc>    Additional scene direction appended to the prompt
   --dry-run         Print prompt and resolved output path without calling the API
   --prompt-only     Print the prompt only and exit
 `);
@@ -73,6 +75,7 @@ function parseArgs(argv) {
   let model = DEFAULT_MODEL;
   let dryRun = false;
   let promptOnly = false;
+  let scene = "";
 
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
@@ -98,6 +101,12 @@ function parseArgs(argv) {
       continue;
     }
 
+    if (arg === "--scene") {
+      scene = argv[index + 1] || "";
+      index += 1;
+      continue;
+    }
+
     if (arg === "--dry-run") {
       dryRun = true;
       continue;
@@ -119,7 +128,7 @@ function parseArgs(argv) {
     process.exit(1);
   }
 
-  return { postPath, outputPath, model, dryRun, promptOnly };
+  return { postPath, outputPath, model, dryRun, promptOnly, scene };
 }
 
 function slugify(value) {
@@ -204,7 +213,7 @@ function truncate(value, maxChars) {
   return `${value.slice(0, Math.max(0, maxChars - 1)).trimEnd()}…`;
 }
 
-function buildPrompt(metadata) {
+function buildPrompt(metadata, scene) {
   const paletteSummary = BRAND.palette
     .map((entry) => `${entry.name} ${entry.hex}`)
     .join(", ");
@@ -213,7 +222,7 @@ function buildPrompt(metadata) {
   const tags = metadata.tags.length > 0 ? metadata.tags.join(", ") : "none";
   const altHint = metadata.imageAlt || "not provided";
 
-  return [
+  const lines = [
     `Create a custom landscape blog image for ${BRAND.siteName} (${BRAND.siteUrl}).`,
     "",
     "Post metadata:",
@@ -237,7 +246,13 @@ function buildPrompt(metadata) {
     "- Prefer symbolic or scene-based storytelling over literal text poster design.",
     "- If the topic is technical, imply the ideas visually without brand logos or product screenshots.",
     `- ${BRAND.avoid.join("; ")}.`,
-  ].join("\n");
+  ];
+
+  if (scene) {
+    lines.push("", "Specific scene direction:", scene);
+  }
+
+  return lines.join("\n");
 }
 
 async function ensureDir(filePath) {
@@ -326,7 +341,7 @@ async function main() {
     body,
   };
 
-  const prompt = buildPrompt(metadata);
+  const prompt = buildPrompt(metadata, args.scene);
 
   if (args.promptOnly) {
     console.log(prompt);

@@ -17,6 +17,8 @@ When drafting blog posts from user-provided notes, dictation, transcripts, or "s
 - Required frontmatter is validated in `src/content/config.ts`.
 - Post images live in `src/assets/images/`.
 - Use `pnpm generate:blog-image -- <path-to-post.md>` as the default workflow for blog art generation.
-- The blog image generator should build its prompt from post metadata and body context, follow the site's forest palette, and subtly hide a Shih Tzu as an easter egg when appropriate.
+- The blog image generator builds its prompt from post metadata and body context, follows the site's forest palette, and subtly hides a Shih Tzu as an easter egg when appropriate.
+- Use `--scene "<description>"` to inject specific scene direction into the prompt (e.g., `pnpm generate:blog-image -- <path-to-post.md> --scene "A floating Buddha statue hidden in a fading sunset overlooking a man navigating a labyrinth of cardboard boxes."`).
+- Use `--prompt-only` to inspect the generated prompt without calling the API.
 - `pnpm generate:og -- <path-to-post.md>` is a legacy/local OG card tool and should not be the default choice for new blog art.
 - Run `pnpm build` to verify routes, content schema, and Pagefind indexing.
