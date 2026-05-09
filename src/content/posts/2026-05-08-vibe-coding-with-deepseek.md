@@ -5,7 +5,7 @@ description: "Running out of tokens, discovering DeepSeek credits, and vibe codi
 author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/vibe-coding-with-deepseek-og.jpg"
-  alt: "A retro fantasy game scene rendered through a digital pipeline, with AI-generated concept art blending into 3D models."
+  alt: "A psychedelic cosmic mindscape with fractal patterns, a glowing blue whale swimming through a sea of code and color, forest greens melting into electric blue."
 tags: ["AI", "deepseek", "vibe coding", "game development", "open source", "workflow", "stream of thought"]
 ---
 
@@ -25,7 +25,7 @@ So I plugged it in and we went to town.
 
 What I really enjoy about DeepSeek is its thinking. It's a really nice thinker, and I love that OpenCode lets me see it doing its work straight from the provider. It's a little slow, but I'm learning to be patient, get my *Power of Now* mindset in place. I hate that feeling when you don't trust that the model will do its best, and that's what I'm trying to explore: can I trust a model to do its work? Because I don't want it leaving scattered technical debt around the codebase.
 
-I'm always sitting there scanning all the code changes as they come through, looking for issues. Is this class responsible for this action? Is this its duty? That's the question I keep asking myself, it's the easiest way to catch when something needs to be moved where it belongs.
+I'm always sitting there scanning all the code changes as they come through, looking for issues. Is this class responsible for this action? Is this its duty? That's the question I keep asking myself. It's the easiest way to catch when something needs to be moved where it belongs.
 
 Anyway, DeepSeek knocked it out of the park. We got the right concept image loaded, and DeepSeek ran the pipeline all the way down, 3D models through Blender taking orthographic snapshots, and it all came together. I looked at it and it looks fine for prototyping. There's an aesthetic forming from the pipeline in the game now.
 
