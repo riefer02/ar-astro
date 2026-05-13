@@ -30,6 +30,9 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="max-w-5xl font-sans text-5xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both sm:text-7xl">
+            <span className="sr-only">
+              Andrew Riefenstahl — Full-Stack Engineer & AI Architect —{" "}
+            </span>
             Forging the Future of <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-[hsl(var(--hero-gradient-from))] via-[hsl(var(--hero-gradient-via))] to-[hsl(var(--hero-gradient-to))] bg-clip-text text-transparent drop-shadow-[0_6px_20px_hsl(var(--hero-gradient-to)/0.35)]">
               Digital Intelligence
@@ -38,7 +41,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both sm:text-xl">
-            I'm <strong>Andrew Riefenstahl</strong>. Senior software engineer and AI
+            I&apos;m <strong>Andrew Riefenstahl</strong>. Senior software engineer and AI
             specialist. I build resilient systems and explore the intersection
             of human cognition and artificial intelligence.
           </p>
