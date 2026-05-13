@@ -23,7 +23,7 @@ const MobileNav = () => {
           size="icon"
           className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground md:hidden"
         >
-          <Menu className="h-6 w-6" />
+          <Menu className="h-6 w-6" aria-hidden="true" />
           <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </SheetTrigger>
@@ -43,7 +43,7 @@ const MobileNav = () => {
                     onClick={handleItemClick}
                     className="flex items-center gap-3 rounded-lg px-4 py-3 text-foreground transition-colors duration-200 hover:bg-secondary hover:text-foreground"
                   >
-                    <IconComponent className="h-5 w-5" />
+                    <IconComponent className="h-5 w-5" aria-hidden="true" />
                     <span className="font-medium">{item.label}</span>
                   </a>
                 );

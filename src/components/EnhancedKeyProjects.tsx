@@ -87,7 +87,7 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
                       aria-label={`Visit ${project.name}`}
                     >
                       Visit
-                      <ArrowUpRight className="h-3 w-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                      <ArrowUpRight className="h-3 w-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" aria-hidden="true" />
                     </a>
                   </div>
 

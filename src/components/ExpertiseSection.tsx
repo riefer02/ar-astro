@@ -122,7 +122,7 @@ const ExpertiseSection = () => {
                 
                 <CardHeader className="relative pb-4">
                   <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
-                    <IconComponent className="h-7 w-7" />
+                    <IconComponent className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">
                     {area.title}
@@ -160,7 +160,7 @@ const ExpertiseSection = () => {
               return (
                 <div key={index} className="group flex flex-col items-center text-center">
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-border/70 bg-card shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:border-border group-hover:shadow-md">
-                    <IconComponent className="h-7 w-7 text-muted-foreground transition-colors group-hover:text-foreground" />
+                    <IconComponent className="h-7 w-7 text-muted-foreground transition-colors group-hover:text-foreground" aria-hidden="true" />
                   </div>
                   <h4 className="mb-1.5 text-sm font-bold text-foreground">
                     {spec.label}

@@ -81,7 +81,7 @@ const ConnectSection = () => {
                     <div
                       className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-secondary text-muted-foreground transition-all duration-300 group-hover:scale-110 group-hover:bg-card group-hover:shadow-md ${link.color}`}
                     >
-                      <IconComponent className="h-8 w-8" />
+                      <IconComponent className="h-8 w-8" aria-hidden="true" />
                     </div>
                     <div className="flex-1">
                       <h3 className="mb-1 text-xl font-bold text-foreground">
@@ -93,7 +93,7 @@ const ConnectSection = () => {
                     </div>
                     <div className="hidden sm:block">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-transparent text-muted-foreground/70 transition-all duration-300 group-hover:border-border group-hover:text-foreground">
-                        <ArrowRight className="h-5 w-5 -translate-x-1 transition-transform duration-300 group-hover:translate-x-0" />
+                        <ArrowRight className="h-5 w-5 -translate-x-1 transition-transform duration-300 group-hover:translate-x-0" aria-hidden="true" />
                       </div>
                     </div>
                   </CardContent>
@@ -111,7 +111,7 @@ const ConnectSection = () => {
           
           <div className="relative z-10">
             <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl border border-border/60 bg-background/55 text-foreground backdrop-blur-sm">
-              <MessageCircle className="h-8 w-8" />
+              <MessageCircle className="h-8 w-8" aria-hidden="true" />
             </div>
             
             <h3 className="mb-4 text-3xl font-bold text-foreground">
@@ -129,7 +129,7 @@ const ConnectSection = () => {
                 size="lg"
               >
                 <a href="mailto:andrew.riefenstahl@gmail.com">
-                  <Send className="mr-2 h-4 w-4" />
+                  <Send className="mr-2 h-4 w-4" aria-hidden="true" />
                   Say Hello
                 </a>
               </Button>
