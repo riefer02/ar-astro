@@ -130,9 +130,9 @@
   background-repeat: repeat;
   background-size: var(--trees-tile-size) var(--trees-tile-size);
   animation: drift 120s linear infinite;
-  contain: paint;
   transform: translate3d(0, 0, 0);
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
