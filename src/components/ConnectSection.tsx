@@ -44,9 +44,7 @@ const ConnectSection = () => {
   ];
 
   return (
-    <section id="connect" className="relative py-16 md:py-32">
-
-      
+    <section id="connect" className="relative bg-background py-16 md:py-32">
       <div className="container mx-auto max-w-5xl px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -104,10 +102,6 @@ const ConnectSection = () => {
 
         {/* CTA Section */}
         <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-gradient-to-br from-secondary via-card to-background px-6 py-16 text-center shadow-2xl md:px-12">
-           {/* Decorative background blobs */}
-          <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-primary/15" />
-          <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-surface-2/20" />
-          
           <div className="relative z-10">
             <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl border border-border/60 bg-background/55 text-foreground">
               <MessageCircle className="h-8 w-8" aria-hidden="true" />

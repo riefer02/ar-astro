@@ -5,10 +5,6 @@ import { Badge } from "@/components/ui/badge";
 const HeroSection = () => {
   return (
     <section className="relative w-full overflow-hidden bg-background py-16 md:py-32">
-      {/* Subtle background depth */}
-      <div className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-accent/10" />
-      <div className="absolute -right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-secondary/15" />
-
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center gap-8 text-center">
           {/* Status Badge */}
@@ -82,7 +78,6 @@ const HeroSection = () => {
               <p className="text-muted-foreground">
                 Scalable architectures, automation pipelines, and robust full-stack solutions.
               </p>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-secondary opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>
 
             {/* Card 2: AI & Future Tech */}
@@ -96,7 +91,6 @@ const HeroSection = () => {
               <p className="text-muted-foreground">
                 Building autonomous agents, memory systems, and RAG pipelines for complex problems.
               </p>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-secondary opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>
 
             {/* Card 3: Leadership & Ethics */}
@@ -110,7 +104,6 @@ const HeroSection = () => {
               <p className="text-muted-foreground">
                 Solution-oriented mentorship with a focus on sustainable, human-centric tech.
               </p>
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-secondary opacity-0 transition-all duration-500 group-hover:opacity-100"></div>
             </div>
           </div>
         </div>

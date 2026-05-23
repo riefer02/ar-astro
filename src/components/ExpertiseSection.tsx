@@ -90,9 +90,7 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section id="expertise" className="relative py-16 md:py-32">
-       {/* Background Elements - Subtle continuation of Hero theme */}
-       <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] bg-gradient-to-b from-secondary/20 to-transparent" />
+    <section id="expertise" className="relative bg-background py-16 md:py-32">
 
       <div className="container mx-auto px-4">
         {/* Section Header */}

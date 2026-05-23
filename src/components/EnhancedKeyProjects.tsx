@@ -75,7 +75,7 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
               >
                 <CardHeader className="pb-4">
                   <div className="mb-6 flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background" aria-hidden="true">
                       <IconComponent className="h-6 w-6" />
                     </div>
                     <a
