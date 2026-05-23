@@ -92,13 +92,12 @@ const ExpertiseSection = () => {
   return (
     <section id="expertise" className="relative py-16 md:py-32">
        {/* Background Elements - Subtle continuation of Hero theme */}
-       <div className="absolute inset-0 -z-10 bg-[url('/noise.svg')] opacity-10"></div>
-       <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] bg-gradient-to-b from-secondary/60 to-transparent blur-[120px]" />
+       <div className="absolute right-0 top-0 -z-10 h-[500px] w-[500px] bg-gradient-to-b from-secondary/20 to-transparent" />
 
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-border bg-card/50 px-3 py-1 text-muted-foreground backdrop-blur-sm">
+          <Badge variant="outline" className="mb-4 border-border bg-card/50 px-3 py-1 text-muted-foreground">
             Core Competencies
           </Badge>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
@@ -150,7 +149,7 @@ const ExpertiseSection = () => {
         </div>
 
         {/* Specializations Grid - Updated to match style */}
-        <div className="rounded-3xl border border-border bg-card/50 p-8 backdrop-blur-sm md:p-12">
+        <div className="rounded-3xl border border-border bg-card/50 p-8 md:p-12">
           <h3 className="mb-10 text-center text-xl font-semibold tracking-tight text-foreground">
             Specialized Capabilities
           </h3>

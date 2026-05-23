@@ -5,20 +5,17 @@ import { Badge } from "@/components/ui/badge";
 const HeroSection = () => {
   return (
     <section className="relative w-full overflow-hidden bg-background py-16 md:py-32">
-      {/* Abstract Background Shapes for Depth */}
-      <div className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-accent/40 blur-[120px]" />
-      <div className="absolute -right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-secondary/50 blur-[120px]" />
-      
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20"></div>
+      {/* Subtle background depth */}
+      <div className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-accent/10" />
+      <div className="absolute -right-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-secondary/15" />
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center gap-8 text-center">
           {/* Status Badge */}
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-forwards">
+          <div>
             <Badge
               variant="secondary"
-              className="border border-border bg-card/80 px-4 py-1.5 text-sm font-medium text-muted-foreground shadow-sm backdrop-blur-md"
+              className="border border-border bg-card/80 px-4 py-1.5 text-sm font-medium text-muted-foreground shadow-sm"
             >
               <span className="mr-2 flex h-2 w-2">
                 <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-400 opacity-75"></span>
@@ -29,7 +26,7 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="max-w-5xl font-sans text-5xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-forwards sm:text-7xl">
+          <h1 className="max-w-5xl font-sans text-5xl font-extrabold tracking-tight text-foreground sm:text-7xl">
             <span className="sr-only">
               Andrew Riefenstahl — Full-Stack Engineer & AI Architect —{" "}
             </span>
@@ -40,14 +37,14 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-forwards sm:text-xl">
+          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
             I&apos;m <strong>Andrew Riefenstahl</strong>. Senior software engineer and AI
             specialist. I build resilient systems and explore the intersection
             of human cognition and artificial intelligence.
           </p>
 
           {/* Actions */}
-          <div className="flex flex-col items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-forwards sm:flex-row">
+          <div className="flex flex-col items-center gap-4 sm:flex-row">
             <Button
               asChild
               size="lg"
@@ -62,7 +59,7 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="h-12 min-w-[160px] rounded-full border-border bg-card/60 text-base backdrop-blur-sm transition-all hover:bg-card hover:text-foreground"
+              className="h-12 min-w-[160px] rounded-full border-border bg-card/60 text-base transition-all hover:bg-card hover:text-foreground"
             >
               <a href="/posts/">
                 Read Insights
@@ -73,7 +70,7 @@ const HeroSection = () => {
 
           {/* Tech Stack / "Flare" Visual - Floating Cards */}
           <h2 className="sr-only">Core focus areas</h2>
-          <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 fill-mode-forwards sm:grid-cols-3">
+          <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
             {/* Card 1: Senior Engineering */}
             <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
