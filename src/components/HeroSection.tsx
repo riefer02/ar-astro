@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center gap-8 text-center">
           {/* Status Badge */}
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-forwards">
             <Badge
               variant="secondary"
               className="border border-border bg-card/80 px-4 py-1.5 text-sm font-medium text-muted-foreground shadow-sm backdrop-blur-md"
@@ -29,7 +29,7 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="max-w-5xl font-sans text-5xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both sm:text-7xl">
+          <h1 className="max-w-5xl font-sans text-5xl font-extrabold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-forwards sm:text-7xl">
             <span className="sr-only">
               Andrew Riefenstahl — Full-Stack Engineer & AI Architect —{" "}
             </span>
@@ -40,14 +40,14 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both sm:text-xl">
+          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-forwards sm:text-xl">
             I&apos;m <strong>Andrew Riefenstahl</strong>. Senior software engineer and AI
             specialist. I build resilient systems and explore the intersection
             of human cognition and artificial intelligence.
           </p>
 
           {/* Actions */}
-          <div className="flex flex-col items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both sm:flex-row">
+          <div className="flex flex-col items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-forwards sm:flex-row">
             <Button
               asChild
               size="lg"
@@ -73,7 +73,7 @@ const HeroSection = () => {
 
           {/* Tech Stack / "Flare" Visual - Floating Cards */}
           <h2 className="sr-only">Core focus areas</h2>
-          <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 fill-mode-both sm:grid-cols-3">
+          <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 fill-mode-forwards sm:grid-cols-3">
             {/* Card 1: Senior Engineering */}
             <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 text-left shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
