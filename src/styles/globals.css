@@ -131,8 +131,7 @@
   background-size: var(--trees-tile-size) var(--trees-tile-size);
   animation: drift 120s linear infinite;
   transform: translate3d(0, 0, 0);
-  will-change: transform;
-  backface-visibility: hidden;
+  contain: paint;
 }
 
 @media (prefers-reduced-motion: reduce) {
