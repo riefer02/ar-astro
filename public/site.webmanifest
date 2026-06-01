@@ -16,6 +16,6 @@
   "theme_color": "#e7e5e4",
   "background_color": "#ffffff",
   "display": "standalone",
-  "start_url": "https://andrewriefenstahl.com",
+  "start_url": "/",
   "description": "Andrew Riefenstahl is a full-stack developer specializing in AI applications, secure web development, and MCP server architecture. Personal portfolio showcasing technical projects and philosophical writings."
 }

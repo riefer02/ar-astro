@@ -90,19 +90,31 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section id="expertise" className="relative bg-background py-16 md:py-32">
+    <section
+      id="expertise"
+      className="grounded-section relative bg-background py-16 md:py-32"
+    >
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+        aria-hidden="true"
+      />
 
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-border bg-card/50 px-3 py-1 text-muted-foreground">
+          <Badge
+            variant="outline"
+            className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
+          >
             Core Competencies
           </Badge>
-          <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+          <h2 className="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             Technical & Leadership DNA
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I bring a holistic approach to software engineering—combining deep technical expertise with a focus on sustainable architecture and human-centric leadership.
+            I bring a holistic approach to software engineering—combining deep
+            technical expertise with a focus on sustainable architecture and
+            human-centric leadership.
           </p>
         </div>
 
@@ -113,12 +125,10 @@ const ExpertiseSection = () => {
             return (
               <Card
                 key={index}
-                className="group relative h-full overflow-hidden border-border bg-card/80 p-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/15"
+                className="grounded-panel group h-full rounded-lg p-2 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-background/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                
                 <CardHeader className="relative pb-4">
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
+                  <div className="grounded-icon mb-6 inline-flex h-14 w-14 items-center justify-center rounded-lg text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
                     <IconComponent className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-foreground">
@@ -134,7 +144,7 @@ const ExpertiseSection = () => {
                       <Badge
                         key={skillIndex}
                         variant="secondary"
-                        className="border border-border/70 bg-background px-3 py-1 text-sm font-normal text-muted-foreground transition-colors hover:border-border hover:bg-card hover:text-foreground"
+                        className="grounded-chip px-3 py-1 text-sm font-normal text-muted-foreground transition-colors hover:border-[hsl(var(--glint)/0.38)] hover:text-foreground"
                       >
                         {skill}
                       </Badge>
@@ -147,7 +157,7 @@ const ExpertiseSection = () => {
         </div>
 
         {/* Specializations Grid - Updated to match style */}
-        <div className="rounded-3xl border border-border bg-card/50 p-8 md:p-12">
+        <div className="grounded-panel rounded-lg p-8 md:p-12">
           <h3 className="mb-10 text-center text-xl font-semibold tracking-tight text-foreground">
             Specialized Capabilities
           </h3>
@@ -155,14 +165,22 @@ const ExpertiseSection = () => {
             {specializations.map((spec, index) => {
               const IconComponent = spec.icon;
               return (
-                <div key={index} className="group flex flex-col items-center text-center">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-border/70 bg-card shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:border-border group-hover:shadow-md">
-                    <IconComponent className="h-7 w-7 text-muted-foreground transition-colors group-hover:text-foreground" aria-hidden="true" />
+                <div
+                  key={index}
+                  className="group relative flex flex-col items-center text-center"
+                >
+                  <div className="grounded-icon mb-4 flex h-16 w-16 items-center justify-center rounded-lg transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[hsl(var(--glint)/0.44)]">
+                    <IconComponent
+                      className="h-7 w-7 text-muted-foreground transition-colors group-hover:text-foreground"
+                      aria-hidden="true"
+                    />
                   </div>
                   <h4 className="mb-1.5 text-sm font-bold text-foreground">
                     {spec.label}
                   </h4>
-                  <p className="text-xs font-medium text-muted-foreground">{spec.desc}</p>
+                  <p className="text-xs font-medium text-muted-foreground">
+                    {spec.desc}
+                  </p>
                 </div>
               );
             })}
