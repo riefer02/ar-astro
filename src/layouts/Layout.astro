@@ -25,7 +25,10 @@ const { metaTags, structuredData } = Astro.props;
 
 const siteUrl = Astro.site ?? new URL("https://andrewriefenstahl.com");
 const canonicalUrl = new URL(metaTags.url, siteUrl).toString();
-const socialImageUrl = new URL(metaTags.image || ogImage.src, siteUrl).toString();
+const socialImageUrl = new URL(
+  metaTags.image || ogImage.src,
+  siteUrl,
+).toString();
 
 const personStructuredData = {
   "@context": "https://schema.org",
@@ -33,10 +36,7 @@ const personStructuredData = {
   name: "Andrew Riefenstahl",
   jobTitle: "Full-Stack Software Engineer & AI Architect",
   url: "https://andrewriefenstahl.com",
-  sameAs: [
-    "https://twitter.com/riefer02",
-    "https://github.com/riefer02",
-  ],
+  sameAs: ["https://twitter.com/riefer02", "https://github.com/riefer02"],
   knowsAbout: [
     "Web Development",
     "Artificial Intelligence",
@@ -115,20 +115,33 @@ const structuredDataItems = [
     }
     <Favicon />
 
-
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(structuredDataItems)} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredDataItems)}
+    />
   </head>
   <body class="bg-background text-foreground">
-    <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <div
+      class="pointer-events-none fixed inset-0 z-0 overflow-hidden"
+      aria-hidden="true"
+    >
       <div class="trees-drift"></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,hsl(var(--glint)/0.08),transparent_32rem),linear-gradient(180deg,transparent_0%,transparent_86%,hsl(var(--background)/0.66)_100%)]"
+      >
+      </div>
     </div>
     <Header title={metaTags.title} />
     <main>
       <slot />
     </main>
     <footer class="py-6 text-center">
-      <a href="/games/dragon-quest/" class="text-[0.5rem] leading-none text-muted-foreground/70 no-underline transition-colors hover:text-muted-foreground" aria-label="A secret">🐉</a>
+      <a
+        href="/games/dragon-quest/"
+        class="text-[0.5rem] leading-none text-muted-foreground/70 no-underline transition-colors hover:text-muted-foreground"
+        aria-label="A secret">🐉</a
+      >
     </footer>
   </body>
 </html>

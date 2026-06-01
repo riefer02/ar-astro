@@ -45,16 +45,25 @@ const getProjectIcon = (projectName: string) => {
 
 const EnhancedKeyProjects = ({ keyProjects }: Props) => {
   return (
-    <section id="projects" className="relative py-16 md:py-32 bg-background">
-
+    <section
+      id="projects"
+      className="grounded-section relative py-16 md:py-32"
+    >
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+        aria-hidden="true"
+      />
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <Badge variant="outline" className="mb-4 border-border bg-card/50 px-3 py-1 text-muted-foreground">
-             Portfolio
+          <Badge
+            variant="outline"
+            className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
+          >
+            Portfolio
           </Badge>
-          <h2 className="mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+          <h2 className="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
             Selected Work
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -71,22 +80,28 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
             return (
               <Card
                 key={project.name}
-                className="group relative flex h-full flex-col overflow-hidden border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20"
+                className="grounded-panel group flex h-full flex-col rounded-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <CardHeader className="pb-4">
                   <div className="mb-6 flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background" aria-hidden="true">
+                    <div
+                      className="grounded-icon flex h-12 w-12 items-center justify-center rounded-lg text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background"
+                      aria-hidden="true"
+                    >
                       <IconComponent className="h-6 w-6" />
                     </div>
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/link flex items-center gap-1 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:border-primary hover:text-foreground"
+                      className="group/link relative flex items-center gap-1 rounded-full border border-border/70 bg-background/60 px-3 py-1.5 text-xs font-medium text-muted-foreground shadow-[inset_0_1px_0_hsl(var(--foreground)/0.06)] transition-all hover:border-[hsl(var(--glint)/0.44)] hover:text-foreground"
                       aria-label={`Visit ${project.name}`}
                     >
                       Visit
-                      <ArrowUpRight className="h-3 w-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" aria-hidden="true" />
+                      <ArrowUpRight
+                        className="h-3 w-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
+                        aria-hidden="true"
+                      />
                     </a>
                   </div>
 
@@ -110,7 +125,7 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
                         <Badge
                           key={tech}
                           variant="secondary"
-                          className="bg-secondary text-xs font-normal text-muted-foreground transition-colors group-hover:bg-accent group-hover:text-foreground"
+                          className="grounded-chip text-xs font-normal text-muted-foreground transition-colors group-hover:border-[hsl(var(--glint)/0.36)] group-hover:text-foreground"
                         >
                           {tech}
                         </Badge>
@@ -130,7 +145,7 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
           </p>
           <Button
             asChild
-            className="h-12 rounded-full px-8 text-base font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+            className="grounded-button-primary h-12 rounded-full px-8 text-base font-semibold transition-all hover:-translate-y-0.5"
             size="lg"
           >
             <a href="#connect">Let's Connect</a>

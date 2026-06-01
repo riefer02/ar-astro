@@ -86,7 +86,7 @@ export function GameUI({
 
       {/* Secret quest tracker */}
       <div
-        className={`absolute right-4 rounded-xl border px-4 py-3 shadow-lg backdrop-blur-sm ${
+        className={`absolute right-4 rounded-lg border px-4 py-3 shadow-lg ${
           showControls && !isTouchDevice ? "top-[124px]" : "top-4"
         } border-border bg-background/80 text-sm text-foreground`}
         style={{ maxWidth: 250 }}
