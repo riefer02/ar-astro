@@ -9,10 +9,6 @@ const HeroSection = () => {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[hsl(var(--glint)/0.5)] to-transparent"
         aria-hidden="true"
       />
-      <div
-        className="pointer-events-none absolute left-1/2 top-10 h-72 w-[min(46rem,80vw)] -translate-x-1/2 rounded-full border border-[hsl(var(--glint)/0.08)] bg-[radial-gradient(circle,hsl(var(--glint)/0.08),transparent_68%)]"
-        aria-hidden="true"
-      />
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center gap-8 text-center">
           {/* Status Badge */}
