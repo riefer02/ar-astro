@@ -35,8 +35,8 @@
     --surface-1: 151 22% 18%;
     --surface-2: 131 25% 29%;
     --surface-3: 119 24% 34%;
-    --glint: 151 54% 62%;
-    --glint-soft: 113 32% 68%;
+    --glint: 112 36% 60%;
+    --glint-soft: 91 28% 68%;
     --depth-shadow: 152 55% 4%;
     --hero-gradient-from: 85 22% 72%;
     --hero-gradient-via: 112 24% 48%;
@@ -80,8 +80,8 @@
     --surface-1: 151 24% 14%;
     --surface-2: 131 25% 29%;
     --surface-3: 119 26% 38%;
-    --glint: 151 58% 66%;
-    --glint-soft: 113 36% 72%;
+    --glint: 112 40% 64%;
+    --glint-soft: 91 32% 72%;
     --depth-shadow: 152 58% 3%;
     --hero-gradient-from: 85 24% 74%;
     --hero-gradient-via: 112 26% 50%;
@@ -106,7 +106,7 @@
       ),
       radial-gradient(
         circle at 85% 8%,
-        hsl(var(--glint) / 0.12),
+        hsl(var(--glint) / 0.1),
         transparent 30rem
       ),
       linear-gradient(180deg, hsl(var(--background)) 0%, hsl(153 33% 8%) 100%);
@@ -156,7 +156,7 @@
   background-repeat: repeat;
   background-size: var(--trees-tile-size) var(--trees-tile-size);
   animation: drift 120s linear infinite;
-  opacity: 0.42;
+  opacity: 0.68;
   transform: translate3d(0, 0, 0);
   contain: paint;
 }
@@ -329,9 +329,9 @@
       ),
       linear-gradient(
         180deg,
-        hsl(var(--background) / 0.08),
-        hsl(var(--background) / 0.42) 18%,
-        hsl(var(--background) / 0.52) 100%
+        hsl(var(--background) / 0.04),
+        hsl(var(--background) / 0.32) 18%,
+        hsl(var(--background) / 0.42) 100%
       );
   }
 

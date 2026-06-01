@@ -18,7 +18,7 @@ const ConnectSection = () => {
       url: "https://www.linkedin.com/in/andrewriefenstahl/",
       icon: Linkedin,
       description: "Professional network & insights",
-      color: "group-hover:text-[#0077b5]",
+      color: "group-hover:text-foreground",
     },
     {
       name: "GitHub",
@@ -32,7 +32,7 @@ const ConnectSection = () => {
       url: "https://twitter.com/riefer02",
       icon: Twitter,
       description: "Tech thoughts & discussions",
-      color: "group-hover:text-[#1DA1F2]",
+      color: "group-hover:text-foreground",
     },
     {
       name: "Email",

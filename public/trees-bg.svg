@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
   <!-- Single deciduous tree centered in the tile -->
-  <g opacity="0.055" transform="translate(120,120) scale(0.9)">
+  <g opacity="0.16" transform="translate(120,120) scale(0.9)">
     <!-- Trunk -->
     <path d="M-4,20 L-5,55 L5,55 L4,20 Z" fill="hsl(30,18%,22%)"/>
     <!-- Main branches -->

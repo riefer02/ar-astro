@@ -18,8 +18,8 @@ const HeroSection = () => {
               className="grounded-kicker px-4 py-1.5 text-sm font-medium text-muted-foreground"
             >
               <span className="mr-2 flex h-2 w-2">
-                <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-[hsl(var(--hero-gradient-via))] opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[hsl(var(--hero-gradient-via))]"></span>
               </span>
               System Online & Ready
             </Badge>
