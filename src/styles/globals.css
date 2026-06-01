@@ -313,7 +313,7 @@
       90deg,
       hsl(var(--foreground)) 0%,
       hsl(var(--hero-gradient-from)) 31%,
-      hsl(var(--glint)) 68%,
+      hsl(var(--hero-gradient-via)) 68%,
       hsl(var(--hero-gradient-to)) 100%
     );
     background-clip: text;
