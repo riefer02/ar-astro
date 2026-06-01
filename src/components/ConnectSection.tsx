@@ -46,7 +46,7 @@ const ConnectSection = () => {
   return (
     <section
       id="connect"
-      className="grounded-section relative bg-background py-16 md:py-32"
+      className="grounded-section relative py-16 md:py-32"
     >
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"

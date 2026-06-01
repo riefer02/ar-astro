@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
   return (
-    <section className="grounded-section relative w-full overflow-hidden bg-background py-16 md:py-32">
+    <section className="grounded-section relative w-full overflow-hidden py-16 md:py-32">
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[hsl(var(--glint)/0.5)] to-transparent"
         aria-hidden="true"
