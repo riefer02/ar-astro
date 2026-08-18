@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Analytics from "../components/Analytics.astro";
+import ServicesSection from "../components/ServicesSection";
+
+const metaTags = {
+  title: "Services | Andrew Riefenstahl",
+  description:
+    "Help setting up or fixing a workflow for individuals and small businesses. Redesigned first, AI added only where it earns its place, flexible pricing — you stay in control.",
+  url: "https://andrewriefenstahl.com/services/",
+};
+---
+
+<Layout metaTags={metaTags}>
+  <Analytics />
+  <ServicesSection />
+</Layout>

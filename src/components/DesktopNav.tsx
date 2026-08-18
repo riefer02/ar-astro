@@ -1,8 +1,9 @@
-import { Home, BookOpen } from "lucide-react";
+import { Home, BookOpen, Briefcase } from "lucide-react";
 
 const DesktopNav = () => {
   const menuItems = [
     { href: "/", label: "Home", icon: Home },
+    { href: "/services/", label: "Services", icon: Briefcase },
     { href: "/posts/", label: "Blog Posts", icon: BookOpen },
   ];
 

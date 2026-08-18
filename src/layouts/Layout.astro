@@ -24,7 +24,13 @@ interface Props {
 const { metaTags, structuredData } = Astro.props;
 
 const siteUrl = Astro.site ?? new URL("https://andrewriefenstahl.com");
-const canonicalUrl = new URL(metaTags.url, siteUrl).toString();
+const canonicalUrl = new URL(metaTags.url, siteUrl);
+const canonicalPath =
+  canonicalUrl.pathname === "/"
+    ? canonicalUrl.pathname
+    : canonicalUrl.pathname.replace(/\/?$/, "/");
+canonicalUrl.pathname = canonicalPath;
+const canonicalUrlString = canonicalUrl.toString();
 const socialImageUrl = new URL(
   metaTags.image || ogImage.src,
   siteUrl,
@@ -74,7 +80,7 @@ const structuredDataItems = [
     <meta property="og:title" content={metaTags.title} />
     <meta property="og:description" content={metaTags.description} />
     <meta property="og:image" content={socialImageUrl} />
-    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:url" content={canonicalUrlString} />
     <meta property="og:type" content={metaTags.type || "website"} />
     <meta property="og:site_name" content="Andrew Riefenstahl" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -85,7 +91,7 @@ const structuredDataItems = [
     <meta name="twitter:title" content={metaTags.title} />
     <meta name="twitter:description" content={metaTags.description} />
     <meta name="twitter:image" content={socialImageUrl} />
-    <link rel="canonical" href={canonicalUrl} />
+    <link rel="canonical" href={canonicalUrlString} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     {
       metaTags.article?.publishedTime && (

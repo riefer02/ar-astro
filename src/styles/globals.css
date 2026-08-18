@@ -129,6 +129,10 @@
   #connect {
     scroll-margin-top: 60px;
   }
+
+  #how {
+    scroll-margin-top: 60px;
+  }
 }
 
 /* Floating tree background */

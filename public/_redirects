@@ -1,2 +1,4 @@
 /posts  /posts/  301
 /posts/:slug  /posts/:slug/  301
+/services  /services/  301
+/games/dragon-quest  /games/dragon-quest/  301
