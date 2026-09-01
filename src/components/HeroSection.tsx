@@ -1,29 +1,7 @@
-import { ArrowRight, Code2, Terminal, Heart, PenLine } from "lucide-react";
+import { ArrowRight, Terminal } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import GroundedButton from "@/components/GroundedButton";
 import Hairline from "@/components/Hairline";
-import IconChip from "@/components/IconChip";
-
-const focusCards = [
-  {
-    icon: Code2,
-    title: "Engineering",
-    description:
-      "Scalable architectures, automation, and robust full-stack systems.",
-  },
-  {
-    icon: PenLine,
-    title: "Writing & Ideas",
-    description:
-      "Long-form thinking on AI, work, and technology's place in people's lives.",
-  },
-  {
-    icon: Heart,
-    title: "Human-first AI",
-    description:
-      "Agents, RAG, and MCP tooling built to reduce friction — not replace people.",
-  },
-];
 
 const HeroSection = () => {
   return (
@@ -41,7 +19,7 @@ const HeroSection = () => {
                 <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-hero-via opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-hero-via"></span>
               </span>
-              Available for freelance &amp; consulting
+              Systems online
             </Badge>
           </div>
 
@@ -56,7 +34,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            I&apos;m <strong>Andrew Riefenstahl</strong> — senior software engineer
+            I&apos;m <strong>Andrew Riefenstahl</strong>, senior software engineer
             and AI specialist. I build resilient systems and write about where
             AI and humanity meet.
           </p>
@@ -75,25 +53,6 @@ const HeroSection = () => {
                 <Terminal className="ml-2 h-4 w-4" />
               </a>
             </GroundedButton>
-          </div>
-
-          {/* Tech Stack / "Flare" Visual - Floating Cards */}
-          <h2 className="sr-only">Core focus areas</h2>
-          <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
-            {focusCards.map((card) => (
-              <div
-                key={card.title}
-                className="grounded-panel card-lift group rounded-lg p-6 text-left"
-              >
-                <IconChip icon={card.icon} className="mb-4" />
-                <h3 className="relative mb-2 text-xl font-bold text-foreground">
-                  {card.title}
-                </h3>
-                <p className="relative text-muted-foreground">
-                  {card.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
