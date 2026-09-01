@@ -1,0 +1,55 @@
+---
+import { Badge } from "./ui/badge";
+import stack from "../lib/professional-skills.json";
+
+const groups = stack.groups;
+---
+
+<section id="stack" class="grounded-section relative py-16 md:py-24">
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+    aria-hidden="true"
+  />
+  <div class="container mx-auto px-4">
+    <div class="mb-14 text-center">
+      <Badge
+        variant="outline"
+        className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
+      >
+        Stack
+      </Badge>
+      <h2
+        class="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl"
+      >
+        Tools &amp; Technologies
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        The languages, frameworks, and infrastructure I reach for to build
+        resilient systems and reduce friction.
+      </p>
+    </div>
+
+    <div class="mx-auto max-w-5xl space-y-6">
+      {
+        groups.map((group) => (
+          <div class="grounded-panel rounded-lg p-6 md:p-8">
+            <h3
+              class="mb-5 text-xs font-bold uppercase tracking-widest text-muted-foreground"
+            >
+              {group.name}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  class="grounded-chip inline-flex items-center rounded-md px-3 py-1 text-sm font-normal text-muted-foreground"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,10 +1,11 @@
-import { Home, BookOpen, Briefcase } from "lucide-react";
+import { Home, BookOpen, Briefcase, Mail } from "lucide-react";
 
 const DesktopNav = () => {
   const menuItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/services/", label: "Services", icon: Briefcase },
-    { href: "/posts/", label: "Blog Posts", icon: BookOpen },
+    { href: "/posts/", label: "Writing", icon: BookOpen },
+    { href: "/#connect", label: "Contact", icon: Mail },
   ];
 
   return (
@@ -15,7 +16,7 @@ const DesktopNav = () => {
           <a
             key={item.href}
             href={item.href}
-            className="text-primary-foreground/86 hover:border-primary-foreground/12 hover:bg-primary-foreground/8 flex items-center gap-2 rounded-full border border-transparent px-4 py-2 text-sm font-medium transition-all duration-200 hover:text-white hover:shadow-[inset_0_1px_0_hsl(var(--foreground)/0.08)]"
+            className="text-primary-foreground/85 hover:border-primary-foreground/10 hover:bg-primary-foreground/10 flex items-center gap-2 rounded-full border border-transparent px-4 py-2 text-sm font-medium transition-all duration-200 hover:text-white hover:shadow-[inset_0_1px_0_hsl(var(--foreground)/0.08)]"
           >
             <IconComponent className="h-4 w-4" aria-hidden="true" />
             <span>{item.label}</span>

@@ -117,20 +117,8 @@
     scroll-behavior: smooth;
   }
 
-  /* Scroll offset for fixed header - accounts for 80px header height */
-  #projects {
-    scroll-margin-top: 60px;
-  }
-
-  #expertise {
-    scroll-margin-top: 60px;
-  }
-
-  #connect {
-    scroll-margin-top: 60px;
-  }
-
-  #how {
+  /* Scroll offset for fixed header — applies to every anchor target in main */
+  main :where([id]) {
     scroll-margin-top: 60px;
   }
 }

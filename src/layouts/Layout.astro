@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import Favicon from "../components/Favicon.astro";
+import { socials } from "../lib/socials";
 import ogImage from "../assets/ar-ogimage-optimized.jpg";
 import "../styles/globals.css";
 interface Props {
@@ -40,9 +42,11 @@ const personStructuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Andrew Riefenstahl",
-  jobTitle: "Full-Stack Software Engineer & AI Architect",
+  jobTitle: "Senior Software Engineer & AI Specialist",
   url: "https://andrewriefenstahl.com",
-  sameAs: ["https://twitter.com/riefer02", "https://github.com/riefer02"],
+  sameAs: socials
+    .filter((s) => !s.url.startsWith("mailto"))
+    .map((s) => s.url),
   knowsAbout: [
     "Web Development",
     "Artificial Intelligence",
@@ -52,7 +56,7 @@ const personStructuredData = {
     "Full Stack Development",
   ],
   description:
-    "Full-stack developer specializing in AI applications, secure web development, and MCP server architecture.",
+    "Senior software engineer and AI specialist building resilient systems and writing about where AI and humanity meet.",
 };
 
 const structuredDataItems = [
@@ -93,6 +97,12 @@ const structuredDataItems = [
     <meta name="twitter:image" content={socialImageUrl} />
     <link rel="canonical" href={canonicalUrlString} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Andrew Riefenstahl — Writing & Musings"
+      href="/rss.xml"
+    />
     {
       metaTags.article?.publishedTime && (
         <meta
@@ -142,12 +152,6 @@ const structuredDataItems = [
     <main>
       <slot />
     </main>
-    <footer class="py-6 text-center">
-      <a
-        href="/games/dragon-quest/"
-        class="text-[0.5rem] leading-none text-muted-foreground/70 no-underline transition-colors hover:text-muted-foreground"
-        aria-label="A secret">🐉</a
-      >
-    </footer>
+    <Footer />
   </body>
 </html>

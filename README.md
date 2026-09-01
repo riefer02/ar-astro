@@ -1,72 +1,46 @@
-# Andrew Riefenstahl Personal Website
+# Andrew Riefenstahl — Personal Site
 
-Built with Astro 5 + Tailwind CSS + Shadcn/ui
+Personal website, blog, and portfolio at [andrewriefenstahl.com](https://andrewriefenstahl.com).
+
+Built with **Astro 5** + **Tailwind CSS** + **shadcn/ui** (New York variant), deployed to Netlify.
+
+## Commands
 
 ```sh
 pnpm install
+pnpm dev          # Dev server at localhost:4321
+pnpm build        # Production build to ./dist (also builds Pagefind search index)
+pnpm preview      # Preview production build locally
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Blog art
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+pnpm generate:blog-image -- <path-to-post.md>          # Generate blog art (default workflow)
+pnpm generate:blog-image -- <path> --prompt-only       # Inspect the prompt without calling the API
+pnpm generate:blog-image -- <path> --scene "<desc>"    # Inject scene direction
+pnpm generate:og -- <path-to-post.md>                  # Legacy local OG card tool
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Structure
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```
+src/
+├── components/   # Astro (.astro) and React islands (.tsx)
+├── content/posts # Blog posts (markdown, Zod-validated frontmatter)
+├── layouts/      # Layout.astro (shell) + MarkdownPostLayout.astro (posts)
+├── lib/          # content helpers, key-projects.json, professional-skills.json
+└── pages/        # File-based routes (index, services, posts, games, rss)
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Content
 
-## 🧞 Commands
+- Blog posts live in `src/content/posts/*.md` with frontmatter validated in `src/content.config.ts`.
+- Post images live in `src/assets/images/`.
+- Homepage project/stack data lives in `src/lib/key-projects.json` and `src/lib/professional-skills.json`.
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-| `pnpm generate:blog-image -- <post.md>` | Generate blog art from post metadata and body context |
-| `pnpm generate:og -- <post.md>` | Generate a legacy local OG card |
-
-## Theme
-
-The site uses a semantic forest-green token system designed for accessibility and long-term scalability.
-
-- Token source: `src/styles/globals.css`
-- Tailwind mapping: `tailwind.config.mjs`
-- Usage guide: `docs/theme-system.md`
-
-## Blog Authoring
+## Authoring
 
 - Agent guidance: `AGENTS.md`
-- Claude guidance: `CLAUDE.md`
 - Blog authoring workflow: `docs/blog-authoring.md`
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Theme tokens: `src/styles/globals.css` (see `docs/theme-system.md`)

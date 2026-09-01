@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, Home, BookOpen, Briefcase } from "lucide-react";
+import { Menu, Home, BookOpen, Briefcase, Mail } from "lucide-react";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,8 @@ const MobileNav = () => {
   const menuItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/services/", label: "Services", icon: Briefcase },
-    { href: "/posts/", label: "Blog Posts", icon: BookOpen },
+    { href: "/posts/", label: "Writing", icon: BookOpen },
+    { href: "/#connect", label: "Contact", icon: Mail },
   ];
 
   const handleItemClick = () => {
@@ -58,7 +59,7 @@ const MobileNav = () => {
           </nav>
           <div className="border-t border-border pt-4">
             <p className="text-center text-sm text-muted-foreground">
-              © 2025 Andrew Riefenstahl
+              © {new Date().getFullYear()} Andrew Riefenstahl
             </p>
           </div>
         </div>

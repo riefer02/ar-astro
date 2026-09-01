@@ -2,15 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Analytics from "../components/Analytics.astro";
 import HeroSection from "../components/HeroSection";
+import LatestWriting from "../components/LatestWriting.astro";
 import ExpertiseSection from "../components/ExpertiseSection";
 import EnhancedKeyProjects from "../components/EnhancedKeyProjects";
+import StackSection from "../components/StackSection.astro";
 import ConnectSection from "../components/ConnectSection";
 import keyProjects from "../lib/key-projects.json";
 
 const metaTags = {
-  title: "Andrew Riefenstahl | Full-Stack Software Engineer & AI Architect",
+  title: "Andrew Riefenstahl | Senior Software Engineer & AI Specialist",
   description:
-    "Andrew Riefenstahl is a full-stack software engineer and AI architect building secure web applications, MCP servers, and intelligent systems. Explore projects and technical insights.",
+    "Andrew Riefenstahl is a senior software engineer and AI specialist building resilient systems and writing about where AI and humanity meet. Explore projects, writing, and how he can help.",
   url: "https://andrewriefenstahl.com",
   twitterHandle: "@riefer02",
 };
@@ -24,17 +26,47 @@ const metaTags = {
     <!-- Hero Section -->
     <HeroSection />
 
+    <!-- Latest Writing -->
+    <LatestWriting />
+
     <!-- Expertise Section -->
     <ExpertiseSection />
 
     <!-- Enhanced Projects Section -->
     <EnhancedKeyProjects keyProjects={keyProjects} />
 
+    <!-- Stack Section -->
+    <StackSection />
+
+    <!-- Services Teaser -->
+    <section class="grounded-section relative py-16 md:py-24">
+      <div class="container mx-auto max-w-5xl px-4">
+        <div
+          class="grounded-panel relative overflow-hidden rounded-lg px-6 py-14 text-center md:px-12"
+        >
+          <div class="relative z-10">
+            <h2
+              class="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl"
+            >
+              Need something built or fixed?
+            </h2>
+            <p class="mx-auto mb-8 max-w-xl text-lg text-muted-foreground">
+              I help individuals and small businesses reduce friction — making
+              the time-eating parts of their work simpler, with AI only where it
+              actually earns its place.
+            </p>
+            <a
+              href="/services/"
+              class="grounded-button-primary inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold text-primary-foreground transition-all hover:-translate-y-0.5"
+            >
+              See how I can help
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Connect Section -->
     <ConnectSection />
   </div>
 </Layout>
-
-<style>
-  /* You can add custom Tailwind CSS styles here if needed */
-</style>
