@@ -55,12 +55,12 @@ const ConnectSection = () => {
                 className="group block h-full rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 <Card className="grounded-panel card-lift h-full rounded-lg">
-                  <CardContent className="flex items-center gap-6 p-8">
+                  <CardContent className="flex items-center gap-6 p-6">
                     <IconChip
                       icon={IconComponent}
                       size="xl"
                       hover={false}
-                      className="shrink-0 text-muted-foreground group-hover:text-foreground"
+                      className="shrink-0 text-foreground/90 group-hover:text-glint"
                     />
                     <div className="flex-1">
                       <h3 className="mb-1 text-xl font-bold text-foreground">
@@ -86,9 +86,9 @@ const ConnectSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="grounded-panel relative rounded-lg px-6 py-16 text-center md:px-12">
+        <div className="grounded-panel relative rounded-lg px-6 py-12 text-center md:px-10">
           <div className="relative z-10">
-            <div className="grounded-icon mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-lg text-foreground">
+            <div className="grounded-icon mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-xl text-glint">
               <MessageCircle className="h-8 w-8" aria-hidden="true" />
             </div>
 
