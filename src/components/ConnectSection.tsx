@@ -8,8 +8,10 @@ import {
   Send,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import GroundedButton from "@/components/GroundedButton";
+import SectionHeader from "@/components/SectionHeader";
+import Hairline from "@/components/Hairline";
+import IconChip from "@/components/IconChip";
 import { socials, email } from "@/lib/socials";
 
 const icons = {
@@ -28,30 +30,17 @@ const ConnectSection = () => {
   return (
     <section
       id="connect"
-      className="grounded-section relative py-16 md:py-32"
+      className="grounded-section section-pad relative"
     >
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
-        aria-hidden="true"
-      />
+      <Hairline className="via-border" />
       <div className="container mx-auto max-w-5xl px-4">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <Badge
-            variant="outline"
-            className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
-          >
-            Contact
-          </Badge>
-          <h2 className="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Let's Start a Conversation
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Whether you want to chat about technology, music, philosophy, or
-            potential collaborations - I'm always up for meaningful
-            conversations.
-          </p>
-        </div>
+        <SectionHeader
+          className="mb-16"
+          kicker="Contact"
+          title="Let's Start a Conversation"
+          description="Whether you want to chat about technology, music, philosophy, or potential collaborations - I'm always up for meaningful conversations."
+        />
 
         {/* Contact Cards */}
         <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -63,15 +52,16 @@ const ConnectSection = () => {
                 href={link.url}
                 target={link.name === "Email" ? "_self" : "_blank"}
                 rel={link.name === "Email" ? "" : "noopener noreferrer"}
-                className="group block h-full"
+                className="group block h-full rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                <Card className="grounded-panel h-full rounded-lg transition-all duration-300 hover:-translate-y-1">
+                <Card className="grounded-panel card-lift h-full rounded-lg">
                   <CardContent className="flex items-center gap-6 p-8">
-                    <div
-                      className="grounded-icon flex h-16 w-16 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:text-foreground"
-                    >
-                      <IconComponent className="h-8 w-8" aria-hidden="true" />
-                    </div>
+                    <IconChip
+                      icon={IconComponent}
+                      size="xl"
+                      hover={false}
+                      className="shrink-0 text-muted-foreground group-hover:text-foreground"
+                    />
                     <div className="flex-1">
                       <h3 className="mb-1 text-xl font-bold text-foreground">
                         {link.name}
@@ -81,7 +71,7 @@ const ConnectSection = () => {
                       </p>
                     </div>
                     <div className="hidden sm:block">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-transparent text-muted-foreground/70 shadow-[inset_0_1px_0_hsl(var(--foreground)/0.05)] transition-all duration-300 group-hover:border-[hsl(var(--glint)/0.42)] group-hover:text-foreground">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-transparent text-muted-foreground/70 shadow-[inset_0_1px_0_hsl(var(--foreground)/0.05)] transition-all duration-300 group-hover:border-glint/40 group-hover:text-foreground">
                         <ArrowRight
                           className="h-5 w-5 -translate-x-1 transition-transform duration-300 group-hover:translate-x-0"
                           aria-hidden="true"
@@ -111,24 +101,15 @@ const ConnectSection = () => {
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button
-                asChild
-                className="grounded-button-primary h-12 rounded-full px-8 text-base font-bold text-primary-foreground transition-all hover:-translate-y-0.5"
-                size="lg"
-              >
+              <GroundedButton>
                 <a href={`mailto:${email}`}>
                   <Send className="mr-2 h-4 w-4" aria-hidden="true" />
                   Say Hello
                 </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="grounded-button-outline h-12 rounded-full px-8 text-base text-foreground hover:-translate-y-0.5 hover:text-foreground"
-                size="lg"
-              >
+              </GroundedButton>
+              <GroundedButton variant="outline">
                 <a href="/posts/">Read My Writing</a>
-              </Button>
+              </GroundedButton>
             </div>
           </div>
         </div>

@@ -23,24 +23,24 @@ const nav = [
         </p>
       </div>
 
-      <nav class="flex flex-wrap items-center justify-center gap-6">
+      <nav class="flex flex-wrap items-center justify-center gap-2 md:gap-4">
         {nav.map((item) => (
           <a
             href={item.href}
-            class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            class="inline-flex items-center px-2 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             {item.label}
           </a>
         ))}
       </nav>
 
-      <div class="flex items-center gap-5">
+      <div class="flex items-center justify-center gap-2 md:gap-3">
         {socials.map((s) => (
           <a
             href={s.url}
             target={s.url.startsWith("http") ? "_blank" : undefined}
             rel={s.url.startsWith("http") ? "noopener noreferrer" : undefined}
-            class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            class="inline-flex items-center px-2 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             {s.name}
           </a>
@@ -54,8 +54,8 @@ const nav = [
       <p>&copy; {year} Andrew Riefenstahl</p>
       <a
         href="/games/dragon-quest/"
-        class="text-xs text-muted-foreground/60 no-underline transition-colors hover:text-muted-foreground"
-        aria-label="A secret"
+        class="inline-flex items-center px-2 py-3 text-xs text-muted-foreground/70 no-underline transition-colors hover:text-muted-foreground"
+        aria-label="Secret: play the dragon game"
         >🐉</a
       >
     </div>

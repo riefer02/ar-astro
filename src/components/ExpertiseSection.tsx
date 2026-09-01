@@ -11,6 +11,9 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import SectionHeader from "@/components/SectionHeader";
+import Hairline from "@/components/Hairline";
+import IconChip from "@/components/IconChip";
 
 const ExpertiseSection = () => {
   const expertiseAreas = [
@@ -92,31 +95,18 @@ const ExpertiseSection = () => {
   return (
     <section
       id="expertise"
-      className="grounded-section relative py-16 md:py-32"
+      className="grounded-section section-pad relative"
     >
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
-        aria-hidden="true"
-      />
+      <Hairline className="via-border" />
 
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <Badge
-            variant="outline"
-            className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
-          >
-            Core Competencies
-          </Badge>
-          <h2 className="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Engineering that reduces friction
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I build software to make real problems smaller — for the people
-            doing the work and the communities they serve. Deep technical range
-            is the means; reducing friction is the point.
-          </p>
-        </div>
+        <SectionHeader
+          className="mb-16"
+          kicker="Core Competencies"
+          title="Engineering that reduces friction"
+          description="I build software to make real problems smaller — for the people doing the work and the communities they serve. Deep technical range is the means; reducing friction is the point."
+        />
 
         {/* Main Expertise Areas */}
         <div className="mb-20 grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -125,12 +115,14 @@ const ExpertiseSection = () => {
             return (
               <Card
                 key={index}
-                className="grounded-panel group h-full rounded-lg p-2 transition-all duration-300 hover:-translate-y-1"
+                className="grounded-panel card-lift group h-full rounded-lg p-2"
               >
                 <CardHeader className="relative pb-4">
-                  <div className="grounded-icon mb-6 inline-flex h-14 w-14 items-center justify-center rounded-lg text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
-                    <IconComponent className="h-7 w-7" aria-hidden="true" />
-                  </div>
+                  <IconChip
+                    icon={IconComponent}
+                    size="lg"
+                    className="mb-6"
+                  />
                   <CardTitle className="text-2xl font-bold text-foreground">
                     {area.title}
                   </CardTitle>
@@ -144,7 +136,7 @@ const ExpertiseSection = () => {
                       <Badge
                         key={skillIndex}
                         variant="secondary"
-                        className="grounded-chip px-3 py-1 text-sm font-normal text-muted-foreground transition-colors hover:border-[hsl(var(--glint)/0.38)] hover:text-foreground"
+                        className="grounded-chip px-3 py-1 text-sm font-normal text-muted-foreground transition-colors hover:border-glint/40 hover:text-foreground"
                       >
                         {skill}
                       </Badge>
@@ -169,12 +161,13 @@ const ExpertiseSection = () => {
                   key={index}
                   className="group relative flex flex-col items-center text-center"
                 >
-                  <div className="grounded-icon mb-4 flex h-16 w-16 items-center justify-center rounded-lg transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[hsl(var(--glint)/0.44)]">
-                    <IconComponent
-                      className="h-7 w-7 text-muted-foreground transition-colors group-hover:text-foreground"
-                      aria-hidden="true"
-                    />
-                  </div>
+                  <IconChip
+                    icon={IconComponent}
+                    size="xl"
+                    hover={false}
+                    className="mb-4 flex transition-all duration-300 group-hover:-translate-y-1 group-hover:border-glint/40"
+                    iconClassName="text-muted-foreground transition-colors group-hover:text-foreground"
+                  />
                   <h4 className="mb-1.5 text-sm font-bold text-foreground">
                     {spec.label}
                   </h4>

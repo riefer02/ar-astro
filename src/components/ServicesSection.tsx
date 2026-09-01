@@ -13,8 +13,10 @@ import {
   HandCoins,
 } from "lucide-react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import GroundedButton from "@/components/GroundedButton";
+import SectionHeader from "@/components/SectionHeader";
+import IconChip from "@/components/IconChip";
 import { email } from "@/lib/socials";
 
 const methodSteps = [
@@ -125,61 +127,39 @@ const ServicesSection = () => {
   const emailHref = `mailto:${email}`;
 
   return (
-    <section className="grounded-section relative py-16 md:py-24">
+    <section className="grounded-section section-pad relative md:py-24">
       <div className="container mx-auto max-w-5xl px-4">
         {/* Hero */}
-        <div className="mb-20 text-center">
-          <Badge
-            variant="outline"
-            className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
-          >
-            Services
-          </Badge>
-          <h1 className="grounded-section-heading mb-6 text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-            Is part of your business{" "}
-            <span className="grounded-gradient-text">eating your time?</span>
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I build and fix the processes that eat people's time — whether
-            you're an individual or a small business. We look at how work
-            actually gets done, redesign it to be simpler, and add AI only where
-            it genuinely earns its place. You end up with something working,
-            documented, and yours to run.
-          </p>
+        <div className="mb-20">
+          <SectionHeader
+            as="h1"
+            size="xl"
+            kicker="Services"
+            title="Is part of your business"
+            highlight="eating your time?"
+            description="I build and fix the processes that eat people's time — whether you're an individual or a small business. We look at how work actually gets done, redesign it to be simpler, and add AI only where it genuinely earns its place. You end up with something working, documented, and yours to run."
+          />
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
-              asChild
-              className="grounded-button-primary h-12 rounded-full px-8 text-base font-bold text-primary-foreground transition-all hover:-translate-y-0.5"
-              size="lg"
-            >
+            <GroundedButton>
               <a href={emailHref}>
                 <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
                 Tell me what you're dealing with
               </a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="grounded-button-outline h-12 rounded-full px-8 text-base text-foreground hover:-translate-y-0.5 hover:text-foreground"
-              size="lg"
-            >
+            </GroundedButton>
+            <GroundedButton variant="outline">
               <a href="#how">How it works</a>
-            </Button>
+            </GroundedButton>
           </div>
         </div>
 
         {/* What I help with */}
         <div id="how" className="mb-20">
-          <div className="mb-10 text-center">
-            <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              What I can help you with
-            </h2>
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              A focused piece of work with one job: take one broken process and
-              make it work the way it should. No boiling the ocean, no year-long
-              project. One thing, done properly.
-            </p>
-          </div>
+          <SectionHeader
+            className="mb-10"
+            size="md"
+            title="What I can help you with"
+            description="A focused piece of work with one job: take one broken process and make it work the way it should. No boiling the ocean, no year-long project. One thing, done properly."
+          />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             <div className="grounded-panel rounded-lg p-6">
               <Sparkles className="mb-4 h-8 w-8 text-muted-foreground" aria-hidden="true" />
@@ -215,29 +195,24 @@ const ServicesSection = () => {
 
         {/* Method */}
         <div className="mb-20">
-          <div className="mb-10 text-center">
-            <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              How it works
-            </h2>
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              The same practical approach, focused on the one thing you pick.
-              No mystery, no black box.
-            </p>
-          </div>
+          <SectionHeader
+            className="mb-10"
+            size="md"
+            title="How it works"
+            description="The same practical approach, focused on the one thing you pick. No mystery, no black box."
+          />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {methodSteps.map((step) => {
               const IconComponent = step.icon;
               return (
                 <Card
                   key={step.step}
-                  className="grounded-panel group h-full rounded-lg p-2 transition-all duration-300 hover:-translate-y-1"
+                  className="grounded-panel card-lift group h-full rounded-lg p-2"
                 >
                   <CardHeader className="relative pb-4">
                     <div className="mb-4 flex items-center justify-between">
-                      <div className="grounded-icon inline-flex h-12 w-12 items-center justify-center rounded-lg text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background">
-                        <IconComponent className="h-6 w-6" aria-hidden="true" />
-                      </div>
-                      <span className="text-sm font-bold text-muted-foreground/60">
+                      <IconChip icon={IconComponent} />
+                      <span className="text-sm font-bold text-muted-foreground/70">
                         {step.step}
                       </span>
                     </div>
@@ -256,24 +231,27 @@ const ServicesSection = () => {
 
         {/* Trust */}
         <div className="mb-20">
-          <div className="mb-10 text-center">
-            <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Simplify <em>first</em>. AI <em>second</em>.
-            </h2>
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Fast doesn't mean reckless. AI is only worth it if you can trust
-              the output and stand behind it — so we build that in from the
-              start.
-            </p>
-          </div>
+          <SectionHeader
+            className="mb-10"
+            size="md"
+            title={
+              <>
+                Simplify <em>first</em>. AI <em>second</em>.
+              </>
+            }
+            description="Fast doesn't mean reckless. AI is only worth it if you can trust the output and stand behind it — so we build that in from the start."
+          />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {trustPoints.map((point) => {
               const IconComponent = point.icon;
               return (
                 <div key={point.title} className="grounded-panel rounded-lg p-6">
-                  <div className="grounded-icon mb-4 inline-flex h-14 w-14 items-center justify-center rounded-lg text-foreground">
-                    <IconComponent className="h-7 w-7" aria-hidden="true" />
-                  </div>
+                  <IconChip
+                    icon={IconComponent}
+                    size="lg"
+                    hover={false}
+                    className="mb-4 text-foreground"
+                  />
                   <h3 className="mb-2 text-xl font-bold text-foreground">
                     {point.title}
                   </h3>
@@ -312,27 +290,18 @@ const ServicesSection = () => {
                   Scope settled before any work — no open-ended billing.
                 </p>
               </div>
-              <Button
-                asChild
-                className="grounded-button-primary h-12 rounded-full px-8 text-base font-bold text-primary-foreground transition-all hover:-translate-y-0.5"
-                size="lg"
-              >
+              <GroundedButton>
                 <a href={emailHref}>
                   <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
                   Ask about pricing
                 </a>
-              </Button>
-            </div>
+              </GroundedButton>            </div>
           </div>
         </div>
 
         {/* Outcomes */}
         <div className="mb-20">
-          <div className="mb-10 text-center">
-            <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              What good looks like
-            </h2>
-          </div>
+          <SectionHeader className="mb-10" size="md" title="What good looks like" />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {outcomes.map((item) => (
               <div key={item.label} className="grounded-panel rounded-lg p-8 text-center">
@@ -352,11 +321,7 @@ const ServicesSection = () => {
 
         {/* FAQ */}
         <div className="mb-20">
-          <div className="mb-10 text-center">
-            <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Common questions
-            </h2>
-          </div>
+          <SectionHeader className="mb-10" size="md" title="Common questions" />
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq) => (
               <details
@@ -386,16 +351,12 @@ const ServicesSection = () => {
               straight with you about whether I can help and what it would take.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button
-                asChild
-                className="grounded-button-primary h-12 rounded-full px-8 text-base font-bold text-primary-foreground transition-all hover:-translate-y-0.5"
-                size="lg"
-              >
+              <GroundedButton>
                 <a href={emailHref}>
                   <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
                   Email me
                 </a>
-              </Button>
+              </GroundedButton>
             </div>
           </div>
         </div>

@@ -10,9 +10,6 @@
     --card: 151 24% 14%;
     --card-foreground: 50 18% 90%;
 
-    --popover: 151 24% 14%;
-    --popover-foreground: 50 18% 90%;
-
     --primary: 119 24% 34%;
     --primary-foreground: 52 20% 94%;
 
@@ -32,7 +29,6 @@
     --input: 149 18% 28%;
     --ring: 119 24% 42%;
 
-    --surface-1: 151 22% 18%;
     --surface-2: 131 25% 29%;
     --surface-3: 119 24% 34%;
     --glint: 112 36% 60%;
@@ -46,49 +42,6 @@
     --code-foreground: 50 18% 90%;
 
     --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 152 32% 8%;
-    --foreground: 50 18% 92%;
-
-    --card: 151 26% 11%;
-    --card-foreground: 50 18% 92%;
-
-    --popover: 151 26% 11%;
-    --popover-foreground: 50 18% 92%;
-
-    --primary: 119 26% 38%;
-    --primary-foreground: 52 20% 95%;
-
-    --secondary: 151 24% 16%;
-    --secondary-foreground: 50 18% 90%;
-
-    --muted: 151 22% 14%;
-    --muted-foreground: 82 16% 74%;
-
-    --accent: 131 28% 24%;
-    --accent-foreground: 50 18% 92%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 50 18% 90%;
-
-    --border: 149 20% 24%;
-    --input: 149 20% 24%;
-    --ring: 119 26% 44%;
-
-    --surface-1: 151 24% 14%;
-    --surface-2: 131 25% 29%;
-    --surface-3: 119 26% 38%;
-    --glint: 112 40% 64%;
-    --glint-soft: 91 32% 72%;
-    --depth-shadow: 152 58% 3%;
-    --hero-gradient-from: 85 24% 74%;
-    --hero-gradient-via: 112 26% 50%;
-    --hero-gradient-to: 131 32% 38%;
-
-    --code-background: 152 32% 7%;
-    --code-foreground: 50 18% 92%;
   }
 }
 
@@ -120,6 +73,25 @@
   /* Scroll offset for fixed header — applies to every anchor target in main */
   main :where([id]) {
     scroll-margin-top: 60px;
+  }
+
+  /* Keyboard focus ring for elements without a component-level ring */
+  :where(a, button, summary, [role="button"]):focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
@@ -166,10 +138,6 @@
     background-color: hsl(var(--code-background)) !important;
     color: hsl(var(--code-foreground)) !important;
   }
-  .dark .prose pre.astro-code {
-    background-color: hsl(var(--code-background)) !important;
-    color: hsl(var(--code-foreground)) !important;
-  }
 
   /* Reset inline code styling inside fenced blocks so it doesn't get white pills */
   .prose pre code {
@@ -180,6 +148,26 @@
 }
 
 @layer components {
+  /* Shared section rhythm — override vertical padding with utilities (e.g. md:py-24) */
+  .section-pad {
+    @apply py-16 md:py-32;
+  }
+
+  /* Shared card hover lift */
+  .card-lift {
+    @apply transition-all duration-300 hover:-translate-y-1;
+  }
+
+  /* Full grounded buttons as CSS classes — usable on plain <a> in .astro templates
+     (React-asChild class merging does not survive Astro slot children) */
+  .btn-grounded-primary {
+    @apply grounded-button-primary inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-bold text-primary-foreground transition-all hover:-translate-y-0.5;
+  }
+
+  .btn-grounded-outline {
+    @apply grounded-button-outline inline-flex h-12 items-center justify-center rounded-full px-8 text-base text-foreground transition-all hover:-translate-y-0.5 hover:text-foreground;
+  }
+
   .grounded-panel {
     position: relative;
     overflow: hidden;
