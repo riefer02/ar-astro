@@ -1,9 +1,90 @@
 {
   "projects": [
     {
+      "name": "Fetch.ai / Flockx",
+      "subheader": "AI Agent Workflow Platform",
+      "url": "https://agents.flockx.io",
+      "year": "2022–Present",
+      "description": "Senior backend engineer and full-stack developer for Flockx.io's AI agent workflow platform built with Next.js. Architected LangGraph-based agent orchestration with RAG-powered chat over WebSocket, plus API routes, authentication systems, and data transformation pipelines while managing AWS S3, Cloudinary, and Redis. Implemented performance optimizations, database migrations, ElasticSearch integration, and third-party services like Intercom and Slack.",
+      "technologies": [
+        "LangGraph",
+        "LangChain",
+        "Next.js",
+        "FastAPI",
+        "Django ORM",
+        "Redis Streams",
+        "ElasticSearch",
+        "AWS S3",
+        "Cloudinary",
+        "Auth0",
+        "SRE"
+      ]
+    },
+    {
+      "name": "Whole Earth Curriculum",
+      "subheader": "Open-Source K–12 Curriculum",
+      "url": "https://wholeearthcurriculum.org",
+      "year": "2026",
+      "description": "A single, coherent, drop-in K–12 curriculum built by an agent loop across nearly two billion tokens, made affordable by DeepSeek. Free and open source — develops people who are emotionally, physically, and intellectually aware of themselves, their context, and the Earth they live on.",
+      "technologies": [
+        "Astro",
+        "DeepSeek",
+        "Agent Loop",
+        "Open Source",
+        "Education"
+      ]
+    },
+    {
+      "name": "ISCPO.org",
+      "subheader": "Membership Platform & Editorial System",
+      "url": "https://iscpo.org",
+      "year": "2025–Present",
+      "description": "Architected and delivered ISCPO.org as a WordPress membership platform that preserved native editorial workflows, reduced config drift, and made key site structure reproducible across environments. Built with Sage 11, Acorn 5, Blade, and a disciplined plugin/theme boundary so the organization kept the WordPress ecosystem it relied on while the codebase gained Laravel-style structure and a faster developer workflow.",
+      "technologies": [
+        "WordPress",
+        "Sage 11",
+        "Acorn 5",
+        "Blade",
+        "Tailwind CSS 4",
+        "Alpine.js",
+        "Memberful",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "name": "ABowlofRed.com",
+      "subheader": "Non-Profit Charity",
+      "url": "https://abowlofred.com",
+      "year": "2021–Present",
+      "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end that migrated to Astro for improved performance and developer experience. Utilized Strapi CMS on AWS EC2 with Node.js for content management, and integrated Stripe for secure ticket transactions that have surpassed $130,000 in annual ticket sales.",
+      "technologies": [
+        "Astro",
+        "Strapi CMS",
+        "AWS EC2",
+        "Node.js",
+        "Stripe",
+        "SEO"
+      ]
+    },
+    {
+      "name": "The Concert on Lake Grapevine",
+      "subheader": "Non-Profit Community Event",
+      "url": "https://theconcertonlakegrapevine.com",
+      "year": "2026",
+      "description": "Co-developed and produced the site for a family-friendly charity concert benefiting Grapevine charities, presented by Tolbert's Restaurant & Chili Parlor and The Charity Grapevine. Covers lineup, FAQ, sponsors, and Stripe-powered ticketing for a full day of live music on the lake.",
+      "technologies": [
+        "Stripe",
+        "Ticketing",
+        "Community",
+        "Non-Profit",
+        "Event Production"
+      ]
+    },
+    {
       "name": "Pulse COOP",
       "subheader": "Worker-Owned Tech Cooperative",
       "url": "https://pulse.coop",
+      "year": "2025",
       "description": "Co-founded a worker-owned technology cooperative dedicated to empowering local businesses and grassroots movements. As a founding member, I helped establish democratic workplace practices based on the seven cooperative principles while delivering tech solutions that strengthen community economic foundations.",
       "technologies": [
         "Cooperative Management",
@@ -14,45 +95,27 @@
       ]
     },
     {
-      "name": "Flockx.io",
-      "subheader": "AI Agent Workflow Platform",
-      "url": "https://agents.flockx.io",
-      "description": "Senior backend engineer and full-stack developer for Flockx.io's AI agent workflow platform built with Next.js. Architected API routes, authentication systems, and data transformation pipelines while managing cloud infrastructure including AWS S3, Cloudinary, and Redis. Implemented performance optimizations, database migrations, and site reliability engineering. Enhanced platform capabilities with LangGraph workflows, ElasticSearch integration, and third-party services like Intercom and Slack for comprehensive user engagement.",
+      "name": "MCP Server Suite",
+      "subheader": "Open-Source AI Tooling",
+      "url": "https://github.com/riefer02",
+      "year": "2025–Present",
+      "description": "A family of safety-first MCP servers that give AI assistants governed, read-only access to real systems: PostgreSQL (mcp-pg-db-reader), MySQL (mysql-db-reader), and Mezmo log retrieval (mezmo-logs-mcp), plus work on godot-mcp for AI-assisted game development. Built around the idea that AI tooling should be auditable, quota-conscious, and hard to misuse.",
       "technologies": [
-        "LangGraph",
-        "LangChain",
-        "Next.js",
-        "API Development",
-        "Authentication",
-        "AWS S3",
-        "Cloudinary",
-        "Redis",
-        "ElasticSearch",
-        "Data Migration",
-        "Performance Optimization",
-        "SRE"
+        "MCP",
+        "Python",
+        "TypeScript",
+        "PostgreSQL",
+        "MySQL",
+        "Docker",
+        "Godot"
       ]
     },
-    {
-      "name": "ABowlofRed.com",
-      "subheader": "Non-Profit Charity",
-      "url": "https://abowlofred.com",
-      "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end platform that underwent a successful migration to Astro for improved performance and developer experience. Maintained focus on high-performance and accessible design throughout the transition. Utilized Strapi CMS on AWS EC2 with Node.js for content management, ensuring optimal image rendering and SEO-friendly metadata. Successfully integrated Stripe for secure ticket transactions, facilitating annual fundraising events that recently surpassed $130,000 in donations.",
-      "technologies": [
-        "Astro",
-        "Strapi CMS",
-        "AWS EC2",
-        "Node.js",
-        "Stripe",
-        "SEO"
-      ]
-    },
-
     {
       "name": "Propane.com",
       "subheader": "Enterprise Website",
       "url": "https://propane.com",
-      "description": "Spearheaded the development of Propane.com, an enterprise-level WordPress site featuring advanced customizations and integrations. Implemented a robust CI pipeline, 2FA authentication via OAuth Okta, and developed stateful web applications. Enhanced user engagement by integrating Algolia for advanced search capabilities and HubSpot for CRM. Additionally, optimized React-based components for improved site performance and user experience.",
+      "year": "2021",
+      "description": "Spearheaded the development of Propane.com, an enterprise-level WordPress site featuring advanced customizations and integrations. Implemented a robust CI pipeline, 2FA authentication via OAuth Okta, and developed stateful web applications. Integrated Algolia for advanced search and HubSpot for CRM, and optimized React-based components for performance.",
       "technologies": [
         "WordPress",
         "React",
@@ -63,85 +126,42 @@
       ]
     },
     {
-      "name": "ISCPO.org",
-      "subheader": "Membership Platform & Editorial System",
-      "url": "https://iscpo.org",
-      "description": "Architected and delivered ISCPO.org as a WordPress membership platform that preserved native editorial workflows, reduced config drift, and made key site structure reproducible across environments. Built with Sage 11, Acorn 5, Blade, Memberful, and a disciplined plugin/theme boundary so the organization kept the WordPress ecosystem it relied on while the codebase gained Laravel-style structure and a much faster developer workflow.",
-      "technologies": [
-        "WordPress",
-        "Sage 11",
-        "Acorn 5",
-        "Blade",
-        "Vite",
-        "Memberful",
-        "Config as Code"
-      ]
-    },
-
-    {
       "name": "Tolbert's Restaurant",
       "subheader": "Modern Restaurant Website",
       "url": "https://tolbertsrestaurant.com",
-      "description": "Architected a high-performance restaurant website using Astro with a headless WordPress CMS backend. Integrated third-party menu systems and food ordering platforms through custom API routes, leveraging cloud infrastructure for optimal performance and budget efficiency. Features include dynamic calendar integration, contact forms, and seamless third-party service connections - all while maintaining exceptional accessibility and performance standards.",
+      "year": "2024",
+      "description": "Architected a high-performance restaurant website using Astro with a headless WordPress CMS backend. Integrated third-party menu systems and food ordering platforms through custom API routes, with dynamic calendar integration, contact forms, and seamless third-party connections — all while maintaining accessibility and performance standards.",
       "technologies": [
         "Astro",
         "Headless WordPress",
         "Custom API Routes",
         "Third-party Integrations",
-        "Cloud Infrastructure",
         "Food Ordering Systems",
-        "Dynamic Calendar",
         "Performance Optimization"
       ]
-    },
-    {
-      "name": "Junkerri.com",
-      "subheader": "E-commerce Platform",
-      "url": "https://junkerri.com",
-      "description": "Engineered Junkerri.com, a sleek and efficient e-commerce platform using Next.js. Implemented Stripe for a streamlined payment process, and integrated SparkPost for effective customer communication. This project highlights my ability to create user-centric shopping experiences with robust back-end functionalities.",
-      "technologies": ["Next.js", "Stripe", "SparkPost", "E-commerce"]
     },
     {
       "name": "Chisos",
       "subheader": "AI Note-Taking & Speech Platform",
       "url": "https://chisos.xyz",
-      "description": "Developed, deployed, and provisioned a full-stack advanced note-taking application in a single weekend. The platform leverages AI to transcribe speech-to-text and organize notes for later analysis. Built with a focus on end-to-end delivery, I handled all infrastructure provisioning on Railway, implemented secure authentication with Clerk, and integrated AI services for core functionality. The frontend utilizes Vite and TanStack Router for a modern, type-safe routing experience. A testament to rapid, high-quality product delivery and comprehensive system architecture skills.",
+      "year": "2025",
+      "description": "Developed, deployed, and provisioned a full-stack note-taking application that transcribes speech to text and uses AI to organize notes for later analysis. Handled all infrastructure provisioning on Railway, secure authentication with Clerk, and AI services for core functionality. Built with Vite and TanStack Router for a modern, type-safe experience.",
       "technologies": [
         "Vite",
         "TanStack Router",
         "AI Integration",
         "Clerk Auth",
         "Railway",
-        "Infrastructure as Code"
+        "OpenAI"
       ]
-    },
-    {
-      "name": "AI Bible Quote Generator",
-      "subheader": "Early AI Exploration",
-      "url": "https://theosapp.com",
-      "description": "An early exploration into AI-powered applications that, while archaic by today's rapidly evolving AI standards, was an enjoyable project during the emergence of accessible AI technology. Built with Supabase, Edge Functions, Deno, and OpenAI's early frameworks to generate personalized Bible quotes using vector similarity search. A nostalgic reminder of the exciting early days of consumer AI applications.",
-      "technologies": [
-        "Supabase",
-        "Edge Functions",
-        "Deno",
-        "OpenAI",
-        "Vector Search",
-        "Early AI"
-      ]
-    },
-    {
-      "name": "Electron Chat App",
-      "subheader": "Cross-Platform Chat Application",
-      "url": "https://github.com/riefer02/electron-chat-app",
-      "description": "Conceptualized and developed a cutting-edge chat application using React and Electron, demonstrating expertise in cross-platform software development. This app features real-time messaging capabilities, a user-friendly interface, and high-performance chat functionalities.",
-      "technologies": ["React", "Electron", "Real-time Messaging"]
     },
     {
       "name": "Steel Calculator",
       "subheader": "Microservice Web Application",
       "url": "https://steelcalculator.xyz",
-      "description": "Developed a highly specialized steel calculator application, tailored for efficiency improvements in steel-related calculations. Built using Vite, JavaScript, CSS, and HTML, this tool has proven highly effective for clients in the steel industry.",
-      "technologies": ["Vite", "JavaScript", "CSS", "HTML", "Microservices"]
+      "year": "2022",
+      "description": "A specialized steel calculator built for a steel-industry professional to make daily work easier. Simple, focused, and actually used — proof that the most valuable tool is often the least flashy one.",
+      "technologies": ["Vite", "JavaScript", "CSS", "HTML"]
     }
   ]
 }

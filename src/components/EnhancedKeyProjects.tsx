@@ -1,13 +1,12 @@
 import {
   Cpu,
   Shield,
-  ShoppingCart,
-  MessageSquare,
   Calculator,
   Globe,
   ArrowUpRight,
   Users,
   BrainCircuit,
+  Music,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,6 +16,7 @@ interface Project {
   name: string;
   subheader: string;
   url: string;
+  year?: string;
   description: string;
   technologies: string[];
 }
@@ -34,10 +34,11 @@ const getProjectIcon = (projectName: string) => {
   if (name.includes("pulse")) return Users;
   if (name.includes("iscpo")) return Users;
   if (name.includes("chisos")) return BrainCircuit;
-  if (name.includes("flockx") || name.includes("ai")) return Cpu;
+  if (name.includes("flockx")) return Cpu;
+  if (name.includes("mcp")) return Cpu;
+  if (name.includes("curriculum") || name.includes("earth")) return Globe;
+  if (name.includes("concert")) return Music;
   if (name.includes("propane")) return Globe;
-  if (name.includes("junkerri")) return ShoppingCart;
-  if (name.includes("chat")) return MessageSquare;
   if (name.includes("steel") || name.includes("calculator")) return Calculator;
   if (name.includes("bowl")) return Shield;
   return Globe;
@@ -111,6 +112,12 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
 
                   <p className="text-sm font-medium text-muted-foreground">
                     {project.subheader}
+                    {project.year && (
+                      <span className="text-muted-foreground/60">
+                        {" · "}
+                        {project.year}
+                      </span>
+                    )}
                   </p>
                 </CardHeader>
 

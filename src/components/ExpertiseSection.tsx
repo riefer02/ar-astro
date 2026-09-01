@@ -15,10 +15,10 @@ import { Badge } from "@/components/ui/badge";
 const ExpertiseSection = () => {
   const expertiseAreas = [
     {
-      title: "Modern Tech Ecosystem",
+      title: "Deep Technical Range",
       icon: Code2,
       description:
-        "Full-cycle development from high-performance frontends to robust, event-driven backends.",
+        "From high-performance frontends to robust, event-driven backends, I reach for the right tool — not the flashiest one.",
       skills: [
         "React & Astro",
         "TanStack Router",
@@ -31,10 +31,10 @@ const ExpertiseSection = () => {
       ],
     },
     {
-      title: "Architectural Philosophy",
+      title: "Pragmatic by Default",
       icon: Brain,
       description:
-        "Pragmatic, solution-oriented engineering. avoiding over-engineering while keeping a vision for the future.",
+        "Solve the real problem first. Avoid over-engineering, and keep a clear vision for the future.",
       skills: [
         "Solution-First Mindset",
         "Right-Sized Scalability",
@@ -47,10 +47,10 @@ const ExpertiseSection = () => {
       ],
     },
     {
-      title: "Leadership & Culture",
+      title: "Human-Centered",
       icon: Users,
       description:
-        "Leading with empathy, clarity, and an ethical lens. Fostering a collaborative, 'no-drama' environment.",
+        "Leading with empathy and clarity, so technology serves people and communities — not the other way around.",
       skills: [
         "Strategic Goal Setting",
         "Team Inspiration",
@@ -109,12 +109,12 @@ const ExpertiseSection = () => {
             Core Competencies
           </Badge>
           <h2 className="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Technical & Leadership DNA
+            Engineering that reduces friction
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            I bring a holistic approach to software engineering—combining deep
-            technical expertise with a focus on sustainable architecture and
-            human-centric leadership.
+            I build software to make real problems smaller — for the people
+            doing the work and the communities they serve. Deep technical range
+            is the means; reducing friction is the point.
           </p>
         </div>
 

@@ -10,38 +10,20 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { socials, email } from "@/lib/socials";
+
+const icons = {
+  LinkedIn: Linkedin,
+  GitHub: Github,
+  Twitter: Twitter,
+  Email: Mail,
+} as const;
 
 const ConnectSection = () => {
-  const socialLinks = [
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/andrewriefenstahl/",
-      icon: Linkedin,
-      description: "Professional network & insights",
-      color: "group-hover:text-foreground",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/riefer02",
-      icon: Github,
-      description: "Open source projects & code",
-      color: "group-hover:text-foreground",
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/riefer02",
-      icon: Twitter,
-      description: "Tech thoughts & discussions",
-      color: "group-hover:text-foreground",
-    },
-    {
-      name: "Email",
-      url: "mailto:andrew.riefenstahl@gmail.com",
-      icon: Mail,
-      description: "Direct contact",
-      color: "group-hover:text-foreground",
-    },
-  ];
+  const socialLinks = socials.map((link) => ({
+    ...link,
+    icon: icons[link.name],
+  }));
 
   return (
     <section
@@ -86,7 +68,7 @@ const ConnectSection = () => {
                 <Card className="grounded-panel h-full rounded-lg transition-all duration-300 hover:-translate-y-1">
                   <CardContent className="flex items-center gap-6 p-8">
                     <div
-                      className={`grounded-icon flex h-16 w-16 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 ${link.color}`}
+                      className="grounded-icon flex h-16 w-16 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:text-foreground"
                     >
                       <IconComponent className="h-8 w-8" aria-hidden="true" />
                     </div>
@@ -134,7 +116,7 @@ const ConnectSection = () => {
                 className="grounded-button-primary h-12 rounded-full px-8 text-base font-bold text-primary-foreground transition-all hover:-translate-y-0.5"
                 size="lg"
               >
-                <a href="mailto:andrew.riefenstahl@gmail.com">
+                <a href={`mailto:${email}`}>
                   <Send className="mr-2 h-4 w-4" aria-hidden="true" />
                   Say Hello
                 </a>

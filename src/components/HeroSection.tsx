@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Code2, Terminal, Heart } from "lucide-react";
+import { ArrowRight, Code2, Terminal, Heart, PenLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -21,7 +21,7 @@ const HeroSection = () => {
                 <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-[hsl(var(--hero-gradient-via))] opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[hsl(var(--hero-gradient-via))]"></span>
               </span>
-              System Online & Ready
+              Available for freelance &amp; consulting
             </Badge>
           </div>
 
@@ -36,9 +36,9 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            I&apos;m <strong>Andrew Riefenstahl</strong>. Senior software engineer
-            and AI specialist. I build resilient systems and explore the
-            intersection of human cognition and artificial intelligence.
+            I&apos;m <strong>Andrew Riefenstahl</strong> — senior software engineer
+            and AI specialist. I build resilient systems and write about where
+            AI and humanity meet.
           </p>
 
           {/* Actions */}
@@ -69,45 +69,45 @@ const HeroSection = () => {
           {/* Tech Stack / "Flare" Visual - Floating Cards */}
           <h2 className="sr-only">Core focus areas</h2>
           <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
-            {/* Card 1: Senior Engineering */}
+            {/* Card 1: Engineering */}
             <div className="grounded-panel group rounded-lg p-8 text-left transition-all duration-300 hover:-translate-y-1">
               <div className="grounded-icon mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                 <Code2 className="h-6 w-6" />
               </div>
               <h3 className="relative mb-2 text-xl font-bold text-foreground">
-                Senior Engineering
+                Engineering
               </h3>
               <p className="relative text-muted-foreground">
-                Scalable architectures, automation pipelines, and robust
-                full-stack solutions.
+                Scalable architectures, automation, and robust full-stack
+                systems.
               </p>
             </div>
 
-            {/* Card 2: AI & Future Tech */}
+            {/* Card 2: Writing & Ideas */}
             <div className="grounded-panel group rounded-lg p-8 text-left transition-all duration-300 hover:-translate-y-1">
               <div className="grounded-icon mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
-                <Brain className="h-6 w-6" />
+                <PenLine className="h-6 w-6" />
               </div>
               <h3 className="relative mb-2 text-xl font-bold text-foreground">
-                AI Innovation
+                Writing &amp; Ideas
               </h3>
               <p className="relative text-muted-foreground">
-                Building autonomous agents, memory systems, and RAG pipelines
-                for complex problems.
+                Long-form thinking on AI, work, and technology&apos;s place in
+                people&apos;s lives.
               </p>
             </div>
 
-            {/* Card 3: Leadership & Ethics */}
+            {/* Card 3: Human-first AI */}
             <div className="grounded-panel group rounded-lg p-8 text-left transition-all duration-300 hover:-translate-y-1">
               <div className="grounded-icon mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
                 <Heart className="h-6 w-6" />
               </div>
               <h3 className="relative mb-2 text-xl font-bold text-foreground">
-                Leadership & Ethics
+                Human-first AI
               </h3>
               <p className="relative text-muted-foreground">
-                Solution-oriented mentorship with a focus on sustainable,
-                human-centric tech.
+                Agents, RAG, and MCP tooling built to reduce friction — not
+                replace people.
               </p>
             </div>
           </div>

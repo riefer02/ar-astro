@@ -15,6 +15,7 @@ import {
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { email } from "@/lib/socials";
 
 const methodSteps = [
   {
@@ -22,7 +23,7 @@ const methodSteps = [
     title: "Map the work",
     icon: Map,
     description:
-      "We follow the workflow from start to finish — every step, every handoff, every wait.",
+      "We follow the work from start to finish — every step, every handoff, every wait.",
   },
   {
     step: "02",
@@ -36,7 +37,7 @@ const methodSteps = [
     title: "Redesign first",
     icon: RefreshCw,
     description:
-      "We fix the process before adding a single tool. A bad workflow with AI bolted on is just a faster bad workflow.",
+      "We fix the process before adding a single tool. A bad process with AI bolted on is just a faster bad process.",
   },
   {
     step: "04",
@@ -85,7 +86,7 @@ const trustPoints = [
 const outcomes = [
   {
     stat: "30–40%",
-    label: "Less manual handling on the converted workflow",
+    label: "Less manual handling on the process we rebuild",
   },
   {
     stat: "2–3×",
@@ -93,35 +94,35 @@ const outcomes = [
   },
   {
     stat: "1",
-    label: "Workflow proven before you scale to more",
+    label: "Process proven before you scale to more",
   },
 ];
 
 const faqs = [
   {
     q: "What do I walk away with?",
-    a: "A working, documented process — one real workflow rebuilt end to end, running for you, with the know-how to run and extend it yourself. Not a slide deck of recommendations.",
+    a: "A working, documented process — one real process rebuilt end to end, running for you, with the know-how to run and extend it yourself. Not a slide deck of recommendations.",
   },
   {
     q: "How much does it cost?",
-    a: "It depends on how complex the workflow is, how many systems it touches, and how much AI it genuinely needs. I work with individuals and small businesses, and pricing is flexible and negotiable — the best way to get a real number is to tell me what you're dealing with.",
+    a: "It depends on how complex the problem is, how many systems it touches, and how much AI it genuinely needs. I work with individuals and small businesses, and pricing is flexible and negotiable — the best way to get a real number is to tell me what you're dealing with.",
   },
   {
     q: "Will AI make the decisions?",
     a: "No. We keep humans in the loop on every decision that matters. AI handles the dull, repetitive lifting; you stay in control and accountable.",
   },
   {
-    q: "Which workflow should we start with?",
+    q: "Where should we start?",
     a: "The one that's costing you the most time or money — which is usually obvious once we talk it through. A quick conversation settles it, so the first conversion is the one most worth doing.",
   },
   {
     q: "Is this only for businesses?",
-    a: "No. I help individuals and SMBs. If you run a small business, freelance, or just have a process eating your week, this can apply. If it doesn't fit you, I'll tell you straight.",
+    a: "No. I help individuals and SMBs, and the same approach scales to enterprise teams. If you run a small business, freelance, or just have a process eating your week, this can apply. If it doesn't fit you, I'll tell you straight.",
   },
 ];
 
 const ServicesSection = () => {
-  const emailHref = "mailto:andrew.riefenstahl@gmail.com";
+  const emailHref = `mailto:${email}`;
 
   return (
     <section className="grounded-section relative py-16 md:py-24">
@@ -135,8 +136,8 @@ const ServicesSection = () => {
             Services
           </Badge>
           <h1 className="grounded-section-heading mb-6 text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-            Need help getting a workflow{" "}
-            <span className="grounded-gradient-text">set up properly?</span>
+            Is part of your business{" "}
+            <span className="grounded-gradient-text">eating your time?</span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
             I build and fix the processes that eat people's time — whether
@@ -153,7 +154,7 @@ const ServicesSection = () => {
             >
               <a href={emailHref}>
                 <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
-                Tell me about your workflow
+                Tell me what you're dealing with
               </a>
             </Button>
             <Button
@@ -174,7 +175,7 @@ const ServicesSection = () => {
               What I can help you with
             </h2>
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              A focused piece of work with one job: take a single workflow and
+              A focused piece of work with one job: take one broken process and
               make it work the way it should. No boiling the ocean, no year-long
               project. One thing, done properly.
             </p>
@@ -186,7 +187,7 @@ const ServicesSection = () => {
                 You get a working process
               </h3>
               <p className="text-muted-foreground">
-                Not a strategy memo. The actual, redesigned workflow — live and
+                Not a strategy memo. The actual, redesigned process — live and
                 running, not a pile of recommendations.
               </p>
             </div>
@@ -219,7 +220,7 @@ const ServicesSection = () => {
               How it works
             </h2>
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              The same practical approach, focused on the one workflow you pick.
+              The same practical approach, focused on the one thing you pick.
               No mystery, no black box.
             </p>
           </div>
@@ -257,7 +258,7 @@ const ServicesSection = () => {
         <div className="mb-20">
           <div className="mb-10 text-center">
             <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Workflow <em>first</em>. AI <em>second</em>.
+              Simplify <em>first</em>. AI <em>second</em>.
             </h2>
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Fast doesn't mean reckless. AI is only worth it if you can trust
@@ -298,7 +299,7 @@ const ServicesSection = () => {
               </h2>
               <p className="mb-8 text-lg text-muted-foreground">
                 I work with individuals and small businesses, and pricing is
-                flexible. It scales with how complex the workflow is, how many
+                flexible. It scales with how complex the problem is, how many
                 systems it touches, and how much AI it genuinely needs. The
                 honest number comes from talking about what you're dealing with.
               </p>
@@ -343,8 +344,8 @@ const ServicesSection = () => {
             ))}
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">
-            These are the kinds of results a well-converted workflow typically
-            delivers. Your numbers depend on the specific workflow, your team,
+            These are the kinds of results a well-simplified process typically
+            delivers. Your numbers depend on the specific process, your team,
             and your data.
           </p>
         </div>
@@ -378,7 +379,7 @@ const ServicesSection = () => {
         <div className="grounded-panel relative rounded-lg px-6 py-16 text-center md:px-12">
           <div className="relative z-10">
             <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-              Got a workflow that's eating your time?
+              Got something that's eating your time?
             </h2>
             <p className="mx-auto mb-10 max-w-xl text-lg text-muted-foreground">
               Send me a note and tell me what you're dealing with. I'll be
