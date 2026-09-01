@@ -75,6 +75,12 @@
     scroll-margin-top: 60px;
   }
 
+  /* Selection in the site's glint accent */
+  ::selection {
+    background-color: hsl(var(--glint) / 0.35);
+    color: hsl(var(--foreground));
+  }
+
   /* Keyboard focus ring for elements without a component-level ring */
   :where(a, button, summary, [role="button"]):focus-visible {
     outline: 2px solid hsl(var(--ring));
@@ -148,9 +154,10 @@
 }
 
 @layer components {
-  /* Shared section rhythm — override vertical padding with utilities (e.g. md:py-24) */
+  /* Shared section rhythm — 96px desktop / 64px mobile, consistent site-wide.
+     Override vertical padding with utilities only when deliberately diverging. */
   .section-pad {
-    @apply py-16 md:py-32;
+    @apply py-16 md:py-24;
   }
 
   /* Shared card hover lift */

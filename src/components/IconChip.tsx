@@ -2,9 +2,9 @@ import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const sizeClasses = {
-  md: "h-12 w-12",
-  lg: "h-14 w-14",
-  xl: "h-16 w-16",
+  md: "h-12 w-12 rounded-lg",
+  lg: "h-14 w-14 rounded-lg",
+  xl: "h-16 w-16 rounded-xl",
 } as const;
 
 const iconSizeClasses = {

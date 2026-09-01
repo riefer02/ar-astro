@@ -127,7 +127,7 @@ const ServicesSection = () => {
   const emailHref = `mailto:${email}`;
 
   return (
-    <section className="grounded-section section-pad relative md:py-24">
+    <section className="grounded-section section-pad relative">
       <div className="container mx-auto max-w-5xl px-4">
         {/* Hero */}
         <div className="mb-20">
@@ -207,9 +207,9 @@ const ServicesSection = () => {
               return (
                 <Card
                   key={step.step}
-                  className="grounded-panel card-lift group h-full rounded-lg p-2"
+                  className="grounded-panel card-lift group h-full rounded-lg"
                 >
-                  <CardHeader className="relative pb-4">
+                  <CardHeader className="relative p-6 pb-4">
                     <div className="mb-4 flex items-center justify-between">
                       <IconChip icon={IconComponent} />
                       <span className="text-sm font-bold text-muted-foreground/70">
@@ -264,7 +264,7 @@ const ServicesSection = () => {
 
         {/* Pricing */}
         <div className="mb-20">
-          <div className="grounded-panel relative overflow-hidden rounded-lg p-8 text-center md:p-12">
+          <div className="grounded-panel relative overflow-hidden rounded-lg p-6 text-center md:p-8">
             <div className="relative z-10 mx-auto max-w-xl">
               <Badge
                 variant="outline"
@@ -304,7 +304,7 @@ const ServicesSection = () => {
           <SectionHeader className="mb-10" size="md" title="What good looks like" />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {outcomes.map((item) => (
-              <div key={item.label} className="grounded-panel rounded-lg p-8 text-center">
+              <div key={item.label} className="grounded-panel rounded-lg p-6 text-center">
                 <div className="grounded-gradient-text mb-3 text-5xl font-bold">
                   {item.stat}
                 </div>
@@ -328,9 +328,9 @@ const ServicesSection = () => {
                 key={faq.q}
                 className="grounded-panel group rounded-lg p-6"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-bold text-foreground [&::-webkit-details-marker]:hidden">
+                <summary className="group/faq flex cursor-pointer list-none items-center justify-between text-lg font-bold text-foreground transition-colors duration-200 hover:text-glint [&::-webkit-details-marker]:hidden">
                   {faq.q}
-                  <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-90" aria-hidden="true" />
+                  <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-all duration-200 group-open/faq:rotate-90 group-open/faq:text-glint" aria-hidden="true" />
                 </summary>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                   {faq.a}
@@ -341,7 +341,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="grounded-panel relative rounded-lg px-6 py-16 text-center md:px-12">
+        <div className="grounded-panel relative rounded-lg px-6 py-12 text-center md:px-10">
           <div className="relative z-10">
             <h2 className="grounded-section-heading mb-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
               Got something that's eating your time?

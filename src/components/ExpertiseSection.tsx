@@ -115,9 +115,9 @@ const ExpertiseSection = () => {
             return (
               <Card
                 key={index}
-                className="grounded-panel card-lift group h-full rounded-lg p-2"
+                className="grounded-panel card-lift group h-full rounded-lg"
               >
-                <CardHeader className="relative pb-4">
+                <CardHeader className="relative p-6 pb-4">
                   <IconChip
                     icon={IconComponent}
                     size="lg"
@@ -149,7 +149,7 @@ const ExpertiseSection = () => {
         </div>
 
         {/* Specializations Grid - Updated to match style */}
-        <div className="grounded-panel rounded-lg p-8 md:p-12">
+        <div className="grounded-panel rounded-lg p-6 md:p-8">
           <h3 className="mb-10 text-center text-xl font-semibold tracking-tight text-foreground">
             Specialized Capabilities
           </h3>

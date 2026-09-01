@@ -83,7 +83,7 @@ const HeroSection = () => {
             {focusCards.map((card) => (
               <div
                 key={card.title}
-                className="grounded-panel card-lift group rounded-lg p-8 text-left"
+                className="grounded-panel card-lift group rounded-lg p-6 text-left"
               >
                 <IconChip icon={card.icon} className="mb-4" />
                 <h3 className="relative mb-2 text-xl font-bold text-foreground">
