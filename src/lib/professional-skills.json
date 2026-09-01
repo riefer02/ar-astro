@@ -2,11 +2,19 @@
   "groups": [
     {
       "name": "Languages",
-      "items": ["TypeScript", "JavaScript", "Python", "PHP", "SQL"]
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "PHP",
+        "SQL",
+        "Go",
+        "Rust"
+      ]
     },
     {
       "name": "Frontend",
-      "items": ["React", "Next.js", "Astro", "Tailwind CSS"]
+      "items": ["React", "Next.js", "Astro", "Tailwind CSS", "Vite"]
     },
     {
       "name": "Backend & Data",
@@ -14,9 +22,11 @@
         "FastAPI",
         "Django",
         "Node.js",
+        "Express",
         "PostgreSQL",
         "Redis",
-        "Elasticsearch"
+        "Elasticsearch",
+        "MySQL"
       ]
     },
     {
@@ -26,7 +36,8 @@
         "RAG",
         "MCP",
         "Claude Code / Codex",
-        "Vector Search"
+        "OpenCode",
+        "DeepSeek"
       ]
     },
     {
@@ -35,7 +46,20 @@
         "Terraform",
         "AWS CDK",
         "AWS EC2",
-        "GitHub Actions / CI/CD"
+        "AWS S3",
+        "AWS RDS",
+        "AWS VPC",
+        "AWS ECS"
+      ]
+    },
+    {
+      "name": "Deploy & CI/CD",
+      "items": [
+        "GitHub Actions",
+        "Netlify",
+        "Vercel",
+        "Railway",
+        "Heroku"
       ]
     }
   ]
