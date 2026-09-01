@@ -9,8 +9,11 @@ import {
   Music,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import GroundedButton from "@/components/GroundedButton";
+import SectionHeader from "@/components/SectionHeader";
+import Hairline from "@/components/Hairline";
+import IconChip from "@/components/IconChip";
 
 interface Project {
   name: string;
@@ -48,30 +51,18 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
   return (
     <section
       id="projects"
-      className="grounded-section relative py-16 md:py-32"
+      className="grounded-section section-pad relative"
     >
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
-        aria-hidden="true"
-      />
+      <Hairline className="via-border" />
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <Badge
-            variant="outline"
-            className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
-          >
-            Portfolio
-          </Badge>
-          <h2 className="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-            Selected Work
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            A collection of projects I'm proud of - from helping nonprofits
-            raise funds to building AI platforms that solve real problems.
-          </p>
-        </div>
+        <SectionHeader
+          className="mb-16"
+          kicker="Portfolio"
+          title="Selected Work"
+          description="A collection of projects I'm proud of - from helping nonprofits raise funds to building AI platforms that solve real problems."
+        />
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -81,21 +72,16 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
             return (
               <Card
                 key={project.name}
-                className="grounded-panel group flex h-full flex-col rounded-lg transition-all duration-300 hover:-translate-y-1"
+                className="grounded-panel card-lift group flex h-full flex-col rounded-lg"
               >
                 <CardHeader className="pb-4">
                   <div className="mb-6 flex items-start justify-between">
-                    <div
-                      className="grounded-icon flex h-12 w-12 items-center justify-center rounded-lg text-foreground transition-colors duration-300 group-hover:bg-foreground group-hover:text-background"
-                      aria-hidden="true"
-                    >
-                      <IconComponent className="h-6 w-6" />
-                    </div>
+                    <IconChip icon={IconComponent} className="mb-0" />
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/link relative flex items-center gap-1 rounded-full border border-border/70 bg-background/60 px-3 py-1.5 text-xs font-medium text-muted-foreground shadow-[inset_0_1px_0_hsl(var(--foreground)/0.06)] transition-all hover:border-[hsl(var(--glint)/0.44)] hover:text-foreground"
+                      className="group/link relative flex items-center gap-1 rounded-full border border-border/70 bg-background/60 px-3 py-1.5 text-xs font-medium text-muted-foreground shadow-[inset_0_1px_0_hsl(var(--foreground)/0.06)] transition-all hover:border-glint/40 hover:text-foreground"
                       aria-label={`Visit ${project.name}`}
                     >
                       Visit
@@ -132,7 +118,7 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
                         <Badge
                           key={tech}
                           variant="secondary"
-                          className="grounded-chip text-xs font-normal text-muted-foreground transition-colors group-hover:border-[hsl(var(--glint)/0.36)] group-hover:text-foreground"
+                          className="grounded-chip text-xs font-normal text-muted-foreground transition-colors group-hover:border-glint/40 group-hover:text-foreground"
                         >
                           {tech}
                         </Badge>
@@ -150,13 +136,9 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
           <p className="mb-6 text-lg font-medium text-muted-foreground">
             Interested in seeing more work or discussing a project?
           </p>
-          <Button
-            asChild
-            className="grounded-button-primary h-12 rounded-full px-8 text-base font-semibold transition-all hover:-translate-y-0.5"
-            size="lg"
-          >
+          <GroundedButton>
             <a href="#connect">Let's Connect</a>
-          </Button>
+          </GroundedButton>
         </div>
       </div>
     </section>

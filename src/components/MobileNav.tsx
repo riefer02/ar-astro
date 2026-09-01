@@ -1,17 +1,11 @@
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, Home, BookOpen, Briefcase, Mail } from "lucide-react";
+import { Menu } from "lucide-react";
+import { navItems } from "@/lib/nav";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const menuItems = [
-    { href: "/", label: "Home", icon: Home },
-    { href: "/services/", label: "Services", icon: Briefcase },
-    { href: "/posts/", label: "Writing", icon: BookOpen },
-    { href: "/#connect", label: "Contact", icon: Mail },
-  ];
 
   const handleItemClick = () => {
     setIsOpen(false);
@@ -23,7 +17,7 @@ const MobileNav = () => {
         <Button
           variant="ghost"
           size="icon"
-          className="rounded-full text-primary-foreground hover:bg-primary-foreground/10 hover:text-white md:hidden"
+          className="h-11 w-11 rounded-full text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground md:hidden"
         >
           <Menu className="h-6 w-6" aria-hidden="true" />
           <span className="sr-only">Toggle navigation menu</span>
@@ -41,7 +35,7 @@ const MobileNav = () => {
           </div>
           <nav className="flex-1 py-6">
             <div className="space-y-2">
-              {menuItems.map((item) => {
+              {navItems.map((item) => {
                 const IconComponent = item.icon;
                 return (
                   <a

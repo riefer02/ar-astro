@@ -1,33 +1,20 @@
 ---
-import { Badge } from "./ui/badge";
+import SectionHeader from "./SectionHeader";
+import Hairline from "./Hairline";
 import stack from "../lib/professional-skills.json";
 
 const groups = stack.groups;
 ---
 
-<section id="stack" class="grounded-section relative py-16 md:py-24">
-  <div
-    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
-    aria-hidden="true"
-  />
+<section id="stack" class="grounded-section section-pad relative md:py-24">
+  <Hairline className="via-border" />
   <div class="container mx-auto px-4">
-    <div class="mb-14 text-center">
-      <Badge
-        variant="outline"
-        className="grounded-kicker mb-4 px-3 py-1 text-muted-foreground"
-      >
-        Stack
-      </Badge>
-      <h2
-        class="grounded-section-heading mb-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl"
-      >
-        What I build with
-      </h2>
-      <p class="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
-        The fundamentals come first — systems thinking, API design, and knowing
-        when not to build. These are what I reach for when they reduce friction.
-      </p>
-    </div>
+    <SectionHeader
+      className="mb-14"
+      kicker="Stack"
+      title="What I build with"
+      description="The fundamentals come first — systems thinking, API design, and knowing when not to build. These are what I reach for when they reduce friction."
+    />
 
     <div class="mx-auto max-w-5xl space-y-6">
       {

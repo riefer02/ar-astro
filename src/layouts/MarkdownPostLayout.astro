@@ -9,6 +9,7 @@ import PostNavigation from "../components/PostNavigation.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import { formatDate, getReadingTime } from "../lib/format";
 
 interface Props {
   frontmatter: CollectionEntry<"posts">["data"];
@@ -59,32 +60,6 @@ const articleStructuredData = {
     name: "Andrew Riefenstahl",
     url: "https://andrewriefenstahl.com",
   },
-};
-
-// Format date nicely
-const formatDate = (date) => {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-};
-
-// Calculate reading time
-const getReadingTime = (content) => {
-  if (typeof content !== "string") {
-    return "5 min read"; // fallback
-  }
-  const plain = content
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/`[^`]*`/g, " ")
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
-    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
-    .replace(/[#>*_~\-]/g, "")
-    .replace(/\s+/g, " ");
-  const words = plain.trim().split(/\s+/).filter(Boolean).length;
-  const readingTime = Math.ceil(words / 200);
-  return `${Math.max(readingTime, 1)} min read`;
 };
 ---
 
@@ -179,7 +154,7 @@ const getReadingTime = (content) => {
 
         <!-- Title & Description -->
         <h1
-          class="mb-6 text-3xl font-bold leading-tight text-foreground md:text-5xl"
+          class="grounded-section-heading mb-6 text-3xl font-bold leading-tight text-foreground md:text-5xl"
           data-pagefind-meta="title"
         >
           {frontmatter.title}
