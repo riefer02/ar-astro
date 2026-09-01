@@ -2,96 +2,40 @@
   "groups": [
     {
       "name": "Languages",
-      "items": [
-        "TypeScript",
-        "JavaScript",
-        "Python",
-        "PHP",
-        "SQL",
-        "HTML/CSS",
-        "Rust"
-      ]
+      "items": ["TypeScript", "JavaScript", "Python", "PHP", "SQL"]
     },
     {
       "name": "Frontend",
-      "items": [
-        "React",
-        "Next.js 15",
-        "React Native",
-        "Tailwind CSS",
-        "Alpine.js",
-        "SASS",
-        "Redux"
-      ]
+      "items": ["React", "Next.js", "Astro", "Tailwind CSS"]
     },
     {
-      "name": "Backend",
+      "name": "Backend & Data",
       "items": [
         "FastAPI",
         "Django",
-        "Django ORM",
         "Node.js",
-        "WebSocket",
-        "Celery",
-        "REST",
-        "GraphQL",
-        "Fastify",
-        "Deno",
-        "Prisma"
+        "PostgreSQL",
+        "Redis",
+        "Elasticsearch"
       ]
     },
     {
-      "name": "AI / ML",
+      "name": "AI & Agents",
       "items": [
         "LangGraph",
         "RAG",
+        "MCP",
         "Claude Code / Codex",
-        "MCP Servers",
-        "LLM Tool Integration",
-        "Elasticsearch Vector Search"
+        "Vector Search"
       ]
     },
     {
-      "name": "Data / Infra",
+      "name": "Infrastructure",
       "items": [
-        "PostgreSQL",
-        "Redis",
-        "Redis Streams",
-        "Elasticsearch",
-        "AWS EC2",
-        "Heroku",
-        "GitHub Actions",
-        "CI/CD",
         "Terraform",
         "AWS CDK",
-        "MySQL",
-        "MongoDB"
-      ]
-    },
-    {
-      "name": "Integrations",
-      "items": [
-        "Auth0",
-        "Stripe",
-        "Cloudinary",
-        "Mapbox",
-        "Intercom",
-        "Slack",
-        "Pipedream",
-        "Web3",
-        "Memberful"
-      ]
-    },
-    {
-      "name": "Tooling",
-      "items": [
-        "Turborepo",
-        "Webpack",
-        "Astro",
-        "Strapi",
-        "WordPress (Sage 11 / Acorn 5 / Blade)",
-        "PHPStan",
-        "Godot"
+        "AWS EC2",
+        "GitHub Actions / CI/CD"
       ]
     }
   ]
