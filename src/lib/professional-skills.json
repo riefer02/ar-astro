@@ -14,7 +14,15 @@
     },
     {
       "name": "Frontend",
-      "items": ["React", "Next.js", "Astro", "Tailwind CSS", "Vite"]
+      "items": [
+        "React",
+        "Next.js",
+        "Astro",
+        "Tailwind CSS",
+        "Vite",
+        "Redux",
+        "Zustand"
+      ]
     },
     {
       "name": "Backend & Data",
@@ -23,10 +31,12 @@
         "Django",
         "Node.js",
         "Express",
+        "Celery",
         "PostgreSQL",
         "Redis",
         "Elasticsearch",
-        "MySQL"
+        "MySQL",
+        "Cloudflare D1"
       ]
     },
     {
@@ -49,7 +59,9 @@
         "AWS S3",
         "AWS RDS",
         "AWS VPC",
-        "AWS ECS"
+        "AWS ECS",
+        "AWS Lambda",
+        "AWS SQS"
       ]
     },
     {
@@ -59,7 +71,8 @@
         "Netlify",
         "Vercel",
         "Railway",
-        "Heroku"
+        "Heroku",
+        "Cloudflare Workers"
       ]
     }
   ]
