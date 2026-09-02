@@ -3,45 +3,97 @@
 @tailwind utilities;
 
 @layer base {
+  /* Light theme — clean paper, forest-green accents, neutral gray text */
   :root {
-    --background: 152 28% 11%;
-    --foreground: 50 18% 90%;
+    --background: 40 14% 98%;
+    --foreground: 165 8% 12%;
 
-    --card: 151 24% 14%;
-    --card-foreground: 50 18% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 165 8% 12%;
 
-    --primary: 119 24% 34%;
-    --primary-foreground: 52 20% 94%;
+    --primary: 148 38% 28%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 151 22% 20%;
-    --secondary-foreground: 50 18% 88%;
+    --secondary: 150 8% 94%;
+    --secondary-foreground: 165 6% 20%;
 
-    --muted: 151 20% 17%;
-    --muted-foreground: 82 16% 72%;
+    --muted: 150 8% 95%;
+    --muted-foreground: 165 5% 38%;
 
-    --accent: 131 25% 29%;
-    --accent-foreground: 50 18% 92%;
+    --accent: 148 22% 93%;
+    --accent-foreground: 150 30% 18%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 50 18% 90%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 149 18% 28%;
-    --input: 149 18% 28%;
-    --ring: 119 24% 42%;
+    --border: 160 6% 87%;
+    --input: 160 6% 87%;
+    --ring: 148 40% 34%;
 
-    --surface-2: 131 25% 29%;
-    --surface-3: 119 24% 34%;
-    --glint: 112 36% 60%;
-    --glint-soft: 91 28% 68%;
-    --depth-shadow: 152 55% 4%;
-    --hero-gradient-from: 85 22% 72%;
-    --hero-gradient-via: 112 24% 48%;
-    --hero-gradient-to: 131 30% 36%;
+    --surface-2: 150 8% 94%;
+    --surface-3: 150 10% 90%;
+    --glint: 148 45% 32%;
+    --glint-soft: 148 35% 46%;
+    --depth-shadow: 150 12% 72%;
+    --hero-gradient-from: 160 30% 22%;
+    --hero-gradient-via: 148 45% 32%;
+    --hero-gradient-to: 130 45% 38%;
 
-    --code-background: 152 30% 9%;
-    --code-foreground: 50 18% 90%;
+    --code-background: 160 8% 96%;
+    --code-foreground: 165 8% 12%;
+
+    --prose-body: 165 6% 18%;
+
+    /* Header chrome stays dark forest in both modes (nav text is light) */
+    --header-from: 152 28% 14%;
+    --header-to: 152 24% 11%;
 
     --radius: 0.5rem;
+  }
+
+  /* Dark theme — near-neutral surfaces, green reserved for accents */
+  .dark {
+    --background: 165 6% 8%;
+    --foreground: 40 8% 91%;
+
+    --card: 165 5% 11%;
+    --card-foreground: 40 8% 91%;
+
+    --primary: 138 32% 46%;
+    --primary-foreground: 120 20% 96%;
+
+    --secondary: 165 5% 15%;
+    --secondary-foreground: 40 6% 88%;
+
+    --muted: 165 5% 14%;
+    --muted-foreground: 160 5% 70%;
+
+    --accent: 160 6% 19%;
+    --accent-foreground: 40 8% 90%;
+
+    --destructive: 0 62% 38%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 165 5% 20%;
+    --input: 165 5% 20%;
+    --ring: 140 35% 52%;
+
+    --surface-2: 165 5% 14%;
+    --surface-3: 165 5% 18%;
+    --glint: 140 42% 62%;
+    --glint-soft: 130 25% 68%;
+    --depth-shadow: 165 30% 3%;
+    --hero-gradient-from: 140 30% 76%;
+    --hero-gradient-via: 140 36% 56%;
+    --hero-gradient-to: 130 36% 46%;
+
+    --code-background: 165 8% 7%;
+    --code-foreground: 40 8% 90%;
+
+    --prose-body: 155 5% 86%;
+
+    --header-from: 165 5% 14%;
+    --header-to: 165 5% 10%;
   }
 }
 
@@ -54,6 +106,21 @@
     background:
       radial-gradient(
         circle at 15% -10%,
+        hsl(var(--primary) / 0.1),
+        transparent 28rem
+      ),
+      radial-gradient(
+        circle at 85% 8%,
+        hsl(var(--glint) / 0.06),
+        transparent 30rem
+      ),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(40 10% 96%) 100%);
+  }
+
+  .dark body {
+    background:
+      radial-gradient(
+        circle at 15% -10%,
         hsl(var(--primary) / 0.22),
         transparent 28rem
       ),
@@ -62,7 +129,7 @@
         hsl(var(--glint) / 0.1),
         transparent 30rem
       ),
-      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(153 33% 8%) 100%);
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(160 8% 6%) 100%);
   }
 
   /* Smooth scrolling */
@@ -126,9 +193,13 @@
   background-repeat: repeat;
   background-size: var(--trees-tile-size) var(--trees-tile-size);
   animation: drift 120s linear infinite;
-  opacity: 0.68;
+  opacity: 0.12;
   transform: translate3d(0, 0, 0);
   contain: paint;
+}
+
+.dark .trees-drift {
+  opacity: 0.68;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -139,10 +210,18 @@
 
 /* Typography and code block fixes */
 @layer base {
-  /* Ensure fenced code blocks (Shiki) use our dark background and readable text */
+  /* Fenced code blocks (Shiki) use our themed background; syntax colors come
+     from the dual light/dark Shiki themes via --shiki-dark variables */
   .prose pre.astro-code {
     background-color: hsl(var(--code-background)) !important;
     color: hsl(var(--code-foreground)) !important;
+  }
+
+  .dark .prose pre.astro-code span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
   }
 
   /* Reset inline code styling inside fenced blocks so it doesn't get white pills */
@@ -256,7 +335,11 @@
   .grounded-button-primary {
     border: 1px solid hsl(var(--glint) / 0.28);
     background:
-      linear-gradient(180deg, hsl(var(--primary) / 1), hsl(122 25% 28%)),
+      linear-gradient(
+        180deg,
+        hsl(var(--primary) / 1),
+        hsl(var(--primary) / 0.82)
+      ),
       hsl(var(--primary));
     box-shadow:
       inset 0 1px 0 hsl(var(--foreground) / 0.16),
@@ -265,7 +348,11 @@
 
   .grounded-button-primary:hover {
     background:
-      linear-gradient(180deg, hsl(119 28% 42%), hsl(122 27% 31%)),
+      linear-gradient(
+        180deg,
+        hsl(var(--glint) / 1),
+        hsl(var(--primary) / 0.9)
+      ),
       hsl(var(--primary));
     box-shadow:
       inset 0 1px 0 hsl(var(--foreground) / 0.2),
