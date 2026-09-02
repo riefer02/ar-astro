@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   prefix: "",
   theme: {
@@ -48,6 +49,7 @@ module.exports = {
         glint: "hsl(var(--glint))",
         "glint-soft": "hsl(var(--glint-soft))",
         "depth-shadow": "hsl(var(--depth-shadow))",
+        "prose-body": "hsl(var(--prose-body))",
         hero: {
           from: "hsl(var(--hero-gradient-from))",
           via: "hsl(var(--hero-gradient-via))",
