@@ -5,7 +5,7 @@ const year = new Date().getFullYear();
 
 const nav = [
   { href: "/", label: "Home" },
-  { href: "/services/", label: "Services" },
+  { href: "https://riefproductions.com/", label: "Services", external: true },
   { href: "/posts/", label: "Writing" },
   { href: "/#connect", label: "Contact" },
 ];
@@ -27,6 +27,8 @@ const nav = [
         {nav.map((item) => (
           <a
             href={item.href}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noopener noreferrer" : undefined}
             class="inline-flex items-center px-2 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             {item.label}

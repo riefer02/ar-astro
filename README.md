@@ -30,7 +30,7 @@ src/
 ├── content/posts # Blog posts (markdown, Zod-validated frontmatter)
 ├── layouts/      # Layout.astro (shell) + MarkdownPostLayout.astro (posts)
 ├── lib/          # content helpers, key-projects.json, professional-skills.json
-└── pages/        # File-based routes (index, services, posts, games, rss)
+└── pages/        # File-based routes (index, posts, games, rss)
 ```
 
 ## Content

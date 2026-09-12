@@ -37,10 +37,13 @@ const MobileNav = () => {
             <div className="space-y-2">
               {navItems.map((item) => {
                 const IconComponent = item.icon;
+                const isExternal = item.href.startsWith("http");
                 return (
                   <a
                     key={item.href}
                     href={item.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
                     onClick={handleItemClick}
                     className="flex items-center gap-3 rounded-lg border border-transparent px-4 py-3 text-foreground transition-colors duration-200 hover:border-border/70 hover:bg-secondary/75 hover:text-foreground"
                   >
