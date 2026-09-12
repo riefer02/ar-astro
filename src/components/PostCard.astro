@@ -1,4 +1,5 @@
 ---
+import { ArrowRight } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -13,18 +14,18 @@ const { post } = Astro.props;
 const { title, description, pubDate, image } = post.data;
 ---
 
-<article>
+<article class="h-full">
   <Card
-    className="grounded-panel card-lift group mx-auto flex h-full max-w-md flex-col justify-between"
+    className="grounded-panel card-lift group relative mx-auto flex h-full max-w-md flex-col justify-between focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 focus-within:ring-offset-background"
   >
     <div class="flex h-full flex-col">
-      <CardHeader className="p-0">
+      <CardHeader className="overflow-hidden p-0">
         <Image
           src={image.url}
           alt={image.alt}
           widths={[400, 800]}
           sizes="(max-width: 640px) 100vw, 400px"
-          class="h-48 w-full rounded-t-[inherit] object-cover"
+          class="h-48 w-full rounded-t-[inherit] object-cover transition-transform duration-300 group-hover:scale-[1.02]"
         />
       </CardHeader>
       <CardContent className="flex flex-1 flex-col justify-between p-5">
@@ -32,7 +33,7 @@ const { title, description, pubDate, image } = post.data;
           <CardTitle className="mb-2 line-clamp-2 text-xl font-bold">
             <a
               href={`/posts/${post.id}/`}
-              class="text-foreground transition-colors duration-200 hover:text-glint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              class="text-foreground transition-colors duration-200 after:absolute after:inset-0 after:content-[''] group-hover:text-primary focus-visible:outline-none"
             >
               {title}
             </a>
@@ -41,9 +42,18 @@ const { title, description, pubDate, image } = post.data;
             {description}
           </CardDescription>
         </div>
-        <p class="mt-2 text-xs text-muted-foreground">
-          {formatDate(pubDate)}
-        </p>
+        <div class="mt-2 flex items-center justify-between gap-4">
+          <p class="text-xs text-muted-foreground">{formatDate(pubDate)}</p>
+          <span
+            class="inline-flex items-center gap-1 text-xs font-medium text-primary transition-colors group-hover:text-foreground"
+          >
+            Read article
+            <ArrowRight
+              className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+              aria-hidden="true"
+            />
+          </span>
+        </div>
       </CardContent>
     </div>
   </Card>
