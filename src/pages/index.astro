@@ -1,12 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Analytics from "../components/Analytics.astro";
-import HeroSection from "../components/HeroSection";
-import LatestWriting from "../components/LatestWriting.astro";
-import ExpertiseSection from "../components/ExpertiseSection";
-import EnhancedKeyProjects from "../components/EnhancedKeyProjects";
-import StackSection from "../components/StackSection.astro";
-import ConnectSection from "../components/ConnectSection";
+import Hero from "../components/home/Hero.astro";
+import SelectedWork from "../components/home/SelectedWork.astro";
+import WritingList from "../components/home/WritingList.astro";
+import Capabilities from "../components/home/Capabilities.astro";
+import ContactCta from "../components/home/ContactCta.astro";
 import keyProjects from "../lib/key-projects.json";
 
 const metaTags = {
@@ -21,24 +20,20 @@ const metaTags = {
 <Layout metaTags={metaTags}>
   <Analytics />
 
-  <!-- Modern spacing and structure -->
-  <div class="space-y-0">
-    <!-- Hero Section -->
-    <HeroSection />
+  <Hero />
 
-    <!-- Latest Writing -->
-    <LatestWriting />
+  <div class="container mx-auto space-y-6 px-4 py-10 md:space-y-8 md:py-14">
+    <SelectedWork projects={keyProjects.projects} />
 
-    <!-- Expertise Section -->
-    <ExpertiseSection />
+    <div class="grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
+      <div class="lg:col-span-1">
+        <WritingList />
+      </div>
+      <div class="lg:col-span-2">
+        <Capabilities />
+      </div>
+    </div>
 
-    <!-- Enhanced Projects Section -->
-    <EnhancedKeyProjects keyProjects={keyProjects} />
-
-    <!-- Stack Section -->
-    <StackSection />
-
-    <!-- Connect Section -->
-    <ConnectSection />
+    <ContactCta />
   </div>
 </Layout>

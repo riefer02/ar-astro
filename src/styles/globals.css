@@ -103,33 +103,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    background:
-      radial-gradient(
-        circle at 15% -10%,
-        hsl(var(--primary) / 0.1),
-        transparent 28rem
-      ),
-      radial-gradient(
-        circle at 85% 8%,
-        hsl(var(--glint) / 0.06),
-        transparent 30rem
-      ),
-      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(40 10% 96%) 100%);
-  }
-
-  .dark body {
-    background:
-      radial-gradient(
-        circle at 15% -10%,
-        hsl(var(--primary) / 0.22),
-        transparent 28rem
-      ),
-      radial-gradient(
-        circle at 85% 8%,
-        hsl(var(--glint) / 0.1),
-        transparent 30rem
-      ),
-      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(160 8% 6%) 100%);
+    background-color: hsl(var(--background));
   }
 
   /* Smooth scrolling */
@@ -144,7 +118,7 @@
 
   /* Selection in the site's glint accent */
   ::selection {
-    background-color: hsl(var(--glint) / 0.35);
+    background-color: hsl(var(--glint) / 0.22);
     color: hsl(var(--foreground));
   }
 
@@ -193,13 +167,13 @@
   background-repeat: repeat;
   background-size: var(--trees-tile-size) var(--trees-tile-size);
   animation: drift 120s linear infinite;
-  opacity: 0.12;
+  opacity: 0.05;
   transform: translate3d(0, 0, 0);
   contain: paint;
 }
 
 .dark .trees-drift {
-  opacity: 0.68;
+  opacity: 0.06;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -239,9 +213,9 @@
     @apply py-16 md:py-24;
   }
 
-  /* Shared card hover lift */
+  /* Shared card hover lift — kept subtle for a calmer, formal feel */
   .card-lift {
-    @apply transition-all duration-300 hover:-translate-y-1;
+    @apply transition-all duration-300 hover:-translate-y-0.5;
   }
 
   /* Full grounded buttons as CSS classes — usable on plain <a> in .astro templates
@@ -254,159 +228,67 @@
     @apply grounded-button-outline inline-flex h-12 items-center justify-center rounded-full px-8 text-base text-foreground transition-all hover:-translate-y-0.5 hover:text-foreground;
   }
 
+  /* Flat, editorial surfaces — one border, one restrained shadow, no gradients */
   .grounded-panel {
     position: relative;
     overflow: hidden;
-    border: 1px solid hsl(var(--border) / 0.8);
-    background:
-      linear-gradient(145deg, hsl(var(--foreground) / 0.055), transparent 34%),
-      linear-gradient(
-        180deg,
-        hsl(var(--card) / 0.96),
-        hsl(var(--background) / 0.88)
-      );
-    box-shadow:
-      inset 0 1px 0 hsl(var(--foreground) / 0.1),
-      inset 0 -1px 0 hsl(var(--depth-shadow) / 0.72),
-      0 24px 70px -46px hsl(var(--primary) / 0.95);
-  }
-
-  .grounded-panel::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-      linear-gradient(120deg, hsl(var(--glint) / 0.16), transparent 28%),
-      radial-gradient(
-        circle at 100% 0%,
-        hsl(var(--glint-soft) / 0.13),
-        transparent 18rem
-      );
-    opacity: 0.62;
-    transition: opacity 240ms ease;
-  }
-
-  .grounded-panel::after {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    pointer-events: none;
-    border-radius: inherit;
-    box-shadow: inset 0 0 0 1px hsl(var(--foreground) / 0.035);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card));
+    box-shadow: 0 1px 2px hsl(var(--foreground) / 0.04);
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease;
   }
 
   .grounded-panel:hover {
-    border-color: hsl(var(--glint) / 0.56);
-    box-shadow:
-      inset 0 1px 0 hsl(var(--foreground) / 0.13),
-      inset 0 -1px 0 hsl(var(--depth-shadow) / 0.75),
-      0 34px 90px -48px hsl(var(--glint) / 0.86);
-  }
-
-  .grounded-panel:hover::before {
-    opacity: 0.92;
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 6px 20px -12px hsl(var(--foreground) / 0.16);
   }
 
   .grounded-icon {
-    border: 1px solid hsl(var(--foreground) / 0.09);
-    background:
-      linear-gradient(145deg, hsl(var(--foreground) / 0.1), transparent),
-      hsl(var(--secondary) / 0.78);
-    box-shadow:
-      inset 0 1px 0 hsl(var(--foreground) / 0.11),
-      0 16px 32px -24px hsl(var(--glint) / 0.75);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--secondary));
   }
 
   .grounded-kicker {
-    border: 1px solid hsl(var(--glint) / 0.35);
-    background:
-      linear-gradient(
-        180deg,
-        hsl(var(--foreground) / 0.07),
-        hsl(var(--card) / 0.82)
-      ),
-      hsl(var(--background));
-    box-shadow:
-      inset 0 1px 0 hsl(var(--foreground) / 0.12),
-      0 18px 42px -32px hsl(var(--glint) / 0.8);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card));
   }
 
   .grounded-button-primary {
-    border: 1px solid hsl(var(--glint) / 0.28);
-    background:
-      linear-gradient(
-        180deg,
-        hsl(var(--primary) / 1),
-        hsl(var(--primary) / 0.82)
-      ),
-      hsl(var(--primary));
-    box-shadow:
-      inset 0 1px 0 hsl(var(--foreground) / 0.16),
-      0 18px 42px -25px hsl(var(--glint) / 0.8);
+    border: 1px solid hsl(var(--primary) / 0.9);
+    background: linear-gradient(
+      180deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary) / 0.88) 100%
+    );
+    box-shadow: 0 1px 2px hsl(var(--foreground) / 0.08);
   }
 
   .grounded-button-primary:hover {
-    background:
-      linear-gradient(
-        180deg,
-        hsl(var(--glint) / 1),
-        hsl(var(--primary) / 0.9)
-      ),
-      hsl(var(--primary));
-    box-shadow:
-      inset 0 1px 0 hsl(var(--foreground) / 0.2),
-      0 24px 56px -28px hsl(var(--glint) / 0.92);
+    background: hsl(var(--primary));
+    box-shadow: 0 2px 8px -4px hsl(var(--foreground) / 0.2);
   }
 
   .grounded-button-outline {
-    border: 1px solid hsl(var(--foreground) / 0.13);
-    background:
-      linear-gradient(
-        180deg,
-        hsl(var(--foreground) / 0.055),
-        hsl(var(--card) / 0.48)
-      ),
-      hsl(var(--background));
-    box-shadow: inset 0 1px 0 hsl(var(--foreground) / 0.08);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card));
+    box-shadow: 0 1px 2px hsl(var(--foreground) / 0.04);
   }
 
   .grounded-button-outline:hover {
-    border-color: hsl(var(--glint) / 0.44);
-    background:
-      linear-gradient(
-        180deg,
-        hsl(var(--foreground) / 0.08),
-        hsl(var(--secondary) / 0.68)
-      ),
-      hsl(var(--background));
+    border-color: hsl(var(--primary) / 0.4);
+    background: hsl(var(--secondary));
   }
 
+  /* Emphasis is a solid accent now — no clipped gradients */
   .grounded-gradient-text {
-    background-image: linear-gradient(
-      90deg,
-      hsl(var(--foreground)) 0%,
-      hsl(var(--hero-gradient-from)) 31%,
-      hsl(var(--hero-gradient-via)) 68%,
-      hsl(var(--hero-gradient-to)) 100%
-    );
-    background-clip: text;
-    color: transparent;
+    color: hsl(var(--glint));
   }
 
+  /* Sections are flat; separation comes from the hairline rule */
   .grounded-section {
-    background:
-      radial-gradient(
-        circle at 50% 0%,
-        hsl(var(--glint) / 0.07),
-        transparent 34rem
-      ),
-      linear-gradient(
-        180deg,
-        hsl(var(--background) / 0.04),
-        hsl(var(--background) / 0.32) 18%,
-        hsl(var(--background) / 0.42) 100%
-      );
+    background: transparent;
   }
 
   .grounded-section-heading {
@@ -414,15 +296,30 @@
   }
 
   .grounded-chip {
-    border: 1px solid hsl(var(--border) / 0.76);
-    background:
-      linear-gradient(
-        180deg,
-        hsl(var(--foreground) / 0.055),
-        hsl(var(--secondary) / 0.55)
-      ),
-      hsl(var(--background));
-    box-shadow: inset 0 1px 0 hsl(var(--foreground) / 0.07);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--secondary));
+  }
+
+  /* CSS-only segmented tabs (no JS) — :has() drives label + panel state */
+  .cap-panel {
+    display: none;
+  }
+
+  .capabilities:has(#capabilities-domains:checked) .cap-panel-domains,
+  .capabilities:has(#capabilities-stack:checked) .cap-panel-stack {
+    display: block;
+  }
+
+  .capabilities:has(#capabilities-domains:checked) .cap-tab-domains,
+  .capabilities:has(#capabilities-stack:checked) .cap-tab-stack {
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--foreground));
+  }
+
+  .capabilities:has(#capabilities-domains:focus-visible) .cap-tab-domains,
+  .capabilities:has(#capabilities-stack:focus-visible) .cap-tab-stack {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 
   .article-prose :is(h2, h3, h4) {
@@ -442,11 +339,7 @@
     border: 1px solid hsl(var(--border));
     border-radius: 1rem;
     overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      hsl(var(--card) / 0.95) 0%,
-      hsl(var(--background) / 0.9) 100%
-    );
+    background: hsl(var(--card));
   }
 
   .article-prose thead {

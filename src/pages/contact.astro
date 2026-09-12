@@ -1,0 +1,150 @@
+---
+import { Linkedin, Github, Twitter, Mail, Briefcase, ArrowUpRight } from "lucide-react";
+import Layout from "../layouts/Layout.astro";
+import { socials, email } from "../lib/socials";
+
+const metaTags = {
+  title: "Contact — Andrew Riefenstahl",
+  description:
+    "Get in touch with Andrew Riefenstahl — senior software engineer and AI specialist. Email, LinkedIn, GitHub, and services for projects and consulting.",
+  url: "https://andrewriefenstahl.com/contact/",
+  twitterHandle: "@riefer02",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Andrew Riefenstahl",
+  url: "https://andrewriefenstahl.com/contact/",
+  mainEntity: {
+    "@type": "Person",
+    name: "Andrew Riefenstahl",
+    email,
+    url: "https://andrewriefenstahl.com",
+  },
+};
+
+const icons = {
+  LinkedIn: Linkedin,
+  GitHub: Github,
+  Twitter: Twitter,
+  Email: Mail,
+} as const;
+
+const channels = socials
+  .filter((social) => social.name !== "Email")
+  .map((social) => ({ ...social, icon: icons[social.name] }));
+---
+
+<Layout metaTags={metaTags} structuredData={structuredData}>
+  <section class="container mx-auto max-w-4xl px-4 py-14 md:py-20">
+    <header class="max-w-2xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+        Contact
+      </p>
+      <h1
+        class="mt-4 text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl"
+      >
+        Let's start a conversation
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+        Projects, consulting, or a good conversation about technology, music, or
+        philosophy — I'm always up for it.
+      </p>
+    </header>
+
+    <a
+      href={`mailto:${email}`}
+      class="group mt-10 flex items-center gap-5 rounded-lg border border-border bg-card px-6 py-6 transition-colors hover:border-primary/40"
+    >
+      <span
+        class="grounded-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-lg text-primary"
+      >
+        <Mail className="h-6 w-6" aria-hidden="true" />
+      </span>
+      <span class="min-w-0 flex-1">
+        <span
+          class="block font-mono text-xs uppercase tracking-widest text-muted-foreground"
+          >Email</span
+        >
+        <span class="mt-1 block break-words text-lg font-semibold text-foreground"
+          >{email}</span
+        >
+      </span>
+      <ArrowUpRight
+        className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
+        aria-hidden="true"
+      />
+    </a>
+
+    <h2
+      class="mt-12 flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-muted-foreground"
+    >
+      <span class="h-4 w-0.5 rounded-full bg-primary" aria-hidden="true"></span>
+      Elsewhere
+    </h2>
+    <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {
+        channels.map((channel) => {
+          const Icon = channel.icon;
+          return (
+            <a
+              href={channel.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center gap-4 rounded-lg border border-border bg-card px-5 py-5 transition-colors hover:border-primary/40"
+            >
+              <span class="grounded-icon flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-foreground">
+                <Icon className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <span class="min-w-0 flex-1">
+                <span class="block text-sm font-semibold text-foreground">
+                  {channel.name}
+                </span>
+                <span class="mt-0.5 block text-sm text-muted-foreground">
+                  {channel.description}
+                </span>
+              </span>
+              <ArrowUpRight
+                className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
+                aria-hidden="true"
+              />
+            </a>
+          );
+        })
+      }
+    </div>
+
+    <h2
+      class="mt-12 flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-muted-foreground"
+    >
+      <span class="h-4 w-0.5 rounded-full bg-primary" aria-hidden="true"></span>
+      Work with me
+    </h2>
+    <a
+      href="https://riefproductions.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group mt-4 flex items-center gap-5 rounded-lg border border-border bg-card px-6 py-6 transition-colors hover:border-primary/40"
+    >
+      <span
+        class="grounded-icon flex h-12 w-12 shrink-0 items-center justify-center rounded-lg text-primary"
+      >
+        <Briefcase className="h-6 w-6" aria-hidden="true" />
+      </span>
+      <span class="min-w-0 flex-1">
+        <span class="block text-lg font-semibold text-foreground">
+          Rief Productions
+        </span>
+        <span class="mt-1 block text-sm text-muted-foreground">
+          Freelance projects and consulting for individuals and small
+          businesses.
+        </span>
+      </span>
+      <ArrowUpRight
+        className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground"
+        aria-hidden="true"
+      />
+    </a>
+  </section>
+</Layout>

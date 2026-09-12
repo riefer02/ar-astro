@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import { getSortedPosts } from "../../lib/content";
+
+const posts = (await getSortedPosts()).slice(0, 3);
+const formatMonth = (date: Date | string) =>
+  new Date(date).toLocaleDateString("en-US", { month: "short", year: "numeric" });
+---
+
+<section id="writing" aria-label="Latest writing">
+  <div class="grounded-panel flex flex-col overflow-hidden rounded-lg">
+    <header
+      class="flex items-center justify-between gap-4 border-b border-border px-5 py-4"
+    >
+      <div class="flex items-center gap-3">
+        <span class="h-4 w-0.5 rounded-full bg-primary" aria-hidden="true"
+        ></span>
+        <h2
+          class="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+        >
+          Writing
+        </h2>
+      </div>
+      <a
+        href="/posts/"
+        class="font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
+      >
+        all →
+      </a>
+    </header>
+
+    <ul class="divide-y divide-border">
+      {
+        posts.map((post) => (
+          <li>
+            <a
+              href={`/posts/${post.id}/`}
+              class="group flex items-center gap-4 px-5 py-4 transition-colors hover:bg-secondary/50"
+            >
+              <span class="w-16 shrink-0 font-mono text-xs text-muted-foreground">
+                {formatMonth(post.data.pubDate)}
+              </span>
+              <span class="min-w-0 flex-1">
+                <span class="line-clamp-2 text-sm font-medium text-foreground transition-colors group-hover:text-primary">
+                  {post.data.title}
+                </span>
+              </span>
+              <Image
+                src={post.data.image.url}
+                alt=""
+                widths={[64, 128]}
+                sizes="64px"
+                class="hidden h-10 w-16 shrink-0 rounded object-cover sm:block"
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

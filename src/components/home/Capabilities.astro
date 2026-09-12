@@ -1,0 +1,187 @@
+---
+import stack from "../../lib/professional-skills.json";
+
+const core = stack.core;
+const groups = stack.groups;
+
+const domains = [
+  {
+    title: "Deep Technical Range",
+    description:
+      "From high-performance frontends to event-driven backends — the right tool, not the flashiest one.",
+    tags: [
+      "React & Astro",
+      "TypeScript",
+      "Workers & Cron",
+      "Event Buses",
+      "Automation",
+    ],
+  },
+  {
+    title: "Pragmatic by Default",
+    description:
+      "Solve the real problem first. Avoid over-engineering and keep a clear path forward.",
+    tags: [
+      "System Design",
+      "Right-Sized Scale",
+      "Performance",
+      "Tech Debt",
+      "Sustainability",
+    ],
+  },
+  {
+    title: "Human-Centered",
+    description:
+      "Leading with empathy and clarity so technology serves people and communities.",
+    tags: [
+      "Strategy",
+      "Mentorship",
+      "Cross-Functional",
+      "Ethical Leadership",
+      "Staff Execution",
+    ],
+  },
+];
+
+const specializations = [
+  "System Architecture",
+  "Automation",
+  "Web Performance",
+  "Security",
+  "Human Centric",
+  "AI Integration",
+];
+---
+
+<section id="capabilities" aria-label="Capabilities" class="capabilities">
+  <input
+    type="radio"
+    name="capabilities"
+    id="capabilities-domains"
+    class="peer/domains sr-only"
+    checked
+  />
+  <input
+    type="radio"
+    name="capabilities"
+    id="capabilities-stack"
+    class="peer/stack sr-only"
+  />
+
+  <div class="grounded-panel overflow-hidden rounded-lg">
+    <header
+      class="flex flex-col gap-3 border-b border-border px-5 py-4 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <div class="flex items-center gap-3">
+        <span class="h-4 w-0.5 rounded-full bg-primary" aria-hidden="true"
+        ></span>
+        <h2
+          class="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+        >
+          Capabilities
+        </h2>
+      </div>
+
+      <div
+        role="radiogroup"
+        aria-label="Capabilities view"
+        class="flex w-fit gap-1 rounded-full border border-border p-1"
+      >
+        <label
+          for="capabilities-domains"
+          class="cap-tab cap-tab-domains cursor-pointer rounded-full px-3 py-1 text-xs font-medium text-muted-foreground transition-colors"
+        >
+          Domains
+        </label>
+        <label
+          for="capabilities-stack"
+          class="cap-tab cap-tab-stack cursor-pointer rounded-full px-3 py-1 text-xs font-medium text-muted-foreground transition-colors"
+        >
+          Stack
+        </label>
+      </div>
+    </header>
+
+    <div class="cap-panel cap-panel-domains p-5">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {
+          domains.map((domain) => (
+            <div>
+              <h3 class="text-base font-semibold text-foreground">
+                {domain.title}
+              </h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                {domain.description}
+              </p>
+              <ul class="mt-3 flex flex-wrap gap-1.5">
+                {domain.tags.map((tag) => (
+                  <li class="inline-flex items-center rounded-md border border-border bg-secondary px-2 py-0.5 text-xs text-muted-foreground">
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+
+      <div
+        class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-border pt-4"
+      >
+        <span class="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          Also
+        </span>
+        {
+          specializations.map((spec) => (
+            <span class="text-xs text-muted-foreground">{spec}</span>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="cap-panel cap-panel-stack p-5">
+      <h3
+        class="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+      >
+        Daily drivers
+      </h3>
+      <ul class="mt-3 flex flex-wrap gap-1.5">
+        {
+          core.map((item) => (
+            <li class="inline-flex items-center rounded-md border border-primary/40 bg-card px-2 py-0.5 text-xs font-medium text-foreground">
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+
+      <p class="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        Tools change; fundamentals don't. Beyond the daily drivers, I've shipped
+        across a broad surface area — enough to reach for the right tool instead
+        of the familiar one.
+      </p>
+
+      <div class="mt-6 border-t border-border pt-5">
+        <h3
+          class="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+        >
+          Also shipped with
+        </h3>
+        <dl class="mt-4 space-y-3">
+          {
+            groups.map((group) => (
+              <div class="grid grid-cols-1 gap-1 sm:grid-cols-[10rem_1fr] sm:gap-4">
+                <dt class="font-mono text-xs uppercase tracking-widest text-muted-foreground/80">
+                  {group.name}
+                </dt>
+                <dd class="text-sm leading-relaxed text-muted-foreground">
+                  {group.items.join(" · ")}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,27 +1,45 @@
 {
+  "core": [
+    "TypeScript",
+    "Python",
+    "React",
+    "Next.js",
+    "Astro",
+    "Node.js",
+    "PostgreSQL",
+    "Redis",
+    "AWS",
+    "Docker",
+    "LangGraph",
+    "MCP"
+  ],
   "groups": [
     {
       "name": "Languages",
       "items": [
-        "TypeScript",
         "JavaScript",
-        "Python",
         "PHP",
         "SQL",
         "Go",
-        "Rust"
+        "Rust",
+        "GDScript",
+        "HTML",
+        "CSS",
+        "SCSS"
       ]
     },
     {
       "name": "Frontend",
       "items": [
-        "React",
-        "Next.js",
-        "Astro",
+        "Vue",
+        "Vuetify",
         "Tailwind CSS",
         "Vite",
         "Redux",
-        "Zustand"
+        "Zustand",
+        "TanStack Router",
+        "Alpine.js",
+        "Gatsby"
       ]
     },
     {
@@ -29,25 +47,27 @@
       "items": [
         "FastAPI",
         "Django",
-        "Node.js",
         "Express",
         "Celery",
-        "PostgreSQL",
-        "Redis",
-        "Elasticsearch",
         "MySQL",
-        "Cloudflare D1"
+        "Elasticsearch",
+        "MongoDB",
+        "Deno",
+        "Cloudflare D1",
+        "Redis Streams"
       ]
     },
     {
       "name": "AI & Agents",
       "items": [
-        "LangGraph",
         "RAG",
-        "MCP",
+        "LangChain",
+        "Agent Loops",
+        "OpenAI",
+        "DeepSeek",
         "Claude Code / Codex",
         "OpenCode",
-        "DeepSeek"
+        "Fine-tuning"
       ]
     },
     {
@@ -55,24 +75,43 @@
       "items": [
         "Terraform",
         "AWS CDK",
-        "AWS EC2",
-        "AWS S3",
-        "AWS RDS",
-        "AWS VPC",
-        "AWS ECS",
-        "AWS Lambda",
-        "AWS SQS"
+        "EC2",
+        "S3",
+        "RDS",
+        "VPC",
+        "ECS",
+        "Lambda",
+        "SQS",
+        "Cloudflare Workers"
       ]
     },
     {
       "name": "Deploy & CI/CD",
       "items": [
         "GitHub Actions",
+        "CI/CD",
         "Netlify",
         "Vercel",
         "Railway",
-        "Heroku",
-        "Cloudflare Workers"
+        "Heroku"
+      ]
+    },
+    {
+      "name": "CMS & Integrations",
+      "items": [
+        "WordPress",
+        "Headless WordPress",
+        "Sage",
+        "Acorn",
+        "Blade",
+        "Strapi",
+        "Memberful",
+        "Cloudinary",
+        "Stripe",
+        "Auth0",
+        "Clerk",
+        "Algolia",
+        "HubSpot"
       ]
     }
   ]
