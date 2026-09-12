@@ -4,7 +4,7 @@
       "name": "Fetch.ai / Flockx",
       "subheader": "AI Agent Workflow Platform",
       "url": "https://agents.flockx.io",
-      "year": "2022–Present",
+      "year": "Since 2022",
       "description": "Senior backend engineer and full-stack developer for Flockx.io's AI agent workflow platform built with Next.js. Architected LangGraph-based agent orchestration with RAG-powered chat over WebSocket, plus API routes, authentication systems, and data transformation pipelines while managing AWS S3, Cloudinary, and Redis. Implemented performance optimizations, database migrations, ElasticSearch integration, and third-party services like Intercom and Slack.",
       "technologies": [
         "LangGraph",
@@ -38,7 +38,7 @@
       "name": "ISCPO.org",
       "subheader": "Membership Platform & Editorial System",
       "url": "https://iscpo.org",
-      "year": "2025–Present",
+      "year": "Since 2025",
       "description": "Architected and delivered ISCPO.org as a WordPress membership platform that preserved native editorial workflows, reduced config drift, and made key site structure reproducible across environments. Built with Sage 11, Acorn 5, Blade, and a disciplined plugin/theme boundary so the organization kept the WordPress ecosystem it relied on while the codebase gained Laravel-style structure and a faster developer workflow.",
       "technologies": [
         "WordPress",
@@ -55,7 +55,7 @@
       "name": "ABowlofRed.com",
       "subheader": "Non-Profit Charity",
       "url": "https://abowlofred.com",
-      "year": "2021–Present",
+      "year": "Since 2021",
       "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end that migrated to Astro for improved performance and developer experience. Utilized Strapi CMS on AWS EC2 with Node.js for content management, and integrated Stripe for secure ticket transactions that have surpassed $130,000 in annual ticket sales.",
       "technologies": [
         "Astro",
@@ -98,7 +98,7 @@
       "name": "MCP Server Suite",
       "subheader": "Open-Source AI Tooling",
       "url": "https://github.com/riefer02",
-      "year": "2025–Present",
+      "year": "Since 2025",
       "description": "A family of safety-first MCP servers that give AI assistants governed, read-only access to real systems: PostgreSQL (mcp-pg-db-reader), MySQL (mysql-db-reader), and Mezmo log retrieval (mezmo-logs-mcp), plus work on godot-mcp for AI-assisted game development. Built around the idea that AI tooling should be auditable, quota-conscious, and hard to misuse.",
       "technologies": [
         "MCP",
