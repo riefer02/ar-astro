@@ -5,7 +5,7 @@ import {
   Mail,
   MessageCircle,
   ArrowRight,
-  Send,
+  Briefcase,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import GroundedButton from "@/components/GroundedButton";
@@ -39,7 +39,7 @@ const ConnectSection = () => {
           className="mb-16"
           kicker="Contact"
           title="Let's Start a Conversation"
-          description="Whether you want to chat about technology, music, philosophy, or potential collaborations - I'm always up for meaningful conversations."
+          description="Whether it's a project, a consulting question, or a good conversation about technology, music, or philosophy — I'm always up for it."
         />
 
         {/* Contact Cards */}
@@ -93,22 +93,29 @@ const ConnectSection = () => {
             </div>
 
             <h3 className="mb-4 text-3xl font-bold text-foreground">
-              Ready to collaborate?
+              Need something built or fixed?
             </h3>
             <p className="mx-auto mb-10 max-w-xl text-lg text-muted-foreground">
-              I'm available for interesting projects, consulting work, or just
-              good conversations. Let's see what we can create together.
+              I help individuals and small businesses take the time-eating parts
+              of their work down to size — with AI only where it earns its place.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <GroundedButton>
-                <a href={`mailto:${email}`}>
-                  <Send className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Say Hello
+                <a
+                  href="https://riefproductions.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Briefcase className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Visit Rief Productions
                 </a>
               </GroundedButton>
               <GroundedButton variant="outline">
-                <a href="/posts/">Read My Writing</a>
+                <a href={`mailto:${email}`}>
+                  <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Email me
+                </a>
               </GroundedButton>
             </div>
           </div>

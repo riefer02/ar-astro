@@ -2,6 +2,7 @@ import { ArrowRight, Terminal } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import GroundedButton from "@/components/GroundedButton";
 import Hairline from "@/components/Hairline";
+import { jobTitle } from "@/lib/site";
 
 const HeroSection = () => {
   return (
@@ -26,7 +27,7 @@ const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="max-w-5xl font-sans text-4xl font-extrabold leading-[1.02] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
             <span className="sr-only">
-              Andrew Riefenstahl — Full-Stack Engineer & AI Architect —{" "}
+              Andrew Riefenstahl — {jobTitle} —{" "}
             </span>
             Forging the Future of <br className="hidden sm:block" />
             <span className="grounded-gradient-text">Digital Intelligence</span>

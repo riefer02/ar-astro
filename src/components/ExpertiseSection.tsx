@@ -105,7 +105,7 @@ const ExpertiseSection = () => {
           className="mb-16"
           kicker="Core Competencies"
           title="Engineering that reduces friction"
-          description="I build software to make real problems smaller — for the people doing the work and the communities they serve. Deep technical range is the means; reducing friction is the point."
+          description="I build software to make real problems smaller — for the people doing the work and the communities they serve. Deep technical range is the means, not the goal."
         />
 
         {/* Main Expertise Areas */}

@@ -5,9 +5,7 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button.tsx";
 import { Image } from "astro:assets";
 import { formatDate } from "../lib/format";
 
@@ -47,11 +45,6 @@ const { title, description, pubDate, image } = post.data;
           {formatDate(pubDate)}
         </p>
       </CardContent>
-      <CardFooter className="mt-auto flex items-center justify-between p-4">
-        <Button asChild variant="outline">
-          <a href={`/posts/${post.id}/`}>Read More</a>
-        </Button>
-      </CardFooter>
     </div>
   </Card>
 </article>

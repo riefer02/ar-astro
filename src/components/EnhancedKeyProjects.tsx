@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import GroundedButton from "@/components/GroundedButton";
 import SectionHeader from "@/components/SectionHeader";
 import Hairline from "@/components/Hairline";
 import IconChip from "@/components/IconChip";
@@ -59,7 +58,6 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
         {/* Section Header */}
         <SectionHeader
           className="mb-16"
-          kicker="Portfolio"
           title="Selected Work"
           description="A collection of projects I'm proud of - from helping nonprofits raise funds to building AI platforms that solve real problems."
         />
@@ -129,16 +127,6 @@ const EnhancedKeyProjects = ({ keyProjects }: Props) => {
               </Card>
             );
           })}
-        </div>
-
-        {/* Additional CTA */}
-        <div className="mt-20 text-center">
-          <p className="mb-6 text-lg font-medium text-muted-foreground">
-            Interested in seeing more work or discussing a project?
-          </p>
-          <GroundedButton>
-            <a href="#connect">Let's Connect</a>
-          </GroundedButton>
         </div>
       </div>
     </section>
