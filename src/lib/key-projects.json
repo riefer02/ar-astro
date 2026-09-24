@@ -35,6 +35,20 @@
       ]
     },
     {
+      "name": "Laya Call Router",
+      "subheader": "Typed AI Decision Model for Dealership Calls",
+      "url": "https://github.com/riefer02/laya-call-router",
+      "year": "2026",
+      "description": "A narrow, typed local decision model that routes dealership calls to the right team. Built the synthetic data pipeline, taxonomy, policy boundaries, and evaluation around a small local model, reaching 71/81 joint routing cases with a roughly 20 ms median decision time.",
+      "technologies": [
+        "Laya",
+        "MLX",
+        "Synthetic Data",
+        "Evaluation",
+        "Policy Systems"
+      ]
+    },
+    {
       "name": "ISCPO.org",
       "subheader": "Membership Platform & Editorial System",
       "url": "https://iscpo.org",
