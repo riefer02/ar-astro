@@ -1,5 +1,5 @@
 ---
-title: "Laya Call Router: the little model that could"
+title: "Laya Call Router: The Little Model That Could"
 pubDate: 2026-09-24
 description: "A small local model, a narrow dealership call-routing task, and the data, policy, and engineering decisions that made it useful."
 author: "Andrew Riefenstahl"
