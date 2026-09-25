@@ -4,8 +4,8 @@ pubDate: 2026-09-24
 description: "A small local model, a narrow dealership call-routing task, and the data, policy, and engineering decisions that made it useful."
 author: "Andrew Riefenstahl"
 image:
-  url: "@/assets/images/laya-call-router-overview.png"
-  alt: "The Laya Call Router debugger showing caller turns, typed model decisions, policy steps, and a Body Shop route."
+  url: "@/assets/images/laya-call-router-overview.webp"
+  alt: "The Laya Call Router debugger showing caller turns, typed model decisions, policy steps, and a booked Sales Floor appointment."
 tags:
   - "AI"
   - "machine learning"
