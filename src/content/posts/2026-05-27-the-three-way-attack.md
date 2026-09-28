@@ -21,13 +21,13 @@ tags:
   ]
 ---
 
-Right now there is a generational battle for the United States of America. The battle to protect our environment. Because if we don't, it will be pillaged by capitalism. This is our first shared battle that needs to be escalated. If we don't do this, our land will be destroyed and there will be no Americans. There will be a wasteland. There will be a rich profit-tier class that is not living here anymore, somewhere else. We have to protect the land. If we don't, we will have nothing left. Being an American will literally be equivalent to dust.
+Right now there is a generational battle for the United States of America. The battle to protect our environment. Because if we don't, it will be pillaged by capitalism. This is our first shared battle that needs to be escalated. If we don't do this, our land will be destroyed. There will be no Americans. There will be a wasteland. There will be a rich profit-tier class that is not living here anymore, somewhere else. If we don't protect the land, we will have nothing left. Being an American will literally be equivalent to dust.
 
-I feel like I'm waking up from a really long AI psychosis. I was one of the first when I saw it flash on my screen — ChatGPT — and I just thought, this is incredible. This is indistinguishable from magic at this point. Then I learned all about it. Then I became a user. And then I learned about the implications of this technology.
+I feel like I'm waking up from a really long AI psychosis. I was one of the first when I saw it flash on my screen — ChatGPT — and I just thought, this is indistinguishable from magic. Then I became a user. Then I learned about the implications of this technology.
 
-It's not really serving the people. It's just serving a select few privatized organizations. And on top of that, no one is even talking about the fact that this was supposed to be unlocking things like universal basic income and a stronger social structure for every individual. So we're losing our society, our culture, and the land. It's a three-way attack.
+It's not really serving the people. It's just serving a select few privatized organizations. And on top of that, no one is even talking about the fact that this was supposed to be unlocking things like universal basic income and a stronger social structure for every individual. We're losing the land, and the society built on it. It's a three-way attack: corporate extraction, unchecked AI infrastructure, and a government that has stopped protecting us.
 
-## Louisiana: The Preview
+## Corporate Extraction: The Louisiana Preview
 
 Before we talk about what's coming for the rest of the country, we need to look at what's already happened. Louisiana is a preview of what corporate extraction looks like when the government steps aside and lets industry write the rules.
 
@@ -35,7 +35,7 @@ Here's Louisiana, ranked by the numbers. **Dead last** — #50 overall in U.S. N
 
 But the most visible scar on Louisiana is something called Cancer Alley.
 
-Cancer Alley is an 85-mile stretch of land along the Mississippi River between Baton Rouge and New Orleans. It contains **over 200 petrochemical plants and refineries** — the largest concentration of fossil fuel and petrochemical operations in the entire Western Hemisphere. This single corridor accounts for 25% of the petrochemical production in the United States. The cancer risk for residents living there is **47 times greater than the acceptable threshold set by the U.S. government**[^1].
+Cancer Alley is an 85-mile stretch of land along the Mississippi River between Baton Rouge and New Orleans. It contains **over 200 petrochemical plants and refineries** — the largest concentration of fossil fuel and petrochemical operations in the entire Western Hemisphere. The cancer risk for residents living there is **47 times greater than the acceptable threshold set by the U.S. government**[^1].
 
 One plant alone — the Denka Performance Elastomer facility in St. John the Baptist Parish, formerly owned by DuPont — emits **99% of the nation's chloroprene pollution**[^2]. The EPA found that residents near this plant face a cancer risk from air pollution **over 700 times the national average**[^2].
 
@@ -49,15 +49,15 @@ But here's the thing: they promised these communities jobs. They said the plants
 
 ## The $20 Billion Giveaway
 
-Here's something that made my jaw drop when I learned it — and I'm just learning this for the first time.
+Here's something that made my jaw drop when I learned it.
 
-For nearly 80 years, Louisiana has been running a program called the Industrial Tax Exemption Program, or ITEP. The idea was simple: give massive property tax breaks to industrial corporations in exchange for... supposedly... jobs and economic growth. Since the program began in 1936, Louisiana has given away an estimated **$20 billion** in property tax revenue to industrial corporations — money that could have funded schools, roads, hospitals, and community services[^7].
+For nearly 80 years, Louisiana has been running a program called the Industrial Tax Exemption Program, or ITEP. The idea was simple: give massive property tax breaks to industrial corporations in exchange for jobs and economic growth. Supposedly. Since the program began in 1936, Louisiana has given away an estimated **$20 billion** in property tax revenue to industrial corporations — money that could have funded schools, roads, hospitals, and community services[^7].
 
 $20 billion. That's the cost of treating a state like a colonial extraction operation. Give the corporations everything they want, starve the communities, and then wonder why the state ranks dead last in everything.
 
-And here's the part that should terrify you: this is exactly what the corporate class is now doing to the rest of the United States. Louisiana just got there first.
+And this is exactly what the corporate class is now doing to the rest of the United States. Louisiana just got there first.
 
-## Data Centers: The New Extraction
+## Unchecked AI: The New Extraction
 
 Now here comes the next wave. AI data centers.
 
@@ -83,15 +83,15 @@ The Bank of England and the International Monetary Fund have both issued formal 
 
 And despite all this spending — all these trillions — a National Bureau of Economic Research study from February 2026 found that **90% of firms reported no impact of AI on workplace productivity**[^24].
 
-Let that sink in. Trillions of dollars. Gigawatts of power. Billions of liters of water. And nine out of ten businesses say it hasn't changed a thing about how productive their workers are.
+Let that sink in. Trillions of dollars. Gigawatts of power. Billions of liters of water. And nine out of ten businesses say it hasn't changed a thing.
 
-## We're Not Defending It
+## The Government Stepped Aside
 
 I'm not saying we destroy AI. I'm saying we slow down. We legislate. We force efficiency and environmental accountability as the ultimate goal — not "spend more" as some kind of achievement. We stop letting capitalists turn every advancement into a zero-sum hustle that extracts wealth from communities and puts the cost on the American people.
 
 The government is not doing anything to protect us. Its policy-making is absent. So it's on us. Protect your local communities. Protect the land. There are equitable solutions. We need to take back the government, open up negotiations, and protect our world.
 
-Contemporary Americans have a very brief history compared to the natives, but we're all a part of the story of this land. How we got here is less important than what are we going to do to preserve it and care for it now. We need to make a stand against data centers. Everyone is getting hurt except for a few who are profiteering off the environment, putting the cost on the American people because the government is not doing anything to protect them.
+Contemporary Americans have a very brief history compared to the natives, but we're all a part of the story of this land. How we got here is less important than what we're going to do to preserve it and care for it now. We need to make a stand against data centers.
 
 The land is what should bond us. It's the one thing we all share.
 
