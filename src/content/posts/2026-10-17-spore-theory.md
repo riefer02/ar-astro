@@ -6,14 +6,7 @@ author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/spore-theory-og.jpg"
   alt: "A dark forest-green illustration of a small planet at dusk, a seed pod at its crown releasing spores into space, and a lone figure sitting with a dog under a warm porch light."
-tags:
-  [
-    "stream of thought",
-    "capitalism",
-    "degrowth",
-    "biology",
-    "panspermia",
-  ]
+tags: ["stream of thought", "capitalism", "degrowth", "biology", "panspermia"]
 ---
 
 Novel thought, October 2026.

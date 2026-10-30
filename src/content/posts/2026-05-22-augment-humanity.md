@@ -6,12 +6,21 @@ author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/augment-humanity-og.jpg"
   alt: "A divine figure lifting a pyramid of people upward, each person helping the next, symbolizing collective human dignity and stewardship"
-tags: ["AI", "ethics", "stewardship", "humanity", "technology", "capitalism", "balance"]
+tags:
+  [
+    "AI",
+    "ethics",
+    "stewardship",
+    "humanity",
+    "technology",
+    "capitalism",
+    "balance",
+  ]
 ---
 
 Slow down and augment your fellow man.
 
-We are using AI incorrectly. It's not in balance with the world. The love of the dollar is corrupting everything in existence. It's taxing to the spirit and debilitating to the mind. We're using AI incorrectly. We need to stop using it for sending email, stop using it for work. Stop chasing the datacenter dream. It's going to completely break the land. *Homo sapiens* taxes the earth too much already. We need to be something else now: *Homo balance*. We need to focus on the sustainability of planet Earth.
+We are using AI incorrectly. It's not in balance with the world. The love of the dollar is corrupting everything in existence. It's taxing to the spirit and debilitating to the mind. We're using AI incorrectly. We need to stop using it for sending email, stop using it for work. Stop chasing the datacenter dream. It's going to completely break the land. _Homo sapiens_ taxes the earth too much already. We need to be something else now: _Homo balance_. We need to focus on the sustainability of planet Earth.
 
 And we're using AI incorrectly. I just want to say, like, I'm tired of watching capitalists fire people and expecting AI to replace their laborers. If anything, it should be used to augment their laborers. It should be a boon. It should be a blessing. And it should be used within reason for important tasks. We don't need a bunch of AI everywhere. Things were simpler without AI. And simpler is honestly a good thing. Yeah, it took a little longer, but hell, everyone was happy. Now it's just like a small select group of capitalists treating the planet like a resource to extract. And we should have no destruction of planet Earth.
 

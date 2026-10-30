@@ -36,7 +36,7 @@ Looking back, it almost feels like this was meant to happen. I know that’s jus
 
 A few weeks after the origin incident I went on a road trip to clear my head, but all I brought back was more anger. I felt confused, like I had no family, no foundation. I didn’t know who I was. I reached out to every support system, knowing I was going through something terrible, but it was hard to hear them—nothing was working.
 
-The first month was a blur. By July 8th, I drew a line in the sand, knowing I had to save myself from this suffering, and that only I could do it. A beacon of light came in the form of a book recommended by a friend: *The Power of Now* by Eckhart Tolle. It gave me the tools to begin healing and to strip away the carcass of my ego, which had weighed me down with hopes, dreams, fears, and memories. When I was finally able to step back and bring awareness to my situation, I began to heal.
+The first month was a blur. By July 8th, I drew a line in the sand, knowing I had to save myself from this suffering, and that only I could do it. A beacon of light came in the form of a book recommended by a friend: _The Power of Now_ by Eckhart Tolle. It gave me the tools to begin healing and to strip away the carcass of my ego, which had weighed me down with hopes, dreams, fears, and memories. When I was finally able to step back and bring awareness to my situation, I began to heal.
 
 I took my first steps toward spiritual enlightenment. I was becoming spiritually awakened—something I never thought would happen to me, but it made sense. When you’re going through a crisis, you might join a cult, a crappy political party, or buy some self-help books. I chose the latter, and I’m thankful I did.
 
@@ -44,10 +44,10 @@ This new awareness reframed my perspective on life. Living in the now and just b
 
 I began to appreciate everything around me. My backyard became a sanctuary. I listened to the sounds of summer, though at times the insects were painful during my heightened sensitivity. Still, I was healing and finding a new baseline—a new normal. This baseline would continue to shift, and I knew I’d get better, though there’s no telling if I’ll ever be able to handle the pounding of drums at point blank again. On the worst days, my own voice would hurt my ears. On the best, I could go out with friends and, with some ear protection, enjoy myself without being overwhelmed by the acoustics.
 
-I feel like I’m losing steam here, telling you all this, but I just wanted to say that I know I’m going to be okay. I know my life won’t look like I originally envisioned, but I’ve found beauty and strength in my friendships and connections. My heart goes out to everyone who has had to deal with such limitations. 
+I feel like I’m losing steam here, telling you all this, but I just wanted to say that I know I’m going to be okay. I know my life won’t look like I originally envisioned, but I’ve found beauty and strength in my friendships and connections. My heart goes out to everyone who has had to deal with such limitations.
 
 The literature helped me find acceptance. I stay home a lot now, dedicated to getting better and increasing my threshold. I still have setbacks when I do something careless or go out without ear protection, and I understand it will probably be like that for a long time—maybe forever.
 
-I had to let go of my ego. I had to die before dying, which sounds scary at first, but you begin to understand. It’s like in *Fight Club*: "It’s only after we’ve lost everything that we’re free to do anything." Such is life. 
+I had to let go of my ego. I had to die before dying, which sounds scary at first, but you begin to understand. It’s like in _Fight Club_: "It’s only after we’ve lost everything that we’re free to do anything." Such is life.
 
 If you’re going through something similar, please reach out to the people who love you the most. Be patient with yourself. Don’t beat yourself up, and avoid negative self-talk. You are worthy of love, and you will live a wonderful life.

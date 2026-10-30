@@ -10,7 +10,7 @@ tags:
   [
     "AI",
     "custom agents",
-    "technology trends",
+    "technology",
     "web development",
     "automation",
     "universal basic income",

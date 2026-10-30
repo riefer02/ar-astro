@@ -28,7 +28,7 @@ So, what have I been up to? Well, I’ve had a few successful moonlighting proje
 
 First up is the new website for [**TolbertsRestaurant.com**](https://tolbertsrestaurant.com), which I built alongside [Riley Sklar](https://github.com/rileysklar). When the opportunity arose to create their new site, we presented them with a competitive offer. Not only did they save money, but they also got a superior product.
 
-A few years ago, I built a standalone Next.js application as a music calendar for their events at **tolbertsmusic.com**. At the time, I was using the Next.js **Page Router**, which was an excellent real-world opportunity to grow my skills. While Page Router can be a bit tricky (just kidding, it’s not that bad), the real issue was deciding on a backend. They had a legacy WordPress site, so I set up a new WordPress instance as a dedicated content management system (CMS), with Next.js handling the front end. 
+A few years ago, I built a standalone Next.js application as a music calendar for their events at **tolbertsmusic.com**. At the time, I was using the Next.js **Page Router**, which was an excellent real-world opportunity to grow my skills. While Page Router can be a bit tricky (just kidding, it’s not that bad), the real issue was deciding on a backend. They had a legacy WordPress site, so I set up a new WordPress instance as a dedicated content management system (CMS), with Next.js handling the front end.
 
 Lately, I’ve been using the **App Router** at work, which has been a significant improvement in terms of organization and flexibility.
 
@@ -58,7 +58,7 @@ Lastly, I want to talk about the **Agent RAG** (retrieval-augmented generation) 
 
 Using **LangChain**, I set up a large language model that can access all my markdown files and notes. It creates embeddings of the content, allowing me to run natural language queries. This means I can get answers about specific sections or themes in the book, which has made revisions and edits much faster.
 
-I also finally got around to learning **Streamlit** after seeing it mentioned in several tutorials. After an 8-9 hour hackathon, I had a fully functional chat application running in my local browser. This app can access my book, answer questions, and help with the editing process. 
+I also finally got around to learning **Streamlit** after seeing it mentioned in several tutorials. After an 8-9 hour hackathon, I had a fully functional chat application running in my local browser. This app can access my book, answer questions, and help with the editing process.
 
 The next step is to enhance the system by converting my LangChain setup to use **LangGraph**, which will give the chatbot more flexibility. Right now, every query results in a vector similarity search, but with LangGraph, the bot will be able to choose whether to respond normally or perform a retrieval, depending on the situation.
 

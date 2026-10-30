@@ -6,7 +6,16 @@ author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/vibe-coding-with-deepseek-og.jpg"
   alt: "A psychedelic cosmic mindscape with fractal patterns, a glowing blue whale swimming through a sea of code and color, forest greens melting into electric blue."
-tags: ["AI", "deepseek", "vibe coding", "game development", "open source", "workflow", "stream of thought"]
+tags:
+  [
+    "AI",
+    "deepseek",
+    "vibe coding",
+    "game development",
+    "open source",
+    "workflow",
+    "stream of thought",
+  ]
 ---
 
 My two subsidized accounts, Claude Code and Codex Pro, have run their course. The tokens are tapped, and I was getting tired of the five-hour window on one of them. Up until now I've been riding on subsidized access, not paying for tokens directly. But the free ride was over. It was time to start paying my fair share and buy tokens for large language models.
@@ -23,7 +32,7 @@ I had an open source model ready to go. I pulled up [Artificial Analysis](https:
 
 So I plugged it in and we went to town.
 
-What I enjoy about DeepSeek is its thinking. It's a nice thinker, and I love that OpenCode lets me see it doing its work straight from the provider. It's a little slow, but I'm learning to be patient, get my *Power of Now* mindset in place. I hate that feeling when I don't trust the model will do its best. That's what I'm trying to explore: can I trust a model to do its work without leaving scattered technical debt around the codebase?
+What I enjoy about DeepSeek is its thinking. It's a nice thinker, and I love that OpenCode lets me see it doing its work straight from the provider. It's a little slow, but I'm learning to be patient, get my _Power of Now_ mindset in place. I hate that feeling when I don't trust the model will do its best. That's what I'm trying to explore: can I trust a model to do its work without leaving scattered technical debt around the codebase?
 
 I'm always sitting there scanning all the code changes as they come through, looking for issues. Is this class responsible for this action? Is this its duty? That's the question I keep asking myself. It's the easiest way to catch when something needs to be moved where it belongs.
 

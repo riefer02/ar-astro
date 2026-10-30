@@ -39,7 +39,7 @@ Cancer Alley is an 85-mile stretch of land along the Mississippi River between B
 
 One plant alone — the Denka Performance Elastomer facility in St. John the Baptist Parish, formerly owned by DuPont — emits **99% of the nation's chloroprene pollution**[^2]. The EPA found that residents near this plant face a cancer risk from air pollution **over 700 times the national average**[^2].
 
-Human Rights Watch released a report in January 2024 titled *"We're Dying Here: The Fight for Life in a Louisiana Fossil Fuel Sacrifice Zone."* The UN Human Rights Committee formally condemned Cancer Alley as **environmental racism** in March 2021, stating that it "poses serious and disproportionate threats to the enjoyment of several human rights of its largely African American residents"[^3].
+Human Rights Watch released a report in January 2024 titled _"We're Dying Here: The Fight for Life in a Louisiana Fossil Fuel Sacrifice Zone."_ The UN Human Rights Committee formally condemned Cancer Alley as **environmental racism** in March 2021, stating that it "poses serious and disproportionate threats to the enjoyment of several human rights of its largely African American residents"[^3].
 
 In 2023, the EPA itself found significant evidence that Louisiana regulators' actions and inactions "have resulted and continue to result in a range of adverse impacts on African American residents"[^4].
 
@@ -101,7 +101,7 @@ I just wanna hang out with my dog. 🐕 🌎 ✌️ ❤️
 
 ---
 
-[^1]: Buerk, Ellen. "Sacrifice Zone: Conciliating Racial Discrimination in Louisiana's 'Cancer Alley.'" *Case Western Reserve Journal of International Law*, vol. 57, no. 1, 2025, p. 491. Also: U.S. Environmental Protection Agency, National Air Toxic Assessment.
+[^1]: Buerk, Ellen. "Sacrifice Zone: Conciliating Racial Discrimination in Louisiana's 'Cancer Alley.'" _Case Western Reserve Journal of International Law_, vol. 57, no. 1, 2025, p. 491. Also: U.S. Environmental Protection Agency, National Air Toxic Assessment.
 
 [^2]: U.S. Environmental Protection Agency. Civil rights investigation and Clean Air Act complaint against Denka Performance Elastomer, 2023. The EPA found the facility emits 99% of the nation's chloroprene, and air monitoring near the plant showed chloroprene levels as high as 14 times the recommended safe level.
 
@@ -111,21 +111,21 @@ I just wanna hang out with my dog. 🐕 🌎 ✌️ ❤️
 
 [^5]: U.S. Department of Justice. Dismissal of federal case against Denka Performance Elastomer, March 7, 2025. The DOJ linked the withdrawal to the administration's policy of ending federal Diversity, Equity, and Inclusion (DEI) initiatives.
 
-[^6]: Maraniss, David; Weisskopf, Michael. "The Faces of Pollution." *Los Angeles Times*, January 24, 1988. Updated data confirmed in Human Rights Watch, *"We're Dying Here,"* January 2024.
+[^6]: Maraniss, David; Weisskopf, Michael. "The Faces of Pollution." _Los Angeles Times_, January 24, 1988. Updated data confirmed in Human Rights Watch, _"We're Dying Here,"_ January 2024.
 
 [^7]: Louisiana's Industrial Tax Exemption Program (ITEP), established 1936. Estimates of total foregone property tax revenue over the program's history come from reporting by Together Louisiana and the Louisiana Budget Project. For context on how ITEP functions, see the broader discussion in the Cancer Alley research and Human Rights Watch's 2024 report documenting the relationship between industrial tax exemptions and community underinvestment in Louisiana.
 
-[^8]: International Energy Agency. *Energy and AI*, Executive Summary, 2025. Global data center electricity consumption estimates and projections.
+[^8]: International Energy Agency. _Energy and AI_, Executive Summary, 2025. Global data center electricity consumption estimates and projections.
 
-[^9]: LaBrecque, Sarah. "Desert storm: Can data centres slake their insatiable thirst for water?" *Reuters*, December 17, 2025.
+[^9]: LaBrecque, Sarah. "Desert storm: Can data centres slake their insatiable thirst for water?" _Reuters_, December 17, 2025.
 
-[^10]: Li, Pengfei; Yang, Jianyi; Islam, Mohammad A.; Ren, Shaolei. "Making AI Less 'Thirsty.'" *Communications of the ACM*, 2025.
+[^10]: Li, Pengfei; Yang, Jianyi; Islam, Mohammad A.; Ren, Shaolei. "Making AI Less 'Thirsty.'" _Communications of the ACM_, 2025.
 
-[^11]: *Nature Sustainability*, 2025 study on projected water and carbon impact of AI servers in the United States through 2030.
+[^11]: _Nature Sustainability_, 2025 study on projected water and carbon impact of AI servers in the United States through 2030.
 
-[^12]: Gomes, Ben; Brandt, Kate. "Our 2024 Environmental Report." *The Keyword*, Google, July 2, 2024. Google reported a 13% year-over-year increase in 2023, and cumulative data shows nearly 50% increase from 2019-2024.
+[^12]: Gomes, Ben; Brandt, Kate. "Our 2024 Environmental Report." _The Keyword_, Google, July 2, 2024. Google reported a 13% year-over-year increase in 2023, and cumulative data shows nearly 50% increase from 2019-2024.
 
-[^13]: Wang, Peng; Zhang, Ling-Yu; Tzachor, Asaf; Chen, Wei-Qiang. "E-waste challenges of generative artificial intelligence." *Nature Computational Science*, vol. 4, no. 11, 2024, pp. 818-823.
+[^13]: Wang, Peng; Zhang, Ling-Yu; Tzachor, Asaf; Chen, Wei-Qiang. "E-waste challenges of generative artificial intelligence." _Nature Computational Science_, vol. 4, no. 11, 2024, pp. 818-823.
 
 [^14]: Gallup. "Americans Oppose Data Centers in Their Area." March 2026.
 
@@ -133,18 +133,18 @@ I just wanna hang out with my dog. 🐕 🌎 ✌️ ❤️
 
 [^16]: National Conference of State Legislatures. "Which States Are Banning Data Centers?" 2026.
 
-[^17]: Bort, Julie. "Sam Altman says OpenAI has $20B ARR and about $1.4 trillion in data center commitments." *TechCrunch*, November 6, 2025.
+[^17]: Bort, Julie. "Sam Altman says OpenAI has $20B ARR and about $1.4 trillion in data center commitments." _TechCrunch_, November 6, 2025.
 
-[^18]: Smith, Dave. "OpenAI says it plans to report stunning annual losses through 2028." *Fortune*, November 12, 2025. Tangermann, Victor. "Asset Manager Warns That OpenAI Is Likely Headed for Financial Disaster." *Futurism*, January 25, 2026.
+[^18]: Smith, Dave. "OpenAI says it plans to report stunning annual losses through 2028." _Fortune_, November 12, 2025. Tangermann, Victor. "Asset Manager Warns That OpenAI Is Likely Headed for Financial Disaster." _Futurism_, January 25, 2026.
 
-[^19]: Nishant, Niket; Singh, Rashika. "Nvidia hits $5 trillion valuation as AI boom powers meteoric rise." *Reuters*, October 29, 2025.
+[^19]: Nishant, Niket; Singh, Rashika. "Nvidia hits $5 trillion valuation as AI boom powers meteoric rise." _Reuters_, October 29, 2025.
 
-[^20]: Jamali, Lily. "'It's going to be really bad': Fears over AI bubble bursting grow in Silicon Valley." *BBC News*, October 11, 2025.
+[^20]: Jamali, Lily. "'It's going to be really bad': Fears over AI bubble bursting grow in Silicon Valley." _BBC News_, October 11, 2025.
 
-[^21]: Gu, Jacqueline; Metz, Cade. "How OpenAI Uses Complex and Circular Deals to Fuel Its Multibillion-Dollar Rise." *The New York Times*, October 31, 2025.
+[^21]: Gu, Jacqueline; Metz, Cade. "How OpenAI Uses Complex and Circular Deals to Fuel Its Multibillion-Dollar Rise." _The New York Times_, October 31, 2025.
 
-[^22]: Makortoff, Kalyeena. "Bank of England warns of growing risk that AI bubble could burst." *The Guardian*, October 8, 2025.
+[^22]: Makortoff, Kalyeena. "Bank of England warns of growing risk that AI bubble could burst." _The Guardian_, October 8, 2025.
 
-[^23]: Jack, Simon; McNamee, Michael Sheils. "America's top banker sounds warning on US stock market fall." *BBC News*, October 9, 2025.
+[^23]: Jack, Simon; McNamee, Michael Sheils. "America's top banker sounds warning on US stock market fall." _BBC News_, October 9, 2025.
 
 [^24]: Yotzov, Ivan; Barrero, Jose Maria; Bloom, Nicholas; et al. "Firm Data on AI." National Bureau of Economic Research, Working Paper 34836, February 2026.

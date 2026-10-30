@@ -6,16 +6,7 @@ author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/why-i-kept-wordpress-and-bolted-laravel-on-top-og.jpg"
   alt: "A stylized Shih Tzu between WordPress and Laravel symbols in a modern publishing stack illustration"
-tags:
-  [
-    "WordPress",
-    "Laravel",
-    "Sage",
-    "architecture",
-    "CMS",
-    "Blade",
-    "Acorn",
-  ]
+tags: ["WordPress", "Laravel", "Sage", "architecture", "CMS", "Blade", "Acorn"]
 ---
 
 Every greenfield WordPress conversation in 2026 eventually drifts toward headless Next.js.
@@ -242,7 +233,7 @@ The access layer returned something closer to application state than a boolean:
 ]
 ```
 
-That mattered because the UI was not just allowing or blocking access. It also needed to explain *why*. A logged-in non-member sees an upsell. An admin gets a bypass. A subscriber sees the content. A restricted user might see plan-specific marketing copy.
+That mattered because the UI was not just allowing or blocking access. It also needed to explain _why_. A logged-in non-member sees an upsell. An admin gets a bypass. A subscriber sees the content. A restricted user might see plan-specific marketing copy.
 
 That is the kind of integration bug you only get when two frameworks sit on top of each other and both look more complete than they are. It was not WordPress being broken. It was not Blade being broken. It was the seam between them.
 
@@ -259,13 +250,13 @@ If it registers content models, admin tools, integrations, or operational behavi
 
 That split looked like this:
 
-| Theme | Plugin |
-| --- | --- |
-| Blade templates | CPT registration |
-| View Composers | ACF field groups in code |
-| Components | REST endpoints |
-| Config files | Admin tools |
-| Styling | bulk importers and seeders |
+| Theme               | Plugin                     |
+| ------------------- | -------------------------- |
+| Blade templates     | CPT registration           |
+| View Composers      | ACF field groups in code   |
+| Components          | REST endpoints             |
+| Config files        | Admin tools                |
+| Styling             | bulk importers and seeders |
 | Alpine client logic | external integration setup |
 
 The reason I care so much about that boundary is because WordPress projects get messy fast. Logic seeps into templates. Admin behavior lands in theme files because it was convenient. Rendering concerns leak into plugins because somebody needed a quick helper and now everyone is afraid to touch it.

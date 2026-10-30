@@ -12,7 +12,7 @@ tags:
     "socialism",
     "public infrastructure",
     "technology",
-    "UBI",
+    "universal basic income",
     "society",
   ]
 ---
@@ -35,7 +35,7 @@ But yeah, anyway, it’s just weird. `Co-authored-by`, really? Bro, you’re not
 
 Anyway, just kidding. Love my AI tools.
 
-Need to tell you guys about my game I’m working on. It’s in the vein of classic *Might and Magic* games, but of course with contemporary game systems, focusing of course on a great user experience and also reinventing the wheel on a classic, which is a throwback to my [previous blog](/posts/2026-03-21-time-to-reinvent-the-wheel/).
+Need to tell you guys about my game I’m working on. It’s in the vein of classic _Might and Magic_ games, but of course with contemporary game systems, focusing of course on a great user experience and also reinventing the wheel on a classic, which is a throwback to my [previous blog](/posts/2026-03-21-time-to-reinvent-the-wheel/).
 
 All right, well that’s enough for today. I actually moved today. I could tell you about that, but instead I’ll append my thoughts on moving from my other lecture I gave to myself. All right, it’s not a lecture. I call it audio journaling. That’s all it is. I’m just journaling.
 
