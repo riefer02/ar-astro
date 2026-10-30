@@ -5,7 +5,7 @@ description: "Cheap tokens, expensive thoughts, and the business model eating it
 author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/b2b-cannibalism-og.jpg"
-  alt: "A dark forest-green illustration of a snake curled in a ring around a glowing server rack, with a whale silhouette in the background and a tiny dog sitting beside the rack."
+  alt: "A dark forest-green illustration of a great snake coiled in a ring around a glowing server rack, a whale silhouette above, and a tiny dog tucked between the coils."
 tags: ["AI", "capitalism", "DeepSeek", "open source", "inference", "labor"]
 ---
 

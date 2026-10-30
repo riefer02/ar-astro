@@ -5,7 +5,7 @@ description: "A novel thought about the billionaire class as biology's launch ve
 author: "Andrew Riefenstahl"
 image:
   url: "@/assets/images/spore-theory-og.jpg"
-  alt: "A dark forest-green illustration of a small planet at dusk, a seed pod at its crown releasing spores into space, and a lone figure sitting with a dog under a warm porch light."
+  alt: "A dark forest-green illustration of a small planet at dusk, a seed pod at its crown releasing glowing spores like rocket trails into space, and a lone figure sitting with a dog on a porch under a warm light."
 tags: ["stream of thought", "capitalism", "degrowth", "biology", "panspermia"]
 ---
 

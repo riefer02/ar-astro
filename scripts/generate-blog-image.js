@@ -6,7 +6,7 @@ import OpenAI from "openai";
 import "dotenv/config";
 
 const ROOT_DIR = process.cwd();
-const DEFAULT_MODEL = "gpt-image-1";
+const DEFAULT_MODEL = "gpt-image-2.5-sunburst";
 const DEFAULT_OUTPUT_DIR = path.join(ROOT_DIR, "src/assets/images");
 const DEFAULT_GPT_IMAGE_SIZE = "1536x1024";
 const DEFAULT_DALLE_SIZE = "1792x1024";
@@ -168,7 +168,10 @@ function extractScalar(frontmatter, key) {
 }
 
 function extractNestedScalar(frontmatter, parentKey, childKey) {
-  const regex = new RegExp(`${parentKey}:\\s*\\n(?:\\s+.*\\n)*?\\s+${childKey}:\\s*(.+)$`, "m");
+  const regex = new RegExp(
+    `${parentKey}:\\s*\\n(?:\\s+.*\\n)*?\\s+${childKey}:\\s*(.+)$`,
+    "m",
+  );
   const match = frontmatter.match(regex);
   if (!match) return "";
   return match[1].trim().replace(/^["']|["']$/g, "");
@@ -262,13 +265,15 @@ async function ensureDir(filePath) {
 async function downloadUrl(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(`Failed to download generated image: ${response.status} ${response.statusText}`);
+    throw new Error(
+      `Failed to download generated image: ${response.status} ${response.statusText}`,
+    );
   }
   return Buffer.from(await response.arrayBuffer());
 }
 
 async function generateImage(client, prompt, model) {
-  const isGptImage = model === "gpt-image-1";
+  const isGptImage = model.startsWith("gpt-image");
 
   const response = await client.images.generate({
     prompt,
@@ -320,7 +325,8 @@ async function main() {
   const frontmatter = parseFrontmatterBlock(markdown);
   const body = parseBody(markdown);
 
-  const title = extractScalar(frontmatter, "title") || path.basename(args.postPath, ".md");
+  const title =
+    extractScalar(frontmatter, "title") || path.basename(args.postPath, ".md");
   const description = extractScalar(frontmatter, "description");
   const author = extractScalar(frontmatter, "author");
   const pubDate = extractScalar(frontmatter, "pubDate");
@@ -359,11 +365,17 @@ async function main() {
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    throw new Error("OPENAI_API_KEY is not set. Add it to your environment before generating blog images.");
+    throw new Error(
+      "OPENAI_API_KEY is not set. Add it to your environment before generating blog images.",
+    );
   }
 
   const client = new OpenAI({ apiKey });
-  const { buffer, revisedPrompt } = await generateImage(client, prompt, args.model);
+  const { buffer, revisedPrompt } = await generateImage(
+    client,
+    prompt,
+    args.model,
+  );
 
   await ensureDir(outputPath);
   await fs.writeFile(outputPath, buffer);
