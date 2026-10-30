@@ -78,7 +78,7 @@ Here's what I've built for myself recently:
 
 And that's just scratching the surface. The possibilities for personalized software are endless.
 
-The concern I have isn't with this technology itself—it's with _who controls the most advanced models_. When I say "the only issue," I'm referring to companies like Anthropic and OpenAI, and how governments have signed agreements essentially promising not to interfere with their development for the next decade.
+The concern I have isn't with this technology itself—it's with _who controls the most advanced models_—companies like Anthropic and OpenAI, and how governments have signed agreements essentially promising not to interfere with their development for the next decade.
 
 The cost of the best models—the ones that let you output the most and move the fastest—is growing. A divide is already forming between those who can afford cutting-edge AI and those who can't, and it's only going to widen. This won't just affect developers. Ultimately, it'll affect all citizens. An AI divide is emerging, and sadly, the planet will take a punch to the stomach too: the electricity and water consumption required to run these models at scale is staggering.
 
