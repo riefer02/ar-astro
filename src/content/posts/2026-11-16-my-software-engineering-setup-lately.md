@@ -32,7 +32,7 @@ Yeah, so also I think it's important to talk about the budgeting, because that d
 
 I guess they've got their inference dialed in for DeepSeek. In my use, as long as you bring the thinking, it's doing a really good job just doing what you're thinking, you know.
 
-And when you get good at using DeepSeek, I'm also using subagents, or using it as a subagent of a bigger model. But I actually just love using DeepSeek to create its own subagents. [OpenCode supports subagents with their own model choices](https://opencode.ai/docs/agents/), so that's part of what I'm doing through the harness.
+Sometimes I use DeepSeek as a subagent of a bigger model. But I actually just love letting DeepSeek run its own [subagents](https://opencode.ai/docs/agents/).
 
 Whenever I need a big brain, I've also got a simple subscription, like $20 a month, and I'm using Sol for the brainier tasks. But most of my work, at high volumes, I'm doing with DeepSeek.
 
@@ -80,27 +80,19 @@ There are [guardrails](https://github.com/anomalyco/browse#security): agents use
 
 I started by giving it control when working through a local CMS instance, just seeing how it did in the local environment for a while, managing and doing tasks. Then when I asked it to start making changes to a production environment that I was logged into, it was doing it really well.
 
-And I was using DeepSeek. It didn't feel like a big concern in the tasks I was watching it do. Obviously, once again, another disclaimer goes here. That's how it felt to me while using it; it doesn't mean it can't fuck something up.
+And I was using DeepSeek. It didn't feel like a big concern in the tasks I was watching it do. That's how it felt to me while using it; it doesn't mean it can't fuck something up.
 
-It feels crazy because I'm on the couch, or in the chair, and I can talk to it and be like, hey, will you go to this webpage and do this thing for me? And literally my computer in the other room is going, it's doing the thing, and then reporting back to me.
+It feels crazy because I'm on the couch, or in the chair, and I can talk to it and be like, hey, will you go to this webpage and do this thing for me? And literally my computer in the other room is doing the thing and reporting back to me.
 
 It's cutting down on so much friction, having to click through portals just to make content updates, and now it's doing that itself. It's incredible.
 
 ## Okay, wait, it's not all local
 
-I keep wanting to say it's all local. Well, I mean, my setup's local, right? Okay, wait, it's not local. It's using hosted models and a bunch of subscriptions and promo stuff too.
-
-[Hex transcribes on the device](https://github.com/anomalyco/hex#how-it-works). It also has an optional OpenCode rewrite step, which is a separate thing from the local transcription. With browse, the browser control runs on my computer, but [what the agent sends to its model provider can leave the computer](https://github.com/anomalyco/browse#how-it-works). So local tools don't mean the whole setup stays on my machine.
-
-And yeah, your personal data is not my problem. I'm choosing to use these models and send data through a hosted service. In the middle of saying all this I was like, I don't actually know their policy, I should look that up here.
-
-> Privacy check, November 16, 2026: [OpenCode Go's privacy table](https://opencode.ai/docs/console/go/#privacy) lists DeepSeek V4.1 Flash and V4 Pro as not used for model training, with zero-day retention under an agreement valid through November 30, 2026 and renewed monthly. That's the Go service's published policy; it isn't a blanket claim about every way to use DeepSeek. [DeepSeek's own consumer privacy policy](https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html) has a different scope and excludes downstream apps built by developers using its platform.
-
-I was ready to say, whatever, they can have the data if it helps make a better open source product. But that's me being casual about my own stuff, and the actual policy matters. Look at the service you're actually sending it through.
+I keep saying it's all local. Well, my computer's doing the work, but I'm still using DeepSeek through [OpenCode Go](https://opencode.ai/docs/console/go/#privacy), so there are third-party services involved. I'm comfortable with that for my own stuff. Fully local AI is another conversation.
 
 ## That's my setup lately
 
-Anyway, T3 Code, Hex, and browse MCP by Anomaly. T3 Code is separate from Anomaly, but together it's been a huge speedup and just removing a bunch of annoying friction. It's really cool.
+Anyway, T3 Code, Hex, and browse. It's been a huge speedup, just removing a bunch of annoying friction. It's really cool.
 
 T3 Code has kind of replaced opening all the different harness apps for me. OpenCode Go's DeepSeek plan is fire right now for the dollar value. Hex removes a bunch of keyboard friction for accessibility purposes. And browse is cutting down on all the clicking through portals to make content updates.
 

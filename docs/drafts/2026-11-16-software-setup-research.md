@@ -29,8 +29,9 @@ The setup removes the friction between having a thought and getting something do
 - The Go allowance has rolling limits; it is not cash credit or unlimited access. The cited figures are a dated snapshot, not a permanent offer.
 - Hex now supports multiple models. Don't claim it exclusively wraps one Parakeet release, or that Andrew's installed version uses a particular default. The NVIDIA card is an example of the named model family, not evidence about his settings.
 - Keep the Talon comparison as Andrew's experience, not a claim that Talon cannot produce correct grammar. Do not turn low latency into a measured benchmark.
-- Put researched pricing and privacy additions in dated blockquotes so they are visibly distinct from the original dictation.
-- Go reports no training and zero retention for the named DeepSeek models, with its current agreement ending November 30. Do not infer that using Go grants training permission. [DeepSeek's consumer policy](https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html) explicitly distinguishes downstream developer apps.
+- Keep the pricing clarification in a dated blockquote. Shorten the privacy section to the author's local-computer/third-party-services distinction with one policy link; leave the detailed retention research in these notes.
+- At the November 16 research check, Go reported no training and zero retention for the named DeepSeek models, with its current agreement ending November 30. Do not infer that using Go grants training permission. [DeepSeek's consumer policy](https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html) explicitly distinguishes downstream developer apps.
+- Tighten the subagent and computer-in-the-other-room sentences, remove the extra disclaimer placeholder, and shorten the recap. Preserve the UBI pivot and sign-off verbatim.
 - The exact $20 subscription tier and Sol model identifier are not specified in the transcript. Leave them as the author's description of his own setup; don't invent an identifier or a public pricing claim. The unfinished “only brainy task” fragment contains no recoverable task detail and is omitted.
 - Keep the expensive-model example as a personal cost impression. Do not convert it into a universal per-task price or guess a specific Opus release from “Op. 5.5.”
 
