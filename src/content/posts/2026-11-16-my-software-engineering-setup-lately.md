@@ -83,10 +83,6 @@ It feels crazy because I'm on the couch, or in the chair, and I can talk to it a
 
 It's cutting down on so much friction, having to click through portals just to make content updates, and now it's doing that itself. It's incredible.
 
-## Okay, wait, it's not all local
-
-I keep saying it's all local. Well, my computer's doing the work, but I'm still using DeepSeek through [OpenCode Go](https://opencode.ai/docs/console/go/#privacy), so there are third-party services involved. I'm comfortable with that for my own stuff. Fully local AI is another conversation.
-
 ## That's my setup lately
 
 Anyway, T3 Code, Hex, and browse. It's been a huge speedup, just removing a bunch of annoying friction. It's really cool.
