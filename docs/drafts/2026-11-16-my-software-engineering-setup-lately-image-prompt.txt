@@ -1,0 +1,26 @@
+Create a custom landscape blog image for Andrew Riefenstahl (andrewriefenstahl.com).
+
+Post metadata:
+- Title: My Software Engineering Setup Lately
+- Description: T3 Code from the couch, DeepSeek on a budget, Hex for speech, and browse for all the clicking. A status update on the tools removing friction from my agent workflow.
+- Author: Andrew Riefenstahl
+- Publish date: 2026-11-16
+- Tags: AI, software engineering, workflow, open source, DeepSeek, accessibility, stream of thought
+- Existing alt hint: A person reclining on a couch beside a small Shih Tzu, with a phone nearby and a computer glowing in the next room, in a forest-green editorial illustration.
+
+Article excerpt for thematic context:
+Hello, this is a status update and chat about what I've been doing with software and agent development. Yeah, so I just want a huge shoutout to these products in particular which have really unlocked a whole new level of agent development flows, and just general friction removal. The first one is the open source project T3 Code, and I'll tell you a little bit of how I use it. Then also Hex, by Anomaly, the same organization that makes OpenCode. And there's another one from them, browse, which I'll get into too. T3 Code is a separate organization. The budget determines a lot of how I behave Yeah, so also I think it's important to talk about the budgeting, because that determines a lot of how I behave. I can't just throw cash at Opus. Even a simple task feeling like $2.50 is too much at the volume of tasks I want to be doing. OpenCode Go has a $10 a month plan, and right now you basically get $100 worth of DeepSeek usage for the month. Which is a lot of DeepSeek. Some of it is subsidized probably, I don't know their math, but the dollar value is fire right now. Pricing check, November 16, 2026: Go's $100 monthly allowance is for DeepSeek V4.1 Flash, not a cash balance. Five hour and weekly limits also apply. See the Go usage limits. I guess they've got their inference dialed in for DeepSeek. In my use, as long as you bring the thinking, it's doing a really good job just doing what you're thinking, you know. And when you get good at using DeepSeek, I'm also using subagents, or using it as a subagent of a bigger model. But I actually just love using DeepSeek to create its own subagents. OpenCode supports subagents with their own model choices, so that's part of what I'm doing through the harness. Whenever I need a big brain, I've also got a simple subscription, like $20 a month, and I'm using Sol for the brainier tasks. But most of my work, at high volumes, I'm doing with DeepSeek. I'm digressing because I always do these without any format and just start talking. So let me talk about T3 Code. T3 Code, from the couch I'm able to now write this entire blog just sitting on my couch, staring up at the ceiling with my arms behind my head and my legs crossed and my dog next to me, just enjoying the couch and free flow speaking right now. I'm capturing this in the iOS Notes app, and T3 is how I'm working with the agent on my computer from my phone. T3 Code is a wrapp…
+
+Art direction:
+- Use a thoughtful editorial illustration, slightly strange but grounded, human-centered technology, smart, moody, contemporary, clean composition that still feels warm visual language.
+- Use the site's forest palette: dust-grey #dad7cd, dry-sage #a3b18a, fern #588157, hunter-green #3a5a40, pine-teal #344e41.
+- Build around deep forest background tones, subtle mossy gradients, earthy contrast, soft atmospheric lighting.
+- subtly hide a Shih Tzu as an easter egg somewhere in the composition; the Shih Tzu should not dominate the frame; avoid cartoon mascot energy unless the post itself is playful.
+- The image should feel like a premium editorial header illustration for a personal blog by a software engineer, writer, and musician.
+- Composition should read clearly on the web and at smaller thumbnail sizes.
+- Prefer symbolic or scene-based storytelling over literal text poster design.
+- If the topic is technical, imply the ideas visually without brand logos or product screenshots.
+- no visible text; no logos; no watermark; no UI chrome; no code snippets rendered as text; no generic corporate AI slop; no stock-photo feel; no direct copyrighted character references.
+
+Specific scene direction:
+A warm, quiet evening at home: a person reclining on a couch with their arms behind their head and legs crossed, a small Shih Tzu curled beside them, a phone resting nearby, and through an open doorway a softly glowing computer doing work in the next room. Suggest speech traveling between the rooms with a subtle flowing ribbon of light. Relaxed and human, not futuristic spectacle. Wide editorial illustration in the site's forest greens, sage, and warm grey; no text, logos, or visible interface.
