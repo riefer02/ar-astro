@@ -1,38 +1,6 @@
 {
  "projects": [
   {
-   "name": "api-gateway",
-   "subheader": "Rust API Gateway",
-   "url": "https://github.com/riefer02/api-gateway",
-   "year": "2026",
-   "description": "An HTTP API gateway in Rust: authenticates API keys, resolves routes from Postgres, enforces per-route scopes and per-tenant limits, and proxies to allowlisted upstreams with streaming bodies and strict header hygiene. About 9k lines with 130 tests, one binary, a distroless image with no shell, and a measured +0.32 ms p50 overhead at 78k req/s. Tracing and metrics built in. Written to be cloned and adapted rather than admired.",
-   "technologies": [
-    "Rust",
-    "axum",
-    "sqlx",
-    "PostgreSQL",
-    "OpenTelemetry",
-    "Prometheus",
-    "Docker"
-   ]
-  },
-  {
-   "name": "springtime",
-   "subheader": "BigQuery Replenishment Dashboard on GCP",
-   "url": "https://github.com/riefer02/springtime",
-   "year": "2026",
-   "description": "A store-replenishment service and dashboard on Google Cloud: Java 21 and Spring Boot 4 over BigQuery for the analytical plane, Postgres for the control plane, Flyway migrations, and typed gateway ports instead of an ORM. A planner sees which SKUs are below cover, the service ranks what to reorder using demand, lead time and safety stock, and approved recommendations become purchase orders. Deployed on GCP, multi-stage Docker build, Swagger API.",
-   "technologies": [
-    "Java",
-    "Spring Boot",
-    "BigQuery",
-    "GCP",
-    "PostgreSQL",
-    "Flyway",
-    "Docker"
-   ]
-  },
-  {
    "name": "Fetch.ai / Flockx",
    "subheader": "AI Agent Workflow Platform",
    "url": "https://agents.flockx.io",
@@ -212,6 +180,38 @@
     "JavaScript",
     "CSS",
     "HTML"
+   ]
+  },
+  {
+   "name": "api-gateway",
+   "subheader": "Rust API Gateway",
+   "url": "https://github.com/riefer02/api-gateway",
+   "year": "2026",
+   "description": "An HTTP API gateway in Rust: authenticates API keys, resolves routes from Postgres, enforces per-route scopes and per-tenant limits, and proxies to allowlisted upstreams with streaming bodies and strict header hygiene. About 9k lines with 130 tests, one binary, a distroless image with no shell, and a measured +0.32 ms p50 overhead at 78k req/s. Tracing and metrics built in. Written to be cloned and adapted rather than admired.",
+   "technologies": [
+    "Rust",
+    "axum",
+    "sqlx",
+    "PostgreSQL",
+    "OpenTelemetry",
+    "Prometheus",
+    "Docker"
+   ]
+  },
+  {
+   "name": "springtime",
+   "subheader": "BigQuery Replenishment Dashboard on GCP",
+   "url": "https://github.com/riefer02/springtime",
+   "year": "2026",
+   "description": "A store-replenishment service and dashboard on Google Cloud: Java 21 and Spring Boot 4 over BigQuery for the analytical plane, Postgres for the control plane, Flyway migrations, and typed gateway ports instead of an ORM. A planner sees which SKUs are below cover, the service ranks what to reorder using demand, lead time and safety stock, and approved recommendations become purchase orders. Deployed on GCP, multi-stage Docker build, Swagger API.",
+   "technologies": [
+    "Java",
+    "Spring Boot",
+    "BigQuery",
+    "GCP",
+    "PostgreSQL",
+    "Flyway",
+    "Docker"
    ]
   }
  ]
