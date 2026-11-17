@@ -12,6 +12,9 @@ const postsCollection = defineCollection({
       image: z.object({
         url: image(),
         alt: z.string(),
+        // Compression quality for the generated webp variants (default 90).
+        // Grainy or photographic images can go lower to save bytes.
+        quality: z.number().min(0).max(100).optional(),
       }),
       tags: z.array(z.string()),
     }),

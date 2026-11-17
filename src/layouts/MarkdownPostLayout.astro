@@ -194,7 +194,7 @@ const articleStructuredData = {
               widths={[375, 720, 900, 1350, 1800]}
               sizes="(max-width: 896px) 100vw, 896px"
               format="webp"
-              quality={90}
+              quality={frontmatter.image.quality ?? 90}
               data-pagefind-meta="image[src]"
             />
           </div>

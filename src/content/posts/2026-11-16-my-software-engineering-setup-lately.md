@@ -4,8 +4,9 @@ pubDate: 2026-11-16
 description: "T3 Code from the couch, DeepSeek on a budget, Hex for speech, and browse for all the clicking. A status update on the tools removing friction from my agent workflow."
 author: "Andrew Riefenstahl"
 image:
-  url: "@/assets/images/my-software-engineering-setup-lately-og.jpg"
-  alt: "A person reclining on a couch beside a small Shih Tzu, with a phone nearby and a computer glowing in the next room, in a forest-green editorial illustration."
+  url: "@/assets/images/my-software-engineering-setup-lately-desk.jpg"
+  alt: "A warm, lamp-lit standing desk with a large monitor showing an AI chat, a laptop running OpenCode, a colorful mechanical keyboard, a game controller, and a mug, next to a window with closed blinds."
+  quality: 80
 tags:
   [
     "AI",
