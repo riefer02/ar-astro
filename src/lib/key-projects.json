@@ -1,181 +1,218 @@
 {
-  "projects": [
-    {
-      "name": "Fetch.ai / Flockx",
-      "subheader": "AI Agent Workflow Platform",
-      "url": "https://agents.flockx.io",
-      "year": "Since 2022",
-      "description": "Senior backend engineer and full-stack developer for Flockx.io's AI agent workflow platform built with Next.js. Architected LangGraph-based agent orchestration with RAG-powered chat over WebSocket, plus API routes, authentication systems, and data transformation pipelines while managing AWS S3, Cloudinary, and Redis. Implemented performance optimizations, database migrations, ElasticSearch integration, and third-party services like Intercom and Slack.",
-      "technologies": [
-        "LangGraph",
-        "LangChain",
-        "Next.js",
-        "FastAPI",
-        "Django ORM",
-        "Redis Streams",
-        "ElasticSearch",
-        "AWS S3",
-        "Cloudinary",
-        "Auth0",
-        "SRE"
-      ]
-    },
-    {
-      "name": "Whole Earth Curriculum",
-      "subheader": "Open-Source K–12 Curriculum",
-      "url": "https://wholeearthcurriculum.org",
-      "year": "2026",
-      "description": "A single, coherent, drop-in K–12 curriculum built by an agent loop across nearly two billion tokens, made affordable by DeepSeek. Free and open source — develops people who are emotionally, physically, and intellectually aware of themselves, their context, and the Earth they live on.",
-      "technologies": [
-        "Astro",
-        "DeepSeek",
-        "Agent Loop",
-        "Open Source",
-        "Education"
-      ]
-    },
-    {
-      "name": "Laya Call Router",
-      "subheader": "Typed AI Decision Model for Dealership Calls",
-      "url": "https://github.com/riefer02/laya-call-router",
-      "year": "2026",
-      "description": "A narrow, typed local decision model that routes dealership calls to the right team. Built the synthetic data pipeline, taxonomy, policy boundaries, and evaluation around a small local model, reaching 71/81 joint routing cases with a roughly 20 ms median decision time.",
-      "technologies": [
-        "Laya",
-        "MLX",
-        "Synthetic Data",
-        "Evaluation",
-        "Policy Systems"
-      ]
-    },
-    {
-      "name": "ISCPO.org",
-      "subheader": "Membership Platform & Editorial System",
-      "url": "https://iscpo.org",
-      "year": "Since 2025",
-      "description": "Architected and delivered ISCPO.org as a WordPress membership platform that preserved native editorial workflows, reduced config drift, and made key site structure reproducible across environments. Built with Sage 11, Acorn 5, Blade, and a disciplined plugin/theme boundary so the organization kept the WordPress ecosystem it relied on while the codebase gained Laravel-style structure and a faster developer workflow.",
-      "technologies": [
-        "WordPress",
-        "Sage 11",
-        "Acorn 5",
-        "Blade",
-        "Tailwind CSS 4",
-        "Alpine.js",
-        "Memberful",
-        "GitHub Actions"
-      ]
-    },
-    {
-      "name": "ABowlofRed.com",
-      "subheader": "Non-Profit Charity",
-      "url": "https://abowlofred.com",
-      "year": "Since 2021",
-      "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end that migrated to Astro for improved performance and developer experience. Utilized Strapi CMS on AWS EC2 with Node.js for content management, and integrated Stripe for secure ticket transactions that have surpassed $130,000 in annual ticket sales.",
-      "technologies": [
-        "Astro",
-        "Strapi CMS",
-        "AWS EC2",
-        "Node.js",
-        "Stripe",
-        "SEO"
-      ]
-    },
-    {
-      "name": "The Concert on Lake Grapevine",
-      "subheader": "Non-Profit Community Event",
-      "url": "https://theconcertonlakegrapevine.com",
-      "year": "2026",
-      "description": "Co-developed and produced the site for a family-friendly charity concert benefiting Grapevine charities, presented by Tolbert's Restaurant & Chili Parlor and The Charity Grapevine. Covers lineup, FAQ, sponsors, and Stripe-powered ticketing for a full day of live music on the lake.",
-      "technologies": [
-        "Stripe",
-        "Ticketing",
-        "Community",
-        "Non-Profit",
-        "Event Production"
-      ]
-    },
-    {
-      "name": "Pulse COOP",
-      "subheader": "Worker-Owned Tech Cooperative",
-      "url": "https://pulse.coop",
-      "year": "2025",
-      "description": "Co-founded a worker-owned technology cooperative dedicated to empowering local businesses and grassroots movements. As a founding member, I helped establish democratic workplace practices based on the seven cooperative principles while delivering tech solutions that strengthen community economic foundations.",
-      "technologies": [
-        "Cooperative Management",
-        "Web Development",
-        "Community Tools",
-        "Democratic Workplace",
-        "Local Business Support"
-      ]
-    },
-    {
-      "name": "MCP Server Suite",
-      "subheader": "Open-Source AI Tooling",
-      "url": "https://github.com/riefer02",
-      "year": "Since 2025",
-      "description": "A family of safety-first MCP servers that give AI assistants governed, read-only access to real systems: PostgreSQL (mcp-pg-db-reader), MySQL (mysql-db-reader), and Mezmo log retrieval (mezmo-logs-mcp), plus work on godot-mcp for AI-assisted game development. Built around the idea that AI tooling should be auditable, quota-conscious, and hard to misuse.",
-      "technologies": [
-        "MCP",
-        "Python",
-        "TypeScript",
-        "PostgreSQL",
-        "MySQL",
-        "Docker",
-        "Godot"
-      ]
-    },
-    {
-      "name": "Propane.com",
-      "subheader": "Enterprise Website",
-      "url": "https://propane.com",
-      "year": "2021",
-      "description": "Spearheaded the development of Propane.com, an enterprise-level WordPress site featuring advanced customizations and integrations. Implemented a robust CI pipeline, 2FA authentication via OAuth Okta, and developed stateful web applications. Integrated Algolia for advanced search and HubSpot for CRM, and optimized React-based components for performance.",
-      "technologies": [
-        "WordPress",
-        "React",
-        "OAuth",
-        "CI/CD",
-        "Algolia",
-        "HubSpot"
-      ]
-    },
-    {
-      "name": "Tolbert's Restaurant",
-      "subheader": "Modern Restaurant Website",
-      "url": "https://tolbertsrestaurant.com",
-      "year": "2024",
-      "description": "Architected a high-performance restaurant website using Astro with a headless WordPress CMS backend. Integrated third-party menu systems and food ordering platforms through custom API routes, with dynamic calendar integration, contact forms, and seamless third-party connections — all while maintaining accessibility and performance standards.",
-      "technologies": [
-        "Astro",
-        "Headless WordPress",
-        "Custom API Routes",
-        "Third-party Integrations",
-        "Food Ordering Systems",
-        "Performance Optimization"
-      ]
-    },
-    {
-      "name": "Chisos",
-      "subheader": "AI Note-Taking & Speech Platform",
-      "url": "https://chisos.xyz",
-      "year": "2025",
-      "description": "Developed, deployed, and provisioned a full-stack note-taking application that transcribes speech to text and uses AI to organize notes for later analysis. Handled all infrastructure provisioning on Railway, secure authentication with Clerk, and AI services for core functionality. Built with Vite and TanStack Router for a modern, type-safe experience.",
-      "technologies": [
-        "Vite",
-        "TanStack Router",
-        "AI Integration",
-        "Clerk Auth",
-        "Railway",
-        "OpenAI"
-      ]
-    },
-    {
-      "name": "Steel Calculator",
-      "subheader": "Microservice Web Application",
-      "url": "https://steelcalculator.xyz",
-      "year": "2022",
-      "description": "A specialized steel calculator built for a steel-industry professional to make daily work easier. Simple, focused, and actually used — proof that the most valuable tool is often the least flashy one.",
-      "technologies": ["Vite", "JavaScript", "CSS", "HTML"]
-    }
-  ]
+ "projects": [
+  {
+   "name": "api-gateway",
+   "subheader": "Rust API Gateway",
+   "url": "https://github.com/riefer02/api-gateway",
+   "year": "2026",
+   "description": "An HTTP API gateway in Rust: authenticates API keys, resolves routes from Postgres, enforces per-route scopes and per-tenant limits, and proxies to allowlisted upstreams with streaming bodies and strict header hygiene. About 9k lines with 130 tests, one binary, a distroless image with no shell, and a measured +0.32 ms p50 overhead at 78k req/s. Tracing and metrics built in. Written to be cloned and adapted rather than admired.",
+   "technologies": [
+    "Rust",
+    "axum",
+    "sqlx",
+    "PostgreSQL",
+    "OpenTelemetry",
+    "Prometheus",
+    "Docker"
+   ]
+  },
+  {
+   "name": "springtime",
+   "subheader": "BigQuery Replenishment Dashboard on GCP",
+   "url": "https://github.com/riefer02/springtime",
+   "year": "2026",
+   "description": "A store-replenishment service and dashboard on Google Cloud: Java 21 and Spring Boot 4 over BigQuery for the analytical plane, Postgres for the control plane, Flyway migrations, and typed gateway ports instead of an ORM. A planner sees which SKUs are below cover, the service ranks what to reorder using demand, lead time and safety stock, and approved recommendations become purchase orders. Deployed on GCP, multi-stage Docker build, Swagger API.",
+   "technologies": [
+    "Java",
+    "Spring Boot",
+    "BigQuery",
+    "GCP",
+    "PostgreSQL",
+    "Flyway",
+    "Docker"
+   ]
+  },
+  {
+   "name": "Fetch.ai / Flockx",
+   "subheader": "AI Agent Workflow Platform",
+   "url": "https://agents.flockx.io",
+   "year": "Since 2022",
+   "description": "Senior backend engineer and full-stack developer for Flockx.io's AI agent workflow platform built with Next.js. Architected LangGraph-based agent orchestration with RAG-powered chat over WebSocket, plus API routes, authentication systems, and data transformation pipelines while managing AWS S3, Cloudinary, and Redis. Implemented performance optimizations, database migrations, ElasticSearch integration, and third-party services like Intercom and Slack.",
+   "technologies": [
+    "LangGraph",
+    "LangChain",
+    "Next.js",
+    "FastAPI",
+    "Django ORM",
+    "Redis Streams",
+    "ElasticSearch",
+    "AWS S3",
+    "Cloudinary",
+    "Auth0",
+    "SRE"
+   ]
+  },
+  {
+   "name": "Whole Earth Curriculum",
+   "subheader": "Open-Source K\u201312 Curriculum",
+   "url": "https://wholeearthcurriculum.org",
+   "year": "2026",
+   "description": "A single, coherent, drop-in K\u201312 curriculum built by an agent loop across nearly two billion tokens, made affordable by DeepSeek. Free and open source \u2014 develops people who are emotionally, physically, and intellectually aware of themselves, their context, and the Earth they live on.",
+   "technologies": [
+    "Astro",
+    "DeepSeek",
+    "Agent Loop",
+    "Open Source",
+    "Education"
+   ]
+  },
+  {
+   "name": "Laya Call Router",
+   "subheader": "Typed AI Decision Model for Dealership Calls",
+   "url": "https://github.com/riefer02/laya-call-router",
+   "year": "2026",
+   "description": "A narrow, typed local decision model that routes dealership calls to the right team. Built the synthetic data pipeline, taxonomy, policy boundaries, and evaluation around a small local model, reaching 71/81 joint routing cases with a roughly 20 ms median decision time.",
+   "technologies": [
+    "Laya",
+    "MLX",
+    "Synthetic Data",
+    "Evaluation",
+    "Policy Systems"
+   ]
+  },
+  {
+   "name": "ISCPO.org",
+   "subheader": "Membership Platform & Editorial System",
+   "url": "https://iscpo.org",
+   "year": "Since 2025",
+   "description": "Architected and delivered ISCPO.org as a WordPress membership platform that preserved native editorial workflows, reduced config drift, and made key site structure reproducible across environments. Built with Sage 11, Acorn 5, Blade, and a disciplined plugin/theme boundary so the organization kept the WordPress ecosystem it relied on while the codebase gained Laravel-style structure and a faster developer workflow.",
+   "technologies": [
+    "WordPress",
+    "Sage 11",
+    "Acorn 5",
+    "Blade",
+    "Tailwind CSS 4",
+    "Alpine.js",
+    "Memberful",
+    "GitHub Actions"
+   ]
+  },
+  {
+   "name": "ABowlofRed.com",
+   "subheader": "Non-Profit Charity",
+   "url": "https://abowlofred.com",
+   "year": "Since 2021",
+   "description": "Orchestrated the development of ABowlofRed.com, originally a Gatsby-based front-end that migrated to Astro for improved performance and developer experience. Utilized Strapi CMS on AWS EC2 with Node.js for content management, and integrated Stripe for secure ticket transactions that have surpassed $130,000 in annual ticket sales.",
+   "technologies": [
+    "Astro",
+    "Strapi CMS",
+    "AWS EC2",
+    "Node.js",
+    "Stripe",
+    "SEO"
+   ]
+  },
+  {
+   "name": "The Concert on Lake Grapevine",
+   "subheader": "Non-Profit Community Event",
+   "url": "https://theconcertonlakegrapevine.com",
+   "year": "2026",
+   "description": "Co-developed and produced the site for a family-friendly charity concert benefiting Grapevine charities, presented by Tolbert's Restaurant & Chili Parlor and The Charity Grapevine. Covers lineup, FAQ, sponsors, and Stripe-powered ticketing for a full day of live music on the lake.",
+   "technologies": [
+    "Stripe",
+    "Ticketing",
+    "Community",
+    "Non-Profit",
+    "Event Production"
+   ]
+  },
+  {
+   "name": "Pulse COOP",
+   "subheader": "Worker-Owned Tech Cooperative",
+   "url": "https://pulse.coop",
+   "year": "2025",
+   "description": "Co-founded a worker-owned technology cooperative dedicated to empowering local businesses and grassroots movements. As a founding member, I helped establish democratic workplace practices based on the seven cooperative principles while delivering tech solutions that strengthen community economic foundations.",
+   "technologies": [
+    "Cooperative Management",
+    "Web Development",
+    "Community Tools",
+    "Democratic Workplace",
+    "Local Business Support"
+   ]
+  },
+  {
+   "name": "MCP Server Suite",
+   "subheader": "Open-Source AI Tooling",
+   "url": "https://github.com/riefer02",
+   "year": "Since 2025",
+   "description": "A family of safety-first MCP servers that give AI assistants governed, read-only access to real systems: PostgreSQL (mcp-pg-db-reader), MySQL (mysql-db-reader), and Mezmo log retrieval (mezmo-logs-mcp), plus work on godot-mcp for AI-assisted game development. Built around the idea that AI tooling should be auditable, quota-conscious, and hard to misuse.",
+   "technologies": [
+    "MCP",
+    "Python",
+    "TypeScript",
+    "PostgreSQL",
+    "MySQL",
+    "Docker",
+    "Godot"
+   ]
+  },
+  {
+   "name": "Propane.com",
+   "subheader": "Enterprise Website",
+   "url": "https://propane.com",
+   "year": "2021",
+   "description": "Spearheaded the development of Propane.com, an enterprise-level WordPress site featuring advanced customizations and integrations. Implemented a robust CI pipeline, 2FA authentication via OAuth Okta, and developed stateful web applications. Integrated Algolia for advanced search and HubSpot for CRM, and optimized React-based components for performance.",
+   "technologies": [
+    "WordPress",
+    "React",
+    "OAuth",
+    "CI/CD",
+    "Algolia",
+    "HubSpot"
+   ]
+  },
+  {
+   "name": "Tolbert's Restaurant",
+   "subheader": "Modern Restaurant Website",
+   "url": "https://tolbertsrestaurant.com",
+   "year": "2024",
+   "description": "Architected a high-performance restaurant website using Astro with a headless WordPress CMS backend. Integrated third-party menu systems and food ordering platforms through custom API routes, with dynamic calendar integration, contact forms, and seamless third-party connections \u2014 all while maintaining accessibility and performance standards.",
+   "technologies": [
+    "Astro",
+    "Headless WordPress",
+    "Custom API Routes",
+    "Third-party Integrations",
+    "Food Ordering Systems",
+    "Performance Optimization"
+   ]
+  },
+  {
+   "name": "Chisos",
+   "subheader": "AI Note-Taking & Speech Platform",
+   "url": "https://chisos.xyz",
+   "year": "2025",
+   "description": "Developed, deployed, and provisioned a full-stack note-taking application that transcribes speech to text and uses AI to organize notes for later analysis. Handled all infrastructure provisioning on Railway, secure authentication with Clerk, and AI services for core functionality. Built with Vite and TanStack Router for a modern, type-safe experience.",
+   "technologies": [
+    "Vite",
+    "TanStack Router",
+    "AI Integration",
+    "Clerk Auth",
+    "Railway",
+    "OpenAI"
+   ]
+  },
+  {
+   "name": "Steel Calculator",
+   "subheader": "Microservice Web Application",
+   "url": "https://steelcalculator.xyz",
+   "year": "2022",
+   "description": "A specialized steel calculator built for a steel-industry professional to make daily work easier. Simple, focused, and actually used \u2014 proof that the most valuable tool is often the least flashy one.",
+   "technologies": [
+    "Vite",
+    "JavaScript",
+    "CSS",
+    "HTML"
+   ]
+  }
+ ]
 }
