@@ -23,16 +23,17 @@ The setup removes the friction between having a thought and getting something do
 
 ## Editing and fact-check decisions
 
-- Keep the original broad order: introduction, budget, T3, Hex, browse, local/privacy clarification, recap and sign-off. Add paragraph breaks and a few section headings. Keep the informal transitions, profanity, dog, Riley, accessibility point, and repeated warnings.
+- Keep the original broad order: introduction, budget, T3, Hex, browse, local/privacy clarification, recap and sign-off. Keep the informal transitions, profanity, dog, accessibility point, and substantive warnings. Replace the Riley/entry-point explanation with a brief, humorous nod to beginners about files and folders.
 - Correct clear transcription errors: “rapper” → “wrapper,” “deep sea/deep seek” → “DeepSeek,” “heck” → “Hex,” and “go” → “OpenCode Go” where the meaning is clear. Remove abandoned fragments and “rest rest rest.”
 - Describe T3 as the common interface using existing harnesses. Its FAQ explicitly says it is not itself a harness. Preserve the author's sense that it has replaced opening all the separate apps.
 - The Go allowance has rolling limits; it is not cash credit or unlimited access. The cited figures are a dated snapshot, not a permanent offer.
 - Hex now supports multiple models. Don't claim it exclusively wraps one Parakeet release, or that Andrew's installed version uses a particular default. The NVIDIA card is an example of the named model family, not evidence about his settings.
 - Keep the Talon comparison as Andrew's experience, not a claim that Talon cannot produce correct grammar. Do not turn low latency into a measured benchmark.
-- Keep the pricing clarification in a dated blockquote. Shorten the privacy section to the author's local-computer/third-party-services distinction with one policy link; leave the detailed retention research in these notes.
+- Keep the Go usage claim linked to its source and remove the pricing-check callout. Keep the privacy section to the author's local-computer/third-party-services distinction with one policy link; leave detailed retention research in these notes.
 - At the November 16 research check, Go reported no training and zero retention for the named DeepSeek models, with its current agreement ending November 30. Do not infer that using Go grants training permission. [DeepSeek's consumer policy](https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html) explicitly distinguishes downstream developer apps.
 - Tighten the subagent and computer-in-the-other-room sentences, remove the extra disclaimer placeholder, and shorten the recap. Preserve the UBI pivot and sign-off verbatim.
-- The exact $20 subscription tier and Sol model identifier are not specified in the transcript. Leave them as the author's description of his own setup; don't invent an identifier or a public pricing claim. The unfinished “only brainy task” fragment contains no recoverable task detail and is omitted.
+- Name ChatGPT Plus as the subscription used for Codex instead of describing it by price. This follows the transcript's $20/Sol reference and the author's earlier B2B Cannibalism post identifying his $20 Codex subscription. [OpenAI's Plus documentation](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus) confirms the plan name and price, and [Codex pricing](https://chatgpt.com/codex/pricing/) confirms inclusion. Keep “Sol” without inventing an exact model identifier. The unfinished “only brainy task” fragment contains no recoverable task detail and is omitted.
+- Remove the separate-organization line, the self-interruption before T3, repeated phone/host explanations, repeated Notes-app mention, and the closing list that restates each tool's benefit. Keep the shorter recap and the UBI ending.
 - Keep the expensive-model example as a personal cost impression. Do not convert it into a universal per-task price or guess a specific Opus release from “Op. 5.5.”
 
 ## Repository conventions checked
