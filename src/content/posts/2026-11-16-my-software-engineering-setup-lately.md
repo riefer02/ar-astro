@@ -44,7 +44,7 @@ T3 Code is a wrapper around your computer's [agent harnesses](https://github.com
 
 I'm [tunneling from my phone](https://github.com/pingdotgg/t3code/blob/main/docs/user/remote-access.md) through the T3 mobile app to my computer. The computer stays on and does the work.
 
-Yeah, disclaimer, probably some major security issues to think about here. Don't fuck around and find out type shit. You're giving agents access to do things on your computer. That's the end of the disclaimer, and then back to it.
+> **Disclaimer:** Yeah, disclaimer, probably some major security issues to think about here. Don't f\*\*k around and find out type sh\*t. You're giving agents access to do things on your computer. That's the end of the disclaimer, and then back to it.
 
 Basically, now I can just open any of my projects from my phone and immediately get going. Usually I've got a preset to just DeepSeek, you know. I've got lots of projects.
 
@@ -68,13 +68,13 @@ For accessibility purposes, removing a bunch of that keyboard friction is huge.
 
 Then there's this other one, browse by Anomaly, which basically gives your agents control of your regular browser. All your stuff's already logged in. It's an [MCP server and a Chromium extension](https://github.com/anomalyco/browse), so the agent can read pages and click through things in that browser.
 
-Yeah, once again, disclaimer warning. Don't do this if you don't know what the fuck you're doing. It's dangerous. You're giving it control in a browser where you're signed into stuff.
+> **Disclaimer warning:** Yeah, once again, disclaimer warning. Don't do this if you don't know what the f\*\*k you're doing. It's dangerous. You're giving it control in a browser where you're signed into stuff.
 
 There are [guardrails](https://github.com/anomalyco/browse#security): agents use tabs they open or you lend them. But the project's own security notes also call out that pages and emails can try to steer an agent.
 
 I started by giving it control when working through a local CMS instance, just seeing how it did in the local environment for a while, managing and doing tasks. Then when I asked it to start making changes to a production environment that I was logged into, it was doing it really well.
 
-And I was using DeepSeek. It didn't feel like a big concern in the tasks I was watching it do. That's how it felt to me while using it; it doesn't mean it can't fuck something up.
+And I was using DeepSeek. It didn't feel like a big concern in the tasks I was watching it do. That's how it felt to me while using it; it doesn't mean it can't f\*\*k something up.
 
 It feels crazy because I'm on the couch, or in the chair, and I can talk to it and be like, hey, will you go to this webpage and do this thing for me? And literally my computer in the other room is doing the thing and reporting back to me.
 
