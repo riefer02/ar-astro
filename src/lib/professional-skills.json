@@ -1,118 +1,123 @@
 {
-  "core": [
-    "TypeScript",
-    "Python",
-    "React",
-    "Next.js",
-    "Astro",
-    "Node.js",
-    "PostgreSQL",
-    "Redis",
-    "AWS",
-    "Docker",
-    "LangGraph",
-    "MCP"
-  ],
-  "groups": [
-    {
-      "name": "Languages",
-      "items": [
-        "JavaScript",
-        "PHP",
-        "SQL",
-        "Go",
-        "Rust",
-        "GDScript",
-        "HTML",
-        "CSS",
-        "SCSS"
-      ]
-    },
-    {
-      "name": "Frontend",
-      "items": [
-        "Vue",
-        "Vuetify",
-        "Tailwind CSS",
-        "Vite",
-        "Redux",
-        "Zustand",
-        "TanStack Router",
-        "Alpine.js",
-        "Gatsby"
-      ]
-    },
-    {
-      "name": "Backend & Data",
-      "items": [
-        "FastAPI",
-        "Django",
-        "Express",
-        "Celery",
-        "MySQL",
-        "Elasticsearch",
-        "MongoDB",
-        "Deno",
-        "Cloudflare D1",
-        "Redis Streams"
-      ]
-    },
-    {
-      "name": "AI & Agents",
-      "items": [
-        "RAG",
-        "LangChain",
-        "Agent Loops",
-        "OpenAI",
-        "DeepSeek",
-        "Claude Code / Codex",
-        "OpenCode",
-        "Fine-tuning"
-      ]
-    },
-    {
-      "name": "Infrastructure",
-      "items": [
-        "Terraform",
-        "AWS CDK",
-        "EC2",
-        "S3",
-        "RDS",
-        "VPC",
-        "ECS",
-        "Lambda",
-        "SQS",
-        "Cloudflare Workers"
-      ]
-    },
-    {
-      "name": "Deploy & CI/CD",
-      "items": [
-        "GitHub Actions",
-        "CI/CD",
-        "Netlify",
-        "Vercel",
-        "Railway",
-        "Heroku"
-      ]
-    },
-    {
-      "name": "CMS & Integrations",
-      "items": [
-        "WordPress",
-        "Headless WordPress",
-        "Sage",
-        "Acorn",
-        "Blade",
-        "Strapi",
-        "Memberful",
-        "Cloudinary",
-        "Stripe",
-        "Auth0",
-        "Clerk",
-        "Algolia",
-        "HubSpot"
-      ]
-    }
-  ]
+ "core": [
+  "TypeScript",
+  "Python",
+  "React",
+  "Next.js",
+  "Astro",
+  "Node.js",
+  "PostgreSQL",
+  "Redis",
+  "AWS",
+  "Docker",
+  "LangGraph",
+  "MCP"
+ ],
+ "groups": [
+  {
+   "name": "Languages",
+   "items": [
+    "JavaScript",
+    "PHP",
+    "SQL",
+    "Go",
+    "Rust",
+    "GDScript",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "Java"
+   ]
+  },
+  {
+   "name": "Frontend",
+   "items": [
+    "Vue",
+    "Vuetify",
+    "Tailwind CSS",
+    "Vite",
+    "Redux",
+    "Zustand",
+    "TanStack Router",
+    "Alpine.js",
+    "Gatsby"
+   ]
+  },
+  {
+   "name": "Backend & Data",
+   "items": [
+    "FastAPI",
+    "Django",
+    "Express",
+    "Celery",
+    "MySQL",
+    "Elasticsearch",
+    "MongoDB",
+    "Deno",
+    "Cloudflare D1",
+    "Redis Streams",
+    "Spring Boot",
+    "BigQuery"
+   ]
+  },
+  {
+   "name": "AI & Agents",
+   "items": [
+    "RAG",
+    "LangChain",
+    "Agent Loops",
+    "OpenAI",
+    "DeepSeek",
+    "Claude Code / Codex",
+    "OpenCode",
+    "Fine-tuning"
+   ]
+  },
+  {
+   "name": "Infrastructure",
+   "items": [
+    "Terraform",
+    "AWS CDK",
+    "EC2",
+    "S3",
+    "RDS",
+    "VPC",
+    "ECS",
+    "Lambda",
+    "SQS",
+    "Cloudflare Workers",
+    "GCP",
+    "Azure"
+   ]
+  },
+  {
+   "name": "Deploy & CI/CD",
+   "items": [
+    "GitHub Actions",
+    "CI/CD",
+    "Netlify",
+    "Vercel",
+    "Railway",
+    "Heroku"
+   ]
+  },
+  {
+   "name": "CMS & Integrations",
+   "items": [
+    "WordPress",
+    "Headless WordPress",
+    "Sage",
+    "Acorn",
+    "Blade",
+    "Strapi",
+    "Memberful",
+    "Cloudinary",
+    "Stripe",
+    "Auth0",
+    "Clerk",
+    "Algolia",
+    "HubSpot"
+   ]
+  }
+ ]
 }
